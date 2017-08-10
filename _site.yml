@@ -14,4 +14,5 @@ navbar:
       href: Nicholas_Giangreco_CV.pdf
 output:
   html_document:
+    output_dir: "."
     theme: cosmo
