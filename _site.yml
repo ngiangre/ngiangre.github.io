@@ -1,5 +1,6 @@
 name: "my-website"
 output_dir: "."
+theme: cosmo
 navbar:
   title: ""
   left:
@@ -13,6 +14,3 @@ navbar:
       href: Research.html
     - text: "CV"
       href: Nicholas_Giangreco_CV.pdf
-output:
-  html_document:
-    theme: cosmo
