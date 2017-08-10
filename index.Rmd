@@ -1,7 +1,7 @@
 ---
 title: ""
 ---
-<div class="cover">
+<div id="navbar">
 
   <img src="Manhattan_Skyline-Sunset_Sunburt-Top_of_the_Rock-New_York_City--Greg_Goodman-AdventuresofaGoodMan.jpg" alt="" />
   
