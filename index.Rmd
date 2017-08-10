@@ -1,0 +1,24 @@
+---
+title: ""
+
+---
+<div class="cover">
+
+  <img src="Manhattan_Skyline-Sunset_Sunburt-Top_of_the_Rock-New_York_City--Greg_Goodman-AdventuresofaGoodMan.jpg" alt="" />
+  
+  <h1>Hi, I'm Nick.</h1>
+  
+</div>
+
+<br>
+
+<br>
+
+<br>
+
+
+# **Currently, I'm a PhD student in Systems Biology at Columbia University Medical Center. In general, my interests lie in asking questions and testing hypotheses resulting from high throughput biological experiments e.g. RNA-Seq, MS-based proteomics and metabolomics. See the work of my <a href="http://www.tatonettilab.org" >lab</a> for details.**
+
+<br>
+
+
