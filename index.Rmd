@@ -14,8 +14,9 @@ title: "Hi, I'm Nick. Welcome to my personal site!"
 
 ---
 
-# **Interests: 
-##* **Translational Bioinformatics**
+# **Interests:**
+
+## * **Translational Bioinformatics**
 ## * **Systems Pharmacology**
 ## * **Data Science**
 
