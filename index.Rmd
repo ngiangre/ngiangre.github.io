@@ -1,31 +1,19 @@
 ---
-title: "Hi, I'm Nick. Welcome to my personal site!"
+title: ""
 ---
 
 <!--This site serves as my personal site and repository for professional and personal links-->
 
 
 <!--Cover Image-->
-![](Manhattan_Skyline-Sunset_Sunburt-Top_of_the_Rock-New_York_City--Greg_Goodman-AdventuresofaGoodMan.jpg "NYC skyline"){ width=100% height=100%}
+<body background="Manhattan_Skyline-Sunset_Sunburt-Top_of_the_Rock-New_York_City--Greg_Goodman-AdventuresofaGoodMan.jpg">
 
-<!--Introduction paragraph-->
+  <!--Cover Image Text-->
+  <!--Useful Styles https://www.w3.org/Style/Examples/007/fonts.en.html#font-family-->
+  <h1 style="font-size: 70px; color: rgb(0,0,0); text-align: center; font-family: 'Apple Chancery'; font: bold;"><b>Welcome to my website!</b></h1>
 
-# **PhD student in Systems Biology at Columbia University Medical Center**
+</body>
 
----
-
-# **Interests:**
-
-## * **Translational Bioinformatics**
-## * **Systems Pharmacology**
-## * **Data Science**
-
----
-
-# **RNA-Seq, MS-based proteomics and metabolomics**
-
----
-
-# **See the work of my <a href="http://www.tatonettilab.org" >lab</a> !**
+<!--Posts? Welcome things?-->
 
 

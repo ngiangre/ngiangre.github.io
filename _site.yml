@@ -7,7 +7,6 @@ navbar:
       href: https://www.linkedin.com/in/nickgiangreco/
     - icon: fa-github fa-2x
       href: https://github.com/ngiangre
-    
   right:
     - text: "Home"
       href: index.html
@@ -20,4 +19,4 @@ navbar:
 output:
     html_document:
         theme: cosmo
-        highlight: textmate
+        highlight: kate
