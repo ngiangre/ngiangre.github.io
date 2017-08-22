@@ -10,4 +10,6 @@
 
 ---
 
-# **Outside of doing research in my [lab](tatonettilab.org), I really enjoy being involved in [AI-related](https://www.meetup.com/AI-at-CUMC/) and [programming](https://nyhackr.org) groups in NYC-they're really fun! I'm also interested in rehabilitative science. Being [disabled](http://www.wgrz.com/life/wny-native-continues-recovery-from-stroke/244046774) myself, I learn a lot about how the body re-learns movement patterns through [occupational therapy](http://www.nyp.org/rehabmed/services/occupational-therapy) and [pilates](http://www.kinectedcenter.com).**
+# **Outside of doing research in my [lab](tatonettilab.org), I really enjoy being involved in [AI-related](https://www.meetup.com/AI-at-CUMC/) and [programming](https://nyhackr.org) groups in NYC-they're really fun!**
+
+# **I'm also interested in rehabilitative science. Being [disabled](http://www.wgrz.com/life/wny-native-continues-recovery-from-stroke/244046774) myself, I learn a lot about how the body re-learns movement patterns through [occupational therapy](http://www.nyp.org/rehabmed/services/occupational-therapy) and [pilates](http://www.kinectedcenter.com).**
