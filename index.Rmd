@@ -4,6 +4,7 @@ title: ""
 
 <!--This site serves as my personal site and repository for professional and personal links-->
 
+<!--CSS for background image; Thank you to https://css-tricks.com/perfect-full-page-background-image/-->
 <style>
 
 body {
@@ -17,10 +18,6 @@ body {
 }
 
 </style>
-
-<!--Cover Image-->
-<!--<body background="Manhattan_Skyline-Sunset_Sunburt-Top_of_the_Rock-New_York_City--Greg_Goodman-AdventuresofaGoodMan.jpg">-->
-<!--<body background="Manhattan_Skyline-Sunset_Sunburt-Top_of_the_Rock-New_York_City--Greg_Goodman-AdventuresofaGoodMan.jpg"; background-image: "Manhattan_Skyline-Sunset_Sunburt-Top_of_the_Rock-New_York_City--Greg_Goodman-AdventuresofaGoodMan.jpg"; background-size: cover; background-repeat: no-repeat; background-position: center center>-->
 <body>
 
   <!--Cover Image Text-->
