@@ -4,9 +4,24 @@ title: ""
 
 <!--This site serves as my personal site and repository for professional and personal links-->
 
+<style>
+
+body {
+    background: url(Manhattan_Skyline-Sunset_Sunburt-Top_of_the_Rock-New_York_City--Greg_Goodman-AdventuresofaGoodMan.jpg) no-repeat center center fixed;    
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-width: 100%;
+    min-height: 100%
+}
+
+</style>
 
 <!--Cover Image-->
-<body background="Manhattan_Skyline-Sunset_Sunburt-Top_of_the_Rock-New_York_City--Greg_Goodman-AdventuresofaGoodMan.jpg">
+<!--<body background="Manhattan_Skyline-Sunset_Sunburt-Top_of_the_Rock-New_York_City--Greg_Goodman-AdventuresofaGoodMan.jpg">-->
+<!--<body background="Manhattan_Skyline-Sunset_Sunburt-Top_of_the_Rock-New_York_City--Greg_Goodman-AdventuresofaGoodMan.jpg"; background-image: "Manhattan_Skyline-Sunset_Sunburt-Top_of_the_Rock-New_York_City--Greg_Goodman-AdventuresofaGoodMan.jpg"; background-size: cover; background-repeat: no-repeat; background-position: center center>-->
+<body>
 
   <!--Cover Image Text-->
   <!--Useful Styles https://www.w3.org/Style/Examples/007/fonts.en.html#font-family-->
