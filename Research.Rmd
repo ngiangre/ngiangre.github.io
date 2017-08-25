@@ -1,17 +1,19 @@
-<br></br>
+---
+title: ""
+---
 
 <!--Want to put something here such as an image or plot that captures some of the things I work on or produce to g=ive an idea of the research I do-->
 
 <!--Introduction paragraph-->
 
-# **I'm a PhD student in [Systems Biology](http://systemsbiology.columbia.edu/graduate-education) at Columbia University Medical Center. Formally, I'm in the [Integrated Program in Cellular, Molecular and Biomedical Sciences](http://columbiaphd.org) program.**
+<img src="sysbioResearch.png" style="height: 200px; width: 100%;">
+
+##### **I'm a PhD student in [Systems Biology](http://systemsbiology.columbia.edu/graduate-education) at Columbia University Medical Center. Formally, I'm in the [Integrated Program in Cellular, Molecular and Biomedical Sciences](http://columbiaphd.org) program.**
 
 <br></br>
+
+##### **See my GitHub for projects I've worked on and possibly currently working on. I'm looking forward to adding content representative of my work, so stay tuned!**
+
 <br></br>
 
-# **See my GitHub for projects I've worked on and possibly currently working on. I'm looking forward to adding content representative of my work, so stay tuned!**
-
-<br></br>
-<br></br>
-
-# **I work in an awesome <a href="http://www.tatonettilab.org" >lab</a>!**
+##### **I work in an awesome <a href="http://www.tatonettilab.org" >lab</a>!**

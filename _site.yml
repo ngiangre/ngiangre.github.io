@@ -8,12 +8,12 @@ navbar:
     - icon: fa-github fa-2x
       href: https://github.com/ngiangre
   right:
-    - text: "Home"
-      href: index.html
     - text: "About"
       href: About.html
     - text: "Research"
       href: Research.html
+    - text: "Blog"
+      href: Blog.html
     - text: "CV"
       href: Nicholas_Giangreco_CV.pdf
 output:
