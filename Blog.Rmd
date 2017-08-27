@@ -8,4 +8,80 @@ title: ""
 
 <br>
 
-##### **Coming Soon!**
+<style>
+
+h1 {
+  
+  font-weight: bold;
+  
+}
+img {
+
+  float: left;
+  position: relative;
+  width: 20%;
+  margin-left: 2%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-right: 2%;
+  
+}
+
+.post {
+
+  background-color: #D3D3D3;
+  position: relative;
+  height: 20%;
+  width: auto;
+  border-style: outset;
+  
+}
+
+.text {
+
+  background-color: #D3D3D3;
+  font-size: 15px;
+  position: relative;
+  font-weight: bold;
+  
+}
+
+.text.Date {
+
+  top: 10%;
+
+}
+
+.text.Description {
+
+  top: 25%;
+  color: #211a23;
+  
+}
+
+</style>
+
+
+<h1 style="text-align: center" >Blog Posts</h1>
+
+<br>
+<br>
+
+<div class="post">
+
+  <a href="_posts/Columbia_Authors_To_Topics.html">
+    <img src="http://www.iran-daily.com/content/imgcache/file/11166/0/image_650_365.jpg"/>
+  </a>
+  
+  <p class="text Date">
+    Bayes Classifier Associating Columbia authors to Research topics
+  </p>
+  
+  <p class="text Description">
+    In this post, I am finding Columbia University author's research area using Bayes Classification
+  </p>
+
+</div>
+
+
+
