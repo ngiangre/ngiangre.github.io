@@ -210,47 +210,64 @@ h1 {
   font-weight: bold;
   
 }
-img {
-
-  float: left;
-  position: relative;
-  width: 20%;
-  margin-left: 2%;
-  margin-top: 2%;
-  margin-bottom: 2%;
-  margin-right: 2%;
-  
-}
 
 .post {
 
   background-color: #D3D3D3;
   position: relative;
-  height: 20%;
+  float: center;
+  height: 200px;
   width: auto;
   border-style: outset;
   
 }
 
-.text {
+.imagecontainer {
 
-  background-color: #D3D3D3;
-  font-size: 15px;
+  float: left;
+  display: block;
   position: relative;
-  font-weight: bold;
+  width: 30%;
+  top: 5%;
+  height: auto;
+  margin: 1% 1% 1% 1%;
   
 }
 
-.text.Date {
+.textcontainer {
 
-  top: 10%;
-
+  float: right;
+  display: block;
+  background-color: #D3D3D3;
+  font-size: 15px;
+  font-weight: bold;
+  position: relative;
+  word-wrap: break-word;
+  margin: 1% 5% 1% 1%;
+  width: 60%;
+  height: auto;
+  
 }
 
-.text.Description {
+.date {
+  
+  top: 5%;
+  text-align: center;
+  font-size: 160%;
+  
+}
+
+.title {
+  
+  top: 15%;
+  font-size: 140%;
+  
+}
+
+.description {
 
   top: 25%;
-  color: #211a23;
+  color: #666666;
   
 }
 
@@ -260,13 +277,20 @@ Blog Posts
 </h1>
 <p><br> <br></p>
 <div class="post">
+<div class="imagecontainer">
 <p><a href="_posts/Columbia_Authors_To_Topics.html"> <img src="http://www.iran-daily.com/content/imgcache/file/11166/0/image_650_365.jpg"/> </a></p>
-<p class="text Date">
-<pre><code>Bayes Classifier Associating Columbia authors to Research topics</code></pre>
+</div>
+<div class="textcontainer">
+<p class="date">
+August 29, 2017
 </p>
-<p class="text Description">
-<pre><code>In this post, I am finding Columbia University author&#39;s research area using Bayes Classification</code></pre>
+<p class="title">
+Bayes Classifier Associating Columbia authors to Research topics
 </p>
+<p class="description">
+In this post, I am finding Columbia University author’s research area using Bayes Classification
+</p>
+</div>
 </div>
 
 
