@@ -103,7 +103,7 @@ h1 {
   </p>
         
   <p class="description">
-  In this post, I am finding Columbia University author's research area using Bayes Classification
+  Finding Columbia University author's research area using Bayes Classification. A fun weekend project...
   </p>
   
 </div>
