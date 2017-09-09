@@ -22,9 +22,9 @@ h1 {
   position: relative;
   float: center;
   height: 200px;
-  width: auto;
+  width: 100%;
   border-style: outset;
-  
+    
 }
 
 .imagecontainer {
@@ -33,9 +33,18 @@ h1 {
   display: block;
   position: relative;
   width: 30%;
+  height: 80%;
   top: 5%;
-  height: auto;
+  bottom: 5%;
   margin: 1% 1% 1% 1%;
+  
+}
+
+.image {
+
+  max-height: 100%; 
+  max-width: 100%; 
+  object-fit: contain;
   
 }
 
@@ -48,9 +57,10 @@ h1 {
   font-weight: bold;
   position: relative;
   word-wrap: break-word;
-  margin: 1% 5% 1% 1%;
+  margin: 1% 1% 1% 1%;
   width: 60%;
-  height: auto;
+  height: 80%;
+  overflow: auto;
   
 }
 
@@ -88,7 +98,7 @@ h1 {
 
 <div class="imagecontainer">
   <a href="_posts/Columbia_Authors_To_Topics.html">
-    <img src="http://www.iran-daily.com/content/imgcache/file/11166/0/image_650_365.jpg"/>
+<img class="image" src="https://i1.wp.com/cannabischris.com/wp-content/uploads/2016/09/pubmed256blue.png?w=595"/>
     </a>
 </div>
 
