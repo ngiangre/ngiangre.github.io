@@ -15,7 +15,7 @@ navbar:
     - text: "Blog"
       href: Blog.html
     - text: "CV"
-      href: Nicholas_Giangreco_CV.pdf
+      href: CV/Nicholas_Giangreco_CV.html
 output:
     html_document:
         theme: cosmo

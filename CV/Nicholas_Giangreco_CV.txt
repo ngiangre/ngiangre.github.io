@@ -1,0 +1,90 @@
+
+
+NICHOLAS GIANGRECO
+
+
+    _____ nick.giangreco@gmail.com   _____ Github   _____ LinkedIn _____
+  -------------------------------- -------------- ----------------------
+
+------------------------------------------------------------------------
+
+
+RESEARCH
+
+-   Biomedical Data Science
+
+-   Analysis of high throughput biomedical data: RNA sequencing,
+    Proteomics
+
+-   Systems Pharmacology and Disease Comorbidity in Electronic Health
+    Records
+
+-   Programming Languages: R, Python, bash
+
+
+EDUCATION
+
+COLUMBIA UNIVERSITY; NEW YORK, NY
+
+_PhD Candidate in Systems Biology_, _Anticipated Summer 2020_
+
+PhD advisor: Nicholas Tatonetti
+
+UNIVERSITY OF ROCHESTER; ROCHESTER, NY
+
+_Bachelor of Science in Biochemistry, May 2014_
+
+
+WORK EXPERIENCE
+
+NATIONAL HUMAN GENOME RESEARCH INSTITUTE BETHESDA, MD
+
+_Post-baccalaureate Trainee August 2014-August 2016_
+
+_Special Volunteer August 2016-Present_
+
+Principal Investigator: Dr. Laura Elnitski.
+
+-   Molecular events during tumorigenesis of murine ovarian tumor
+    subtypes differing in deletion of tumor suppressor genes
+
+-   RNA sequencing, DNA methylation sequencing, and their integration.
+
+
+FELLOWSHIPS AND AWARDS
+
+-   Columbia Diversity Fellowship
+
+-   Department of Systems Biology Merit Fellowship
+
+-   Donald Charles Award, University of Rochester Department of Biology
+
+-   Fulbright Fellowship Alternate 2013-2014: Sweden, Molecular
+    Modeling, “Novel Antibody-SpA Complex Modeling”.
+
+-   Travel Award to 9th Student Council and ISMB/ECCB conference 2013
+    Berlin, Germany.
+
+
+PUBLICATIONS
+
+-   Sarah Kim-Hellmuth, Matthias Bechheim, Benno Puetz, Pejman
+    Mohammadi, Yohann Nedelec, NICHOLAS GIANGRECO, Jessica Becker, Vera
+    Kaiser, Nadine Fricker, Esther Beier, Peter Boor, Stephane Castel,
+    Markus M. Noethen, Luis B. Barreiro, Joseph K. Pickrell, Bertram
+    Mueller-Myhsok, Tuuli Lappalainen, Johannes Schumacher, Veit
+    Hornung. GENETIC REGULATORY EFFECTS MODIFIED BY IMMUNE ACTIVATION
+    CONTRIBUTE TO AUTOIMMUNE DISEASE ASSOCIATIONS _(bioarxiv)_
+-   GIANGRECO N., Petrykowska H., Scott A., Margolin G., Gotea V.,
+    Cho K. R., and Elnitski L. INACTIVATION OF ARID1A DRIVES ABERRANT
+    EPIGENETIC TRAITS IN A MOUSE MODEL OF APC/PTEN DEFECTIVE OVARIAN
+    ENDOMETRIOID TUMORS. In preparation. _(in preparation)_
+
+
+CONFERENCES AND HACKATHONS
+
+-   NCBI Hackathon @ New York Genome Center June 2017
+-   NCBI Hackathon @ NCBI March 2017
+-   CSHL Biological Data Science meeting October 2016
+-   JHU DaSH Hackathon September 2015
+-   ISMB/ECCB conference @ Berlin, Germany July 2013
