@@ -1,3 +1,6 @@
+---
+date: September 11th, 2017
+---
 
 <!--  
 
@@ -10,8 +13,14 @@ The CSS is attributable to the above blog post
 [Nicholas Giangreco](http://systemsbiology.columbia.edu/people/nicholas-giangreco)
 =====
 
-| _____ nick.giangreco@gmail.com | _____ [Github](https://github.com/ngiangre) | _____ [LinkedIn](https://www.linkedin.com/in/nickgiangreco/) _____
-| -----: | -----: | -----: | 
++-----------------------------+-----------------------+
+|         Email               | Links                 |
++=============================+=======================+
+| nick.giangreco@gmail.com    | [Github](https://github.com/ngiangre) 
+|                             | [Linkedin](https://www.linkedin.com/in/nickgiangreco/)                   |
+|                             | [Facebook](https://www.facebook.com/ngiangreco)                          |
++-----------------------------+-----------------------+
+ 
 -----
 
 RESEARCH
