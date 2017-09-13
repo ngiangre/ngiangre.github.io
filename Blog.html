@@ -205,17 +205,47 @@ $(document).ready(function () {
 <p><br></p>
 <style>
 
-h1 {
+h1, h3 {
   
   font-weight: bold;
+  text-align: center;
   
 }
 
-.post {
+.blog-section {
+
+  text-align: right;
+  float: right;
+  width: 45%;
+  
+}
+
+.notebook-section {
+
+  text-align: left;
+  float: left;
+  width: 45%;
+  
+}
+
+.blogpost {
 
   background-color: #D3D3D3;
   position: relative;
-  float: center;
+  text-align: right;
+  float: right;
+  height: 200px;
+  width: 100%;
+  border-style: outset;
+    
+}
+
+.notebook {
+
+  background-color: #D3D3D3;
+  position: relative;
+  text-align: left;
+  float: left;
   height: 200px;
   width: 100%;
   border-style: outset;
@@ -227,16 +257,18 @@ h1 {
   float: left;
   display: block;
   position: relative;
-  width: 30%;
-  height: 80%;
+  width: 35%;
+  height: 90%;
   top: 5%;
   bottom: 5%;
-  margin: 1% 1% 1% 1%;
   
 }
 
 .image {
 
+  position: relative;
+  width: 100%;
+  height: 100%;
   max-height: 100%; 
   max-width: 100%; 
   object-fit: contain;
@@ -248,13 +280,14 @@ h1 {
   float: right;
   display: block;
   background-color: #D3D3D3;
-  font-size: 15px;
+  font-size: 11px;
   font-weight: bold;
   position: relative;
   word-wrap: break-word;
-  margin: 1% 1% 1% 1%;
+  top: 5%;
+  bottom: 5%;
   width: 60%;
-  height: 80%;
+  height: 90%;
   overflow: auto;
   
 }
@@ -263,14 +296,15 @@ h1 {
   
   top: 5%;
   text-align: center;
-  font-size: 160%;
+  font-size: 130%;
   
 }
 
 .title {
   
   top: 15%;
-  font-size: 140%;
+  font-size: 115%;
+  text-align: center;
   
 }
 
@@ -278,15 +312,22 @@ h1 {
 
   top: 25%;
   color: #666666;
+  font-size: 100%;
+  text-align: left;
   
 }
 
 </style>
-<h1 style="text-align: center">
-Blog Posts
+<h1>
+Posts
 </h1>
 <p><br> <br></p>
-<div class="post">
+<div class="notebook-section">
+<h3>
+Notebooks
+</h3>
+<p><br> <br></p>
+<div class="notebook">
 <div class="imagecontainer">
 <p><a href="_posts/Columbia_Authors_To_Topics.html"> <img class="image" src="https://i1.wp.com/cannabischris.com/wp-content/uploads/2016/09/pubmed256blue.png?w=595"/> </a></p>
 </div>
@@ -300,6 +341,29 @@ Bayes Classifier Associating Columbia authors to Research topics
 <p class="description">
 Finding Columbia University author’s research area using Bayes Classification. A fun weekend project…
 </p>
+</div>
+</div>
+</div>
+<div class="blog-section">
+<h3>
+Blog
+</h3>
+<p><br> <br></p>
+<div class="blogpost">
+<div class="imagecontainer">
+<p><img class="image" src="https://i.pinimg.com/736x/be/7c/7a/be7c7afc068fedfb9875589b238b3732--face-images-smile-face.jpg"/></p>
+</div>
+<div class="textcontainer">
+<p class="date">
+September 13th, 2017
+</p>
+<p class="title">
+Hello World!
+</p>
+<p class="description">
+Hello everybody! Thanks for visiting my very under construction site. I’ll be adding more notebooks and blog posts in the future. Hopefully they’ll be useful and readable. Stay tuned!
+</p>
+</div>
 </div>
 </div>
 
