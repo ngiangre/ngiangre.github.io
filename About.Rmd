@@ -2,7 +2,7 @@
 title: ""
 ---
 
-<img src="nycAbout.jpg" style="height: 200px; width: 100%;">
+<img src="imgs/nycAbout.jpg" style="height: 200px; width: 100%;">
   
 ##### **This site serves to be a platform for me both personally (less-so) and professionally (more-so).** 
   

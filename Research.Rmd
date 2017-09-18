@@ -6,7 +6,7 @@ title: ""
 
 <!--Introduction paragraph-->
 
-<img src="sysbioResearch.png" style="height: 200px; width: 100%;">
+<img src="imgs/sysbioResearch.png" style="height: 200px; width: 100%;">
 
 ##### **I'm a PhD student in [Systems Biology](http://systemsbiology.columbia.edu/graduate-education) at Columbia University Medical Center. Formally, I'm in the [Integrated Program in Cellular, Molecular and Biomedical Sciences](http://columbiaphd.org) program.**
 

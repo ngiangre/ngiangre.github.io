@@ -8,7 +8,7 @@ title: ""
 <style>
 
 body {
-    background: url(Manhattan_Skyline-Sunset_Sunburt-Top_of_the_Rock-New_York_City--Greg_Goodman-AdventuresofaGoodMan.jpg) no-repeat center center fixed;    
+    background: url(imgs/Manhattan_Skyline-Sunset_Sunburt-Top_of_the_Rock-New_York_City--Greg_Goodman-AdventuresofaGoodMan.jpg) no-repeat center center fixed;    
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
