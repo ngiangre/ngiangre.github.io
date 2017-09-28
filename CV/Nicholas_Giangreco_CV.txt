@@ -1,47 +1,29 @@
-September 11th, 2017
-
 Nicholas Giangreco
-==================
+  Email                      Links
+  -------------------------- -----------------
+  nick.giangreco@gmail.com   Github Linkedin
 
-+--------------------------------+-------------------------+
-| Email                          | Links                   |
-+================================+=========================+
-| nick.giangreco@gmail.com       | Github Linkedin         |
-|                                | Facebook                |
-+--------------------------------+-------------------------+
-
-* * * * *
-
-RESEARCH
---------
-
--   Biomedical Data Science
-
--   Analysis of high throughput biomedical data: RNA sequencing,
-    Proteomics
-
--   Systems Pharmacology and Disease Comorbidity in Electronic Health
-    Records
-
--   Programming Languages: R, Python, bash, html, css
 
 EDUCATION
----------
 
-Columbia University; New York, NY PhD Candidate in Systems Biology,
-Anticipated Summer 2020PhD advisor: Nicholas TatonettiUniversity of
-Rochester; Rochester, NY
+COLUMBIA UNIVERSITY; NEW YORK, NY
 
-Bachelor of Science in Biochemistry, May 2014
+_PhD Candidate in Systems Biology_, _Anticipated Summer 2020_
+
+PhD advisor: Nicholas Tatonetti
+
+UNIVERSITY OF ROCHESTER; ROCHESTER, NY
+
+_Bachelor of Science in Biochemistry, May 2014_
+
 
 WORK EXPERIENCE
----------------
 
-National Human Genome Research Institute Bethesda, MD
+NATIONAL HUMAN GENOME RESEARCH INSTITUTE BETHESDA, MD
 
-Post-baccalaureate Trainee August 2014-August 2016
+_Post-baccalaureate Trainee August 2014-August 2016_
 
-Special Volunteer August 2016-Present
+_Special Volunteer August 2016-Present_
 
 Principal Investigator: Dr. Laura Elnitski.
 
@@ -50,8 +32,8 @@ Principal Investigator: Dr. Laura Elnitski.
 
 -   RNA sequencing, DNA methylation sequencing, and their integration.
 
+
 FELLOWSHIPS AND AWARDS
-----------------------
 
 -   Columbia Diversity Fellowship
 
@@ -65,31 +47,33 @@ FELLOWSHIPS AND AWARDS
 -   Travel Award to 9th Student Council and ISMB/ECCB conference 2013
     Berlin, Germany.
 
+
 PUBLICATIONS
-------------
 
 -   Sarah Kim-Hellmuth, Matthias Bechheim, Benno Puetz, Pejman
-    Mohammadi, Yohann Nedelec, Nicholas Giangreco, Jessica Becker, Vera
+    Mohammadi, Yohann Nedelec, NICHOLAS GIANGRECO, Jessica Becker, Vera
     Kaiser, Nadine Fricker, Esther Beier, Peter Boor, Stephane Castel,
     Markus M. Noethen, Luis B. Barreiro, Joseph K. Pickrell, Bertram
     Mueller-Myhsok, Tuuli Lappalainen, Johannes Schumacher, Veit
-    Hornung. Genetic regulatory effects modified by immune activation
-    contribute to autoimmune disease associations Nature Communications
--   Giangreco N., Petrykowska H., Scott A., Margolin G., Gotea V., Cho
-    K. R., and Elnitski L. Inactivation of Arid1a drives aberrant
-    epigenetic traits in a mouse model of Apc/Pten defective ovarian
-    endometrioid tumors. (in preparation)
+    Hornung. GENETIC REGULATORY EFFECTS MODIFIED BY IMMUNE ACTIVATION
+    CONTRIBUTE TO AUTOIMMUNE DISEASE ASSOCIATIONS _Nature
+    Communications_
+-   GIANGRECO N., Petrykowska H., Scott A., Margolin G., Gotea V.,
+    Cho K. R., and Elnitski L. INACTIVATION OF ARID1A DRIVES ABERRANT
+    EPIGENETIC TRAITS IN A MOUSE MODEL OF APC/PTEN DEFECTIVE OVARIAN
+    ENDOMETRIOID TUMORS. _(in preparation)_
+
 
 CONFERENCES AND HACKATHONS
---------------------------
 
--   NCBI Hackathon @ New York Genome Center June 2017- NCBI Hackathon @
-    NCBI March 2017- CSHL Biological Data Science meeting October 2016-
-    JHU DaSH Hackathon September 2015- ISMB/ECCB conference @ Berlin,
-    Germany July 2013
+-   NCBI Hackathon @ New York Genome Center June 2017
+-   NCBI Hackathon @ NCBI March 2017
+-   CSHL Biological Data Science meeting October 2016
+-   JHU DaSH Hackathon September 2015
+-   ISMB/ECCB conference @ Berlin, Germany July 2013
+
 
 COMMUNITY INVOLVEMENT
----------------------
 
 -   NYC MeetUps
     -   AI @ Columbia University Medical Center

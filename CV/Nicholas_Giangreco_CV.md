@@ -1,7 +1,3 @@
----
-date: September 11th, 2017
----
-
 <!--  
 
 Great resource https://blog.chmd.fr/editing-a-cv-in-markdown-with-pandoc.html 
@@ -10,29 +6,15 @@ The CSS is attributable to the above blog post
 
 -->
 
-[Nicholas Giangreco](http://systemsbiology.columbia.edu/people/nicholas-giangreco)
-=====
+<center>[Nicholas Giangreco](http://systemsbiology.columbia.edu/people/nicholas-giangreco)</center>
 
-+-----------------------------+-----------------------+
-|         Email               | Links                 |
-+=============================+=======================+
-| nick.giangreco@gmail.com    | [Github](https://github.com/ngiangre) 
-|                             | [Linkedin](https://www.linkedin.com/in/nickgiangreco/)                   |
-|                             | [Facebook](https://www.facebook.com/ngiangreco)                          |
-+-----------------------------+-----------------------+
+
+
+| Email | Links |
+| ----- | ----- |
+| nick.giangreco@gmail.com | [Github](https://github.com/ngiangre) [Linkedin](https://www.linkedin.com/in/nickgiangreco/) |
  
------
 
-RESEARCH
------
-
--   Biomedical Data Science
-
--   Analysis of high throughput biomedical data: RNA sequencing, Proteomics
-
--   Systems Pharmacology and Disease Comorbidity in Electronic Health Records
-
--   Programming Languages: R, Python, bash, html, css
 
 EDUCATION
 -----
