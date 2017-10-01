@@ -4,43 +4,64 @@ Great resource https://blog.chmd.fr/editing-a-cv-in-markdown-with-pandoc.html
 
 The CSS is attributable to the above blog post
 
+This is another great post influencing this document https://mszep.github.io/pandoc_resume/
+
+see github repo for licensing information
 -->
 
-<center>[Nicholas Giangreco](http://systemsbiology.columbia.edu/people/nicholas-giangreco)</center>
+[Nicholas Giangreco](http://systemsbiology.columbia.edu/people/nicholas-giangreco)
+==========
 
 
+----------------------------------    --------------------------------------------------
+<u>**Email:**</u>                                               nick.giangreco@gmail.com
+<u>**Links:**</u>                              [Github]([github]) [Linkedin]([linkedin])
+<u>**Website:**</u>                                        [nickg.bio](http://nickg.bio)
+<u>**Programming Languages:**</u>              Frequent: R, Python, bash, css, html, sql 
+                                                                        Previously: Java
+<u>**Formatting:**</u>                       Markdown, Rmarkdown, Microsoft Office Suite
+----------------------------------     ------------------------------------------------- 
 
-| Email | Links |
-| ----- | ----- |
-| nick.giangreco@gmail.com | [Github](https://github.com/ngiangre) [Linkedin](https://www.linkedin.com/in/nickgiangreco/) |
- 
+
+[github]: https://github.com/ngiangre
+
+[linkedin]: https://www.linkedin.com/in/nickgiangreco/
 
 
 EDUCATION
------
+----------
 
-**Columbia University; New York, NY**
-*PhD Candidate in Systems Biology*, *Anticipated Summer 2020*PhD advisor: [Nicholas Tatonetti](http://tatonettilab.org)**University of Rochester; Rochester, NY**
 
-*Bachelor of Science in Biochemistry, May 2014*
+2021 (expected)
+:    **PhD, Systems Biology**; Columbia University, New York City, NY
+
+     PhD advisor: [Nicholas Tatonetti](http://tatonettilab.org)
+
+     Translational Bioinformatics, Analysis of Electronic Health Records
+
+2010-2014
+:    **BS, Biochemistry**; University of Rochester, Rochester, NY
+
+     Minor: Philosophy
 
 WORK EXPERIENCE
------
+----------
 
-**National Human Genome Research Institute Bethesda, MD**
+2014-Present
+:    **National Human Genome Research Institute**; Bethesda, MD
 
-*Post-baccalaureate Trainee August 2014-August 2016*
+     Principal Investigator: [Dr. Laura Elnitski](https://www.genome.gov/12514761/elnitski--group/)
 
-*Special Volunteer August 2016-Present*
+     -   Molecular events during tumorigenesis of murine ovarian tumor subtypes differing in deletion of tumor suppressor genes
 
-Principal Investigator: Dr. Laura Elnitski.
-
--   Molecular events during tumorigenesis of murine ovarian tumor subtypes differing in deletion of tumor suppressor genes
-
--   RNA sequencing, DNA methylation sequencing, and their integration.
+     -   RNA sequencing, DNA methylation sequencing, and their integration.
+     
+     Trainee 2014-2016
+     
+     Special Volunteer 2016-Present
 
 FELLOWSHIPS AND AWARDS
------
+----------
 
 -   Columbia Diversity Fellowship
 
@@ -53,18 +74,18 @@ FELLOWSHIPS AND AWARDS
 -   Travel Award to 9<sup>th</sup> Student Council and ISMB/ECCB conference 2013 Berlin, Germany.
 
 PUBLICATIONS
------
+----------
 
 -	Sarah Kim-Hellmuth, Matthias Bechheim, Benno Puetz, Pejman Mohammadi, Yohann Nedelec, **Nicholas Giangreco**, Jessica Becker, Vera Kaiser, Nadine Fricker, Esther Beier, Peter Boor, Stephane Castel, Markus M. Noethen, Luis B. Barreiro, Joseph K. Pickrell, Bertram Mueller-Myhsok, Tuuli Lappalainen, Johannes Schumacher, Veit Hornung. **Genetic regulatory effects modified by immune activation contribute to autoimmune disease associations** [*Nature Communications*](https://www.nature.com/articles/s41467-017-00366-1)
 -	**Giangreco N.**, Petrykowska H., Scott A., Margolin G., Gotea V., Cho K. R., and Elnitski L. **Inactivation of Arid1a drives aberrant epigenetic traits in a mouse model of Apc/Pten defective ovarian endometrioid tumors.** *(in preparation)*
 
 CONFERENCES AND HACKATHONS
------
+----------
 
 -	[NCBI Hackathon @ New York Genome Center June 2017](https://github.com/NCBI-Hackathons/Proteomic_Correlation_Shiny)-	[NCBI Hackathon @ NCBI March 2017](https://github.com/NCBI-Hackathons/Scan2CNV)-	CSHL Biological Data Science meeting October 2016-	[JHU DaSH Hackathon September 2015](https://github.com/NCBI-Hackathons/DASH_cell_type)-	ISMB/ECCB conference @ Berlin, Germany July 2013
 
 COMMUNITY INVOLVEMENT
------
+----------
 
 - NYC MeetUps
      + [AI @ Columbia University Medical Center](https://www.meetup.com/AI-at-CUMC/)

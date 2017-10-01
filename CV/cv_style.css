@@ -15,6 +15,7 @@
 /* Whole document */
 body {
     font-family: Verdana, sans-serif;
+    font-size: 14px;
     width: 800px;
     margin: auto;
     background: #FFFFFF;
@@ -23,8 +24,8 @@ body {
 
 /* Title of the resume */
 h1 {
-    font-size: 55px;
-    color: #000000;
+    font-size: 50px;
+    color: #757575;
     text-align:center;
     margin-bottom:15px;
 }
@@ -56,6 +57,7 @@ dd {
 p {
     margin-top:0;
     margin-bottom:7px;
+    word-wrap: break-word;
 }
 
 /* Blockquotes */
@@ -79,3 +81,9 @@ a:hover, a:active {
 hr {
     color: #A6A6A6;
 }
+
+/* for table below header-making sure there is separation across the whole page */
+table {
+    width: 100%;
+}
+
