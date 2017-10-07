@@ -15,17 +15,12 @@ see github repo for licensing information
 
 ----------------------------------    --------------------------------------------------
 <u>**Email:**</u>                                               nick.giangreco@gmail.com
-<u>**Links:**</u>                              [Github]([github]) [Linkedin]([linkedin])
+<u>**Links:**</u>                              [Github](https://github.com/ngiangre) [Linkedin](https://www.linkedin.com/in/nickgiangreco/)
 <u>**Website:**</u>                                        [nickg.bio](http://nickg.bio)
 <u>**Programming Languages:**</u>              Frequent: R, Python, bash, css, html, sql 
                                                                         Previously: Java
 <u>**Formatting:**</u>                       Markdown, Rmarkdown, Microsoft Office Suite
 ----------------------------------     ------------------------------------------------- 
-
-
-[github]: https://github.com/ngiangre
-
-[linkedin]: https://www.linkedin.com/in/nickgiangreco/
 
 
 EDUCATION
