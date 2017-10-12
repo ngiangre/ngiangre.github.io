@@ -79,7 +79,7 @@ CONFERENCES AND HACKATHONS
 
 -	[NCBI Hackathon @ New York Genome Center June 2017](https://github.com/NCBI-Hackathons/Proteomic_Correlation_Shiny)-	[NCBI Hackathon @ NCBI March 2017](https://github.com/NCBI-Hackathons/Scan2CNV)-	CSHL Biological Data Science meeting October 2016-	[JHU DaSH Hackathon September 2015](https://github.com/NCBI-Hackathons/DASH_cell_type)-	ISMB/ECCB conference @ Berlin, Germany July 2013
 
-Invited Talks and Panels
+INVITED TALKS AND PANELS
 ------------------------
 
 - "AI, Life Sciences, and Big Data", AI Meetup in NYC, August 2017
