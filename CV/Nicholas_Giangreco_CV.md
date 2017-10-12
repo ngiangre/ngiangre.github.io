@@ -15,7 +15,7 @@ see github repo for licensing information
 
 ----------------------------------    --------------------------------------------------
 <u>**Email:**</u>                                               nick.giangreco@gmail.com
-<u>**Links:**</u>                              [Github](https://github.com/ngiangre) [Linkedin](https://www.linkedin.com/in/nickgiangreco/)
+<u>**Links:**</u>                              [Github](http://github.com/ngiangre) [Linkedin](http://www.linkedin.com/in/nickgiangreco/)
 <u>**Website:**</u>                                        [nickg.bio](http://nickg.bio)
 <u>**Programming Languages:**</u>              Frequent: R, Python, bash, css, html, sql 
                                                                         Previously: Java
@@ -71,7 +71,7 @@ FELLOWSHIPS AND AWARDS
 PUBLICATIONS
 ----------
 
--	Sarah Kim-Hellmuth, Matthias Bechheim, Benno Puetz, Pejman Mohammadi, Yohann Nedelec, **Nicholas Giangreco**, Jessica Becker, Vera Kaiser, Nadine Fricker, Esther Beier, Peter Boor, Stephane Castel, Markus M. Noethen, Luis B. Barreiro, Joseph K. Pickrell, Bertram Mueller-Myhsok, Tuuli Lappalainen, Johannes Schumacher, Veit Hornung. **Genetic regulatory effects modified by immune activation contribute to autoimmune disease associations** [*Nature Communications*](https://www.nature.com/articles/s41467-017-00366-1)
+-	Sarah Kim-Hellmuth, Matthias Bechheim, Benno Puetz, Pejman Mohammadi, Yohann Nedelec, **Nicholas Giangreco**, Jessica Becker, Vera Kaiser, Nadine Fricker, Esther Beier, Peter Boor, Stephane Castel, Markus M. Noethen, Luis B. Barreiro, Joseph K. Pickrell, Bertram Mueller-Myhsok, Tuuli Lappalainen, Johannes Schumacher, Veit Hornung. **Genetic regulatory effects modified by immune activation contribute to autoimmune disease associations** [*Nature Communications*](https://www.nature.com/articles/s41467-017-00366-1), 8 (266): 1-10. 
 -	**Giangreco N.**, Petrykowska H., Scott A., Margolin G., Gotea V., Cho K. R., and Elnitski L. **Inactivation of Arid1a drives aberrant epigenetic traits in a mouse model of Apc/Pten defective ovarian endometrioid tumors.** *(in preparation)*
 
 CONFERENCES AND HACKATHONS
@@ -79,11 +79,23 @@ CONFERENCES AND HACKATHONS
 
 -	[NCBI Hackathon @ New York Genome Center June 2017](https://github.com/NCBI-Hackathons/Proteomic_Correlation_Shiny)-	[NCBI Hackathon @ NCBI March 2017](https://github.com/NCBI-Hackathons/Scan2CNV)-	CSHL Biological Data Science meeting October 2016-	[JHU DaSH Hackathon September 2015](https://github.com/NCBI-Hackathons/DASH_cell_type)-	ISMB/ECCB conference @ Berlin, Germany July 2013
 
+Invited Talks and Panels
+------------------------
+
+- "AI, Life Sciences, and Big Data", AI Meetup in NYC, August 2017
+- NIDDK Undergraduate Step-Up Judge, NIH, Bethesda MD, August 2015
+
 COMMUNITY INVOLVEMENT
 ----------
 
 - NYC MeetUps
      + [AI @ Columbia University Medical Center](https://www.meetup.com/AI-at-CUMC/)
+         + Attend and engage in public discourse on wide range of topics such as AI & Society, AI & Healthcare, and AI economic impact. 
+         + Facilitate group engagement and organization by consult
      + [Data Storytelling](https://www.meetup.com/Data-Storytelling-NYC/)
+         + Monthly lectures by data scientists and managers from private companies presenting stories and narratives using visualizations and interactive methods on diverse sources of data.  
      + [Statistical programming](https://www.meetup.com/nyhackr/)
+         + Monthly seminars by data scientists, engineers and analysts using novel and statistically rigorous methods applied within academic and company research teams mainly using the R programming language. 
 - [CUMC Data Science Study Group](https://github.com/ngiangre/CUMC_Data_Science_Group)
+     + Co-organizer of a group of mostly wet-lab biologists learning data sciemce topics using the R programming language
+     + Leading project management and learn strategies for doing bioinformatics projects. 
