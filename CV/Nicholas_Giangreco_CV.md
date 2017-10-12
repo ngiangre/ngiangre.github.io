@@ -68,11 +68,13 @@ FELLOWSHIPS AND AWARDS
 
 -   Travel Award to 9<sup>th</sup> Student Council and ISMB/ECCB conference 2013 Berlin, Germany.
 
-PUBLICATIONS
+PUBLICATIONS AND POSTERS
 ----------
 
--	Sarah Kim-Hellmuth, Matthias Bechheim, Benno Puetz, Pejman Mohammadi, Yohann Nedelec, **Nicholas Giangreco**, Jessica Becker, Vera Kaiser, Nadine Fricker, Esther Beier, Peter Boor, Stephane Castel, Markus M. Noethen, Luis B. Barreiro, Joseph K. Pickrell, Bertram Mueller-Myhsok, Tuuli Lappalainen, Johannes Schumacher, Veit Hornung. **Genetic regulatory effects modified by immune activation contribute to autoimmune disease associations** [*Nature Communications*](https://www.nature.com/articles/s41467-017-00366-1), 8 (266): 1-10. 
+- **Nicholas Giangreco**, Emmanuel Zorn, Emily Chen, Paolo Colombo, Nicholas Tatonetti, and Barry Fine. **Identification of Novel Primary Graft Dysfunction Biomarkers using Exosome Proteomics**. _American Heart Association Scientific Sessions 2017_, poster.
+- Sarah Kim-Hellmuth, Matthias Bechheim, Benno Puetz, Pejman Mohammadi, Yohann Nedelec, **Nicholas Giangreco**, Jessica Becker, Vera Kaiser, Nadine Fricker, Esther Beier, Peter Boor, Stephane Castel, Markus M. Noethen, Luis B. Barreiro, Joseph K. Pickrell, Bertram Mueller-Myhsok, Tuuli Lappalainen, Johannes Schumacher, Veit Hornung. **Genetic regulatory effects modified by immune activation contribute to autoimmune disease associations** [*Nature Communications*](https://www.nature.com/articles/s41467-017-00366-1), 8 (266): 1-10. 
 -	**Giangreco N.**, Petrykowska H., Scott A., Margolin G., Gotea V., Cho K. R., and Elnitski L. **Inactivation of Arid1a drives aberrant epigenetic traits in a mouse model of Apc/Pten defective ovarian endometrioid tumors.** *(in preparation)*
+- **Nicholas Giangreco**, Tim Lezon. **Alternative conformation prediction of Vibrio Cholerae concentrative nucleoside transporter**. _F1000Research_, poster. 
 
 CONFERENCES AND HACKATHONS
 ----------
