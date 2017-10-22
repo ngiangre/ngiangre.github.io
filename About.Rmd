@@ -1,14 +1,20 @@
 ---
-title: ""
+title: "" 
 ---
 
+<style>
+  .main-container {
+    max-width: 100% !important;
+  }
+</style>
+
 <img src="imgs/nycAbout.jpg" style="height: 200px; width: 100%;">
-  
+
 ##### **This site serves to be a platform for me both personally (less-so) and professionally (more-so).** 
   
   <br></br>
   
-##### **I'm still getting the hang of this so bear with me! I'm adding more content soon. It's hard to figure out what exactly to put up here...if you happen to stumble upon this site and have some ideas for me let me know!**
+##### **This site is still in development so bear with me! I'm adding more content soon. It's hard to figure out what exactly to put up here...if you have any ideas!**
   
 <br>
 
