@@ -99,5 +99,5 @@ COMMUNITY INVOLVEMENT
      + [Statistical programming](https://www.meetup.com/nyhackr/)
          + Monthly seminars by data scientists, engineers and analysts using novel and statistically rigorous methods applied within academic and company research teams mainly using the R programming language. 
 - [CUMC Data Science Study Group](https://github.com/ngiangre/CUMC_Data_Science_Group)
-     + Co-organizer of a group of mostly wet-lab biologists learning data sciemce topics using the R programming language
+     + Co-organizer of a group of mostly wet-lab biologists learning data science topics using the R programming language
      + Leading project management and learn strategies for doing bioinformatics projects. 
