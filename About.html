@@ -1,155 +1,27 @@
 <!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-
+<!-- English website -->
+<html lang="en">
+<!-- Metadata container -->
 <head>
-
-<meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="generator" content="pandoc" />
-
-
-
-
-<title></title>
-
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
-<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
-
-
-
-
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
-
-
+  <title>Nick Giangreco</title>
+  <!-- Proper encodings -->
+  <meta charset="utf-8">
+  <!-- mobile compatibility-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- Boostrap JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Font Awesome for icons -->
+  <link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
 </head>
-
+<!-- START PAGE CONTENT -->
 <body>
 
-<style type = "text/css">
-.main-container {
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
-}
-img {
-  max-width:100%;
-  height: auto;
-}
-.tabbed-pane {
-  padding-top: 12px;
-}
-button.code-folding-btn:focus {
-  outline: none;
-}
-</style>
-
-
-<style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 51px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-
-.section h2 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h3 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h4 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h5 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h6 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-</style>
-
-<script>
-// manage active state of menu based on current page
-$(document).ready(function () {
-  // active menu anchor
-  href = window.location.pathname
-  href = href.substr(href.lastIndexOf('/') + 1)
-  if (href === "")
-    href = "index.html";
-  var menuAnchor = $('a[href="' + href + '"]');
-
-  // mark it active
-  menuAnchor.parent().addClass('active');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
-});
-</script>
-
-
-<div class="container-fluid main-container">
-
-<!-- tabsets -->
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-</script>
-
-<!-- code folding -->
-
-
-
-
-
-
-<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+<!-- START NAVIGATION BAR-->
+<nav class="navbar navbar-inverse">  
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
@@ -161,111 +33,71 @@ $(document).ready(function () {
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li>
-  <a href="https://www.linkedin.com/in/nickgiangreco/">
-    <span class="fa fa-linkedin fa-2x"></span>
-     
-  </a>
-</li>
-<li>
-  <a href="https://github.com/ngiangre">
-    <span class="fa fa-github fa-2x"></span>
-     
-  </a>
-</li>
+        <li><a href="https://www.linkedin.com/in/nickgiangreco/"><span class="fa fa-linkedin fa-2x"></span></a></li>
+        <li><a href="https://github.com/ngiangre"><span class="fa fa-github fa-2x"></span></a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li>
-  <a href="About.html">About</a>
-</li>
-<li>
-  <a href="Research.html">Research</a>
-</li>
-<li>
-  <a href="Blog.html">Blog</a>
-</li>
-<li>
-  <a href="CV/Nicholas_Giangreco_CV.html">CV</a>
-</li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Research.html">Research</a></li>
+        <li><a href="Blog.html">Blog</a></li>
+        <li><a href="CV/Nicholas_Giangreco_CV.html">CV</a></li>
       </ul>
-    </div><!--/.nav-collapse -->
-  </div><!--/.container -->
-</div><!--/.navbar -->
+    </div>
+  </div>
+</nav>
+<!-- END NAVIGATION BAR-->
 
-<div class="fluid-row" id="header">
-
-
-
-
+<div class="container-fluid main-container">
+<div class="row content">
+  <div class="col-sm-2 sidenav">
+    <h4>Podcast Roll</h4>
+    <p>The Effort Report</p>
+    <p>Partially Derivative</p>
+    <p>Talking Machines</p>
+    <p>Linear Digressions</p>
+    <p>Data Skeptic</p>
+    <p>The Inquiry</p>
+    <p>Beautiful Anonymous</p>
+    <p>Freakonomics Radio</p>
+    <p>Philosophize This!</p>
+  </div>
+  <div class="col-sm-8 text-left">
+      <div class="row content">
+        <div class="col-sm-6">
+          <img src="imgs/headshot.jpg" style="height: 300px; width: 300px;"></img>
+        </div>
+        <div class="col-sm-1">
+          <p></p>
+        </div>
+        <div class="col-sm-3">
+          <p>Hi, I'm Nick</p>
+        </div>
+      </div>
+      <div class="row content">
+        <div class="col-sm-8">
+        <h5><strong>This site serves to be a platform for me both personally (less-so) and professionally (more-so).</strong></h5>
+      </div>
+        <div class="col-sm-8">
+        <h5><strong>This site is still in development so bear with me! I’m adding more content soon. It’s hard to figure out what exactly to put up here…if you have any ideas!</strong></h5>
+      </div>
+        <div class="col-sm-8">
+        <h5><strong>Outside of doing research in my <a href="tatonettilab.org">lab</a>, I really enjoy being involved in <a href="https://www.meetup.com/AI-at-CUMC/">AI-related</a> and <a href="https://nyhackr.org">programming</a> groups in NYC-they’re really fun!</strong></h5>
+      </div>
+        <div class="col-sm-8">
+        <h5><strong>I’m also interested in rehabilitative science. Being <a href="http://www.wgrz.com/life/wny-native-continues-recovery-from-stroke/244046774">disabled</a> myself, I learn a lot about how the body re-learns movement patterns through <a href="http://www.nyp.org/rehabmed/services/occupational-therapy">occupational therapy</a> and <a href="http://www.kinectedcenter.com">pilates</a>.</strong></h5>
+      </div>
+      </div>
+  </div>
+  <div class="col-sm-2 sidenav">
+      <h4>Book(s) I'm Reading</h4>
+      <p>Thinking Bayes</p>
+  </div>
 </div>
-
-
-<style>
-  .main-container {
-    max-width: 100% !important;
-  }
-</style>
-<p><img src="imgs/nycAbout.jpg" style="height: 200px; width: 100%;"></p>
-<div id="this-site-serves-to-be-a-platform-for-me-both-personally-less-so-and-professionally-more-so." class="section level5">
-<h5><strong>This site serves to be a platform for me both personally (less-so) and professionally (more-so).</strong></h5>
-<p><br></br></p>
 </div>
-<div id="this-site-is-still-in-development-so-bear-with-me-im-adding-more-content-soon.-its-hard-to-figure-out-what-exactly-to-put-up-hereif-you-have-any-ideas" class="section level5">
-<h5><strong>This site is still in development so bear with me! I’m adding more content soon. It’s hard to figure out what exactly to put up here…if you have any ideas!</strong></h5>
-<p><br></p>
-</div>
-<div id="outside-of-doing-research-in-my-lab-i-really-enjoy-being-involved-in-ai-related-and-programming-groups-in-nyc-theyre-really-fun" class="section level5">
-<h5><strong>Outside of doing research in my <a href="tatonettilab.org">lab</a>, I really enjoy being involved in <a href="https://www.meetup.com/AI-at-CUMC/">AI-related</a> and <a href="https://nyhackr.org">programming</a> groups in NYC-they’re really fun!</strong></h5>
-<p><br></p>
-</div>
-<div id="i-really-enjoy-listening-to-podcasts-if-you-want-to-suggest-me-some-other-great-podcasts-shoot-me-an-email.-weekly-i-listen-to-a-select-few-from-top-to-bottom-in-my-podcasts-app" class="section level5">
-<h5><strong>I really enjoy listening to podcasts! If you want to suggest me some other great podcasts shoot me an email. Weekly, I listen to (a select few from top to bottom in my Podcasts app):</strong></h5>
-<ul>
-<li><strong>The Effort Report</strong></li>
-<li><strong>Partially Derivative</strong></li>
-<li><strong>Talking Machines</strong></li>
-<li><strong>Linear Digressions</strong></li>
-<li><strong>Data Skeptic</strong></li>
-<li><strong>The Inquiry</strong></li>
-<li><strong>OPTIMIZE with Brian Johnson</strong></li>
-<li><strong>STEM-Talk</strong></li>
-<li><strong>Beautiful Anonymous</strong></li>
-<li><strong>Freakonomics Radio</strong></li>
-<li><strong>Philosophize This!</strong></li>
-</ul>
-<p><br></p>
-</div>
-<div id="im-also-interested-in-rehabilitative-science.-being-disabled-myself-i-learn-a-lot-about-how-the-body-re-learns-movement-patterns-through-occupational-therapy-and-pilates." class="section level5">
-<h5><strong>I’m also interested in rehabilitative science. Being <a href="http://www.wgrz.com/life/wny-native-continues-recovery-from-stroke/244046774">disabled</a> myself, I learn a lot about how the body re-learns movement patterns through <a href="http://www.nyp.org/rehabmed/services/occupational-therapy">occupational therapy</a> and <a href="http://www.kinectedcenter.com">pilates</a>.</strong></h5>
-</div>
-
-
-
-
-</div>
-
-<script>
-
-// add bootstrap table styles to pandoc tables
-function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
-}
-$(document).ready(function () {
-  bootstrapStylePandocTables();
-});
-
-
-</script>
-
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
+  
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
 
 </body>
 </html>
