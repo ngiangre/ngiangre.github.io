@@ -1,0 +1,266 @@
+chapter3_exercise324_1	library	tidyverse	ggplot
+chapter3_exercise324_2	nrow	mpg	ncol
+chapter3_exercise324_3	mpg
+chapter3_exercise324_4	ggplot	mpg	geom_point	aes	cyl	hwy
+chapter3_exercise324_5	ggplot	mpg	geom_point	aes	class	drv
+chapter3_exercise331_1	ggplot	mpg	geom_point	aes	displ	hwy
+chapter3_exercise331_2	mpg
+chapter3_exercise331_3	ggplot	mpg	geom_point	aes	displ	hwy	class	cyl
+chapter3_exercise331_4	ggplot	mpg	geom_point	aes	displ	class
+chapter3_exercise331_5	geom_point	ggplot	mpg	aes	displ	hwy	class
+chapter3_exercise331_6	ggplot	mpg	geom_point	aes	displ	hwy
+chapter3_exercise351_1	ggplot	mpg	geom_point	aes	cty	hwy	facet_wrap	displ
+chapter3_exercise351_2	ggplot	mpg	geom_point	aes	drv	cyl
+chapter3_exercise351_3	ggplot	mpg	geom_point	aes	displ	hwy	facet_grid	drv	.	cyl
+chapter3_exercise351_4	ggplot	mpg	geom_point	aes	displ	hwy	class
+chapter3_exercise351_5	facet_wrap	ggplot	mpg	geom_point	aes	displ	hwy	class	facet_grid
+chapter3_exercise361_2	ggplot	mpg	aes	displ	hwy	drv	geom_point	geom_smooth
+chapter3_exercise361_3	ggplot	mpg	aes	displ	hwy	drv	geom_point	geom_smooth
+chapter3_exercise361_5	ggplot	mpg	aes	displ	hwy	geom_point	geom_smooth
+chapter3_exercise361_6	ggplot	mpg	aes	displ	hwy	geom_point	geom_smooth	drv
+chapter3_exercise371_1	ggplot	diamonds	stat_summary	aes	cut	depth	min	max	median	geom_pointrange
+chapter3_exercise371_2	ggplot	diamonds	aes	cut	depth	geom_col
+chapter3_exercise371_5	ggplot	diamonds	geom_bar	aes	cut	..prop..	color
+chapter3_exercise371_5_2	ggplot	diamonds	geom_bar	aes	cut	..prop..	color
+chapter3_exercise381_1	ggplot	mpg	aes	cty	hwy	geom_point
+chapter3_exercise381_1_2	ggplot	mpg	aes	cty	hwy	geom_jitter
+chapter3_exercise381_2	ggplot	mpg	aes	cty	hwy	geom_jitter
+chapter3_exercise381_3	ggplot	mpg	aes	cty	hwy	geom_count	geom_jitter
+chapter3_exercise381_4	ggplot	mpg	aes	drv	hwy	class	geom_boxplot
+chapter3_exercise381_4_2	ggplot	mpg	aes	drv	hwy	class	geom_boxplot
+chapter3_exercise391_1	ggplot	diamonds	geom_bar	aes	cut	clarity	coord_polar
+chapter3_exercise391_2	labs
+chapter3_exercise391_3	nz	map_data	ggplot	aes	long	lat	group	geom_polygon	coord_quickmap	coord_map
+chapter3_exercise391_4	ggplot	mpg	aes	cty	hwy	geom_point	geom_abline	coord_fixed
+chapter4_exercise44_1	my_variable
+chapter4_exercise44_2	library	tidyverse	ggplot	mpg	geom_point	aes	displ	hwy	fliter	filter	diamond	carat
+chapter4_exercise44_2_2	library	tidyverse	ggplot	mpg	geom_point	aes	displ	hwy	filter	cyl	diamonds	carat
+chapter5_exercise524_1a	library	nycflights13	tidyverse	filter	flights	arr_delay
+chapter5_exercise524_1b	filter	flights	dest
+chapter5_exercise524_1c	filter	flights	carrier
+chapter5_exercise524_1d	filter	flights	month
+chapter5_exercise524_1e	filter	flights	arr_delay	dep_delay
+chapter5_exercise524_1f	filter	flights	dep_delay	air_time
+chapter5_exercise524_1g	filter	flights	hour
+chapter5_exercise524_3	filter	flights	is.na	dep_time
+chapter5_exercise524_4	
+chapter5_exercise531_1	arrange	flights	desc	is.na	dep_time
+chapter5_exercise531_2	arrange	flights	desc	dep_delay
+chapter5_exercise531_3	arrange	flights	air_time
+chapter5_exercise531_4	arrange	flights	desc	distance
+chapter5_exercise541_2	select	flights	dep_time
+chapter5_exercise541_3	vars	c	select	flights	one_of
+chapter5_exercise541_4	select	flights	contains
+chapter5_exercise552_1	transmute	flights	dep_time	%%	%/%	sched_dep_time
+chapter5_exercise552_2	transmute	flights	air_time	arr_time	dep_time
+chapter5_exercise552_2_2	transmute	flights	air_time	arr_time	%%	%/%	dep_time	arr_minutes	dep_minutes
+chapter5_exercise552_3	transmute	flights	dep_delay	dep_time	sched_dep_time	tmp	ggplot	aes	theoretical_dep_time	geom_point
+chapter5_exercise552_4	mutate	flights	min_rank	dep_delay	%>%	arrange	dep_delay_rank
+chapter5_exercise552_5	
+chapter5_exercise567_2	not_cancelled	flights	%>%	filter	is.na	dep_delay	arr_delay	count	dest	tailnum	distance
+chapter5_exercise567_2_2	not_cancelled	%>%	group_by	dest	summarise	sum	is.na
+chapter5_exercise567_2_3	not_cancelled	%>%	group_by	tailnum	tally	distance
+chapter5_exercise567_3	flights	%>%	filter	is.na	arr_delay
+chapter5_exercise567_4	cancelled_delayed	flights	%>%	mutate	is.na	arr_delay	dep_delay	group_by	year	month	day	summarise	mean	cancelled	ggplot	aes	avg_dep_delay	prop_cancelled	geom_point	geom_smooth
+chapter5_exercise567_5	not_cancelled	flights	%>%	filter	is.na	dep_delay	arr_delay	tmp	group_by	carrier	summarise	mean	ggplot	aes	mean_delay	geom_bar	dest	factor	facet_wrap	theme
+chapter5_exercise567_5_2	tmp	not_cancelled	%>%	group_by	carrier	summarise	mean	arr_delay	n	mean_delay	num_flights	ggplot	aes	norm	geom_bar
+chapter5_exercise567_6	not_cancelled	%>%	count	dest	T
+chapter5_exercise571_2	not_cancelled	%>%	group_by	tailnum	summarise	mean	arr_delay	ungroup	filter	rank	desc
+chapter5_exercise571_3	not_cancelled	%>%	group_by	hour	summarise	mean	arr_delay	T	ungroup	arrange	mean_arr_delay
+chapter5_exercise571_4	not_cancelled	%>%	group_by	dest	summarise	sum	arr_delay	flight	transmute
+chapter5_exercise571_5	flights	%>%	group_by	year	month	day	filter	is.na	dep_delay	mutate	lag	lag_delay	ggplot	aes	geom_point	geom_smooth
+chapter5_exercise571_6	flights	%>%	filter	is.na	air_time	group_by	dest	mutate	median	med_air_time	min	arrange	desc	air_time_diff	select	o_vs_e	dep_time	sched_dep_time	arr_time	sched_arr_time	head
+chapter5_exercise571_7	not_cancelled	%>%	group_by	dest	carrier	count	filter	n
+chapter5_exercise571_8	not_cancelled	%>%	group_by	tailnum	mutate	dep_delay	cumsum	delay_gt1hr	filter	before_delay	count
+chapter7_exercise734_1	library	tidyverse	ggplot	diamonds	geom_freqpoly	aes	x	y	z
+chapter7_exercise734_1_2	diamonds	%>%	mutate	row_number	select	x	y	z	id	gather	variable	value	ggplot	aes	geom_density	geom_rug	facet_grid	.
+chapter7_exercise734_2	ggplot	diamonds	aes	price	geom_histogram
+chapter7_exercise734_2_2	ggplot	diamonds	aes	price	geom_histogram	coord_cartesian	c
+chapter7_exercise734_3	diamonds	%>%	group_by	carat	count	ggplot	geom_histogram	aes	coord_cartesian	c	filter
+chapter7_exercise734_4	diamonds	%>%	ggplot	geom_histogram	aes	carat	coord_cartesian	c	xlim	ylim
+chapter7_exercise741_1	flights	%>%	count	is.na	dep_time	ggplot	geom_bar	aes	geom_histogram
+chapter7_exercise741_2	flights	%>%	group_by	dep_time	count	sum
+chapter7_exercise7511_1	cancellation	flights	%>%	mutate	is.na	dep_time	sched_dep_time	%/%	%%	sched_hour	sched_min	ggplot	aes	geom_freqpoly	cancelled
+chapter7_exercise7511_1_2	ggplot	cancellation	aes	cancelled	sched_dep_time	geom_boxplot
+chapter7_exercise7511_2	ggplot	diamonds	aes	price	geom_histogram	coord_cartesian	c
+chapter7_exercise7511_3	require	ggstance	ggplot	cancellation	geom_boxplot	aes	cancelled	sched_dep_time	coord_flip	geom_boxploth
+chapter7_exercise7511_4	ggplot	diamonds	aes	cut	price	geom_boxplot	coord_flip	require	lvplot	geom_lv	..LV..
+chapter7_exercise7511_5	ggplot	diamonds	aes	cut	price	geom_violin	geom_histogram	facet_wrap	geom_freqpoly
+chapter7_exercise7511_6	require	ggbeeswarm
+chapter7_exercise7521_1	d	diamonds	%>%	count	color	cut	ggplot	aes	geom_tile	n
+chapter7_exercise7521_1_2	require	viridis	diamonds	%>%	count	color	cut	group_by	mutate	n	sum	ggplot	aes	geom_tile	prop	scale_fill_viridis	c
+chapter7_exercise7521_2	flights	%>%	group_by	month	dest	summarize	mean	dep_delay	ggplot	aes	factor	geom_tile	labs
+chapter7_exercise7521_2_2	require	forcats	flights	%>%	group_by	month	dest	summarize	mean	dep_delay	filter	n	ungroup	mutate	fct_reorder	ggplot	aes	factor	geom_tile	labs	scale_fill_viridis
+chapter7_exercise7521_3	diamonds	%>%	count	color	cut	ggplot	aes	geom_tile	n
+chapter7_exercise7531_1	ggplot	diamonds	aes	price	cut_width	carat	geom_freqpoly
+chapter7_exercise7531_1_2	ggplot	diamonds	aes	price	..density..	cut_width	carat	geom_freqpoly	cut_number
+chapter7_exercise7531_1_3	ggplot	diamonds	aes	price	..density..	cut_number	carat	geom_freqpoly
+chapter7_exercise7531_2	ggplot	diamonds	aes	cut_number	price	carat	geom_boxplot	coord_flip	xlab
+chapter7_exercise7531_3	ggplot	diamonds	aes	cut_number	carat	price	geom_boxplot	coord_flip	xlab
+chapter7_exercise7531_4	require	hexbin	diamonds	%>%	ggplot	aes	carat	price	geom_hex	facet_wrap	cut	scale_fill_viridis	cut_number	geom_boxplot
+chapter7_exercise7531_5	ggplot	diamonds	geom_point	aes	x	y	coord_cartesian	c	geom_bar	cut_number
+chapter10_exercise105_1	as.tibble	mtcars
+chapter10_exercise105_2	df	data.frame	x	c
+chapter10_exercise105_2_2	tbl	as.tibble	df	%>%	.	c
+chapter10_exercise105_3	tbl	as.tibble	mtcars	var	pull
+chapter10_exercise105_4	annoying	tibble	`1`	rnorm	length	pull	ggplot	aes	`2`	geom_point	%>%	mutate	rename	`3`
+chapter10_exercise105_5	enframe	c
+chapter10_exercise105_5_2	mtcars	%>%	print
+chapter11_exercise1122_2	library	readr	union	names	formals	read_csv	read_tsv
+chapter11_exercise1122_4	x	read_delim
+chapter11_exercise1122_5	read_csv
+chapter11_exercise1135_2	parse_number	locale
+chapter11_exercise1135_7	d1	parse_date	d2	d3	d4	c	d5	t1	parse_time	t2
+chapter12_exercise1221_2	library	tidyverse	table2	%>%	filter	type	group_by	country	summarize	sum	count
+chapter12_exercise1221_2_2	table2	%>%	filter	type
+chapter12_exercise1221_2_3	tb2_cases	filter	table2	type	tb2_country	tb2_year	tb2_population	options	table2_clean	tibble
+chapter12_exercise1221_3	data	table2	%>%	filter	type	options	ggplot	aes	year	count	geom_line	country	geom_point	theme
+chapter12_exercise1233_1	stocks	tibble	c	%>%	spread	year	return	gather	`2015`	`2016`
+chapter12_exercise1233_1_2	stocks	%>%	spread	year	return	gather	`2015`	`2016`
+chapter12_exercise1233_3	people	tribble	name	key	value	glimpse
+chapter12_exercise1233_3_2	people	tribble	name	key	value	obs	spread
+chapter12_exercise1233_4	preg	tribble	pregnant	male	female
+chapter12_exercise1233_4_2	gather	preg	sex	count	male	female	%>%	mutate	pregnant	select
+chapter12_exercise1243_1	tibble	c	%>%	separate	x
+chapter12_exercise1261_1	who1	who	%>%	gather	new_sp_m014	newrel_f65	filter	cases	nrow
+chapter12_exercise1261_3	select	who	country	iso2	iso3	%>%	distinct	group_by	filter	n
+chapter12_exercise1261_4	who_new	who	%>%	gather	code	value	new_sp_m014	newrel_f65	mutate	str_replace	separate	c	select	new	iso2	iso3	sexage	group_by	country	year	sex	filter	summarise	sum	unite	country_sex	ggplot	aes	cases	geom_line
+chapter13_exercise1331_1	library	tidyverse	nycflights13	flights	%>%	arrange	year	month	day	sched_dep_time	carrier	flight	mutate	row_number	count	flight_id	filter	n
+chapter13_exercise1331_2	Batting	%>%	group_by	playerID	yearID	stint	filter	n	nrow	babynames	year	sex	name	atmos	lat	long	month	vehicles	id
+chapter13_exercise1331_3	colnames	Batting	Master	Salaries
+chapter13_exercise1345_1	airports	%>%	semi_join	flights	c	ggplot	aes	lon	lat	borders	geom_point	coord_quickmap
+chapter13_exercise1345_1_2	avg_dest_delays	flights	%>%	group_by	dest	summarise	mean	arr_delay	inner_join	airports	c	ggplot	aes	lon	lat	delay	borders	geom_point	coord_quickmap
+chapter13_exercise1345_2	flights	%>%	left_join	airports	c
+chapter13_exercise1345_3	plane_ages	planes	%>%	mutate	year	select	tailnum	age	flights	inner_join	group_by	filter	is.na	dep_delay	summarise	mean	ggplot	aes	delay	geom_point	geom_line
+chapter13_exercise1345_4	flight_weather	flights	%>%	inner_join	weather	c	group_by	precip	summarise	mean	dep_delay	ggplot	aes	delay	geom_line	geom_point	wind_gust	visib
+chapter13_exercise1345_5	library	viridis	flights	%>%	filter	year	month	day	group_by	dest	summarise	mean	arr_delay	inner_join	airports	c	ggplot	aes	lat	lon	delay	borders	geom_point	coord_quickmap	scale_color_viridis
+chapter13_exercise1351_1	na_flights	filter	flights	is.na	tailnum	%>%	anti_join	planes	count	carrier
+chapter13_exercise1351_2	flights	%>%	group_by	tailnum	filter	n
+chapter13_exercise1351_3	com_models	common	%>%	semi_join	vehicles
+chapter13_exercise1351_4	flight_weather	%>%	mutate	day	hour	minute	ggplot	aes	time	geom_histogram
+chapter13_exercise1351_6	flights	%>%	group_by	tailnum	carrier	distinct	count	filter	n	arrange	desc
+chapter14_exercise1425_3	library	stringr	x	med	ifelse	str_length	%%	ceiling	floor	str_sub
+chapter14_exercise1425_6	func	length	x	warning	str_c	x0	c	x1	x2
+chapter14_exercise14311_2	x	str_view
+chapter14_exercise14311_3	x
+chapter14_exercise14321_1	x	str_view
+chapter14_exercise14321_2	words	str_view	T	str_match
+chapter14_exercise14331_1	sub_words	sample	words	str_view	T
+chapter14_exercise14331_2	str_view	words	T
+chapter14_exercise14331_3	str_view	words	T
+chapter14_exercise14331_4	str_view	words	T
+chapter14_exercise14331_5	
+chapter14_exercise14341_3	str_view	words	T
+chapter14_exercise14351_2	str_view	words	T
+chapter14_exercise1442_1	words	str_detect	start_with_x	end_with_x
+chapter14_exercise1442_1_2	str_subset	words	%>%	head	start_with_vowel	str_detect	end_with_consonant
+chapter14_exercise1442_1_3	library	purrr	pattern	cross	rerun	c	x	as.character	unlist	list	...	length	unique	%>%	map_chr	str_c	.x	str_subset	words	str_detect
+chapter14_exercise1442_2	ind	which.max	str_count	words
+chapter14_exercise14431_1	colours	c	colour_match	str_c	more	sentences	str_count	str_view_all	colour_match2	more2
+chapter14_exercise14431_2	str_extract	sentences	%>%	head	pattern	sentences_with_ing	str_detect	unique	unlist	str_extract_all
+chapter14_exercise14441_1	numword	sentences	str_detect	%>%	str_extract
+chapter14_exercise14441_2	contraction	sentences	%>%	`[`	str_detect	str_extract
+chapter14_exercise14451_1	x	c	str_split
+chapter14_exercise14461_1	x	c	str_split
+chapter14_exercise14461_3	str_split
+chapter14_exercise1451_1	str_subset	c	fixed
+chapter14_exercise1451_2	library	dplyr	str_extract_all	sentences	boundary	%>%	unlist	str_to_lower	tibble	set_names	group_by	word	count	head
+chapter15_exercise1531_1	library	forcats	tidyverse	ggplot2	ggplot	gss_cat	aes	rincome	geom_bar	F	coord_flip
+chapter15_exercise1531_2	gss_cat	%>%	group_by	relig	count	arrange	desc	n	partyid
+chapter15_exercise1531_3	gss_cat	%>%	group_by	denom	count
+chapter15_exercise1531_3_2	gss_cat	%>%	ggplot	geom_bar	aes	denom	scale_x_discrete	T	facet_wrap	relig	ggtitle	coord_flip	denoms	levels	tmp	filter	select	unique	protestant_denoms	pull	setdiff
+chapter15_exercise1541_1	gss_cat	%>%	ggplot	geom_density	aes	tvhours
+chapter15_exercise1541_2	gss_cat
+chapter15_exercise1541_2_2	levs	c	i	gg	gss_cat	%>%	ggplot	geom_bar	aes_string	coord_flip	print
+chapter15_exercise1551_1	gss_cat	%>%	group_by	year	partyid	count	ggplot	geom_line	aes	n
+chapter15_exercise1551_1_2	col_gss_cat	gss_cat	%>%	mutate	fct_collapse	partyid	c	group_by	year	count	ggplot	ylab	geom_line	aes	n
+chapter15_exercise1551_2	library	gss_cat	%>%	mutate	fct_collapse	rincome	c	str_c	ggplot	aes	geom_bar	coord_flip
+chapter16_exercise1624_1	library	tidyverse	lubridate	nycflights13	ymd	c
+chapter16_exercise1624_3	d1	d2	d3	d4	c	d5
+chapter16_exercise1624_3_2	mdy	d1	ymd	d2	dmy	d3	d4	d5
+chapter16_exercise1634_1	make_datetime_100	make_datetime	year	month	day	time	%/%	%%	flights_dt	flights	%>%	filter	is.na	dep_time	arr_time	mutate	sched_dep_time	sched_arr_time	select	origin	dest	ends_with
+chapter16_exercise1634_1_2	flights_dt	%>%	mutate	hour	dep_time	minute	as.factor	month	ggplot	aes	time	..density..	mon	geom_freqpoly
+chapter16_exercise1634_2	flights_dt	%>%	mutate	sched_dep_time	dep_delay	filter	dep_time_	dep_time	select
+chapter16_exercise1634_3	flights_dt	%>%	mutate	as.numeric	arr_time	dep_time	air_time	flight_duration	air_time_mins	select	origin	dest	diff
+chapter16_exercise1634_4	flights_dt	%>%	mutate	hour	sched_dep_time	group_by	sched_dep_hour	summarise	mean	dep_delay	ggplot	aes	geom_point	geom_smooth
+chapter16_exercise1634_5	flights_dt	%>%	mutate	wday	sched_dep_time	group_by	dow	summarise	mean	dep_delay	arr_delay
+chapter16_exercise1634_6	diamonds	%>%	ggplot	aes	carat	geom_histogram	flights_dt	sched_dep_time
+chapter16_exercise1634_6_2	diamonds	%>%	ggplot	aes	carat	geom_histogram	xlim	flights_dt	minute	sched_dep_time
+chapter16_exercise1634_7	flights_dt	%>%	mutate	ifelse	minute	sched_dep_time	select	wn2030or5060	dep_delay	ggplot	geom_violin	aes	factor	ylim
+chapter16_exercise1645_3	ymd	months	floor_date	today
+chapter16_exercise1645_4	func	todays_yr	year	today	birth_yr	ymd	date	cat
+chapter16_exercise1645_5	today	%--%	years	months
+chapter19_practice1921_1	x	c	range	T	F
+chapter19_practice1921_2	x	c	rescale01	rng	range	rescale01_alt	y
+chapter19_practice1921_3	mean	is.na	x	sum	sd
+chapter19_practice1921_5	both_na	length	x	y	stop	x_ints	as.integer	is.na	y_ints	sum	c
+chapter19_practice1921_6	is_directory	file.info	x	isdir	is_readable	file.access
+chapter19_practice1921_7	library	dplyr	threat	give_chances	Good_Fairy	foo_foo	chances	turn_into_goon	lyric	%>%	hop	forest	scoop	field_mouse	bop	head	down_came	said	c
+chapter19_exercise1931_1	f1	substr	string	nchar	prefix	f2	length	x	return	f3	rep	y
+chapter19_exercise1944_1	x	ifelse
+chapter19_exercise1944_2	library	lubridate	greet	hr	hour	x	now
+chapter19_exercise1944_3	fizzbuzz	stopifnot	length	x	is.numeric	%%	print
+chapter19_exercise1944_4	temp	seq	cut	c
+chapter19_exercise1944_6	x	switch
+chapter19_exercise1955_1	library	stringr	letters	c	commas	str_c	...
+chapter19_exercise1955_2	rule	title	paste0	...	width	getOption	nchar	cat	str_dup	pad
+chapter19_exercise1955_2_2	rule	title	paste0	...	width	getOption	nchar	padchar	pad	cat	str_dup	%/%	str_sub	%%
+chapter20_exercise2046_3	setNames	set_names
+chapter20_exercise2046_5	x	c	which
+chapter20_exercise2074_1	x	hms	class	str	typeof	attributes
+chapter20_exercise2074_2	library	dplyr	tibble
+chapter21_exercise_2121_1	col_means	vector	ncol	mtcars	i	seq_along	mean	types	flights	names	class	uniq_in_col	iris	length	unique	means	c	ran_norms	n	rnorm	matrix
+chapter21_exercise_2121_2	out	x	letters	str_c	sample	sd	i	seq_along	mean	sqrt	length	runif	vector
+chapter21_exercise_2121_2_2	str_c	letters	x	sample	sd	sqrt	sum	mean	length	runif	cumsum
+chapter21_exercise_2121_3	library	stringr	humps	c	i	cat	str_c	rep	numbers	bottles	beer_bottles	seq	n
+chapter21_exercise_2121_4	output	vector	i	seq_along	x	c	lengths
+chapter21_exercise_2121_5	output	vector	system.time	i	seq_along	x	c	lengths	length
+chapter21_exercise_2121_5_2	library	microbenchmark	add_to_vector	output	vector	i	seq_len	n	c	add_to_vector_2
+chapter21_exercise2135_1	df	vector	length	files	fname	seq_along	i	read_csv	bind_rows
+chapter21_exercise2135_3	show_mean	maxstr	max	str_length	names	df	nm	is.numeric	cat	str_c	str_pad	format	mean	digits	iris
+chapter21_exercise2135_3_2	show_mean	iris
+chapter21_exercise2135_4	trans	list	x	factor	c	var	names	mtcars
+chapter21_exercise2141_2	col_summary2	numeric_cols	vector	length	df	i	seq_along	is.numeric	idxs	n	sum	out	fun	tibble	rnorm	letters	mean
+chapter21_exercise2153_1	map_dbl	mtcars	mean	map	flights	class	map_chr	typeof	map_int	iris	length	unique	.	c	rnorm
+chapter21_exercise2153_2	map_lgl	mtcars	is.factor
+chapter21_exercise2153_3	map	runif
+chapter21_exercise2153_4	map	rnorm
+chapter21_exercise2153_5	map	list	mtcars	lm	mpg	wt	.
+chapter21_exercise2193_1	every2	i	.x	.p	...	return	x
+chapter21_exercise2193_2	col_sum2	map	keep	df	is.numeric	f	...	iris	mean
+chapter21_exercise2193_3	col_sum3	is_num	sapply	df	is.numeric	df_num	f
+chapter21_exercise2193_3_2	df	tibble	c	col_sum3	mean
+chapter21_exercise2193_3_3	sapply	df	is.numeric
+sessionInfo	sessionInfo
+chapter23_exercise2321_1	library	dplyr	modelr	sim1a	tibble	rep	x	rt	length
+chapter23_exercise2321_1_2	library	ggplot2	ggplot	sim1a	aes	x	y	geom_point	geom_smooth	F
+chapter23_exercise2321_1_3	simt	tibble	rep	x	rt	length	i	lm_df	mod	lm	y	.data	beta	coef	sims	map	%>%	map_df	ggplot	aes	intercept	slope	geom_point
+chapter23_exercise2321_2	measure_distance	diff	data	y	make_prediction	mod	mean	abs
+chapter23_exercise2321_2_2	sim1a	tibble	rep	x	rt	length	model1	a	data	measure_distance	diff	y	mod	sqrt	mean	best	optim	c	par
+chapter23_exercise2321_3	model1	a	data	x
+chapter23_exercise2321_3_2	sim1a	tibble	rep	x	rt	length	measure_distance	diff	data	y	model1	mod	sqrt	mean	best	optim	c	par
+chapter23_exercise2332_1	sim1	sim1_loess	loess	y	x
+chapter23_exercise2332_1_2	grid_loess	sim1	%>%	add_predictions	sim1_loess
+chapter23_exercise2332_1_3	sim1	%>%	add_residuals	sim1_loess	add_predictions
+chapter23_exercise2332_1_4	plot_sim1_loess	ggplot	sim1	aes	x	y	geom_point	geom_line	pred	grid_loess
+chapter23_exercise2345_1	mod2	lm	y	x	sim2	grid	%>%	data_grid	add_predictions	ggplot	aes	geom_point	pred	ggtitle
+chapter23_exercise2345_1_2	model_matrix	sim2	y	x
+chapter23_exercise2345_2	model_matrix	sim3	y	x1	x2	%>%	head	sim4
+chapter23_exercise2345_3	mod1	lm	y	x1	x2	sim3	mod2
+chapter23_exercise2345_4	mod1	lm	y	x1	x2	sim3	mod2	%>%	gather_residuals	ggplot	aes	resid	geom_smooth	facet_grid	model
+chapter24_exercise2423_3	library	dplyr	ggplot2	modelr	diamonds2	diamonds	%>%	filter	carat	mutate	log2	price	mod_diamond	lm	lprice	lcarat	add_residuals	resid_quants	quantile	lresid	filtered	ggplot	aes	cut	geom_boxplot	color	clarity
+chapter24_exercise2423_4	mod_diamond2	lm	lprice	lcarat	color	cut	clarity	diamonds2	%>%	add_residuals	ggplot	geom_histogram	aes	lresid
+chapter24_exercise2423_4_2	diamonds2	%>%	add_predictions	mod_diamond2	add_residuals	summarise	sqrt	mean	resid	abs	quantile
+chapter24_exercise2435_2	library	daily	flights	%>%	mutate	make_date	year	month	day	group_by	date	summarise	n	wday	term	cut	ymd	c	mod3	rlm	add_residuals	top_n	resid
+chapter24_exercise2435_3	daily	%>%	mutate	case_when	.	wday	term	as.character	mod2	lm	n	mod4	wday2	gather_residuals	ggplot	aes	date	resid	model	geom_line
+chapter24_exercise2435_3_2	daily	%>%	spread_residuals	mod4	mod2	mutate	sat_term	all_interact	ggplot	aes	date	resid_diff	geom_line
+chapter24_exercise2435_3_3	library	broom	glance	mod4	%>%	select	r.squared	sigma	AIC	df	mod2
+chapter24_exercise2435_4	daily	%>%	mutate	case_when	.	date	%in%	ymd	c	wday	term	as.character	mod5	lm	n	wday3	spread_residuals	arrange	desc	abs	resid	slice	select
+chapter24_exercise_2435_7	flights	%>%	mutate	make_date	year	month	day	wday	date	group_by	summarise	mean	distance	median	ggplot	aes	dist_mean	geom_point	hour	geom_line
+chapter24_exercise2435_8	monday_first	fct_relevel	x	levels	daily	%>%	mutate	wday	date	ggplot	aes	n	geom_boxplot	labs
+chapter25_exercise2525_1	print	library	modelr	tidyverse	require	gapminder	install.packages	by_country	%>%	group_by	country	continent	nest	mutate	map	data	lm	lifeExp	poly	year	.	map2	one_mod	add_residuals	two_mod	three_mod	one_resids	unnest	two_resids	three_resids	plot	df	ggplot	aes	resid	geom_line	geom_smooth	ggtitle	title	glance	one_glance	two_glance	three_glance	geom_point	median	r.squared	r.squared1	r.squared2
+chapter25_exercise2525_2	library	gapminder	country_model	lm	lifeExp	poly	year	median	df	by_country	%>%	group_by	country	continent	nest	mutate	map	data	model	glance	unnest	ggplot	aes	r.squared	geom_beeswarm
+chapter25_exercise2552_3	glance	by_country	%>%	mutate	map	model	unnest
+chapter25_exercise2552_3_2	country_model	lm	lifeExp	poly	year	df	by_country	%>%	mutate	map	data	glance	model	unnest	filter	r.squared	select	country	ggplot	geom_line	aes
+chapter25_exercise2545_3	mtcars	%>%	group_by	cyl	summarise	list	quantile	mpg	unnest
+chapter25_exercise2545_4	mtcars	%>%	group_by	cyl	summarise_each	funs	list

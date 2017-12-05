@@ -1,0 +1,23 @@
+---
+title: "Nicholas Giangreco"
+output: html_document
+---
+
+## Education
+
+* Columbia University, Systems Biology PhD (expected) **2021**
+
+* University of Rochester, Biochemistry BS **2014**
+
+## Employment
+
+* National Human Genome Research Institute
+
+***
+
+## Activities
+
+> Being Awesome
+
+<!-- Footer -->
+<p>Copyright &copy; All rights reserved.</p>
