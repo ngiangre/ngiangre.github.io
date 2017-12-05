@@ -5,4 +5,4 @@
 
 .DS_Store
 _cache
-_files
+*_files/
