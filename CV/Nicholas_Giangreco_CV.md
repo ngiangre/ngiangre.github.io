@@ -72,7 +72,7 @@ FELLOWSHIPS AND AWARDS
 PUBLICATIONS AND POSTERS
 ----------
 
-- **Nicholas Giangreco**, Emmanuel Zorn, Emily Chen, Paolo Colombo, Nicholas Tatonetti, and Barry Fine. **Identification of Novel Primary Graft Dysfunction Biomarkers using Exosome Proteomics**. _American Heart Association Scientific Sessions 2017_, [poster](https://f1000research.com/posters/6-2080).
+- **Nicholas Giangreco**, Emmanuel Zorn, Emily Chen, Paolo Colombo, Nicholas Tatonetti, and Barry Fine. **Identification of Novel Primary Graft Dysfunction Biomarkers using Exosome Proteomics**. _American Heart Association Scientific Sessions 2017_, [10.7490/f1000research.1115115.1](https://f1000research.com/posters/6-2080).
 - Sarah Kim-Hellmuth, Matthias Bechheim, Benno Puetz, Pejman Mohammadi, Yohann Nedelec, **Nicholas Giangreco**, Jessica Becker, Vera Kaiser, Nadine Fricker, Esther Beier, Peter Boor, Stephane Castel, Markus M. Noethen, Luis B. Barreiro, Joseph K. Pickrell, Bertram Mueller-Myhsok, Tuuli Lappalainen, Johannes Schumacher, Veit Hornung. **Genetic regulatory effects modified by immune activation contribute to autoimmune disease associations** [*Nature Communications*, 8 (266): 1-10](https://www.nature.com/articles/s41467-017-00366-1). 
 -	**Giangreco N.**, Petrykowska H., Scott A., Margolin G., Gotea V., Cho K. R., and Elnitski L. **Inactivation of Arid1a drives aberrant epigenetic traits in a mouse model of Apc/Pten defective ovarian endometrioid tumors.** *(in preparation)*
 - **Nicholas Giangreco**, Tim Lezon. **Alternative conformation prediction of Vibrio Cholerae concentrative nucleoside transporter**. _F1000Research 2012_, [poster](https://f1000research.com/posters/1093921). 
