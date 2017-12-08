@@ -20,7 +20,7 @@ see github repo for licensing information
 <u>**Programming Languages:**</u>              Frequent: R, Python, Bash, SQL 
                                                                         Previously: Java
 <u>**Web design:**</u>                       HTML, CSS, Bootstrap library
-<u>**Formatting:**</u>                       LaTeX, Markdown, JuPyteR Notebooks, Rmarkdown, Microsoft Office Suite
+<u>**Formatting:**</u>                       LaTeX, Markdown, Jupyter Notebooks, Rmarkdown, Microsoft Office Suite
 ----------------------------------     ------------------------------------------------- 
 
 
