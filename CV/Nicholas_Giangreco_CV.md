@@ -72,22 +72,23 @@ FELLOWSHIPS AND AWARDS
 PUBLICATIONS AND POSTERS
 ----------
 
-- **Nicholas Giangreco**, Emmanuel Zorn, Emily Chen, Paolo Colombo, Nicholas Tatonetti, and Barry Fine. **Identification of Novel Primary Graft Dysfunction Biomarkers using Exosome Proteomics**. _American Heart Association Scientific Sessions 2017_, [10.7490/f1000research.1115115.1](https://f1000research.com/posters/6-2080).
-- Sarah Kim-Hellmuth, Matthias Bechheim, Benno Puetz, Pejman Mohammadi, Yohann Nedelec, **Nicholas Giangreco**, Jessica Becker, Vera Kaiser, Nadine Fricker, Esther Beier, Peter Boor, Stephane Castel, Markus M. Noethen, Luis B. Barreiro, Joseph K. Pickrell, Bertram Mueller-Myhsok, Tuuli Lappalainen, Johannes Schumacher, Veit Hornung. **Genetic regulatory effects modified by immune activation contribute to autoimmune disease associations** [*Nature Communications*, 8 (266): 1-10](https://www.nature.com/articles/s41467-017-00366-1). 
--	**Giangreco N.**, Petrykowska H., Scott A., Margolin G., Gotea V., Cho K. R., and Elnitski L. **Inactivation of Arid1a drives aberrant epigenetic traits in a mouse model of Apc/Pten defective ovarian endometrioid tumors.** *(in preparation)*
-- **Nicholas Giangreco**, Tim Lezon. **Alternative conformation prediction of Vibrio Cholerae concentrative nucleoside transporter**. _F1000Research 2012_, [poster](https://f1000research.com/posters/1093921). 
+- **Giangreco N**, Zorn E, Chen E et al. Identification of novel primary graft dysfunction biomarkers using exosome proteomics [version 1; not peer reviewed]. F1000Research 2017, 6:2080 [(poster)](https://f1000research.com/posters/6-2080) (doi: 10.7490/f1000research.1115115.1)
+- Sarah Kim-Hellmuth, Matthias Bechheim, Benno Puetz, Pejman Mohammadi, Yohann Nedelec, **Nicholas Giangreco**, Jessica Becker, Vera Kaiser, Nadine Fricker, Esther Beier, Peter Boor, Stephane Castel, Markus M. Noethen, Luis B. Barreiro, Joseph K. Pickrell, Bertram Mueller-Myhsok, Tuuli Lappalainen, Johannes Schumacher, Veit Hornung. Genetic regulatory effects modified by immune activation contribute to autoimmune disease associations [*Nature Communications*, 8 (266): 1-10](https://www.nature.com/articles/s41467-017-00366-1). 
+-	**Giangreco N.**, Petrykowska H., Scott A., Margolin G., Gotea V., Cho K. R., and Elnitski L. Inactivation of _Arid1a_ drives aberrant epigenetic traits in a mouse model of _Apc_/_Pten_ defective ovarian endometrioid tumors. *(in preparation)*
+- **Giangreco N** and Lezon T. Alternative conformation prediction of Vibrio Cholerae concentrative nucleoside transporter. F1000Posters 2013, 4:776 [(poster)](https://f1000research.com/posters/1093921). 
 
 CONFERENCES AND HACKATHONS
 ----------
 
 -  American Heart Association Scientific Sessions 2017, poster presentation [*Giangreco et al. 2017*](https://f1000research.com/posters/6-2080). 
--  [NCBI Hackathon @ New York Genome Center June 2017.](https://github.com/NCBI-Hackathons/Proteomic_Correlation_Shiny)-	[NCBI Hackathon @ NCBI March 2017.](https://github.com/NCBI-Hackathons/Scan2CNV)-	CSHL Biological Data Science meeting October 2016.-	[JHU DaSH Hackathon September 2015.](https://github.com/NCBI-Hackathons/DASH_cell_type)-	ISMB/ECCB conference @ Berlin, Germany July 2013, poster presentation *Giangreco et al. 2012*. .
+-  [NCBI Hackathon @ New York Genome Center June 2017.](https://github.com/NCBI-Hackathons/Proteomic_Correlation_Shiny)-	[NCBI Hackathon @ NCBI March 2017.](https://github.com/NCBI-Hackathons/Scan2CNV)-	CSHL Biological Data Science meeting October 2016.-	[JHU DaSH Hackathon September 2015.](https://github.com/NCBI-Hackathons/DASH_cell_type)-	ISMB/ECCB conference @ Berlin, Germany July 2013, poster presentation *Giangreco et al. 2013*.
 
 TALKS AND PANELS
 ------------------------
 
-- "Doing Science with Big Data", Late Night Science, Columbia University Neuroscience Outreach, December 2017
-- "AI, Life Sciences, and Big Data", AI Meetup in NYC, August 2017
+- ["Tools, Libraries and Analyses in Biomedical Data Science"](http://nickg.bio/_posts/20171220_NYHAIS_talk.pdf), New York Healthcare Artificial Intelligence Society, December 2017.
+- ["Doing Science with Big Data"](http://nickg.bio/_posts/20171205_LateNightScience_Talk.pdf), Late Night Science, Columbia University Neuroscience Outreach, December 2017
+- "AI, Life Sciences, and Big Data", New York Healthcare Artificial Intelligence Society, August 2017
 - NIDDK Undergraduate Step-Up Judge, NIH, Bethesda MD, August 2015
 
 PROFESSIONAL MEMBERSHIPS
@@ -100,13 +101,13 @@ COMMUNITY INVOLVEMENT
 ----------
 
 - NYC MeetUps
-     + [AI @ Columbia University Medical Center](https://www.meetup.com/AI-at-CUMC/)
-         + Attend and engage in public discourse on a wide range of topics such as AI & Society, AI & Healthcare, and economic impact by AI. 
-         + Facilitate group engagement and organization by consult
-     + [Data Storytelling](https://www.meetup.com/Data-Storytelling-NYC/)
-         + Monthly lectures by data scientists and managers from private companies presenting stories and narratives using visualizations and interactive methods on diverse sources of data.
-     + [Statistical programming](https://www.meetup.com/nyhackr/)
-         + Monthly seminars by data scientists, engineers and analysts using novel and statistically rigorous methods applied within academic and company research teams mainly using the R programming language. 
+    + [AI @ Columbia University Medical Center](https://www.meetup.com/AI-at-CUMC/)
+        + Attend and engage in public discourse on a wide range of topics such as AI & Society, AI & Healthcare, and economic impact by AI. 
+        + Facilitate group engagement and organization by consult
+    + [Data Storytelling](https://www.meetup.com/Data-Storytelling-NYC/)
+        + Monthly lectures by data scientists and managers from private companies presenting stories and narratives using visualizations and interactive methods on diverse sources of data.
+    + [Statistical programming](https://www.meetup.com/nyhackr/)
+        + Monthly seminars by data scientists, engineers and analysts using novel and statistically rigorous methods applied within academic and company research teams mainly using the R programming language. 
 - [CUMC Data Science Study Group](https://github.com/ngiangre/CUMC_Data_Science_Group)
-     + Co-organizer of mostly wet-lab biologists learning data science topics using the R programming language
-     + Leading project management and learn strategies for doing bioinformatics projects. 
+    + Co-organizer of mostly wet-lab biologists learning data science topics using the R programming language
+    + Leading project management for bioinformatics projects. 
