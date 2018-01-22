@@ -20,7 +20,7 @@ see github repo for licensing information
 <u>**Programming Languages:**</u>              Frequent: R, Python, Bash, SQL 
                                                                         Previously: Java
 <u>**Web design:**</u>                       HTML, CSS, Bootstrap library
-<u>**Formatting:**</u>                       LaTeX, Markdown, Jupyter Notebooks, Rmarkdown, Microsoft Office Suite
+<u>**Formatting:**</u>                       LaTeX, Markdown, Jupyter Notebooks, Rmarkdown, Microsoft and Apple Office Suite
 ----------------------------------     ------------------------------------------------- 
 
 
@@ -34,6 +34,8 @@ EDUCATION
      PhD advisor: [Nicholas Tatonetti](http://tatonettilab.org)
 
      Topics: Translational Bioinformatics, Systems Biology, Systems Pharmacology
+     
+     Graduate Courses: Deep Sequencing, Translational Bioinformatics, Computational Genomics, Statistical Inference, How to Make a Drug, Molecular Pharmacology
 
 2010-2014
 :    **BS, Biochemistry**; University of Rochester, Rochester, NY
@@ -48,7 +50,7 @@ WORK EXPERIENCE
 
      Principal Investigator: [Dr. Laura Elnitski](https://www.genome.gov/12514761/elnitski--group/)
 
-     -   Molecular events during tumorigenesis of murine ovarian tumor subtypes differing in deletion of tumor suppressor genes
+     -   Molecular events during tumorigenesis of murine ovarian tumor subtypes differing in deletion of tumor suppressor genes.
 
      -   RNA sequencing, DNA methylation sequencing, and their integration.
      
@@ -59,11 +61,11 @@ WORK EXPERIENCE
 FELLOWSHIPS AND AWARDS
 ----------
 
--   Columbia Diversity Fellowship
+-   Columbia Diversity Fellowship.
 
--   Department of Systems Biology Merit Fellowship
+-   Department of Systems Biology Merit Fellowship.
 
--   Donald Charles Award, University of Rochester Department of Biology
+-   Donald Charles Award, University of Rochester Department of Biology.
 
 -   Fulbright Fellowship Alternate 2013-2014: Sweden, Molecular Modeling, “Novel Antibody-SpA Complex Modeling”.
 
@@ -72,7 +74,7 @@ FELLOWSHIPS AND AWARDS
 PUBLICATIONS AND POSTERS
 ----------
 
-- Castillero E., Ali Z., Akashi H., **Giangreco N.**, Wang C., Ji R., Zhang X., Kheysin N., Park J., Hegde S., Patel S., Stein S., Cuenca C., Leung D., Homma S., Tatonetti N., Topkara V., Takeda K., Colombo P., Naka Y., Sweeny L., Schulze C., George I. Structural and Functional Cardiac Profile after Prolonged Duration of Mechanical Unloading: Potential Implications for Myocardial Recovery. *(in preparation)* 
+- Castillero E., Ali Z., Akashi H., **Giangreco N.**, Wang C., Ji R., Zhang X., Kheysin N., Park J., Hegde S., Patel S., Stein S., Cuenca C., Leung D., Homma S., Tatonetti N., Topkara V., Takeda K., Colombo P., Naka Y., Sweeny L., Schulze C., George I. Structural and Functional Cardiac Profile after Prolonged Duration of Mechanical Unloading: Potential Implications for Myocardial Recovery. *(submitted, Journal of Molecular and Cellular Cardiology)* 
 - **Nick Giangreco**. Scan2CNV. [OMICSTools](https://omictools.com/scan2cnv-tool)
 - **Giangreco N**, Zorn E, Chen E et al. Identification of novel primary graft dysfunction biomarkers using exosome proteomics [version 1; not peer reviewed]. F1000Research 2017, 6:2080 [(poster)](https://f1000research.com/posters/6-2080) (doi: 10.7490/f1000research.1115115.1)
 - Sarah Kim-Hellmuth, Matthias Bechheim, Benno Puetz, Pejman Mohammadi, Yohann Nedelec, **Nicholas Giangreco**, Jessica Becker, Vera Kaiser, Nadine Fricker, Esther Beier, Peter Boor, Stephane Castel, Markus M. Noethen, Luis B. Barreiro, Joseph K. Pickrell, Bertram Mueller-Myhsok, Tuuli Lappalainen, Johannes Schumacher, Veit Hornung. Genetic regulatory effects modified by immune activation contribute to autoimmune disease associations [*Nature Communications*, 8 (266): 1-10](https://www.nature.com/articles/s41467-017-00366-1). 
@@ -89,16 +91,29 @@ TALKS AND PANELS
 ------------------------
 
 - ["Tools, Libraries and Analyses in Biomedical Data Science"](http://nickg.bio/_posts/20171220_NYHAIS_talk.pdf), New York Healthcare Artificial Intelligence Society, December 2017.
-- ["Doing Science with Big Data"](http://nickg.bio/_posts/20171205_LateNightScience_Talk.pdf), Late Night Science, Columbia University Neuroscience Outreach, December 2017
-- "AI, Life Sciences, and Big Data", New York Healthcare Artificial Intelligence Society, August 2017
-- NIDDK Undergraduate Step-Up Judge, NIH, Bethesda MD, August 2015
+- ["Doing Science with Big Data"](http://nickg.bio/_posts/20171205_LateNightScience_Talk.pdf), Late Night Science, Columbia University Neuroscience Outreach, December 2017.
+- "AI, Life Sciences, and Big Data", New York Healthcare Artificial Intelligence Society, August 2017.
+- NIDDK Undergraduate Step-Up Judge, NIH, Bethesda MD, August 2015.
 
 PROFESSIONAL MEMBERSHIPS
 ----------
 
-- American Heart Association, 2017-
-- American Medical Informatics Association, 2017-
-- International Society of Computational Biology, 2013-2014 & 2017-
+- American Heart Association, 2017-.
+- American Medical Informatics Association, 2017-.
+- International Society of Computational Biology, 2013-2014 & 2017-.
+
+TEACHING, TUTORING, AND MENTORING
+----------
+
+- Undergraduate Mentoring:
+    * Payal Chandak, Columbia University
+        * Providing guidance and instruction in biomedical data science and research training in preparation for Summer 2018 research internship in the Tatonetti Lab. 
+- Curiology tutor
+    + Managed and co-led science experiments with NIH fellows for middle school students in Washington D.C. 
+- College Bound tutor
+    + Facilitated completion of homework assignments in STEM for Washington D.C. high school students.
+- Genetics Study Group Leader, Center for Excellence in Teaching and Learning, University of Rochester.
+
 
 COMMUNITY INVOLVEMENT
 ----------
@@ -116,8 +131,4 @@ COMMUNITY INVOLVEMENT
         + Monthly lectures by data scientists and managers from private companies presenting stories and narratives using visualizations and interactive methods on diverse sources of data.
     + [Statistical programming](https://www.meetup.com/nyhackr/)
         + Monthly seminars by data scientists, engineers and analysts using novel and statistically rigorous methods applied within academic and company research teams mainly using the R programming language. 
-- Curiology tutor
-    + Managed and co-led science experiments with NIH fellows for middle school students in Washington D.C. 
-- College Bound tutor
-    + Facilitated completion of homework assignments in STEM for Washington D.C. high school students
-
+        + Collaborate with community members producing programming solutions, such as [solutions](http://nickg.bio/_posts/ngiangre/r_for_data_science_solutions.html) for _R for Data Science_ by Hadley Wickham. 
