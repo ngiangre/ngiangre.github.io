@@ -35,7 +35,7 @@ EDUCATION
 
      Topics: Translational Bioinformatics, Systems Biology, Systems Pharmacology
      
-     Graduate Courses: Deep Sequencing, Translational Bioinformatics, Computational Genomics, Statistical Inference, How to Make a Drug, Molecular Pharmacology
+     Courses: Deep Sequencing, Translational Bioinformatics, Computational Genomics, Statistical Inference, How to Make a Drug, Molecular Pharmacology, Statistical Thinking for Data Science and Analytics (Columbia edX)
 
 2010-2014
 :    **BS, Biochemistry**; University of Rochester, Rochester, NY
@@ -123,6 +123,9 @@ COMMUNITY INVOLVEMENT
     + Organize lession plan for biweekly meetings.
     + Lead project management for bioinformatics projects.
     + Organize and manage hackathons for biomedical scientists at CUMC.
+- Columbia University Graduate Student Advisory Council
+    + Voting member of the Columbia graduate student government and student representative for the Department of Biomedical Informatics.
+    + Provide discussion and oversight of the potential 2018 graduate student government reorganization effort in the Ad-Hoc Committee
 - NYC MeetUps
     + [AI @ Columbia University Medical Center](https://www.meetup.com/AI-at-CUMC/)
         + Attend and engage in public discourse on a wide range of topics such as AI & Society, AI & Healthcare, and economic impact by AI. 
