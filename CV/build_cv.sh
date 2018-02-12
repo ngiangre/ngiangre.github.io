@@ -2,7 +2,7 @@
 pandoc --standalone -c cv_style.css --from markdown --to html -o CV/Nicholas_Giangreco_CV.html CV/Nicholas_Giangreco_CV.md
 
 #building pdf
-pandoc -V geometry:margin=1in --standalone -c cv_style.css --from markdown --latex-engine=xelatex -o CV/Nicholas_Giangreco_CV.pdf CV/Nicholas_Giangreco_CV.md
+pandoc -V geometry:margin=1in --standalone -c cv_style.css --from markdown --pdf-engine=xelatex -o CV/Nicholas_Giangreco_CV.pdf CV/Nicholas_Giangreco_CV.md
 
 #building word doc
 #pandoc --standalone -c cv_style.css --from markdown --to docx -o CV/Nicholas_Giangreco_CV.docx CV/Nicholas_Giangreco_CV.md

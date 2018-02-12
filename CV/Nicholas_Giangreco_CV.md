@@ -108,6 +108,8 @@ TEACHING, TUTORING, AND MENTORING
 - Undergraduate Mentoring:
     * Payal Chandak, Columbia University
         * Providing guidance and instruction in biomedical data science and research training in preparation for Summer 2018 research internship in the Tatonetti Lab. 
+- Instructor of advanced sessions for CUMC Data Science Group
+    + Lead discussion and video lessons on modeling and visualizing data in R. 
 - Curiology tutor
     + Managed and co-led science experiments with NIH fellows for middle school students in Washington D.C. 
 - College Bound tutor
@@ -125,7 +127,10 @@ COMMUNITY INVOLVEMENT
     + Organize and manage hackathons for biomedical scientists at CUMC.
 - Columbia University Graduate Student Advisory Council
     + Voting member of the Columbia graduate student government and student representative for the Department of Biomedical Informatics.
-    + Provide discussion and oversight of the potential 2018 graduate student government reorganization effort in the Ad-Hoc Committee
+    + Provide discussion and oversight of the potential 2018 graduate student government reorganization effort in the Ad-Hoc Committee.
+- [Innovative Medicine Interest Group @ CUMC](https://www.innovatemed.org/)
+    + Member of Leadership Board.
+    + Organize career panels and technical talks bringing entrepreneurs in the NYC-area to CUMC.
 - NYC MeetUps
     + [AI @ Columbia University Medical Center](https://www.meetup.com/AI-at-CUMC/)
         + Attend and engage in public discourse on a wide range of topics such as AI & Society, AI & Healthcare, and economic impact by AI. 
