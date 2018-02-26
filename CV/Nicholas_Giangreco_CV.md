@@ -15,10 +15,9 @@ see github repo for licensing information
 
 ----------------------------------    --------------------------------------------------
 <u>**Email:**</u>                                               nick.giangreco@gmail.com
-<u>**Links:**</u>                              [Github](http://github.com/ngiangre) [Linkedin](http://www.linkedin.com/in/nickgiangreco/) [ORCID](https://orcid.org/0000-0001-8138-4947)
-<u>**Website:**</u>                                        [nickg.bio](http://nickg.bio)
-<u>**Programming Languages:**</u>              Frequent: R, Python, Bash, SQL 
-                                                                        Previously: Java
+<u>**Links:**</u>                              [Github](http://github.com/ngiangre) [Linkedin](http://www.linkedin.com/in/nickgiangreco/) [ORCID](https://orcid.org/0000-0001-8138-4947) [nickg.bio](http://nickg.bio)
+<u>**Programming Languages:**</u>              Frequent: R, Python, Bash, SQL; Previously: Java
+<u>**Team/Project Management:**</u>           Teamwork, Slack, Gitter, DropBox, Google apps
 <u>**Web design:**</u>                       HTML, CSS, Bootstrap library
 <u>**Formatting:**</u>                       LaTeX, Markdown, Jupyter Notebooks, Rmarkdown, Microsoft and Apple Office Suite
 ----------------------------------     ------------------------------------------------- 
@@ -74,7 +73,7 @@ FELLOWSHIPS AND AWARDS
 PUBLICATIONS AND POSTERS
 ----------
 
-- Castillero E., Ali Z., Akashi H., **Giangreco N.**, Wang C., Ji R., Zhang X., Kheysin N., Park J., Hegde S., Patel S., Stein S., Cuenca C., Leung D., Homma S., Tatonetti N., Topkara V., Takeda K., Colombo P., Naka Y., Sweeny L., Schulze C., George I. Structural and Functional Cardiac Profile after Prolonged Duration of Mechanical Unloading: Potential Implications for Myocardial Recovery. *(submitted, Journal of Molecular and Cellular Cardiology)* 
+- Castillero E., Ali Z., Akashi H., **Giangreco N.**, Wang C., Ji R., Zhang X., Kheysin N., Park J., Hegde S., Patel S., Stein S., Cuenca C., Leung D., Homma S., Tatonetti N., Topkara V., Takeda K., Colombo P., Naka Y., Sweeny L., Schulze C., George I. Structural and Functional Cardiac Profile after Prolonged Duration of Mechanical Unloading: Potential Implications for Myocardial Recovery. *(submitted)* 
 - **Nick Giangreco**. Scan2CNV. [OMICSTools](https://omictools.com/scan2cnv-tool)
 - **Giangreco N**, Zorn E, Chen E et al. Identification of novel primary graft dysfunction biomarkers using exosome proteomics [version 1; not peer reviewed]. F1000Research 2017, 6:2080 [(poster)](https://f1000research.com/posters/6-2080) (doi: 10.7490/f1000research.1115115.1)
 - Sarah Kim-Hellmuth, Matthias Bechheim, Benno Puetz, Pejman Mohammadi, Yohann Nedelec, **Nicholas Giangreco**, Jessica Becker, Vera Kaiser, Nadine Fricker, Esther Beier, Peter Boor, Stephane Castel, Markus M. Noethen, Luis B. Barreiro, Joseph K. Pickrell, Bertram Mueller-Myhsok, Tuuli Lappalainen, Johannes Schumacher, Veit Hornung. Genetic regulatory effects modified by immune activation contribute to autoimmune disease associations [*Nature Communications*, 8 (266): 1-10](https://www.nature.com/articles/s41467-017-00366-1). 
