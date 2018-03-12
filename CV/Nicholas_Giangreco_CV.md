@@ -80,11 +80,56 @@ PUBLICATIONS AND POSTERS
 -	**Giangreco N.**, Petrykowska H., Scott A., Margolin G., Gotea V., Cho K. R., and Elnitski L. Inactivation of _Arid1a_ drives aberrant epigenetic traits in a mouse model of _Apc_/_Pten_ defective ovarian endometrioid tumors. *(in preparation)*
 - **Giangreco N** and Lezon T. Alternative conformation prediction of Vibrio Cholerae concentrative nucleoside transporter. F1000Posters 2013, 4:776 [(poster)](https://f1000research.com/posters/1093921). 
 
+COMMUNITY INVOLVEMENT
+----------
+
+- [CUMC Data Science Group](https://sites.google.com/view/cumcdatasciencegroup/home)
+    + Co-organizer of mostly wet-lab biologists learning data science topics using the R programming language.
+    + Organize lession plan for biweekly meetings.
+    + Lead project management for bioinformatics projects.
+    + Organize and manage hackathons for biomedical scientists at CUMC.
+- Columbia University Graduate Student Advisory Council
+    + Voting member of the Columbia graduate student government and student representative for the Department of Biomedical Informatics.
+    + Provide discussion and oversight of the potential 2018 graduate student government reorganization effort in the Ad-Hoc Committee.
+- [Innovative Medicine Interest Group @ CUMC](https://www.innovatemed.org/)
+    + Member of Leadership Board.
+    + Organize career panels and technical talks bringing entrepreneurs in the NYC-area to CUMC.
+- NYC MeetUps
+    + [New York Artificial Intelligence in Healthcare](https://www.meetup.com/NYHAIS/)
+        + Co-organizer
+        + Attend and engage in public discourse on a wide range of topics such as AI & Society, AI & Healthcare, and economic impact by AI. 
+        + Facilitate group engagement, AI study groups, and group organization.
+    + [Data Storytelling](https://www.meetup.com/Data-Storytelling-NYC/)
+        + Monthly lectures by data scientists and managers from private companies presenting stories and narratives using visualizations and interactive methods on diverse sources of data.
+    + [Statistical programming](https://www.meetup.com/nyhackr/)
+        + Monthly seminars by data scientists, engineers and analysts using novel and statistically rigorous methods applied within academic and company research teams mainly using the R programming language. 
+        + Collaborate with community members producing programming solutions, such as [solutions](http://nickg.bio/_posts/ngiangre/r_for_data_science_solutions.html) for _R for Data Science_ by Hadley Wickham. 
+        
+TEACHING, TUTORING, AND MENTORING
+----------
+
+- Undergraduate Mentoring:
+    * Payal Chandak, Columbia University
+        * Providing guidance and instruction in biomedical data science and research training in preparation for Summer 2018 research internship in the Tatonetti Lab. 
+- Leader of CUMC Data Science Group
+    + Lead discussions, facilitate group project work, and organize monthly hackathons on processing, analyzing, and visualizing data in R. 
+- Curiology tutor
+    + Managed and co-led science experiments with NIH fellows for middle school students in Washington D.C. 
+- College Bound tutor
+    + Facilitated completion of homework assignments in STEM for Washington D.C. high school students.
+- Genetics Study Group Leader, Center for Excellence in Teaching and Learning, University of Rochester.
+
+
 CONFERENCES AND HACKATHONS
 ----------
 
--  American Heart Association Scientific Sessions 2017, poster presentation [*Giangreco et al. 2017*](https://f1000research.com/posters/6-2080). 
--  [NCBI Hackathon @ New York Genome Center June 2017.](https://github.com/NCBI-Hackathons/Proteomic_Correlation_Shiny)-	[NCBI Hackathon @ NCBI March 2017.](https://github.com/NCBI-Hackathons/Scan2CNV)-	CSHL Biological Data Science meeting October 2016.-	[JHU DaSH Hackathon September 2015.](https://github.com/NCBI-Hackathons/DASH_cell_type)-	ISMB/ECCB conference @ Berlin, Germany July 2013, poster presentation *Giangreco et al. 2013*.
+-  American Heart Association Scientific Sessions 2017, poster presentation [*Giangreco et al. 2017*](https://f1000research.com/posters/6-2080).
+ 
+-  [NCBI Hackathon @ New York Genome Center June 2017.](https://github.com/NCBI-Hackathons/Proteomic_Correlation_Shiny)
+-	[NCBI Hackathon @ NCBI March 2017.](https://github.com/NCBI-Hackathons/Scan2CNV)
+-	CSHL Biological Data Science meeting October 2016.
+-	[JHU DaSH Hackathon September 2015.](https://github.com/NCBI-Hackathons/DASH_cell_type)
+-	ISMB/ECCB conference @ Berlin, Germany July 2013, poster presentation *Giangreco et al. 2013*.
 
 TALKS AND PANELS
 ------------------------
@@ -100,42 +145,3 @@ PROFESSIONAL MEMBERSHIPS
 - American Heart Association, 2017-.
 - American Medical Informatics Association, 2017-.
 - International Society of Computational Biology, 2013-2014 & 2017-.
-
-TEACHING, TUTORING, AND MENTORING
-----------
-
-- Undergraduate Mentoring:
-    * Payal Chandak, Columbia University
-        * Providing guidance and instruction in biomedical data science and research training in preparation for Summer 2018 research internship in the Tatonetti Lab. 
-- Instructor of advanced sessions for CUMC Data Science Group
-    + Lead discussion and video lessons on modeling and visualizing data in R. 
-- Curiology tutor
-    + Managed and co-led science experiments with NIH fellows for middle school students in Washington D.C. 
-- College Bound tutor
-    + Facilitated completion of homework assignments in STEM for Washington D.C. high school students.
-- Genetics Study Group Leader, Center for Excellence in Teaching and Learning, University of Rochester.
-
-
-COMMUNITY INVOLVEMENT
-----------
-
-- [CUMC Data Science Group](https://github.com/ngiangre/CUMC_Data_Science_Group)
-    + Co-organizer of mostly wet-lab biologists learning data science topics using the R programming language.
-    + Organize lession plan for biweekly meetings.
-    + Lead project management for bioinformatics projects.
-    + Organize and manage hackathons for biomedical scientists at CUMC.
-- Columbia University Graduate Student Advisory Council
-    + Voting member of the Columbia graduate student government and student representative for the Department of Biomedical Informatics.
-    + Provide discussion and oversight of the potential 2018 graduate student government reorganization effort in the Ad-Hoc Committee.
-- [Innovative Medicine Interest Group @ CUMC](https://www.innovatemed.org/)
-    + Member of Leadership Board.
-    + Organize career panels and technical talks bringing entrepreneurs in the NYC-area to CUMC.
-- NYC MeetUps
-    + [AI @ Columbia University Medical Center](https://www.meetup.com/AI-at-CUMC/)
-        + Attend and engage in public discourse on a wide range of topics such as AI & Society, AI & Healthcare, and economic impact by AI. 
-        + Facilitate group engagement and organization by consult.
-    + [Data Storytelling](https://www.meetup.com/Data-Storytelling-NYC/)
-        + Monthly lectures by data scientists and managers from private companies presenting stories and narratives using visualizations and interactive methods on diverse sources of data.
-    + [Statistical programming](https://www.meetup.com/nyhackr/)
-        + Monthly seminars by data scientists, engineers and analysts using novel and statistically rigorous methods applied within academic and company research teams mainly using the R programming language. 
-        + Collaborate with community members producing programming solutions, such as [solutions](http://nickg.bio/_posts/ngiangre/r_for_data_science_solutions.html) for _R for Data Science_ by Hadley Wickham. 
