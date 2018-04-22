@@ -8,17 +8,18 @@ This is another great post influencing this document https://mszep.github.io/pan
 
 see github repo for licensing information
 -->
-
-[Nicholas Giangreco](http://systemsbiology.columbia.edu/people/nicholas-giangreco)
-==========
-
+---
+title : Nicholas Giangreco
+address : 154 Haven Avenue, New York, New York, 10032
+phone : 7167132124
+---
 
 ----------------------------------    --------------------------------------------------
 <u>**Email:**</u>                                               nick.giangreco@gmail.com
 <u>**Links:**</u>                              [Github](http://github.com/ngiangre) [Linkedin](http://www.linkedin.com/in/nickgiangreco/) [ORCID](https://orcid.org/0000-0001-8138-4947) [nickg.bio](http://nickg.bio)
 <u>**Programming Languages:**</u>              Frequent: R, Python, Bash, SQL; Previously: Java
 <u>**Team/Project Management:**</u>           Teamwork, Slack, Gitter, DropBox, Google apps
-<u>**Web design:**</u>                       HTML, CSS, Bootstrap library
+<u>**Web design:**</u>                       Plotly, Dash, Shiny, HTML, CSS, Bootstrap library
 <u>**Formatting:**</u>                       LaTeX, Markdown, Jupyter Notebooks, Rmarkdown, Microsoft and Apple Office Suite
 ----------------------------------     ------------------------------------------------- 
 
@@ -28,7 +29,7 @@ EDUCATION
 
 
 2021 (expected)
-:    **PhD Candidate, Systems Biology**; Columbia University, New York City, NY
+:    [**PhD Candidate, Systems Biology**](http://systemsbiology.columbia.edu/people/nicholas-giangreco); Columbia University, New York City, NY
 
      PhD advisor: [Nicholas Tatonetti](http://tatonettilab.org)
 
@@ -94,6 +95,9 @@ COMMUNITY INVOLVEMENT
 - [Innovative Medicine Interest Group @ CUMC](https://www.innovatemed.org/)
     + Member of Leadership Board.
     + Organize career panels and technical talks bringing entrepreneurs in the NYC-area to CUMC.
+- [MLsociety](https://www.mlsociety.com/)
+    + Leader on NYC Chapter Leadership Board
+    + Plan and attend community events
 - NYC MeetUps
     + [New York Artificial Intelligence in Healthcare](https://www.meetup.com/NYHAIS/)
         + Co-organizer
