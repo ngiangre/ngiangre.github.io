@@ -2,7 +2,7 @@
    max-width: 100%; !important
 }
 body{
-  background-color: rgb(200,200,200);
+  background-color: #dbd8d4; // custom gray
   font-family: serif
   font-size: 13
 }
