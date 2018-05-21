@@ -18,8 +18,8 @@ phone : 7167132124
 <u>**Email:**</u>                                               nick.giangreco@gmail.com
 <u>**Links:**</u>                              [Github](http://github.com/ngiangre) [Linkedin](http://www.linkedin.com/in/nickgiangreco/) [ORCID](https://orcid.org/0000-0001-8138-4947) [nickg.bio](http://nickg.bio)
 <u>**Programming Languages:**</u>              Frequent: R, Python, Bash, SQL; Previously: Java
-<u>**Team/Project Management:**</u>           Teamwork, Slack, Gitter, DropBox, Google apps
-<u>**Web design:**</u>                       Plotly, Dash, Shiny, HTML, CSS, Bootstrap library
+<u>**Team/Project Management:**</u>           Teamwork, Slack, Asana, Slite, Gitter, DropBox, Google apps
+<u>**Web design:**</u>                       Plotly (Dash & Shiny), HTML, CSS, Bootstrap library
 <u>**Formatting:**</u>                       LaTeX, Markdown, Jupyter Notebooks, Rmarkdown, Microsoft and Apple Office Suite
 ----------------------------------     ------------------------------------------------- 
 
@@ -86,17 +86,17 @@ COMMUNITY INVOLVEMENT
 
 - [CUMC Data Science Group](https://sites.google.com/view/cumcdatasciencegroup/home)
     + Co-organizer of mostly wet-lab biologists learning data science topics using the R programming language.
-    + Organize lession plan for biweekly meetings.
+    + Organize biweekly seminar series plan, both administrative and presentation tasks.
     + Lead project management for bioinformatics projects.
     + Organize and manage hackathons for biomedical scientists at CUMC.
-- Columbia University Graduate Student Advisory Council
-    + Voting member of the Columbia graduate student government and student representative for the Department of Biomedical Informatics.
-    + Provide discussion and oversight of the potential 2018 graduate student government reorganization effort in the Ad-Hoc Committee.
-- [Innovative Medicine Interest Group @ CUMC](https://www.innovatemed.org/)
+- [Innovative Medicine Interest Group @ CUMC](www.innovatemedcolumbia.org/)
     + Member of Leadership Board.
     + Organize career panels and technical talks bringing entrepreneurs in the NYC-area to CUMC.
+- [Health Tech Assembly](http://www.healthtechassembly.com/)
+    + Medical outreach representative.
 - [MLsociety](https://www.mlsociety.com/)
     + Leader on NYC Chapter Leadership Board
+    + Organize and execute Kaggle competition efforts. 
     + Plan and attend community events
 - NYC MeetUps
     + [New York Artificial Intelligence in Healthcare](https://www.meetup.com/NYHAIS/)
@@ -114,7 +114,7 @@ TEACHING, TUTORING, AND MENTORING
 
 - Undergraduate Mentoring:
     * Payal Chandak, Columbia University
-        * Providing guidance and instruction in biomedical data science and research training in preparation for Summer 2018 research internship in the Tatonetti Lab. 
+        * Providing guidance and instruction in biomedical data science and research training in Summer 2018 research internship in the Tatonetti Lab. 
 - Leader of CUMC Data Science Group
     + Lead discussions, facilitate group project work, and organize monthly hackathons on processing, analyzing, and visualizing data in R. 
 - Curiology tutor
@@ -126,6 +126,8 @@ TEACHING, TUTORING, AND MENTORING
 
 CONFERENCES AND HACKATHONS
 ----------
+
+- [Second Northeast Computational Health Summit, April 2018](http://nechs.org/)
 
 -  American Heart Association Scientific Sessions 2017, poster presentation [*Giangreco et al. 2017*](https://f1000research.com/posters/6-2080).
  
