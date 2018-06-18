@@ -140,6 +140,7 @@ CONFERENCES AND HACKATHONS
 TALKS AND PANELS
 ------------------------
 
+- Medical Research Career Panelist, Minds Matter NYC, June 2018
 - Standardized and Reproducible Analysis Enables Identification of Novel Primary Graft Dysfunction Biomarkers using Exosome Proteomics, [Second NorthEast Computational Health Summit 2018](http://nechs.org), April 2018.
 - ["Tools, Libraries and Analyses in Biomedical Data Science"](http://nickg.bio/_posts/20171220_NYHAIS_talk.pdf), New York Healthcare Artificial Intelligence Society, December 2017.
 - ["Doing Science with Big Data"](http://nickg.bio/_posts/20171205_LateNightScience_Talk.pdf), Late Night Science, Columbia University Neuroscience Outreach, December 2017.
