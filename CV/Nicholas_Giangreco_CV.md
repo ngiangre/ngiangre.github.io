@@ -74,6 +74,7 @@ FELLOWSHIPS AND AWARDS
 PUBLICATIONS AND POSTERS
 ----------
 
+- **Nick Giangreco** and Nicholas Tatonetti. Using precision pharmacovigilance to detect and evaluate antiepileptic drug associated adverse reactions in pediatric patients. [poster](https://f1000research.com/posters/7-1091)
 - Castillero E., Ali Z., Akashi H., **Giangreco N.**, Wang C., Ji R., Zhang X., Kheysin N., Park J., Hegde S., Patel S., Stein S., Cuenca C., Leung D., Homma S., Tatonetti N., Topkara V., Takeda K., Colombo P., Naka Y., Sweeny L., Schulze C., George I. Structural and Functional Cardiac Profile after Prolonged Duration of Mechanical Unloading: Potential Implications for Myocardial Recovery. *(submitted)* 
 - **Nick Giangreco**. Scan2CNV. [OMICSTools](https://omictools.com/scan2cnv-tool)
 - **Giangreco N**, Zorn E, Chen E et al. Identification of novel primary graft dysfunction biomarkers using exosome proteomics [version 1; not peer reviewed]. F1000Research 2017, 6:2080 [(poster)](https://f1000research.com/posters/6-2080) (doi: 10.7490/f1000research.1115115.1)
