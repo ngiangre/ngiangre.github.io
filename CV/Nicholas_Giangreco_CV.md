@@ -18,7 +18,7 @@ phone : 7167132124
 <u>**Email:**</u>                                               nick.giangreco@gmail.com
 <u>**Links:**</u>                              [Github](http://github.com/ngiangre) [Linkedin](http://www.linkedin.com/in/nickgiangreco/) [ORCID](https://orcid.org/0000-0001-8138-4947) [nickg.bio](http://nickg.bio)
 <u>**Programming Languages:**</u>              Frequent: R, Python, Bash, SQL; Previously: Java
-<u>**Team/Project Management:**</u>           Teamwork, Slack, Asana, Slite, Gitter, DropBox, Google apps
+<u>**Team/Project Management:**</u>           Teamwork, Slack, Asana, Basecamp, Slite, Gitlab, Gitter, DropBox, Google apps
 <u>**Web design:**</u>                       Plotly (Dash & Shiny), HTML, CSS, Bootstrap library
 <u>**Formatting:**</u>                       LaTeX, Markdown, Jupyter Notebooks, Rmarkdown, Microsoft and Apple Office Suite
 ----------------------------------     ------------------------------------------------- 
@@ -84,8 +84,8 @@ PUBLICATIONS AND POSTERS
 COMMUNITY INVOLVEMENT
 ----------
 
-- [CUMC Data Science Group](https://sites.google.com/view/cumcdatasciencegroup/home)
-    + Co-organizer of mostly wet-lab biologists learning data science topics using the R programming language.
+- [CUMC Data Science Club](https://sites.google.com/view/cumcdatasciencegroup/home)
+    + Organizer of mostly wet-lab biologists learning data science topics using the R programming language.
     + Organize biweekly seminar series plan, both administrative and presentation tasks.
     + Lead project management for bioinformatics projects.
     + Organize and manage hackathons for biomedical scientists at CUMC.
@@ -99,7 +99,7 @@ COMMUNITY INVOLVEMENT
     + Organize and execute Kaggle competition efforts. 
     + Plan and attend community events
 - NYC MeetUps
-    + [New York Artificial Intelligence in Healthcare](https://www.meetup.com/NYHAIS/)
+    + [New York Artificial Intelligence in Healthcare Society](https://www.meetup.com/NYHAIS/)
         + Co-organizer
         + Attend and engage in public discourse on a wide range of topics such as AI & Society, AI & Healthcare, and economic impact by AI. 
         + Facilitate group engagement, AI study groups, and group organization.
@@ -114,7 +114,7 @@ TEACHING, TUTORING, AND MENTORING
 
 - Undergraduate Mentoring:
     * Payal Chandak, Columbia University
-        * Providing guidance and instruction in biomedical data science and research training in Summer 2018 research internship in the Tatonetti Lab. 
+        * Provided guidance and instruction in biomedical data science and research training in Summer 2018 research internship in the Tatonetti Lab. 
 - Leader of CUMC Data Science Group
     + Lead discussions, facilitate group project work, and organize monthly hackathons on processing, analyzing, and visualizing data in R. 
 - Curiology tutor
@@ -126,6 +126,8 @@ TEACHING, TUTORING, AND MENTORING
 
 CONFERENCES AND HACKATHONS
 ----------
+
+- [Intelligent Systems in Molecular Biology, July 2018](https://iscb.org/ismb2018)
 
 - [Second Northeast Computational Health Summit, April 2018](http://nechs.org/)
 
