@@ -110,12 +110,13 @@ COMMUNITY INVOLVEMENT
         + Monthly seminars by data scientists, engineers and analysts using novel and statistically rigorous methods applied within academic and company research teams mainly using the R programming language. 
         + Collaborate with community members producing programming solutions, such as [solutions](http://nickg.bio/_posts/ngiangre/r_for_data_science_solutions.html) for _R for Data Science_ by Hadley Wickham. 
         
-TEACHING, TUTORING, AND MENTORING
+MENTORING, TEACHING, AND TUTORING
 ----------
 
 - Undergraduate Mentoring:
     * Payal Chandak, Columbia University
-        * Provided guidance and instruction in biomedical data science and research training in Summer 2018 research internship in the Tatonetti Lab. 
+        * Provided guidance and instruction in biomedical data science and research training in Summer 2018 research internship in the Tatonetti Lab.
+        * "Drugs with sex-linked risk for adverse drug reactions" 
 - Leader of CUMC Data Science Group
     + Lead discussions, facilitate group project work, and organize monthly hackathons on processing, analyzing, and visualizing data in R. 
 - Curiology tutor
@@ -128,6 +129,10 @@ TEACHING, TUTORING, AND MENTORING
 CONFERENCES AND HACKATHONS
 ----------
 
+- [New York Genome Center NCBI-Style Hackathon](https://biohackathons.github.io/)
+   - Project lead for developing data science notebooks and web application interfacing with drug safety data.
+   - Code is in [SafeDrugs](https://github.com/NCBI-Hackathons/SafeDrugs) github repository. 
+   
 - [Intelligent Systems in Molecular Biology, July 2018](https://iscb.org/ismb2018)
 
 - [Second Northeast Computational Health Summit, April 2018](http://nechs.org/)
