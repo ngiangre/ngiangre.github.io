@@ -45,6 +45,14 @@ EDUCATION
 WORK EXPERIENCE
 ----------
 
+July 2018 - August 2018
+:    [**Genetic Intelligence Inc**](https://www.linkedin.com/company/genetic-intelligence/); New York, NY
+
+	  Genomics start-up
+	  
+	  Computational biology intern
+	  
+	  
 2014-Present
 :    **National Human Genome Research Institute**; Bethesda, MD
 
@@ -115,8 +123,9 @@ MENTORING, TEACHING, AND TUTORING
 
 - Undergraduate Mentoring:
     * Payal Chandak, Columbia University
-        * Provided guidance and instruction in biomedical data science and research training in Summer 2018 research internship in the Tatonetti Lab.
-        * "Drugs with sex-linked risk for adverse drug reactions" 
+        * Provide guidance and instruction in biomedical data science and research training.
+        * Provided guidance and mentoring for summer 2018 research internship in the Tatonetti Lab
+           + ["Drugs with sex-linked risk for adverse drug reactions"](https://github.com/tatonetti-lab/sex_risks)
 - Leader of CUMC Data Science Group
     + Lead discussions, facilitate group project work, and organize monthly hackathons on processing, analyzing, and visualizing data in R. 
 - Curiology tutor
