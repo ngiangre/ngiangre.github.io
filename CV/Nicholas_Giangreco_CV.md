@@ -33,7 +33,7 @@ EDUCATION
 
      PhD advisor: [Nicholas Tatonetti](http://tatonettilab.org)
 
-     Topics: Translational Bioinformatics, Systems Biology, Systems Pharmacology
+     Topics: Translational Bioinformatics, Clinical proteomics, Systems Biology, Systems Pharmacology
      
      Courses: Deep Sequencing, Translational Bioinformatics, Computational Genomics, Statistical Inference, How to Make a Drug, Molecular Pharmacology, Statistical Thinking for Data Science and Analytics (Columbia edX)
 
@@ -69,6 +69,8 @@ July 2018 - August 2018
 FELLOWSHIPS AND AWARDS
 ----------
 
+-   Best contribution in methodological research at the [OHDSI 2018 Symposium](https://www.ohdsi.org/2018-ohdsi-symposium/) for the poster [Using precision pharmacoviglance to detect developmentally-regulated adverse drug reactions: a case study with antiepileptic drugs](http://10.7490/f1000research.1116203.1).
+
 -   Columbia Diversity Fellowship.
 
 -   Department of Systems Biology Merit Fellowship.
@@ -91,6 +93,8 @@ PUBLICATIONS AND POSTERS
 -	**Giangreco N.**, Petrykowska H., Scott A., Margolin G., Gotea V., Cho K. R., and Elnitski L. Inactivation of _Arid1a_ drives aberrant epigenetic traits in a mouse model of _Apc_/_Pten_ defective ovarian endometrioid tumors. *(in preparation)*
 - **Giangreco N** and Lezon T. Alternative conformation prediction of Vibrio Cholerae concentrative nucleoside transporter. F1000Posters 2013, 4:776 [(poster)](https://f1000research.com/posters/1093921). 
 
+
+
 COMMUNITY INVOLVEMENT
 ----------
 
@@ -101,9 +105,15 @@ COMMUNITY INVOLVEMENT
     + Organize and manage hackathons for biomedical scientists at CUMC.
 - [Innovative Medicine Interest Group @ CUMC](www.innovatemedcolumbia.org/)
     + Member of Leadership Board.
-    + Organize career panels and technical talks bringing entrepreneurs in the NYC-area to CUMC.
+        + Organize career panels and technical talks bringing entrepreneurs in the NYC-area to CUMC.
 - [Health Tech Assembly](http://www.healthtechassembly.com/)
     + Medical outreach representative.
+        + Organize and plan events.
+        + Network and connect with entrepreneurs and professionals.
+- [Graduate Student Organization at Columbia University Irving Medical Center](https://www.gsas.cuimc.columbia.edu/student-life/graduate-student-organization)
+    + Finance Chair
+        + Organize budget and oversee a multi-thousand dollar activities portfolio.
+        + Assess and disseminate travel scholarships to PhD-level biomedical scientists.
 - [MLsociety](https://www.mlsociety.com/)
     + Leader on NYC Chapter Leadership Board
     + Organize and execute Kaggle competition efforts. 
@@ -138,6 +148,8 @@ MENTORING, TEACHING, AND TUTORING
 
 CONFERENCES AND HACKATHONS
 ----------
+
+- [OHDSI 2018 Symposium](https://www.ohdsi.org/2018-ohdsi-symposium/)
 
 - [New York Genome Center NCBI-Style Hackathon](https://biohackathons.github.io/)
    - Project lead for developing data science notebooks and web application interfacing with drug safety data.
