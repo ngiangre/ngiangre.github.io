@@ -33,7 +33,7 @@ EDUCATION
 
      PhD advisor: [Nicholas Tatonetti](http://tatonettilab.org)
 
-     Topics: Translational Bioinformatics, Clinical proteomics, Systems Biology, Systems Pharmacology
+     Research Areas: Translational Bioinformatics, Clinical proteomics, Biomarker Discovery, Systems Biology, Systems Pharmacology
      
      Courses: Deep Sequencing, Translational Bioinformatics, Computational Genomics, Statistical Inference, How to Make a Drug, Molecular Pharmacology, Statistical Thinking for Data Science and Analytics (Columbia edX)
 
@@ -84,7 +84,7 @@ FELLOWSHIPS AND AWARDS
 PUBLICATIONS AND POSTERS
 ----------
 
-- **Nick Giangreco** and Nicholas Tatonetti. Using precision pharmacoviglance to detect developmentally-regulated adverse drug reactions: a case study with antiepileptic drugs. [poster](http://10.7490/f1000research.1116203.1) [github](https://github.com/ngiangre/pediatric_pharmacovigilance)
+- **Nick Giangreco** and Nicholas Tatonetti. Using precision pharmacoviglance to detect developmentally-regulated adverse drug reactions: a case study with antiepileptic drugs. [poster](https://doi.org/10.7490/f1000research.1116203.1) [github](https://github.com/ngiangre/pediatric_pharmacovigilance)
 - **Nick Giangreco** and Nicholas Tatonetti. Using precision pharmacovigilance to detect and evaluate antiepileptic drug associated adverse reactions in pediatric patients. [poster](https://f1000research.com/posters/7-1091)
 - Castillero E., Ali Z., Akashi H., **Giangreco N.**, Wang C., Ji R., Zhang X., Kheysin N., Park J., Hegde S., Patel S., Stein S., Cuenca C., Leung D., Homma S., Tatonetti N., Topkara V., Takeda K., Colombo P., Naka Y., Sweeny L., Schulze C., George I. Structural and Functional Cardiac Profile after Prolonged Duration of Mechanical Unloading: Potential Implications for Myocardial Recovery. [*American Journal of Heart and Circulation Physiology*, article in press](https://www.physiology.org/doi/10.1152/ajpheart.00187.2018)
 - **Nick Giangreco**. Scan2CNV. [OMICSTools](https://omictools.com/scan2cnv-tool)
@@ -95,17 +95,17 @@ PUBLICATIONS AND POSTERS
 
 
 
-COMMUNITY INVOLVEMENT
+Leadership and Management Experience
 ----------
 
 - [CUMC Data Science Club](https://sites.google.com/view/cumcdatasciencegroup/home)
-    + Organizer of mostly wet-lab biologists learning data science topics using the R programming language.
-    + Organize biweekly seminar series plan, both administrative and presentation tasks.
-    + Lead project management for bioinformatics projects.
+    + Founder and President
+    + Manage club budget
+    + Organize and manage activities and outreach portfolio
     + Organize and manage hackathons for biomedical scientists at CUMC.
 - [Innovative Medicine Interest Group @ CUMC](www.innovatemedcolumbia.org/)
     + Member of Leadership Board.
-        + Organize career panels and technical talks bringing entrepreneurs in the NYC-area to CUMC.
+        + Organize career panels and technical talks bringing entrepreneurs in the NYC-area to CUIMC.
 - [Health Tech Assembly](http://www.healthtechassembly.com/)
     + Medical outreach representative.
         + Organize and plan events.
@@ -170,11 +170,13 @@ CONFERENCES AND HACKATHONS
 TALKS AND PANELS
 ------------------------
 
+- "Intro to Bioinformatics and How to Analyze Brain Tissue with Data Science". Invited presentation at [
+NYC Medical Research and Bioinformatics Group](https://www.meetup.com/NYC-Medical-Research-and-Bioinformatics-Group/). November 2018. [Presentation link](https://github.com/ngiangre/Miscellaneous_but_Useful/blob/master/20181113_Bioinformatics_Meetup_Presentation.pdf).
 - Medical Research Career Panelist, Minds Matter NYC, June 2018
 - Standardized and Reproducible Analysis Enables Identification of Novel Primary Graft Dysfunction Biomarkers using Exosome Proteomics, [Second NorthEast Computational Health Summit 2018](http://nechs.org), April 2018.
 - ["Tools, Libraries and Analyses in Biomedical Data Science"](http://nickg.bio/_posts/20171220_NYHAIS_talk.pdf), New York Healthcare Artificial Intelligence Society, December 2017.
 - ["Doing Science with Big Data"](http://nickg.bio/_posts/20171205_LateNightScience_Talk.pdf), Late Night Science, Columbia University Neuroscience Outreach, December 2017.
-- "AI, Life Sciences, and Big Data", New York Healthcare Artificial Intelligence Society, August 2017.
+- "AI, Life Sciences, and Big Data", New York Healthcare Artificial Intelligence Society, August 2017. [Presentation link](https://github.com/ngiangre/20171220_AI_MeetUp_Presentation).
 - NIDDK Undergraduate Step-Up Judge, NIH, Bethesda MD, August 2015.
 
 PROFESSIONAL MEMBERSHIPS
