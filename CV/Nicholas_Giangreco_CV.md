@@ -33,7 +33,7 @@ EDUCATION
 
      PhD advisor: [Nicholas Tatonetti](http://tatonettilab.org)
 
-     Research Areas: Translational Bioinformatics, Clinical proteomics, Biomarker Discovery, Systems Biology, Systems Pharmacology
+     Research Areas: Translational Bioinformatics, Clinical proteomics, Biomarker Discovery, Systems Biology, Systems Pharmacology, Pediatric Drug Safety
      
      Courses: Deep Sequencing, Translational Bioinformatics, Computational Genomics, Statistical Inference, How to Make a Drug, Molecular Pharmacology, Statistical Thinking for Data Science and Analytics (Columbia edX)
 
@@ -45,7 +45,7 @@ EDUCATION
 WORK EXPERIENCE
 ----------
 
-July 2018 - August 2018
+July 2018 - September 2018
 :    [**Genetic Intelligence Inc**](https://www.linkedin.com/company/genetic-intelligence/); New York, NY
 
 	  Genomics start-up
@@ -69,7 +69,7 @@ July 2018 - August 2018
 FELLOWSHIPS AND AWARDS
 ----------
 
--   Best contribution in methodological research at the [OHDSI 2018 Symposium](https://www.ohdsi.org/2018-ohdsi-symposium/) for the poster [Using precision pharmacoviglance to detect developmentally-regulated adverse drug reactions: a case study with antiepileptic drugs](http://10.7490/f1000research.1116203.1).
+-   Best contribution in methodological research at the [OHDSI 2018 Symposium](https://www.ohdsi.org/2018-ohdsi-symposium/) for [Pediatric Drug Safety](http://10.7490/f1000research.1116203.1) poster.
 
 -   Columbia Diversity Fellowship.
 
@@ -81,19 +81,26 @@ FELLOWSHIPS AND AWARDS
 
 -   Travel Award to 9<sup>th</sup> Student Council and ISMB/ECCB conference 2013 Berlin, Germany.
 
-PUBLICATIONS AND POSTERS
+PUBLICATIONS 
+----------
+
+- Castillero E., Ali Z., Akashi H., **Giangreco N.**, Wang C., Ji R., Zhang X., Kheysin N., Park J., Hegde S., Patel S., Stein S., Cuenca C., Leung D., Homma S., Tatonetti N., Topkara V., Takeda K., Colombo P., Naka Y., Sweeny L., Schulze C., George I. Structural and Functional Cardiac Profile after Prolonged Duration of Mechanical Unloading: Potential Implications for Myocardial Recovery. [*American Journal of Heart and Circulation Physiology*, article in press](https://www.physiology.org/doi/10.1152/ajpheart.00187.2018)
+- Sarah Kim-Hellmuth, Matthias Bechheim, Benno Puetz, Pejman Mohammadi, Yohann Nedelec, **Nicholas Giangreco**, Jessica Becker, Vera Kaiser, Nadine Fricker, Esther Beier, Peter Boor, Stephane Castel, Markus M. Noethen, Luis B. Barreiro, Joseph K. Pickrell, Bertram Mueller-Myhsok, Tuuli Lappalainen, Johannes Schumacher, Veit Hornung. Genetic regulatory effects modified by immune activation contribute to autoimmune disease associations [*Nature Communications*, 8 (266): 1-10](https://www.nature.com/articles/s41467-017-00366-1). 
+- **Giangreco N.**, Petrykowska H., Scott A., Margolin G., Gotea V., Cho K. R., and Elnitski L. Inactivation of _Arid1a_ drives aberrant epigenetic traits in a mouse model of _Apc_/_Pten_ defective ovarian endometrioid tumors. *(in preparation)*
+
+
+
+[**Peer-Reviewed Publications on Pubmed**](https://www.ncbi.nlm.nih.gov/pubmed/?term=Giangreco%20N%5BAuthor%5D&cauthor=true&cauthor_uid=30141986)
+
+POSTERS AND SOFTWARE
 ----------
 
 - **Nick Giangreco** and Nicholas Tatonetti. Using precision pharmacoviglance to detect developmentally-regulated adverse drug reactions: a case study with antiepileptic drugs. [poster](https://doi.org/10.7490/f1000research.1116203.1) [github](https://github.com/ngiangre/pediatric_pharmacovigilance)
 - **Nick Giangreco** and Nicholas Tatonetti. Using precision pharmacovigilance to detect and evaluate antiepileptic drug associated adverse reactions in pediatric patients. [poster](https://f1000research.com/posters/7-1091)
-- Castillero E., Ali Z., Akashi H., **Giangreco N.**, Wang C., Ji R., Zhang X., Kheysin N., Park J., Hegde S., Patel S., Stein S., Cuenca C., Leung D., Homma S., Tatonetti N., Topkara V., Takeda K., Colombo P., Naka Y., Sweeny L., Schulze C., George I. Structural and Functional Cardiac Profile after Prolonged Duration of Mechanical Unloading: Potential Implications for Myocardial Recovery. [*American Journal of Heart and Circulation Physiology*, article in press](https://www.physiology.org/doi/10.1152/ajpheart.00187.2018)
+- **Nick Giangreco** and Nicholas Tatonetti. cohorts. [github](https://github.com/ngiangre/cohorts)
 - **Nick Giangreco**. Scan2CNV. [OMICSTools](https://omictools.com/scan2cnv-tool)
 - **Giangreco N**, Zorn E, Chen E et al. Identification of novel primary graft dysfunction biomarkers using exosome proteomics [version 1; not peer reviewed]. F1000Research 2017, 6:2080 [(poster)](https://f1000research.com/posters/6-2080) (doi: 10.7490/f1000research.1115115.1)
-- Sarah Kim-Hellmuth, Matthias Bechheim, Benno Puetz, Pejman Mohammadi, Yohann Nedelec, **Nicholas Giangreco**, Jessica Becker, Vera Kaiser, Nadine Fricker, Esther Beier, Peter Boor, Stephane Castel, Markus M. Noethen, Luis B. Barreiro, Joseph K. Pickrell, Bertram Mueller-Myhsok, Tuuli Lappalainen, Johannes Schumacher, Veit Hornung. Genetic regulatory effects modified by immune activation contribute to autoimmune disease associations [*Nature Communications*, 8 (266): 1-10](https://www.nature.com/articles/s41467-017-00366-1). 
--	**Giangreco N.**, Petrykowska H., Scott A., Margolin G., Gotea V., Cho K. R., and Elnitski L. Inactivation of _Arid1a_ drives aberrant epigenetic traits in a mouse model of _Apc_/_Pten_ defective ovarian endometrioid tumors. *(in preparation)*
 - **Giangreco N** and Lezon T. Alternative conformation prediction of Vibrio Cholerae concentrative nucleoside transporter. F1000Posters 2013, 4:776 [(poster)](https://f1000research.com/posters/1093921). 
-
-
 
 Leadership and Management Experience
 ----------
@@ -123,6 +130,7 @@ Leadership and Management Experience
         + Co-organizer
         + Attend and engage in public discourse on a wide range of topics such as AI & Society, AI & Healthcare, and economic impact by AI. 
         + Facilitate group engagement, AI study groups, and group organization.
+        + Consultant on Meetup projects and initiatives. 
     + [Data Storytelling](https://www.meetup.com/Data-Storytelling-NYC/)
         + Monthly lectures by data scientists and managers from private companies presenting stories and narratives using visualizations and interactive methods on diverse sources of data.
     + [Statistical programming](https://www.meetup.com/nyhackr/)
