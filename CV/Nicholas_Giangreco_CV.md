@@ -106,36 +106,26 @@ Leadership and Management Experience
 ----------
 
 - [CUMC Data Science Club](https://sites.google.com/view/cumcdatasciencegroup/home)
-    + Founder and President
+    + President
     + Manage club budget
-    + Organize and manage activities and outreach portfolio
-    + Organize and manage hackathons for biomedical scientists at CUMC.
+    + Organize and manage activities and outreach portfolio to support and promote the skills of biomedical scientists at CUMC
 - [Innovative Medicine Interest Group @ CUMC](www.innovatemedcolumbia.org/)
     + Member of Leadership Board.
         + Organize career panels and technical talks bringing entrepreneurs in the NYC-area to CUIMC.
 - [Health Tech Assembly](http://www.healthtechassembly.com/)
     + Medical outreach representative.
-        + Organize and plan events.
-        + Network and connect with entrepreneurs and professionals.
+        + Organize and plan social engagement events.
+        + Network and connect with NYC-wide entrepreneurs and professionals.
 - [Graduate Student Organization at Columbia University Irving Medical Center](https://www.gsas.cuimc.columbia.edu/student-life/graduate-student-organization)
     + Finance Chair
         + Organize budget and oversee a multi-thousand dollar activities portfolio.
-        + Assess and disseminate travel scholarships to PhD-level biomedical scientists.
-- [MLsociety](https://www.mlsociety.com/)
-    + Leader on NYC Chapter Leadership Board
-    + Organize and execute Kaggle competition efforts. 
-    + Plan and attend community events
+        + Assess and disseminate travel scholarships to graduate biomedical scientists.
 - NYC MeetUps
     + [New York Artificial Intelligence in Healthcare Society](https://www.meetup.com/NYHAIS/)
         + Co-organizer
         + Attend and engage in public discourse on a wide range of topics such as AI & Society, AI & Healthcare, and economic impact by AI. 
         + Facilitate group engagement, AI study groups, and group organization.
         + Consultant on Meetup projects and initiatives. 
-    + [Data Storytelling](https://www.meetup.com/Data-Storytelling-NYC/)
-        + Monthly lectures by data scientists and managers from private companies presenting stories and narratives using visualizations and interactive methods on diverse sources of data.
-    + [Statistical programming](https://www.meetup.com/nyhackr/)
-        + Monthly seminars by data scientists, engineers and analysts using novel and statistically rigorous methods applied within academic and company research teams mainly using the R programming language. 
-        + Collaborate with community members producing programming solutions, such as [solutions](http://nickg.bio/_posts/ngiangre/r_for_data_science_solutions.html) for _R for Data Science_ by Hadley Wickham. 
         
 MENTORING, TEACHING, AND TUTORING
 ----------
@@ -145,8 +135,6 @@ MENTORING, TEACHING, AND TUTORING
         * Provide guidance and instruction in biomedical data science and research training.
         * Provided guidance and mentoring for summer 2018 research internship in the Tatonetti Lab
            + ["Drugs with sex-linked risk for adverse drug reactions"](https://github.com/tatonetti-lab/sex_risks)
-- Leader of CUMC Data Science Group
-    + Lead discussions, facilitate group project work, and organize monthly hackathons on processing, analyzing, and visualizing data in R. 
 - Curiology tutor
     + Managed and co-led science experiments with NIH fellows for middle school students in Washington D.C. 
 - College Bound tutor
@@ -157,11 +145,13 @@ MENTORING, TEACHING, AND TUTORING
 CONFERENCES AND HACKATHONS
 ----------
 
+-	CSHL Biological Data Science meeting November 2018.
+
 - [OHDSI 2018 Symposium](https://www.ohdsi.org/2018-ohdsi-symposium/)
 
 - [New York Genome Center NCBI-Style Hackathon](https://biohackathons.github.io/)
    - Project lead for developing data science notebooks and web application interfacing with drug safety data.
-   - Code is in [SafeDrugs](https://github.com/NCBI-Hackathons/SafeDrugs) github repository. 
+   - See [SafeDrugs](https://github.com/NCBI-Hackathons/SafeDrugs) github repository. 
    
 - [Intelligent Systems in Molecular Biology, July 2018](https://iscb.org/ismb2018)
 
@@ -176,7 +166,7 @@ CONFERENCES AND HACKATHONS
 -	ISMB/ECCB conference @ Berlin, Germany July 2013, poster presentation *Giangreco et al. 2013*.
 
 TALKS AND PANELS
-------------------------
+--------
 
 - "Intro to Bioinformatics and How to Analyze Brain Tissue with Data Science". Invited presentation at [
 NYC Medical Research and Bioinformatics Group](https://www.meetup.com/NYC-Medical-Research-and-Bioinformatics-Group/). November 2018. [Presentation link](https://github.com/ngiangre/Miscellaneous_but_Useful/blob/master/20181113_Bioinformatics_Meetup_Presentation.pdf).
