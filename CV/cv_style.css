@@ -68,7 +68,8 @@ blockquote {
 /* Links */
 a {
     text-decoration: none;
-    color: #000000;
+    background-color: #FFFFFF;
+    color: #800000;
 }
 a:hover, a:active {
     background-color: #FFFFFF;
