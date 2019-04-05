@@ -127,9 +127,10 @@ Leadership and Management Experience
         + Facilitate group engagement, AI study groups, and group organization.
         + Consultant on Meetup projects and initiatives. 
         
-MENTORING, TEACHING, AND TUTORING
+SCIENCE MENTORING, TUTORING, and WRITING
 ----------
 
+- Nicholas Giangreco. "The Importance of being Open". *PHDISH* January 9th 2019. http://www.phdish.com/blog/openscience
 - Undergraduate Mentoring:
     * Payal Chandak, Columbia University
         * Provide guidance and instruction in biomedical data science and research training.
