@@ -45,6 +45,11 @@ EDUCATION
 WORK EXPERIENCE
 ----------
 
+June 2019 - August 2019
+:    [**Regeneron Genetics Center**](https://www.regeneron.com/genetics-center); TerryTown, NY
+
+	  Clinical informatics group
+	  
 July 2018 - September 2018
 :    [**Genetic Intelligence Inc**](https://www.linkedin.com/company/genetic-intelligence/); New York, NY
 
