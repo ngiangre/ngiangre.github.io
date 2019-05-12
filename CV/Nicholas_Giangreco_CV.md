@@ -125,6 +125,9 @@ Leadership and Management Experience
     + Finance Chair
         + Organize budget and oversee a multi-thousand dollar activities portfolio.
         + Assess and disseminate travel scholarships to graduate biomedical scientists.
+- Columbia Graduate Counncil
+    + Treasurer
+        + Manage 40 thousand dollar budget for Columbia inter-school activities. 
 - NYC MeetUps
     + [New York Artificial Intelligence in Healthcare Society](https://www.meetup.com/NYHAIS/)
         + Co-organizer
