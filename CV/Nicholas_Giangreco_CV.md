@@ -15,11 +15,13 @@ phone : 7167132124
 ---
 
 ----------------------------------    --------------------------------------------------
-<u>**Email:**</u>                                               nick.giangreco@gmail.com
+<u>**Home Address:**</u>                                               154 Haven Avenue, New York, New York, 10032
+<u>**Email Address:**</u>                                               nick.giangreco@gmail.com
 <u>**Links:**</u>                              [Github](http://github.com/ngiangre) [Linkedin](http://www.linkedin.com/in/nickgiangreco/) [ORCID](https://orcid.org/0000-0001-8138-4947) [nickg.bio](http://nickg.bio)
-<u>**Programming Languages:**</u>              Frequent: R, Python, Bash, SQL; Previously: Java
-<u>**Team/Project Management:**</u>           Teamwork, Slack, Asana, Basecamp, Slite, Gitlab, Gitter, DropBox, Google apps
+<u>**Programming Languages:**</u>              R, Python, Bash, SQL, Java
+<u>**Programming Strategies:**</u>              Parallelization (e.g. doParallel/joblib), Out-of-memory computation (e.g. Dask), Distributed Computing (e.g. Spark)
 <u>**Web design:**</u>                       Plotly (Dash & Shiny), HTML, CSS, Bootstrap library
+<u>**Team/Project Management:**</u>           Teamwork, Slack, Asana, Basecamp, Slite, Gitlab, Gitter, DropBox, Google apps
 <u>**Formatting:**</u>                       LaTeX, Markdown, Jupyter Notebooks, Rmarkdown, Microsoft and Apple Office Suite
 ----------------------------------     ------------------------------------------------- 
 
@@ -50,15 +52,17 @@ June 2019 - August 2019
 
 	  Clinical informatics group
 	  
+	  Data-driven phenotyping
+	  
 July 2018 - September 2018
-:    [**Genetic Intelligence Inc**](https://www.linkedin.com/company/genetic-intelligence/); New York, NY
+:    [**Genetic Intelligence Inc**](https://www.geneticintelligence.com/); New York, NY
 
-	  Genomics start-up
+	  Computational biology intern 
 	  
-	  Computational biology intern
+	  Genomics data management
 	  
 	  
-2014-Present
+August 2014-May 2019
 :    **National Human Genome Research Institute**; Bethesda, MD
 
      Principal Investigator: [Dr. Laura Elnitski](https://www.genome.gov/12514761/elnitski--group/)
@@ -69,7 +73,7 @@ July 2018 - September 2018
      
      Trainee 2014-2016
      
-     Special Volunteer 2016-Present
+     Special Volunteer 2016-2019
 
 FELLOWSHIPS AND AWARDS
 ----------
@@ -89,18 +93,19 @@ FELLOWSHIPS AND AWARDS
 PUBLICATIONS 
 ----------
 
+- Benjamin S Glicksberg, Boris Oskotsky, Phyllis M Thangaraj, **Nicholas Giangreco**, Marcus A Badgeley, Kipp W Johnson, Debajyoti Datta, Vivek A Rudrapatna, Nadav Rappoport, Mark M Shervey, Riccardo Miotto, Theodore C Goldstein, Eugenia Rutenberg, Remi Frazier, Nelson Lee, Sharat Israni, Rick Larsen, Bethany Percha, Li Li, Joel T Dudley, Nicholas P Tatonetti, Atul J Butte, PatientExploreR: an extensible application for dynamic visualization of patient clinical history from electronic health records in the OMOP common data model, Bioinformatics, , btz409, [https://doi.org/10.1093/bioinformatics/btz409](https://doi.org/10.1093/bioinformatics/btz409)
 - Castillero E., Ali Z., Akashi H., **Giangreco N.**, Wang C., Ji R., Zhang X., Kheysin N., Park J., Hegde S., Patel S., Stein S., Cuenca C., Leung D., Homma S., Tatonetti N., Topkara V., Takeda K., Colombo P., Naka Y., Sweeny L., Schulze C., George I. Structural and Functional Cardiac Profile after Prolonged Duration of Mechanical Unloading: Potential Implications for Myocardial Recovery. [*American Journal of Heart and Circulation Physiology*, article in press](https://www.physiology.org/doi/10.1152/ajpheart.00187.2018)
 - Sarah Kim-Hellmuth, Matthias Bechheim, Benno Puetz, Pejman Mohammadi, Yohann Nedelec, **Nicholas Giangreco**, Jessica Becker, Vera Kaiser, Nadine Fricker, Esther Beier, Peter Boor, Stephane Castel, Markus M. Noethen, Luis B. Barreiro, Joseph K. Pickrell, Bertram Mueller-Myhsok, Tuuli Lappalainen, Johannes Schumacher, Veit Hornung. Genetic regulatory effects modified by immune activation contribute to autoimmune disease associations [*Nature Communications*, 8 (266): 1-10](https://www.nature.com/articles/s41467-017-00366-1). 
 - **Giangreco N.**, Petrykowska H., Scott A., Margolin G., Gotea V., Cho K. R., and Elnitski L. Inactivation of _Arid1a_ drives aberrant epigenetic traits in a mouse model of _Apc_/_Pten_ defective ovarian endometrioid tumors. *(in preparation)*
 
 
 
-[**Peer-Reviewed Publications on Pubmed**](https://www.ncbi.nlm.nih.gov/pubmed/?term=Giangreco%20N%5BAuthor%5D&cauthor=true&cauthor_uid=30141986)
+[**Peer-Reviewed Publications on Pubmed**](https://www.ncbi.nlm.nih.gov/pubmed/?term=Giangreco+N%5BAuthor%5D)
 
 POSTERS AND SOFTWARE
 ----------
 
-- **Nick Giangreco** and Nicholas Tatonetti. Using precision pharmacoviglance to detect developmentally-regulated adverse drug reactions: a case study with antiepileptic drugs. [poster](https://doi.org/10.7490/f1000research.1116203.1) [github](https://github.com/ngiangre/pediatric_pharmacovigilance)
+- **Nick Giangreco** and Nicholas Tatonetti. Using precision pharmacovigilance to detect developmentally-regulated adverse drug reactions: a case study with antiepileptic drugs. [poster](https://doi.org/10.7490/f1000research.1116203.1) [github](https://github.com/ngiangre/pediatric_pharmacovigilance)
 - **Nick Giangreco** and Nicholas Tatonetti. Using precision pharmacovigilance to detect and evaluate antiepileptic drug associated adverse reactions in pediatric patients. [poster](https://f1000research.com/posters/7-1091)
 - **Nick Giangreco** and Nicholas Tatonetti. cohorts. [github](https://github.com/ngiangre/cohorts)
 - **Nick Giangreco**. Scan2CNV. [OMICSTools](https://omictools.com/scan2cnv-tool)
@@ -110,11 +115,11 @@ POSTERS AND SOFTWARE
 Leadership and Management Experience
 ----------
 
-- [CUMC Data Science Club](https://sites.google.com/view/cumcdatasciencegroup/home)
+- [CUIMC Data Science Club](https://sites.google.com/view/cumcdatasciencegroup/home)
     + President
     + Manage club budget
-    + Organize and manage activities and outreach portfolio to support and promote the skills of biomedical scientists at CUMC
-- [Innovative Medicine Interest Group @ CUMC](www.innovatemedcolumbia.org/)
+    + Organize and direct activities and outreach portfolio to support and promote the skills of biomedical scientists at CUIMC
+- [Innovative Medicine Interest Group @ CUIMC](www.innovatemedcolumbia.org/)
     + Member of Leadership Board.
         + Organize career panels and technical talks bringing entrepreneurs in the NYC-area to CUIMC.
 - [Health Tech Assembly](http://www.healthtechassembly.com/)
@@ -125,7 +130,7 @@ Leadership and Management Experience
     + Finance Chair
         + Organize budget and oversee a multi-thousand dollar activities portfolio.
         + Assess and disseminate travel scholarships to graduate biomedical scientists.
-- Columbia Graduate Counncil
+- [Columbia Graduate Counncil](https://www.cc-seas.columbia.edu/student-group/columbia-graduate-council)
     + Treasurer
         + Manage 40 thousand dollar budget for Columbia inter-school activities. 
 - NYC MeetUps
