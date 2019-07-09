@@ -14,9 +14,12 @@ address : 154 Haven Avenue, New York, New York, 10032
 phone : 7167132124
 ---
 
+Date of preparation: July 8th 2019
 ----------------------------------    --------------------------------------------------
-<u>**Home Address:**</u>                                               154 Haven Avenue, New York, New York, 10032
-<u>**Email Address:**</u>                                               nick.giangreco@gmail.com
+<u>**Birth date:**</u>						July 15th, 1992
+<u>**Birth place:**</u>						Buffalo New York
+<u>**Citizenship:**</u>						United States of America
+<u>**Email Address:**</u>                           nick.giangreco@gmail.com
 <u>**Links:**</u>                              [Github](http://github.com/ngiangre) [Linkedin](http://www.linkedin.com/in/nickgiangreco/) [ORCID](https://orcid.org/0000-0001-8138-4947) [nickg.bio](http://nickg.bio)
 <u>**Programming Languages:**</u>              R, Python, Bash, SQL, Java
 <u>**Programming Strategies:**</u>              Parallelization (e.g. doParallel/joblib), Out-of-memory computation (e.g. Dask), Distributed Computing (e.g. Spark)
@@ -30,16 +33,12 @@ EDUCATION
 ----------
 
 
-2021 (expected)
+August 2016 - Present
 :    [**PhD Candidate, Systems Biology**](http://systemsbiology.columbia.edu/people/nicholas-giangreco); Columbia University, New York City, NY
 
      PhD advisor: [Nicholas Tatonetti](http://tatonettilab.org)
 
-     Research Areas: Translational Bioinformatics, Clinical proteomics, Biomarker Discovery, Systems Biology, Systems Pharmacology, Pediatric Drug Safety
-     
-     Courses: Deep Sequencing, Translational Bioinformatics, Computational Genomics, Statistical Inference, How to Make a Drug, Molecular Pharmacology, Statistical Thinking for Data Science and Analytics (Columbia edX)
-
-2010-2014
+August 2010 - May 2014
 :    **BS, Biochemistry**; University of Rochester, Rochester, NY
 
      Minor: Philosophy
@@ -52,24 +51,15 @@ June 2019 - August 2019
 
 	  Clinical informatics group
 	  
-	  Data-driven phenotyping
-	  
 July 2018 - September 2018
-:    [**Genetic Intelligence Inc**](https://www.geneticintelligence.com/); New York, NY
+:    [**Genetic Intelligence Inc.**](https://www.geneticintelligence.com/); New York, NY
 
-	  Computational biology intern 
-	  
-	  Genomics data management
-	  
+	  Computational biology intern
 	  
 August 2014-May 2019
 :    **National Human Genome Research Institute**; Bethesda, MD
 
      Principal Investigator: [Dr. Laura Elnitski](https://www.genome.gov/12514761/elnitski--group/)
-
-     -   Molecular events during tumorigenesis of murine ovarian tumor subtypes differing in deletion of tumor suppressor genes.
-
-     -   RNA sequencing, DNA methylation sequencing, and their integration.
      
      Trainee 2014-2016
      
@@ -93,7 +83,9 @@ FELLOWSHIPS AND AWARDS
 PUBLICATIONS 
 ----------
 
+- **Nicholas P. Giangreco**, Barry Fine, Nicholas P. Tatonetti. cohorts: A Python package for clinical ‘omics data management. [bioarxiv](https://www.biorxiv.org/content/10.1101/626051v1.article-info)
 - Benjamin S Glicksberg, Boris Oskotsky, Phyllis M Thangaraj, **Nicholas Giangreco**, Marcus A Badgeley, Kipp W Johnson, Debajyoti Datta, Vivek A Rudrapatna, Nadav Rappoport, Mark M Shervey, Riccardo Miotto, Theodore C Goldstein, Eugenia Rutenberg, Remi Frazier, Nelson Lee, Sharat Israni, Rick Larsen, Bethany Percha, Li Li, Joel T Dudley, Nicholas P Tatonetti, Atul J Butte, PatientExploreR: an extensible application for dynamic visualization of patient clinical history from electronic health records in the OMOP common data model, Bioinformatics, , btz409, [https://doi.org/10.1093/bioinformatics/btz409](https://doi.org/10.1093/bioinformatics/btz409)
+- Benjamin S Glicksberg, Boris Oskotsky, **Nicholas Giangreco**, Phyllis M Thangaraj, Vivek Rudrapatna, Debajyoti Datta, Remi Frazier, Nelson Lee, Rick Larsen, Nicholas P Tatonetti, Atul J Butte, ROMOP: a light-weight R package for interfacing with OMOP-formatted electronic health record data, JAMIA Open, Volume 2, Issue 1, April 2019, Pages 10–14, [https://doi.org/10.1093/jamiaopen/ooy059](https://doi.org/10.1093/jamiaopen/ooy059)
 - Castillero E., Ali Z., Akashi H., **Giangreco N.**, Wang C., Ji R., Zhang X., Kheysin N., Park J., Hegde S., Patel S., Stein S., Cuenca C., Leung D., Homma S., Tatonetti N., Topkara V., Takeda K., Colombo P., Naka Y., Sweeny L., Schulze C., George I. Structural and Functional Cardiac Profile after Prolonged Duration of Mechanical Unloading: Potential Implications for Myocardial Recovery. [*American Journal of Heart and Circulation Physiology*, article in press](https://www.physiology.org/doi/10.1152/ajpheart.00187.2018)
 - Sarah Kim-Hellmuth, Matthias Bechheim, Benno Puetz, Pejman Mohammadi, Yohann Nedelec, **Nicholas Giangreco**, Jessica Becker, Vera Kaiser, Nadine Fricker, Esther Beier, Peter Boor, Stephane Castel, Markus M. Noethen, Luis B. Barreiro, Joseph K. Pickrell, Bertram Mueller-Myhsok, Tuuli Lappalainen, Johannes Schumacher, Veit Hornung. Genetic regulatory effects modified by immune activation contribute to autoimmune disease associations [*Nature Communications*, 8 (266): 1-10](https://www.nature.com/articles/s41467-017-00366-1). 
 - **Giangreco N.**, Petrykowska H., Scott A., Margolin G., Gotea V., Cho K. R., and Elnitski L. Inactivation of _Arid1a_ drives aberrant epigenetic traits in a mouse model of _Apc_/_Pten_ defective ovarian endometrioid tumors. *(in preparation)*
