@@ -14,19 +14,19 @@ address : 154 Haven Avenue, New York, New York, 10032
 phone : 7167132124
 ---
 
-Date of preparation: July 8th 2019
-----------------------------------    --------------------------------------------------
-<u>**Birth date:**</u>						July 15th, 1992
-<u>**Birth place:**</u>						Buffalo New York
-<u>**Citizenship:**</u>						United States of America
-<u>**Email Address:**</u>                           nick.giangreco@gmail.com
-<u>**Links:**</u>                              [Github](http://github.com/ngiangre) [Linkedin](http://www.linkedin.com/in/nickgiangreco/) [ORCID](https://orcid.org/0000-0001-8138-4947) [nickg.bio](http://nickg.bio)
-<u>**Programming Languages:**</u>              R, Python, Bash, SQL, Java
-<u>**Programming Strategies:**</u>              Parallelization (e.g. doParallel/joblib), Out-of-memory computation (e.g. Dask), Distributed Computing (e.g. Spark)
-<u>**Web design:**</u>                       Plotly (Dash & Shiny), HTML, CSS, Bootstrap library
-<u>**Team/Project Management:**</u>           Teamwork, Slack, Asana, Basecamp, Slite, Gitlab, Gitter, DropBox, Google apps
-<u>**Formatting:**</u>                       LaTeX, Markdown, Jupyter Notebooks, Rmarkdown, Microsoft and Apple Office Suite
-----------------------------------     ------------------------------------------------- 
+<u>**Date of preparation:**</u> July 8th 2019 | 
+---- | ----:
+<u>**Birth date:**</u> | July 15th, 1992 |
+<u>**Birth place:**</u>	 | Buffalo New York |
+<u>**Citizenship:**</u>	 | United States of America |
+<u>**Email Address:**</u> | nick.giangreco@gmail.com |
+<u>**Formatting:**</u> | Markdown, Rmarkdown, Jupyter Notebooks |
+<u>**Programming Languages:**</u> | R, Python, Bash, SQL, Java |
+<u>**Programming Techniques:**</u> | Parallelization, Out-of-core learning, Distributed computing |
+<u>**Programming Platforms:**</u> | Multicore machines, Amazon services (e.g. EC2), Databricks |
+<u>**Project Management:**</u> | Teamwork, Slack, Asana, Basecamp, Gitter, DropBox, Google |
+<u>**Web design:**</u> | Plotly (Dash & Shiny), HTML, CSS, Bootstrap |
+<u>**Web links:**</u> | [Github](http://github.com/ngiangre) [Linkedin](http://www.linkedin.com/in/nickgiangreco/) [ORCID](https://orcid.org/0000-0001-8138-4947) [nickg.bio](http://nickg.bio) |
 
 
 EDUCATION
@@ -34,12 +34,12 @@ EDUCATION
 
 
 August 2016 - Present
-:    [**PhD Candidate, Systems Biology**](http://systemsbiology.columbia.edu/people/nicholas-giangreco); Columbia University, New York City, NY
+:     [**PhD Candidate, Systems Biology**](http://systemsbiology.columbia.edu/people/nicholas-giangreco); Columbia University, New York City, NY
 
      PhD advisor: [Nicholas Tatonetti](http://tatonettilab.org)
 
 August 2010 - May 2014
-:    **BS, Biochemistry**; University of Rochester, Rochester, NY
+:     **BS, Biochemistry**; University of Rochester, Rochester, NY
 
      Minor: Philosophy
 
@@ -110,27 +110,27 @@ Leadership and Management Experience
 - [CUIMC Data Science Club](https://sites.google.com/view/cumcdatasciencegroup/home)
     + President
     + Manage club budget
-    + Organize and direct activities and outreach portfolio to support and promote the skills of biomedical scientists at CUIMC
+    + Organize team of officers, oversee activities, and promote outreach portfolio to support and strengthen the data science skills of biomedical scientists at CUIMC
 - [Innovative Medicine Interest Group @ CUIMC](www.innovatemedcolumbia.org/)
     + Member of Leadership Board.
         + Organize career panels and technical talks bringing entrepreneurs in the NYC-area to CUIMC.
 - [Health Tech Assembly](http://www.healthtechassembly.com/)
     + Medical outreach representative.
-        + Organize and plan social engagement events.
+        + Organize and plan professional and social engagement events.
         + Network and connect with NYC-wide entrepreneurs and professionals.
 - [Graduate Student Organization at Columbia University Irving Medical Center](https://www.gsas.cuimc.columbia.edu/student-life/graduate-student-organization)
     + Finance Chair
-        + Organize budget and oversee a multi-thousand dollar activities portfolio.
+        + Organize budget and oversee a thirty thousand dollar activities and events portfolio.
         + Assess and disseminate travel scholarships to graduate biomedical scientists.
 - [Columbia Graduate Counncil](https://www.cc-seas.columbia.edu/student-group/columbia-graduate-council)
     + Treasurer
-        + Manage 40 thousand dollar budget for Columbia inter-school activities. 
+        + Manage forty thousand dollar budget for Columbia inter-school activities. 
 - NYC MeetUps
-    + [New York Artificial Intelligence in Healthcare Society](https://www.meetup.com/NYHAIS/)
+    + [New York Health Artificial Intelligence Society](https://www.meetup.com/NYHAIS/)
         + Co-organizer
-        + Attend and engage in public discourse on a wide range of topics such as AI & Society, AI & Healthcare, and economic impact by AI. 
+        + Promote public discourse on a wide range of topics such as AI & Society, AI & Healthcare, and economic impact by AI. 
         + Facilitate group engagement, AI study groups, and group organization.
-        + Consultant on Meetup projects and initiatives. 
+        + Consultant on data science and education projects and initiatives. 
         
 MENTORING, TUTORING, and WRITING
 ----------
