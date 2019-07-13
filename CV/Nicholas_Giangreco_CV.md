@@ -14,11 +14,8 @@ address : 154 Haven Avenue, New York, New York, 10032
 phone : 7167132124
 ---
 
-<u>**Date of preparation:**</u> July 8th 2019 | 
+<u>**Date of preparation:**</u> July 13th 2019 | 
 ---- | ----:
-<u>**Birth date:**</u> | July 15th, 1992 |
-<u>**Birth place:**</u>	 | Buffalo New York |
-<u>**Citizenship:**</u>	 | United States of America |
 <u>**Email Address:**</u> | nick.giangreco@gmail.com |
 <u>**Formatting:**</u> | Markdown, Rmarkdown, Jupyter Notebooks |
 <u>**Programming Languages:**</u> | R, Python, Bash, SQL, Java |
@@ -40,8 +37,6 @@ August 2016 - Present
 
 August 2010 - May 2014
 :     **BS, Biochemistry**; University of Rochester, Rochester, NY
-
-     Minor: Philosophy
 
 WORK EXPERIENCE
 ----------
@@ -109,8 +104,7 @@ Leadership and Management Experience
 
 - [CUIMC Data Science Club](https://sites.google.com/view/cumcdatasciencegroup/home)
     + President
-    + Manage club budget
-    + Organize team of officers, oversee activities, and promote outreach portfolio to support and strengthen the data science skills of biomedical scientists at CUIMC
+    + Organize team of officers, oversee activities, manage budget, and promote outreach portfolio to support and strengthen the data science skills of biomedical scientists at CUIMC
 - [Innovative Medicine Interest Group @ CUIMC](www.innovatemedcolumbia.org/)
     + Member of Leadership Board.
         + Organize career panels and technical talks bringing entrepreneurs in the NYC-area to CUIMC.
@@ -120,7 +114,7 @@ Leadership and Management Experience
         + Network and connect with NYC-wide entrepreneurs and professionals.
 - [Graduate Student Organization at Columbia University Irving Medical Center](https://www.gsas.cuimc.columbia.edu/student-life/graduate-student-organization)
     + Finance Chair
-        + Organize budget and oversee a thirty thousand dollar activities and events portfolio.
+        + Organize budget and oversee thirty thousand dollar activities and events portfolio.
         + Assess and disseminate travel scholarships to graduate biomedical scientists.
 - [Columbia Graduate Counncil](https://www.cc-seas.columbia.edu/student-group/columbia-graduate-council)
     + Treasurer
