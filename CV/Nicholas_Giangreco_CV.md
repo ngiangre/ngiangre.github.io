@@ -42,7 +42,7 @@ WORK EXPERIENCE
 ----------
 
 June 2019 - August 2019
-:    [**Regeneron Genetics Center**](https://www.regeneron.com/genetics-center); TerryTown, NY
+:    [**Regeneron Genetics Center**](https://www.regeneron.com/genetics-center); Tarrytown, NY
 
 	  Clinical informatics group
 	  
