@@ -34,7 +34,9 @@ August 2016 - Present
 :     [**PhD Candidate, Systems Biology**](http://systemsbiology.columbia.edu/people/nicholas-giangreco); Columbia University, New York City, NY
 
      PhD advisor: [Nicholas Tatonetti](http://tatonettilab.org)
-
+     
+     Masters of Arts (2018) and Masters of Philosophy (2019)
+     
 August 2010 - May 2014
 :     **BS, Biochemistry**; University of Rochester, Rochester, NY
 
