@@ -14,7 +14,7 @@ address : 154 Haven Avenue, New York, New York, 10032
 phone : 7167132124
 ---
 
-<u>**Date of preparation:**</u> August 4th 2019 | 
+<u>**Date of preparation:**</u> October 13th 2019 | 
 ---- | ----:
 <u>**Email Address:**</u> | nick.giangreco@gmail.com |
 <u>**Formatting:**</u> | Markdown, Rmarkdown, Jupyter Notebooks |
@@ -46,7 +46,7 @@ WORK EXPERIENCE
 June 2019 - August 2019
 :    [**Regeneron Genetics Center**](https://www.regeneron.com/genetics-center); Tarrytown, NY
 
-	  Clinical informatics group
+	  Clinical informatics intern
 	  
 July 2018 - September 2018
 :    [**Genetic Intelligence Inc.**](https://www.geneticintelligence.com/); New York, NY
@@ -58,9 +58,9 @@ August 2014-May 2019
 
      Principal Investigator: [Dr. Laura Elnitski](https://www.genome.gov/12514761/elnitski--group/)
      
-     Trainee 2014-2016
+     Cancer bioinformatics trainee 2014-2016
      
-     Special Volunteer 2016-2019
+     Special volunteer 2016-2019
 
 FELLOWSHIPS AND AWARDS
 ----------
@@ -106,17 +106,16 @@ Leadership and Management Experience
 
 - [CUIMC Data Science Club](https://sites.google.com/view/cumcdatasciencegroup/home)
     + President
-    + Organize team of officers, oversee activities, manage budget, and promote outreach portfolio to support and strengthen the data science skills of biomedical scientists at CUIMC
+    + Organize and manage team of officers, oversee activities, manage budget, and promote outreach portfolio to support and strengthen the data science skills of biomedical scientists at CUIMC
 - [Health Tech Assembly](http://www.healthtechassembly.com/)
     + President
-        + Manage business, medical, and engineering representatives for inter-school events, panels, and conferences at Columbia. 
-        + Organize and plan professional and social engagement events.
+        + Manage business, medical, public health, and engineering representatives for inter-school events, panels, and conferences at Columbia. 
+        + Organize and plan professional/social engagement events.
         + Network and connect with NYC-wide entrepreneurs and professionals.
 - [Graduate Student Organization at Columbia University Irving Medical Center](https://www.gsas.cuimc.columbia.edu/student-life/graduate-student-organization)
-    + Finance Chair
-        + Organize budget and oversee thirty thousand dollar activities and events portfolio.
-        + Assess and disseminate travel scholarships to graduate biomedical scientists.
-- [Columbia Graduate Counncil](https://www.cc-seas.columbia.edu/student-group/columbia-graduate-council)
+    + President
+        + Organize and manage team of Biomedical PhDs for social and professional activities serving hundreds of CUIMC PhD students. 
+- [Columbia Graduate Council](https://www.cc-seas.columbia.edu/student-group/columbia-graduate-council)
     + Treasurer
         + Manage forty thousand dollar budget for Columbia inter-school activities. 
 - NYC MeetUps
