@@ -128,6 +128,7 @@ Leadership and Management Experience
 MENTORING, TUTORING, and WRITING
 ----------
 
+- ["Hack nights -- Solving healthcare data-science/AI/ML problems"](https://www.eventbrite.com/e/healthcare-hack-night-tickets-72013860395) Introduction to cancer genomics three part series.  Co-led by Nicholas Giangreco and Matthew Eng
 - Nicholas Giangreco. ["The Importance of being Open"](http://www.phdish.com/blog/openscience). *PHDISH* January 9th 2019. 
 - Undergraduate Mentoring:
     * Payal Chandak, Columbia University

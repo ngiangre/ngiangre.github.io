@@ -1,0 +1,4815 @@
+---
+title: 'R for Data Science: Exercise Solutions'
+author: Nick Giangreco
+output:
+  html_document:
+    toc: yes
+    toc_float: yes
+    code_folding: show
+    theme: readable
+    highlight: kate
+    fig_width: 4
+    fig_height: 4
+---
+
+```{r, echo=F}
+knitr::opts_chunk$set(cache=2,
+                      cache.rebuild = F, 
+                      message = F, warning = F,
+                      autodep=TRUE)
+```
+
+
+# Welcome 
+
+**This document details a solutions guide to the chapter exercises in *R for Data Science* by Hadley Wickham. The author created the document while in a study group with [Jason Baik](https://www.linkedin.com/in/jason-baik-0718a1134/). Inspiration for answers also came from [jarnold](https://jrnold.github.io/e4qf/)-thanks to him!**
+
+# 1 Introduction
+
+**No exercises**
+
+# Part I
+
+# 2 Introduction 
+
+**No exercises**
+
+# 3 Data visualization
+
+## Exercise 3.2.4
+
+### 1. Run *ggplot()*. This will instantiate an empty coordinate system.
+
+```{r chapter3_exercise324_1}
+library(tidyverse)
+ggplot()
+```
+
+### 2. How many rows and columns are in *mpg*?
+
+```{r chapter3_exercise324_2}
+nrow(mpg)
+ncol(mpg)
+```
+
+### 3. What does the *drv* variable describe?
+
+```{r chapter3_exercise324_3}
+?mpg
+```
+
+### 4. Make a scatterplot between *hwy* and *cyl*.
+
+```{r chapter3_exercise324_4}
+ggplot( data = mpg ) +
+  geom_point( mapping = aes( x = cyl, y = hwy ) )
+```
+
+### 5. Make a scatterplot between *class* and *drv*. The scatterplot isn't particularly useful because we are not viewing trends-The class of cars and type of drive are both independent variables. The plot would be useful when we are viewing a independent variable and its dependent variable.
+
+```{r chapter3_exercise324_5}
+ggplot( data = mpg ) +
+  geom_point( mapping = aes( x = class, y = drv ) )
+```
+
+## Exercise 3.3.1
+
+### 1. What has gone wrong with this code? Why are the points not blue?
+
+```{r chapter3_exercise331_1}
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, color = "blue" ) )
+```
+
+Because assigning the color within *aes()* provides a mapping of the levels given to color to the x and y coordinates, which in this case is does not because the "blue" by itself does not map to x and y. However, to make all the points blue, one would set the color outside *aes()* within *geom_point()*, which doesn't require a mapping and just passes the property "blue" to all the data points. 
+
+### 2. Which variables in *mpg* are categorical? Which variables are continuous?
+
+```{r chapter3_exercise331_2}
+mpg
+```
+
+Underneath the variable names, a class indicator is given. For example the categorical variables are denoted by "chr" meaning character and are manufacturer, model, trans, drv, fl and class. The continuous variables are denoted by "int" and "dbl" meaning integer and double, respectively, and are year, cyl, trans, cty, and hwy. They are continuous because consecutive numbers are smaller or larger for these variables while categorical variables do not have this relation.
+
+### 3. Map a continuous variable to color, size, and shape. How do these aesthetics behave differently for categorical vs. continuous variables?
+
+```{r chapter3_exercise331_3}
+#Color
+
+# categorical
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, color = class ) )
+
+#continuous
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, color = cyl ) )
+
+#Size
+
+# categorical
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, size = class ) )
+
+#continuous
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, size = cyl ) )
+
+#Shape
+
+# categorical
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, shape = class ) )
+
+#continuous-error
+#ggplot(data = mpg) + 
+#  geom_point(mapping = aes(x = displ, y = hwy, shape = cyl ) )
+```
+
+For color aesthetics, categorical variables are given discrete colors to map to the color levels, where continuous variables are assigned colors along a gradient to designate a lighter or darker color tone to how large or small the value is. Foe size aesthetics, assigning it a categorucal variable doesn't make sense because increasing size doesn't necessarily mean a larger value, so this only makes sense for continuous variables. For shape aesthetics, only up to 6 discrete levels are assigned shapes because beyond 6 is hard to interpret. Assigning a continuous variable gives an error because a shape has no property for indicating similarity between values. 
+
+### 4. What happens if you map the same variable to multiple aesthetics?
+
+```{r chapter3_exercise331_4}
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = class, color = class ) )
+```
+
+You're essentially representing a variable twice which is redundant.
+
+### 5. What does the stroke aesthetic do? What shapes does it work with? (Hint: use ?geom_point)
+
+```{r chapter3_exercise331_5}
+?geom_point
+
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, color = class ), shape = 21, stroke = 1  )
+
+```
+
+The *stroke* easthetic indicates the width of the shape border which is given as a property to *geom_points()*.
+
+### 6. What happens if you map an aesthetic to something other than a variable name, like aes(colour = displ < 5)?
+
+```{r chapter3_exercise331_6}
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, shape = displ<5 ))
+```
+
+displ<5 in actuallity divides the observations into two, which provides it's own mapping to the observations. So you would get two colors, two shapes, etc. based on how one divides the data.
+
+## Exercise 3.5.1
+
+### 1. What happens if you facet on a continuous variable?
+
+```{r chapter3_exercise351_1}
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = cty, y = hwy)) + 
+  facet_wrap(~ displ)
+```
+
+You'll get as many plots as there are distinct values.
+
+### 2. What do the empty cells in plot with facet_grid(drv ~ cyl) mean? How do they relate to this plot?
+
+```{r chapter3_exercise351_2}
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = drv, y = cyl)) #+
+  #facet_grid(drv ~ cyl)
+```
+
+The empty grids using *facet_grid()* compare to the above plot because there are no points for those combination of variables and hence the empty grids are representing the same as the absence of a point for those combination of variables. 
+
+### 3. What plots does the following code make? What does . do?
+
+```{r chapter3_exercise351_3}
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) +
+  facet_grid(drv ~ .)
+
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) +
+  facet_grid(. ~ cyl)
+```
+
+The above plots compare displ vs hwy but for either the drv classes in the rows or the cyl classes in the columns.
+
+### 4. Take the first faceted plot in this section. What are the advantages to using faceting instead of the colour aesthetic? What are the disadvantages? How might the balance change if you had a larger dataset?
+
+
+
+```{r chapter3_exercise351_4}
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, color=class)) #+ 
+  #facet_wrap(~ class, nrow = 2)
+```
+
+The advantages of labeling the classes by different colors versus showing points for each combination of variables in each grid is that showing all the points in one grid may be too cluttered to show especially with a large dataset and if there are many classes. But it may be worth showing each class in a different color in the same grid if the dataset is smaller and there aren't that many classes to distinguish.
+
+### 5. Read ?facet_wrap. What does nrow do? What does ncol do? What other options control the layout of the individual panels? Why doesn’t facet_grid() have nrow and ncol argument?
+
+```{r chapter3_exercise351_5}
+?facet_wrap
+
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) + 
+  facet_wrap(~ class, nrow=1)
+
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) + 
+  facet_grid(~ class)
+```
+
+Nrow establishes the number of rows to display and ncol establishes the number of columns to display when plotting each facet of the variable. Other options to control the layout of the individual panels includes *scales* (either frees or fixes the x and y scales of facets), *shrink* (shrinks scales to fit output of the statistics, not raw data), *labeller* (a function that takes one data frame of labels and returns a list or data frame of character vectors-changes the labelling on the facets see ?labellers for options), and *switch* (changes the facet labelling from top to bottom or from right to left of plots). *facet_grid()* doesn't have nrow and ncol options because it is the simple case of facet_wrap with nrow = 1. *facet_wrap* allows one to better use screen space. 
+
+### 6. When using facet_grid() you should usually put the variable with more unique levels in the columns. Why?
+
+Because if there are many levels, you'll have many panels in the rows which is not a good use of screen space. *facet_grid()* works well with only a few levels to break up into separate panels. 
+
+
+## Exercise 3.6.1
+
+### 1. What geom would you use to draw a line chart? A boxplot? A histogram? An area chart?
+
+bar chart: geom_bar()
+
+histogram: geom_histogram()
+
+line chart: geom_smooth()
+
+area chart: geom_area()
+
+#### 2. Run this code in your head and predict what the output will look like. Then, run the code in R and check your predictions.
+
+```{r chapter3_exercise361_2}
+ggplot(data = mpg, mapping = aes(x = displ, y = hwy, color = drv)) +
+  geom_point() + 
+  geom_smooth(se = FALSE)
+```
+
+I predict this will show a line chart of display vs hwy, without se gray areas around the line, with the corresponding points, and with drive type as color. Also there's 3 different lines per color (the mapping in ggplot() is global so it passes on to geom_point() and geom_smooth()).
+
+```{r chapter3_exercise361_3}
+ggplot(data = mpg, mapping = aes(x = displ, y = hwy, color = drv)) +
+  geom_point() + 
+  geom_smooth(se = FALSE)
+```
+
+#### 3. What does show.legend = FALSE do? What happens if you remove it?
+Why do you think I used it earlier in the chapter?
+
+show.legend = FALSE removes the legend key from the side of the plot, which should be done to remove clutter.
+
+#### 4. What does the se argument to geom_smooth() do? It gives standard error gray areas around a line in the line chart to denote where the data lies about the average.
+
+#### 5. Will these two graphs look different? Why/why not?
+
+```{r chapter3_exercise361_5}
+ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) + 
+  geom_point() + 
+  geom_smooth()
+
+ggplot() + 
+  geom_point(data = mpg, mapping = aes(x = displ, y = hwy)) + 
+  geom_smooth(data = mpg, mapping = aes(x = displ, y = hwy))
+```
+
+No because both have thesame mappings passed on to geom_point() and geom_smooth() (either globally or locally).
+
+#### 6. Recreating graphs in book
+
+```{r chapter3_exercise361_6}
+ggplot(data = mpg, mapping = aes(x=displ,y = hwy))+
+  geom_point()+
+  geom_smooth(se=FALSE)
+
+ggplot(data = mpg, mapping = aes(x=displ,y = hwy))+
+  geom_point()+
+  geom_smooth(se=FALSE, mapping = aes(x=displ,y = hwy, group = drv))
+
+ggplot(data = mpg, mapping = aes(x=displ,y = hwy,color = drv))+
+  geom_point()+
+  geom_smooth(se=FALSE, mapping = aes(x=displ,y = hwy, group = drv))
+
+ggplot(data = mpg, mapping = aes(x=displ,y = hwy))+
+  geom_point(aes(x=displ,y = hwy,color = drv))+
+  geom_smooth(se=FALSE, mapping = aes(x=displ,y = hwy))
+
+ggplot(data = mpg, mapping = aes(x=displ,y = hwy))+
+  geom_point(aes(x=displ,y = hwy,color = drv))+
+  geom_smooth(se=FALSE, mapping = aes(x=displ,y = hwy, linetype = drv))
+
+ggplot(data = mpg, mapping = aes(x=displ,y = hwy))+
+  geom_point(aes(x=displ,y = hwy),shape=21,size=5,fill="white",color="white")+
+  geom_point(aes(x=displ,y = hwy,fill = drv, color = drv),shape=21,size=2)
+```
+
+
+## Exercise 3.7.1
+
+### 1. What is the default geom associated with stat_summary()? How could you rewrite the previous plot to use that geom function instead of the stat function?
+
+The default geom for stat_summary() is geom_pointrange. For geom_pointrange, the default stat is "identity", so in order to duplicate the previous plot we need to change the stat to summary and change the min, max and midpoint to reflect the same parameters as previously. 
+
+```{r chapter3_exercise371_1}
+ggplot(data = diamonds) + 
+  stat_summary(
+    mapping = aes(x = cut, y = depth),
+    fun.ymin = min,
+    fun.ymax = max,
+    fun.y = median
+  )
+
+ggplot(data = diamonds) + 
+  geom_pointrange(
+    mapping = aes(x = cut, y = depth),
+    stat = "summary",
+    fun.ymin = min,
+    fun.ymax = max,
+    fun.y = median
+  )
+```
+
+### 2. What does geom_col() do? How is it different to geom_bar()?
+
+Geom_bar makes the height of the bar proportional to the number of cases in each group (or if the weight aesthetic is supplied, the sum of the weights). If you want the heights of the bars to represent values in the data, use geom_col instead. 
+```{r chapter3_exercise371_2}
+ggplot(data = diamonds, mapping = aes(x = cut, y = depth)) + 
+  geom_col()
+```
+
+### 3. Most geoms and stats come in pairs that are almost always used in concert. Read through the documentation and make a list of all the pairs. What do they have in common?
+
+see http://ggplot2.tidyverse.org/reference/
+
+### 4. What variables does stat_smooth() compute? What parameters control its behaviour?
+
+stat_smooth calculates:
+
+y: predicted value
+ymin: lower value of the confidence interval
+ymax: upper value of the confidence interval
+se: standard error
+
+There’s parameters such as method which determines which method is used to calculate the predictions and confidence interval, and some other arguments that are passed to that.
+
+### 5. In our proportion bar chart, we need to set group = 1. Why? In other words what is the problem with these two graphs?
+
+```{r chapter3_exercise371_5}
+ggplot(data = diamonds) + 
+  geom_bar(mapping = aes(x = cut, y = ..prop..))
+ggplot(data = diamonds) + 
+  geom_bar(mapping = aes(x = cut, fill = color, y = ..prop..))
+```
+
+If group is not set to 1, then all the bars have prop == 1. The function geom_bar assumes that the groups are equal to the x values, since the stat computes the counts within the group.
+
+```{r chapter3_exercise371_5_2}
+ggplot(data = diamonds) + 
+  geom_bar(mapping = aes(x = cut, y = ..prop..,group=1))
+ggplot(data = diamonds) + 
+  geom_bar(mapping = aes(x = cut, fill = color, y = ..prop..,group=1))
+```
+
+
+## Exercise 3.8.1
+
+### 1. What is the problem with this plot? How could you improve it?
+
+```{r chapter3_exercise381_1}
+ggplot(data = mpg, mapping = aes(x = cty, y = hwy)) + 
+  geom_point()
+```
+
+A lot of points aren't shown here because they overlap. Using geom_jitter() allows you to see them all. 
+
+```{r chapter3_exercise381_1_2}
+ggplot(data = mpg, mapping = aes(x = cty, y = hwy)) + 
+  geom_jitter()
+```
+
+#### 2. What parameters to geom_jitter() control the amount of jittering?
+
+```{r chapter3_exercise381_2}
+ggplot(data = mpg, mapping = aes(x = cty, y = hwy)) + 
+  geom_jitter(width=1)
+
+ggplot(data = mpg, mapping = aes(x = cty, y = hwy)) + 
+  geom_jitter(width=10)
+
+```
+The amount of jitter is controlled by the width argument-increases the distance (noise) between the points.
+
+#### 3. Compare and contrast geom_jitter() with geom_count().
+
+```{r chapter3_exercise381_3}
+ggplot(data = mpg, mapping = aes(x = cty, y = hwy)) + 
+  geom_count()
+
+ggplot(data = mpg, mapping = aes(x = cty, y = hwy)) + 
+  geom_jitter()
+
+```
+
+Seems like geom_count() increases the size of the points when there are more overlapping points. Kind of like estimating the density of points in that location. geom_jitter() just makes all the points visible and the same size.
+
+#### 4. What’s the default position adjustment for geom_boxplot()? Create a visualisation of the mpg dataset that demonstrates it.
+
+The deault is for the boxplots to be non overlapping or dodged.
+
+```{r chapter3_exercise381_4}
+ggplot(data = mpg, mapping = aes(x = drv, y = hwy, color = class)) +
+  geom_boxplot(position="dodge")
+```
+
+In contrast, we can have them overlapping by using identity.
+
+```{r chapter3_exercise381_4_2}
+ggplot(data = mpg, mapping = aes(x = drv, y = hwy, color = class)) +
+  geom_boxplot(position="identity")
+```
+
+
+## Exercise 3.9.1
+
+### 1. Turn a stacked bar chart into a pie chart using coord_polar().
+
+```{r chapter3_exercise391_1}
+ggplot(data = diamonds) + 
+  geom_bar(mapping = aes(x = cut, fill = clarity), width = 1)
+
+ggplot(data = diamonds) + 
+  geom_bar(mapping = aes(x = cut, fill = clarity), width=1)+coord_polar(theta = "y")
+```
+
+### 2. What does labs() do? Read the documentation.
+
+```{r chapter3_exercise391_2}
+?labs
+```
+
+Allows one to label the coordinates.
+
+### 3. What’s the difference between coord_quickmap() and coord_map()?
+
+```{r chapter3_exercise391_3}
+nz<-map_data("nz")
+
+ggplot(nz, aes(long, lat, group = group)) +
+  geom_polygon(fill = "white", colour = "black") +
+  coord_quickmap()
+
+ggplot(nz, aes(long, lat, group = group)) +
+  geom_polygon(fill = "white", colour = "black") +
+  coord_map()
+```
+
+Seems like coord_map() eliminates some grid lines and shrinks the map a tiny bit. 
+
+* coord_map uses a 2D projection: by default the Mercatur project of the sphere to the plot. But this requires transforming all geoms.
+* coord_quickmap uses a quick approximation by using the lat/long ratio as an approximation. This is “quick” because the shapes don’t need to be transformed.
+
+### 4. What does the plot below tell you about the relationship between city and highway mpg? Why is coord_fixed() important? What does geom_abline() do?
+
+```{r chapter3_exercise391_4}
+ggplot(data = mpg, mapping = aes(x = cty, y = hwy)) +
+  geom_point() + 
+  geom_abline() +
+  coord_fixed()
+```
+
+The abline shown with the scatter points between cty and hwy tell me that one gets higher highway mpg compared to city mpg, but they are positively correlated. geom_abline() gives the x = y line where if the points were on that line the highway and city mpg would be the same. coord_fixed() fixes the ratio between the physical representation of data units on the axes-the ratio represents the number of units on the y-axis equivalent to one unit on the x-axis.Also, coord_fixed() ensures that the abline is at a 45 degree angle, which makes it easy to compare the highway and city mileage against what it would be if they were exactly the same.
+
+
+
+# 4 Workflow: Basics
+
+## Exercise 4.4
+
+### 1. Why does this code not work?
+
+```{r chapter4_exercise44_1}
+my_variable <- 10
+#my_varıable #Error: object 'my_varıable' not found
+```
+
+Because my_variable that is assigned is different from my_varıable, which is not assigned and thus R will throw an error since it's not an object in the environment.
+
+### 2. Tweak each of the following R commands so that they run correctly:
+
+```{r chapter4_exercise44_2,eval=F}
+library(tidyverse)
+
+ggplot(dota = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy))
+
+fliter(mpg, cyl = 8)
+filter(diamond, carat > 3)
+```
+
+'dota' should be 'data', 'fliter' should be 'filter', '=' should be '==', and 'diamond' should be 'diamonds'. It should be: 
+
+```{r chapter4_exercise44_2_2}
+library(tidyverse)
+
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy) )
+
+filter(mpg, cyl == 8)
+filter(diamonds, carat > 3)
+```
+
+# 5 Data Transformation
+
+## Exercise 5.2.4
+
+### 1. Find all flights that 
+
+##### (a) Had an arrival delay of two hours.
+
+```{r chapter5_exercise524_1a}
+library(nycflights13)
+library(tidyverse)
+#glimpse(flights)
+filter(flights, arr_delay > 119 & arr_delay < 121)
+```
+
+##### (b) flew to Houston
+
+```{r chapter5_exercise524_1b}
+filter(flights, dest == 'HOU' | dest == 'IAH')
+```
+
+##### (c) Were operated by American, United or Delta airlines.
+
+```{r chapter5_exercise524_1c}
+filter(flights, carrier == "UA" | carrier == 'AA' | carrier == 'DA')
+```
+
+##### (d) Departed in the summeer (July, August and September)
+
+```{r chapter5_exercise524_1d}
+filter(flights, month == 7 | month == 8 | month == 9)
+```
+
+##### (e) Arrived more than two hours late, but didn’t leave late
+
+```{r chapter5_exercise524_1e}
+filter(flights,arr_delay > 120 & dep_delay <= 0)
+```
+
+##### (f) Were delayed by at least an hour, but made up over 30 minutes in flight 
+
+```{r chapter5_exercise524_1f}
+filter(flights, dep_delay > 60 & air_time > 30)
+```
+
+##### (g) Departed between midnight and 6am (inclusive)
+
+```{r chapter5_exercise524_1g}
+filter(flights, hour >= 0 & hour <= 6)
+```
+
+### 2. Another useful dplyr filtering helper is between(). What does it do? Can you use it to simplify the code needed to answer the previous challenges?
+
+between() is a shortcut for an inclusive range, implemented efficiently in C++. So instead of filter(flights, hour >= 0 & hour <= 6), we can have between(flights$hour,0,6) which would give TRUE for rows of flights in the range. Or, to simplify 1g, do filter( flights, between(dep_time, 0, 600) ). (I don't think it simplifies it.)
+
+### 3. How many flights have a missing dep_time? What other variables are missing? What might these rows represent?
+
+```{r chapter5_exercise524_3}
+filter(flights, is.na(dep_time) )
+```
+
+Along with departure time, the arrival time, delays, and air time are missing. But these flights are scheduled-it seems that these flights were scheduled but wasn't recorded to actually fly.
+
+### 4. Why is NA ^ 0 not missing? Why is NA | TRUE not missing? Why is FALSE & NA not missing? Can you figure out the general rule? (NA * 0 is a tricky counterexample!)
+
+```{r chapter5_exercise524_4}
+NA^0
+NA | TRUE
+FALSE & NA
+NA * 0
+```
+
+Hmm. Anything to the 0 is 1, NA | TRUE is TRUE because of the TRUE, FALSE & NA is false because anything and false is always false, because the value of the missing element matters in NA | FALSE and NA & TRUE, these are missing (NA), and the reason that NA \* 0 is not equal to 0 is that x \* 0 = NaN is undefined when x = Inf or x = -Inf. 
+
+## Exercise 5.3.1
+
+### 1. How could you use arrange() to sort all missing values to the start? (Hint: use is.na()).
+
+for example:
+
+```{r chapter5_exercise531_1}
+arrange(flights, desc(is.na(dep_time)), dep_time)
+```
+
+#### 2. Sort flights to find the most delayed flights. Find the flights that left earliest
+
+```{r chapter5_exercise531_2}
+arrange(flights, desc(dep_delay)) 
+arrange(flights, dep_delay)
+```
+
+#### 3. Sort flights to find the fastest flights.
+
+```{r chapter5_exercise531_3}
+arrange(flights, air_time)
+```
+
+#### 4. Which flights travelled the longest? Which travelled the shortest?
+
+```{r chapter5_exercise531_4}
+arrange(flights,desc(distance))
+arrange(flights,distance)
+```
+
+
+## Exercise 5.4.1
+
+### 1. Brainstorm as many ways as possible to select dep_time, dep_delay, arr_time, and arr_delay from flights.
+
+I could reorder, I could select a subset or I could remove variables.
+
+### 2. What happens if you include the name of a variable multiple times in a select() call?
+
+```{r chapter5_exercise541_2}
+select(flights, dep_time, dep_time)
+```
+
+It ignores the call to the same variable if it already occurred.
+
+### 3. What does the one_of() function do? Why might it be helpful in conjunction with this vector?
+
+```{r chapter5_exercise541_3}
+vars <- c("year", "month", "day", "dep_delay", "arr_delay")
+
+select(flights, one_of(vars) )
+```
+
+one_of(), when used in select(), makes a table of the variables in the vector vars found in flights.
+
+### 4. Does the result of running the following code surprise you? How do the select helpers deal with case by default? How can you change that default?
+
+```{r chapter5_exercise541_4}
+select(flights, contains("TIME"))
+```
+
+This command makes sense-any variable in flights containing the word TIME (case insensitive) is part of a new table.
+
+
+## Exercise 5.5.2
+
+### 1. Currently dep_time and sched_dep_time are convenient to look at, but hard to compute with because they’re not really continuous numbers. Convert them to a more convenient representation of number of minutes since midnight.
+
+```{r chapter5_exercise552_1}
+transmute(flights,
+  dep_time_since_midnight = (dep_time %% 100) + ((dep_time %/% 100) * 60),
+  sched_dep_time_since_midnight = (sched_dep_time %% 100) + ((sched_dep_time %/% 100) * 60)
+  )
+```
+
+### 2. Compare air_time with arr_time - dep_time. What do you expect to see? What do you see? What do you need to do to fix it?
+
+I expect to see air_time to equal arr_time - dep_time
+
+```{r chapter5_exercise552_2}
+transmute(flights,
+          air_time,
+          tmp = arr_time - dep_time
+          )
+```
+Actually, arr_time and dep_time is in different units than air_time, so let me convert.
+
+```{r chapter5_exercise552_2_2}
+transmute(flights,
+          air_time,
+          arr_minutes = (arr_time %% 100) + ((arr_time %/% 100) * 60),
+          dep_minutes = (dep_time %% 100) + ((dep_time %/% 100) * 60),
+          arr_dep_minutes_diff = arr_minutes - dep_minutes
+          )
+```
+
+Interesting-arr_dep_minutes_diff should be the same but it's a bit inflated compared to air_time. There might be a disconnect between actual air time and the logging of departure and arrival times.
+
+### 3. Compare dep_time, sched_dep_time, and dep_delay. How would you expect those three numbers to be related?
+
+I would expect dep_delay = dep_time - sched_dep_time
+
+```{r chapter5_exercise552_3}
+transmute(flights,
+          dep_delay,
+          theoretical_dep_time = dep_time - sched_dep_time)
+
+tmp <- transmute(flights,
+          dep_delay,
+          theoretical_dep_time = dep_time - sched_dep_time)
+
+ggplot( data = tmp, mapping = aes( x = theoretical_dep_time, y = dep_delay)) +
+  geom_point()
+```
+
+Looks like the early departures deviate more than those that are actual delays. Very strange looking graph-there's like a whole other line at extremely early departures. 
+
+### 4. Find the 10 most delayed flights using a ranking function. How do you want to handle ties? Carefully read the documentation for min_rank().
+
+```{r chapter5_exercise552_4}
+mutate(flights,
+       dep_delay_rank = min_rank(-dep_delay)) %>%
+  arrange(dep_delay_rank) 
+```
+
+### 5. What does 1:3 + 1:10 return? Why?
+
+```{r chapter5_exercise552_5}
+1:3
+1:10
+1:3 + 1:10
+```
+
+Because 1:3 is short than 1:10, 1:3 is recycled and it goes 1+1,2+2,3+3,1+4,2+5,3+6, etc.
+
+
+
+### 6. What trigonometric functions does R provide?
+
+R provides:
+
+cos(x)
+sin(x)
+tan(x)
+
+acos(x)
+asin(x)
+atan(x)
+atan2(y, x)
+
+cospi(x)
+sinpi(x)
+tanpi(x)
+
+From ?Trig, They respectively compute the cosine, sine, tangent, arc-cosine, arc-sine, arc-tangent, and the two-argument arc-tangent.
+
+
+## Exercise 5.6.7
+
+### 1. Brainstorm at least 5 different ways to assess the typical delay characteristics of a group of flights. Consider the following scenarios. Which is more important: arrival delay or departure delay?
+
+* A flight is 15 minutes early 50% of the time, and 15 minutes late 50% of the time.
+* A flight is always 10 minutes late.
+* A flight is 30 minutes early 50% of the time, and 30 minutes late 50% of the time.
+* 99% of the time a flight is on time. 1% of the time it’s 2 hours late.
+
+I would say arrival delay is more important-if I depart late but arrive on time that's ok but I usually like to adhere to adhere to when my arrival is supposed to be. 
+
+So flights can have an arrival delay that modulates the departure and thus that delay, it can also change consecutive flight arrivals/departures. The delay characteristics can vary e.g. large and small delays, or can be consistent e.g. typical amount of delay. The scenarios above vary from having small to large amounts of delays but either either have small variation or are skewed like the last scenario. I would also look to see if the delay of a flight correlates with a delay in a consecutive flight, which airlines attribute to the most delays and even if there's an airport with more or loss delays, especially if one is cchoosing to fly into say LGA or JFK or Newark in the NYC area, which can advise people on choosing flights. Also, is the arrival delay correlative with the departure delay?
+
+### 2. Come up with another approach that will give you the same output as not_cancelled %>% count(dest) and not_cancelled %>% count(tailnum, wt = distance) (without using count()).
+
+```{r chapter5_exercise567_2}
+not_cancelled <- flights %>% 
+  filter(!is.na(dep_delay), !is.na(arr_delay))
+
+not_cancelled %>% count(dest)
+
+not_cancelled %>% count(tailnum, wt = distance)
+```
+
+I can group by the airport (dest) and sum the amount of non-na values instead of using count().
+
+```{r chapter5_exercise567_2_2}
+not_cancelled %>% 
+  group_by(dest) %>%
+  summarise(n = sum(!is.na(dest)))
+
+```
+
+Since count() is a shorthand for group_by() and tally(), I can just break up the command. 
+
+```{r chapter5_exercise567_2_3}
+not_cancelled %>%
+  group_by(tailnum) %>%
+tally(wt = distance)
+```
+
+### 3. Our definition of cancelled flights (is.na(dep_delay) | is.na(arr_delay) ) is slightly suboptimal. Why? Which is the most important column?
+
+There could be flights that depart but never arrive, which could mean a cancelled flight. However, a flight that never departs will never arrive. I would say arr_delay would be more important-if a flight did arrive it will depart but not true the other way around. For making an optimal cancelled flight table, I would just do 
+
+```{r chapter5_exercise567_3}
+flights %>% 
+  filter(is.na(arr_delay))
+```
+
+The extra is.na(dep_delay) isn't necessary.
+
+### 4. Look at the number of cancelled flights per day. Is there a pattern? Is the proportion of cancelled flights related to the average delay?
+
+```{r chapter5_exercise567_4}
+cancelled_delayed <- 
+  flights %>%
+  mutate(cancelled = (is.na(arr_delay) | is.na(dep_delay))) %>%
+  group_by(year, month, day) %>%
+  summarise(prop_cancelled = mean(cancelled),
+            avg_dep_delay = mean(dep_delay, na.rm = TRUE))
+
+ggplot(cancelled_delayed, aes(x = avg_dep_delay, prop_cancelled)) +
+  geom_point() +
+  geom_smooth()
+```
+
+As the average dep_delay increases, the proportion of cancelled flights vary more and more. Also, less and less flights have large delays, with all but one under 60 minutes. With knowing that,the variation in the proportion of cancelled flights seems more or less constant.
+
+### 5. Which carrier has the worst delays? Challenge: can you disentangle the effects of bad airports vs. bad carriers? Why/why not? (Hint: think about flights %>% group_by(carrier, dest) %>% summarise(n()))
+
+So we want to group by carrier. And since we want to take into account the airport (dest), we can group by dest and carrier.
+
+```{r chapter5_exercise567_5}
+not_cancelled <- flights %>% 
+  filter(!is.na(dep_delay), !is.na(arr_delay))
+
+tmp <- not_cancelled %>% group_by(carrier) %>% summarise( "mean_delay" = mean(arr_delay))
+
+ggplot( data = tmp , mapping = aes(x = carrier, y = mean_delay) ) +
+  geom_bar(stat="identity")
+
+tmp <- not_cancelled %>% group_by(carrier,dest) %>% summarise( "mean_delay" = mean(arr_delay))
+
+ggplot( data = tmp , mapping = aes(x = factor(1), y = mean_delay, fill = dest) ) +
+  geom_bar(stat="identity") +
+  facet_wrap(~carrier) +
+  theme(
+    legend.position = "none"
+  )
+```
+
+The barplot shows the mean delay time across all carriers, clearly showing those with more average delays where others have early arrivals.
+
+We see that some carriers are at a lot more aiports. We should take that into account.
+
+```{r chapter5_exercise567_5_2}
+tmp <- not_cancelled %>% 
+  group_by(carrier) %>%
+  summarise( "mean_delay" = mean(arr_delay),
+             "num_flights" = n(),
+             "norm" = mean_delay / num_flights)
+ggplot( data = tmp , mapping = aes(x = carrier, y = norm) ) +
+  geom_bar(stat="identity")
+```
+
+There are multiple and better ways to disentangle worse airport/carrier delays. See http://fivethirtyeight.com/features/the-best-and-worst-airlines-airports-and-flights-summer-2015-update/
+
+### 6. What does the sort argument to count() do. When might you use it?
+
+```{r chapter5_exercise567_6}
+not_cancelled %>% count(dest)
+
+not_cancelled %>% count(dest,sort=T)
+```
+
+The sort argument of count() sorts from largest to smallest counts. One might use this to view the highest count of something among the counts of others.
+
+## Exercise 5.7.1
+
+### 1. Refer back to the lists of useful mutate and filtering functions. Describe how each operation changes when you combine it with grouping.
+
+When you combine the mutate and filtering functions with groupings, you operate on the grouped data as opposed to the entire data frame. 
+
+### 2. Which plane (tailnum) has the worst on-time record?
+
+```{r chapter5_exercise571_2}
+not_cancelled %>%
+  group_by(tailnum) %>%
+  summarise(arr_delay = mean(arr_delay, na.rm = TRUE)) %>%
+  ungroup() %>%
+  filter(rank(desc(arr_delay)) <= 1)
+```
+
+### 3. What time of day should you fly if you want to avoid delays as much as possible?
+
+```{r chapter5_exercise571_3}
+not_cancelled %>%
+  group_by(hour) %>%
+  summarise( mean_arr_delay = mean(arr_delay, na.rm=T) ) %>%
+  ungroup() %>%
+  arrange(mean_arr_delay)
+```
+
+You want to leave as early as possible. 
+
+### 4. For each destination, compute the total minutes of delay. For each, flight, compute the proportion of the total delay for its destination.
+
+```{r chapter5_exercise571_4}
+not_cancelled %>%  
+  group_by(dest) %>%
+  summarise( sum_arr_delay = sum(arr_delay) )
+
+not_cancelled %>% 
+  group_by(flight) %>%
+  transmute( prop_arr_delay = arr_delay / sum(arr_delay) )
+```
+
+### 5. Delays are typically temporally correlated: even once the problem that caused the initial delay has been resolved, later flights are delayed to allow earlier flights to leave. Using lag() explore how the delay of a flight is related to the delay of the immediately preceding flight.
+
+```{r chapter5_exercise571_5}
+flights %>%
+  group_by(year, month, day) %>%
+  filter(!is.na(dep_delay)) %>%
+  mutate(lag_delay = lag(dep_delay)) %>%
+  filter(!is.na(lag_delay)) %>%
+  ggplot(aes(x = dep_delay, y = lag_delay)) +
+  geom_point() +
+  geom_smooth()
+```
+
+### 6. Look at each destination. Can you find flights that are suspiciously fast? (i.e. flights that represent a potential data entry error). Compute the air time a flight relative to the shortest flight to that destination. Which flights were most delayed in the air?
+
+I also computed a observed vs expected ratio using the median air time. I'm sure there's better ways to find outliers. 
+
+```{r chapter5_exercise571_6}
+flights %>%
+  filter(!is.na(air_time)) %>%
+  group_by(dest) %>%
+  mutate( med_air_time = median(air_time),
+          o_vs_e = (air_time - med_air_time) / med_air_time,
+          air_time_diff = air_time - min(air_time) ) %>%
+  arrange(desc(air_time_diff)) %>%
+  select(air_time, o_vs_e, air_time_diff, dep_time, sched_dep_time, arr_time, sched_arr_time) %>%
+  head(15)
+```
+
+### 7. Find all destinations that are flown by at least two carriers. Use that information to rank the carriers.
+
+```{r chapter5_exercise571_7}
+not_cancelled %>% 
+  group_by(dest, carrier) %>%
+  count(carrier) %>%
+  filter(n >= 2) %>%
+  group_by(carrier) %>%
+  count(sort = TRUE)
+```
+
+### 8. For each plane, count the number of flights before the first delay of greater than 1 hour.
+
+```{r chapter5_exercise571_8}
+not_cancelled %>%
+  group_by(tailnum) %>%
+  mutate(delay_gt1hr = dep_delay > 60) %>%
+  mutate(before_delay = cumsum(delay_gt1hr)) %>%
+  filter(before_delay < 1) %>%
+  count(sort = TRUE)
+```
+
+# 6. Workflow: Scripts
+
+## Exercise 6.3
+
+### 1. Go to the RStudio Tips twitter account, https://twitter.com/rstudiotips and find one tip that looks interesting. Practice using it!
+
+This is a good one from https://twitter.com/vuorre/status/869545189056053248: Cmd+Option+o collapses all sections in your Rmarkdown document-pretty useful!
+
+### 2. What other common mistakes will RStudio diagnostics report? Read https://support.rstudio.com/hc/en-us/articles/205753617-Code-Diagnostics to find out.
+
+Very useful doc-must read!
+
+# 7. Exploratory Data Analysis
+
+## Exercise 7.3.4
+
+### 1. Explore the distribution of each of the x, y, and z variables in diamonds. What do you learn? Think about a diamond and how you might decide which dimension is the length, width, and depth.
+
+```{r chapter7_exercise734_1}
+library(tidyverse)
+
+ggplot( data = diamonds ) +
+  geom_freqpoly(binwidth=0.1,aes(x = x ), color = "red") +
+  geom_freqpoly(binwidth=0.1,aes(x = y ), color = "blue") +
+  geom_freqpoly(binwidth=0.1,aes(x = z ), color  ="green") 
+```
+
+Looks like the y and z axis have similar value frequencies, and the z axis has more smaller values, which I think might represent the depth of diamonds. I realy like the graph representation from https://jrnold.github.io/e4qf/exploratory-data-analysis.html so I'm plotting it here for reference.
+
+```{r chapter7_exercise734_1_2}
+diamonds %>%
+  mutate(id = row_number()) %>%
+  select(x, y, z, id) %>%
+  gather(variable, value, -id)  %>%
+  ggplot(aes(x = value)) +
+  geom_density() +
+  geom_rug() +
+  facet_grid(variable ~ .)
+```
+
+### 2. Explore the distribution of price. Do you discover anything unusual or surprising? (Hint: Carefully think about the binwidth and make sure you try a wide range of values.)
+
+```{r chapter7_exercise734_2}
+ggplot( data = diamonds , aes( x = price ) ) +
+  geom_histogram()
+```
+
+There is a skew towards 0 then it tails off to very high prices. But why are diamonds priced so low?
+
+```{r chapter7_exercise734_2_2}
+ggplot( data = diamonds , aes( x = price ) ) +
+  geom_histogram(binwidth=10) +
+  coord_cartesian(xlim=c(0,2000))
+```
+
+Actually the minimum price is between 250 and 300. Then there's no diamonds priced around 1500. Wow, with more domain expertise and interesting questions we can learn a lot more about this data!
+
+### 3. How many diamonds are 0.99 carat? How many are 1 carat? What do you think is the cause of the difference?
+
+```{r chapter7_exercise734_3}
+diamonds %>% group_by(carat) %>% count() %>%
+  ggplot() +
+  geom_histogram( aes( x = carat ) ) +
+  coord_cartesian(xlim=c(0,2))
+
+filter(diamonds,carat==0.99) %>% count() 
+filter(diamonds,carat==1) %>% count() 
+```
+
+There's so many more at 1 carat-maybe makes sense since I wouldn't be asking for a .99 carat diamond. I'll ask for a nice round 1!
+
+### 4. Compare and contrast coord_cartesian() vs xlim() or ylim() when zooming in on a histogram. What happens if you leave binwidth unset? What happens if you try and zoom so only half a bar shows?
+
+```{r chapter7_exercise734_4}
+diamonds %>% 
+  ggplot() +
+  geom_histogram( aes( x = carat ) ) +
+  coord_cartesian(xlim=c(0,5))
+
+diamonds %>% 
+  ggplot() +
+  geom_histogram( aes( x = carat ) ) +
+  xlim( c(0,5) )
+
+diamonds %>% 
+  ggplot() +
+  geom_histogram( aes( x = carat ) ) +
+  coord_cartesian(ylim=c(0,1000))
+
+diamonds %>% 
+  ggplot() +
+  geom_histogram( aes( x = carat ) ) +
+  ylim( c(0,1000) )
+```
+
+That's weird. Using ylim vs. coord_cartesian cuts of the values to only include those with the max or lower bin height. For the x axis it's virtually the same but not sure why one row is removed...
+
+## Exercise 7.4.1
+
+### 1. What happens to missing values in a histogram? What happens to missing values in a bar chart? Why is there a difference?
+
+```{r chapter7_exercise741_1}
+nycflights13::flights %>%
+  count(is.na(dep_time)==TRUE)
+
+nycflights13::flights %>%
+  ggplot() +
+  geom_bar( aes(x = dep_time ) )
+
+nycflights13::flights %>%
+  ggplot() +
+  geom_histogram( aes(x = dep_time ) )
+
+nycflights13::flights %>%
+  ggplot() +
+  geom_histogram( binwidth=1,aes(x = dep_time ) )
+```
+
+I think there's a difference in the bar plot vs. histogram because the binwidth matters for showing that there are gaps present in the data. Trying out different bin widths might be helpful in exploring missingness in your data.
+
+### 2. What does na.rm = TRUE do in mean() and sum()?
+
+```{r chapter7_exercise741_2}
+nycflights13::flights %>%
+  group_by(dep_time) %>%
+  count() 
+
+nycflights13::flights %>%
+  group_by(dep_time) %>%
+  count() %>%
+  sum()
+
+nycflights13::flights %>%
+  group_by(dep_time) %>%
+  count() %>%
+  sum(na.rm=TRUE)
+```
+
+Seems like adding a na.rm=TRUE argument to sum (and mean) gets rid of NA values so that the sum and mean can be computed by R.
+
+## Exercise 7.5.1.1
+
+### 1. Use what you’ve learned to improve the visualisation of the departure times of cancelled vs. non-cancelled flights.
+
+Here's the original
+
+```{r chapter7_exercise7511_1}
+cancellation <- nycflights13::flights %>% 
+  mutate(
+    cancelled = is.na(dep_time),
+    sched_hour = sched_dep_time %/% 100,
+    sched_min = sched_dep_time %% 100,
+    sched_dep_time = sched_hour + sched_min / 60
+  )
+  
+  ggplot( data = cancellation, mapping = aes(sched_dep_time)) + 
+    geom_freqpoly(mapping = aes(colour = cancelled), binwidth = 1/4)
+```
+
+So we see the cancelled flights are less frequent then not cancelled flights so it's hard to see the distribution. We can instead view it as a boxplot.
+
+```{r chapter7_exercise7511_1_2}
+ggplot(data = cancellation , mapping = aes( x = cancelled , y = sched_dep_time) ) +
+  geom_boxplot()
+```
+
+The distributions are more comparable now. 
+
+### 2. What variable in the diamonds dataset is most important for predicting the price of a diamond? How is that variable correlated with cut? Why does the combination of those two relationships lead to lower quality diamonds being more expensive?
+
+So the question is asking a question regarding these
+
+```{r chapter7_exercise7511_2}
+ggplot(data = diamonds, mapping = aes(x = price)) +
+  geom_histogram()
+
+ggplot( data = diamonds , aes( x = price ) ) +
+  geom_histogram(binwidth=10) +
+  coord_cartesian(xlim=c(0,2000))
+```
+
+I assume the question is asking something about variable covariation or predictive value of a variable for proce, but approaches to tackle those problems haven't been addressed in the book thus far. 
+
+### 3. Install the ggstance package, and create a horizontal boxplot. How does this compare to using coord_flip()?
+
+```{r chapter7_exercise7511_3}
+require(ggstance)
+ggplot( data = cancellation ) +
+  geom_boxplot( mapping = aes( x = cancelled , y = sched_dep_time ) ) + 
+  coord_flip()
+
+ggplot( data = cancellation ) +
+  geom_boxploth( mapping = aes( x = cancelled , y = sched_dep_time ) )
+
+ggplot( data = cancellation ) +
+  geom_boxploth( mapping = aes( y = cancelled , x = sched_dep_time ) )
+```
+
+ggstance is a new package to me, so just using geom_boxploth it says we can't have overlapping y axes, but apparently I need to switch the x and y assignment to show the same thing. Hard to see the advantage with ggstance here except you save one line of code?
+
+### 4. One problem with boxplots is that they were developed in an era of much smaller datasets and tend to display a prohibitively large number of “outlying values”. One approach to remedy this problem is the letter value plot. Install the lvplot package, and try using geom_lv() to display the distribution of price vs cut. What do you learn? How do you interpret the plots?
+
+```{r chapter7_exercise7511_4}
+ggplot(diamonds,aes(x=cut,y=price))+
+  geom_boxplot()+coord_flip()
+
+require(lvplot)
+
+ggplot(diamonds,aes(x=cut,y=price))+
+  geom_lv(aes(fill=..LV..))+coord_flip()
+```
+
+Very cool! Try ?geom_lv for the explanation of these distributions. The letter values correspond to quantiles of the data. So we see a better representation of the data quantiles than with regular boxplots. This is useful when we have lots of data.
+
+### 5. Compare and contrast geom_violin() with a facetted geom_histogram(), or a coloured geom_freqpoly(). What are the pros and cons of each method?
+
+```{r chapter7_exercise7511_5}
+ggplot(diamonds,aes(x=cut,y=price))+
+  geom_violin()
+
+ggplot(diamonds,aes(x=price))+
+  geom_histogram()+facet_wrap(~cut)
+
+ggplot(diamonds,aes(color=cut,x=price))+
+  geom_freqpoly()
+```
+
+Hmm. It's harder to compare the price distribution of different cuts with geom_histogram, geom_violin provides a better indication of the density of values in the distribution but I think geom_freqpoly provides a better way to compare and contrast the price distribution of different cuts.
+
+### 6. If you have a small dataset, it’s sometimes useful to use geom_jitter() to see the relationship between a continuous and categorical variable. The ggbeeswarm package provides a number of methods similar to geom_jitter(). List them and briefly describe what each one does.
+
+```{r chapter7_exercise7511_6}
+require(ggbeeswarm)
+```
+
+geom_beeswarm-points jittered using the beeswarm package
+
+geom_quasirandom-points jittered using the vipor package
+
+ggbeeswarm-extends ggplot2 with violin point/beeswarm plots
+
+position_beeswarm-Violin point-style plots to show overlapping points. x must be discrete.
+
+position_quasirandom-Violin point-style plots to show overlapping points. x must be discrete.
+
+## Exercise 7.5.2.1
+
+### 1. How could you rescale the count dataset above to more clearly show the distribution of cut within colour, or colour within cut?
+
+```{r chapter7_exercise7521_1}
+d <- diamonds %>% 
+  count(color, cut)
+
+d
+
+d %>%  
+  ggplot(mapping = aes(x = color, y = cut)) +
+    geom_tile(mapping = aes(fill = n))
+```
+
+Per jarnold's answer you can do this by
+
+```{r chapter7_exercise7521_1_2}
+require(viridis)
+#cut within color
+diamonds %>% 
+  count(color, cut) %>%
+  group_by(color) %>%
+  mutate(prop = n / sum(n)) %>%
+  ggplot(mapping = aes(x = color, y = cut)) +
+  geom_tile(mapping = aes(fill = prop)) +
+  scale_fill_viridis(limits = c(0, 1))
+#color within cut
+diamonds %>% 
+  count(color, cut) %>%
+  group_by(cut) %>%
+  mutate(prop = n / sum(n)) %>%
+  ggplot(mapping = aes(x = color, y = cut)) +
+  geom_tile(mapping = aes(fill = prop)) +
+  scale_fill_viridis(limits = c(0, 1))
+```
+
+### 2. Use geom_tile() together with dplyr to explore how average flight delays vary by destination and month of year. What makes the plot difficult to read? How could you improve it?
+
+```{r chapter7_exercise7521_2}
+nycflights13::flights %>%
+  group_by(month,dest) %>%
+  summarize(dep_delay = mean(dep_delay, na.rm = TRUE)) %>%
+  ggplot(aes(x=factor(month),y=dest,fill=dep_delay))+geom_tile()+
+  labs(x = "Month", y = "Destination", fill = "Departure Delay")
+```
+
+So many of the tiles couldn't be drawn. Again, per jarnold's answer, we filtered for those with 12 destinations,reorder destination and dep_delay factors to get the higher delay destinations toward the top of the plot, and changed the color scheme. 
+
+```{r chapter7_exercise7521_2_2}
+require(forcats)
+nycflights13::flights %>%
+  group_by(month,dest) %>%
+  summarize(dep_delay = mean(dep_delay, na.rm = TRUE)) %>%
+  group_by(dest) %>%
+  filter(n() == 12) %>%
+  ungroup() %>%
+  mutate(dest = fct_reorder(dest, dep_delay)) %>%
+  ggplot(aes(x=factor(month),y=dest,fill=dep_delay))+geom_tile()+
+  labs(x = "Month", y = "Destination", fill = "Departure Delay")+
+    scale_fill_viridis() 
+```
+
+### 3. Why is it slightly better to use aes(x = color, y = cut) rather than aes(x = cut, y = color) in the example above?
+
+```{r chapter7_exercise7521_3}
+diamonds %>% 
+  count(color, cut) %>%  
+  ggplot(mapping = aes(x = color, y = cut)) +
+    geom_tile(mapping = aes(fill = n))
+
+diamonds %>% 
+  count(color, cut) %>%  
+  ggplot(mapping = aes(x = cut, y = color)) +
+    geom_tile(mapping = aes(fill = n))
+```
+
+Longer cut names so better to have them on the y axis and the tiles are less wide in the former so it looks less stretched. 
+
+## Exercise 7.5.3.1
+
+### 1. Instead of summarising the conditional distribution with a boxplot, you could use a frequency polygon. What do you need to consider when using cut_width() vs cut_number()? How does that impact a visualisation of the 2d distribution of carat and price?
+
+Per jarnold:
+
+"When using cut_width the number in each bin may be unequal. The distribution of carat is right skewed so there are few diamonds in those bins."
+
+```{r chapter7_exercise7531_1}
+ggplot(data = diamonds, 
+       mapping = aes(x = price,
+                     colour = cut_width(carat, 0.3))) +
+  geom_freqpoly()
+```
+
+"Plotting the density instead of counts will make the distributions comparable, although the bins with few observations will still be hard to interpret."
+
+```{r chapter7_exercise7531_1_2}
+#cut width
+ggplot(data = diamonds, 
+       mapping = aes(x = price,
+                     y = ..density.., 
+                     colour = cut_width(carat, 0.3))) +
+  geom_freqpoly()
+
+#cut number 
+ggplot(data = diamonds, 
+       mapping = aes(x = price,
+                     colour = cut_number(carat, 10))) +
+  geom_freqpoly()
+```
+
+"Since there are equal numbers in each bin, the plot looks the same if density is used for the y aesthetic (although the values are on a different scale)."
+
+```{r chapter7_exercise7531_1_3}
+ggplot(data = diamonds, 
+       mapping = aes(x = price,
+                     y = ..density..,
+                     colour = cut_number(carat, 10))) +
+  geom_freqpoly()
+```
+
+### 2. Visualise the distribution of carat, partitioned by price
+
+```{r chapter7_exercise7531_2}
+ggplot(diamonds, aes(x = cut_number(price, 10), y = carat)) +
+  geom_boxplot() +
+  coord_flip() +
+  xlab("Price")
+```
+
+### 3. How does the price distribution of very large diamonds compare to small diamonds. Is it as you expect, or does it surprise you?
+
+```{r chapter7_exercise7531_3}
+ggplot(diamonds, aes(x = cut_number(carat, 10), y = price)) +
+  geom_boxplot() +
+  coord_flip() +
+  xlab("Carat")
+```
+
+I would expect larger carat diamonds to be more expensive, but there's substantial overlap with that, depending on other factors.
+
+### 4. Combine two of the techniques you’ve learned to visualise the combined distribution of cut, carat, and price.
+
+```{r chapter7_exercise7531_4}
+require(hexbin)
+diamonds %>%
+ggplot(mapping = aes(x = carat, y = price)) +
+  geom_hex()+
+  facet_wrap(~ cut, ncol=3) +
+  scale_fill_viridis()
+
+ggplot(diamonds, aes(x = cut_number(carat, 5), y = price, color = cut)) +
+  geom_boxplot()
+
+ggplot(diamonds, aes(color = cut_number(carat, 5), y = price, x = cut)) +
+  geom_boxplot()
+```
+
+### 5. Two dimensional plots reveal outliers that are not visible in one dimensional plots. For example, some points in the plot below have an unusual combination of x and y values, which makes the points outliers even though their x and y values appear normal when examined separately. Why is a scatterplot a better display than a binned plot for this case?
+
+```{r chapter7_exercise7531_5}
+ggplot(data = diamonds) +
+  geom_point(mapping = aes(x = x, y = y)) +
+  coord_cartesian(xlim = c(4, 11), ylim = c(4, 11))
+
+ggplot(data = diamonds) +
+  geom_bar(stat="identity",mapping = aes(x = cut_number(x,5), y = y)) 
+```
+
+geom_point gives far greater resolution for picking out outliers in the distributions. 
+
+# Part II Wrangle
+# 8. Workflow: projects
+
+**No exercises**
+
+# 9. Introduction
+
+**No Exercises**
+
+# 10. Tibbles
+
+## Exercise 10.5
+
+### 1. How can you tell if an object is a tibble? (Hint: try printing mtcars, which is a regular data frame)
+
+You can tell if an object is a tibble, as  opposed to a dataframe, in that the class tible is printed, each column class is printed out below the variable name, and the trailing variable names are not printed out but only listed. Addtionally, tibbles have class "tbl_df" and "tbl_" in addition to "data.frame".
+
+```{r chapter10_exercise105_1}
+as.tibble(mtcars)
+```
+
+### 2.  Compare and contrast the following operations on a data.frame and equivalent tibble. What is different? Why might the default data frame behaviours cause you frustration?
+
+```{r chapter10_exercise105_2}
+df <- data.frame(abc = 1, xyz = "a")
+df$x
+df[, "xyz"]
+df[, c("abc", "xyz")]
+```
+
+On a tibble, 
+
+```{r chapter10_exercise105_2_2}
+tbl <- as.tibble(df)
+
+#tbl %>% .$x #Doesn't work because "x" is not a variable name
+
+tbl %>% .[["xyz"]]
+
+tbl[,c("abc","xyz")]
+  
+```
+
+*df$x* is completed to *df$xyz* which could be good but also could call the wrong variable and therefore troublesome. 
+
+From jarnold "With data.frames, with [ the type of object that is returned differs on the number of columns. If it is one column, it won’t return a data.frame, but instead will return a vector. With more than one column, then it will return a data.frame. This is fine if you know what you are passing in, but suppose you did df[ , vars] where vars was a variable. Then you what that code does depends on length(vars) and you’d have to write code to account for those situations or risk bugs."
+
+### 3. If you have the name of a variable stored in an object, e.g. var <- "mpg", how can you extract the reference variable from a tibble?
+
+```{r chapter10_exercise105_3}
+
+tbl <- as.tibble(mtcars)
+
+var <- "mpg"
+
+tbl[[var]]
+
+#or
+
+pull(tbl,var)
+```
+
+### 4. Practice referring to non-syntactic names in the following data frame by:
+
+**Extracting the variable called 1.**
+
+**Plotting a scatterplot of 1 vs 2.**
+
+**Creating a new column called 3 which is 2 divided by 1.**
+
+**Renaming the columns to one, two and three.**
+
+```{r chapter10_exercise105_4}
+annoying <- tibble(
+  `1` = 1:10,
+  `2` = `1` * 2 + rnorm(length(`1`))
+)
+
+pull(annoying,`1`)
+
+ggplot(annoying,aes(x= `1`,y = `2`)) + geom_point()
+
+annoying <- annoying %>% mutate(`3` = `2` / `1`)
+
+annoying
+
+annoying <- rename(annoying, one = `1`, two = `2`, three = `3`)
+ 
+annoying
+```
+
+### 5. What does tibble::enframe() do? When might you use it?
+
+It converts named vectors to a data frame with names and values
+
+```{r chapter10_exercise105_5}
+enframe(c(a = 1, b = 2, c = 3))
+```
+
+### 6. What option controls how many additional column names are printed at the footer of a tibble?
+
+*print(n_extra = ?)* sets the number of column names printed
+
+```{r chapter10_exercise105_5_2}
+mtcars %>% print(n_extra = 5)
+```
+
+# 11. Data Import
+
+## Exercise 11.2.2
+
+### 1. What function would you use to read a file where fields were separated with "|"?
+
+I would use read_delim(), and indicate with sep="|".
+
+### 2. Apart from file, skip, and comment, what other arguments do read_csv() and read_tsv() have in common?
+
+Look up the arguments at ?read_tsv or ?read_csv. Other arguments in common include col_names,  quote and delim. 
+
+```{r chapter11_exercise1122_2}
+library(readr)
+union(names(formals(read_csv)), names(formals(read_tsv)))
+```
+
+### 3. What are the most important arguments to read_fwf()?
+
+The most important arguments to read_fwf which reads in a fixed width file includes the file path and col_positions which tells the function where data columns begin and end. Read ?read_fwf for more details. 
+
+### 4. Sometimes strings in a CSV file contain commas. To prevent them from causing problems they need to be surrounded by a quoting character, like " or '. By convention, read_csv() assumes that the quoting character will be ", and if you want to change it you’ll need to use read_delim() instead. What arguments do you need to specify to read the following text into a data frame?
+
+
+```{r chapter11_exercise1122_4}
+x <- "x,y\n1,'a,b'"
+read_delim(x, ",", quote = "'")
+```
+
+### 5. Identify what is wrong with each of the following inline CSV files. What happens when you run the code?
+
+```{r chapter11_exercise1122_5}
+read_csv("a,b\n1,2,3\n4,5,6") #implying different number of rows so chops of the 3rd element in rows 2 and 3.
+read_csv("a,b,c\n1,2\n1,2,3,4") #adds NA to 2nd column and chops of 4th element in 4th column
+read_csv("a,b\n\"1") #2nd element in 1st row is missing
+read_csv("a,b\n1,2\na,b") #nothing that I see
+read_csv("a;b\n1;3") #need to indicate sep=";"
+```
+
+## Exercise 11.3.5
+
+### 1. What are the most important arguments to locale()?
+
+Arguably, the most important arguments are decimal_mark which tells of the decimal separator and grouping_mark which tells of the grouping separator. Use ?locale
+
+### 2. What happens if you try and set decimal_mark and grouping_mark to the same character? What happens to the default value of grouping_mark when you set decimal_mark to “,”? What happens to the default value of decimal_mark when you set the grouping_mark to “.”?
+
+```{r chapter11_exercise1135_2}
+parse_number("1,000.00",locale=locale(grouping_mark=",",decimal_mark="."))
+
+#parse_number("1,000.00",locale=locale(grouping_mark=",",decimal_mark=",")) # Error: `decimal_mark` and `grouping_mark` must be different
+
+parse_number("1.6,500,000.60",locale=locale(decimal_mark=",")) #grouping_mark default is also ","
+
+parse_number("1.666,500,000.60",locale=locale(grouping_mark=".")) # the "." is ignored
+
+```
+
+### 3. I didn’t discuss the date_format and time_format options to locale(). What do they do? Construct an example that shows when they might be useful.
+
+In locale, the date_format and time_format option indicates the rules for parsing a date and time, respectively.
+
+### 4. If you live outside the US, create a new locale object that encapsulates the settings for the types of file you read most commonly.
+
+Outside the US there seems to be a lack of standards for encoding/decoding.
+
+### 5. What’s the difference between read_csv() and read_csv2()?
+
+sep="," in read_csv and sep=";" in read_csv2
+
+### 6. What are the most common encodings used in Europe? What are the most common encodings used in Asia? Do some googling to find out.
+
+Most frequent encodings overall on the web:
+https://stackoverflow.com/questions/8509339/what-is-the-most-common-encoding-of-each-language
+
+UTF-8 (89.2%)
+ISO-8859-1 (5.0%)
+Windows-1251 (1.6%)
+Shift JIS (0.9%)
+Windows-1252 (0.8%)
+GB2312 (0.7%)
+EUC-KR (0.4%)
+EUC-JP (0.3%)
+
+Also read http://unicodebook.readthedocs.io/encodings.html and http://kunststube.net/encoding/
+
+### 7. Generate the correct format string to parse each of the following dates and times:
+
+```{r chapter11_exercise1135_7}
+d1 <- "January 1, 2010"
+parse_date(d1, format="%B %d, %Y")
+d2 <- "2015-Mar-07"
+parse_date(d2, format="%Y-%b-%d")
+d3 <- "06-Jun-2017"
+parse_date(d3, format="%d-%b-%Y")
+d4 <- c("August 19 (2015)", "July 1 (2015)")
+#parse_date(d4, format=c("%B %b (%Y)","%B %b (%Y)"))
+d5 <- "12/30/14" # Dec 30, 2014
+parse_date(d5, format="%m/%d/%y")
+t1 <- "1705"
+parse_time(t1, format="%H%M")
+t2 <- "11:15:10.12 PM"
+#parse_datetime(t2) #can't figure out
+```
+
+
+# 12. Tidy data
+
+## Exercise 12.2.1
+
+### 1. Using prose, describe how the variables and observations are organised in each of the sample tables.
+
+In table 1, each observation is a (country, year) and variables are cases and count.
+
+In table 2, each observation is a (county, year, type) and the variable is count.
+
+In table 3, each observation is (country, year) and the variable is rate (cases/population)
+
+In the table 4s, each observation is country and variables are years. Table 4a is cases and 4b is population. 
+
+### 2. Compute the rate for table2, and table4a + table4b. You will need to perform four operations:
+
+#### Extract the number of TB cases per country per year.
+
+```{r chapter12_exercise1221_2}
+library(tidyverse)
+
+table2 %>% 
+  filter(type=="cases") %>% 
+  group_by(country) %>% 
+  summarize(TB = sum(count))
+```
+
+#### Extract the matching population per country per year.
+
+```{r chapter12_exercise1221_2_2}
+table2 %>% filter(type == "population")
+```
+
+#### Divide cases by population, and multiply by 10000.
+
+```{r chapter12_exercise1221_2_3}
+tb2_cases <- filter(table2, type == "cases")[["count"]]
+tb2_country <- filter(table2, type == "cases")[["country"]]
+tb2_year <- filter(table2, type == "cases")[["year"]]
+tb2_population <- filter(table2, type == "population")[["count"]]
+options(scipen=-99)
+table2_clean <- tibble(country = tb2_country,
+       year = tb2_year,
+       rate = tb2_cases / tb2_population)
+table2_clean
+```
+
+#### Store back in the appropriate place.
+
+It's stored in table2_clean.
+
+#### Which representation is easiest to work with? Which is hardest? Why?
+
+Hmm. It's easier to work with table2 than table4a or 4b because all the data is in table2 but is separated in table4a and 4b which makes doing operations a bit more complicated.
+
+### 3. Recreate the plot showing change in cases over time using table2 instead of table1. What do you need to do first?
+
+```{r chapter12_exercise1221_3}
+data <- table2 %>% 
+  filter(type == "cases")
+
+options(scipen=99)
+
+  ggplot(data,aes(year, count)) + 
+  geom_line(aes(group = country), colour = "grey50") + 
+  geom_point(aes(colour = country)) +
+    theme(legend.box.just = "centre")
+```
+
+
+## Exercise 12.3.3
+
+### 1. Why are gather() and spread() not perfectly symmetrical? Carefully consider the following example:
+
+```{r chapter12_exercise1233_1}
+stocks <- tibble(
+  year   = c(2015, 2015, 2016, 2016),
+  half  = c(   1,    2,     1,    2),
+  return = c(1.88, 0.59, 0.92, 0.17)
+)
+stocks %>% 
+  spread(year, return) %>% 
+  gather("year", "return", `2015`:`2016`)
+```
+
+#### (Hint: look at the variable types and think about column names.) Both spread() and gather() have a convert argument. What does it do?
+
+From jarnold
+
+"
+The functions spread and gather are not perfectly symmetrical because column type information is not transferred between them. In the original table the column year was numeric, but after the spread-gather cyle it is character, because with gather, variable names are always converted to a character vector.
+
+The convert argument tries to convert character vectors to the appropriate type. In the background this uses the type.convert function.
+"
+
+```{r chapter12_exercise1233_1_2}
+stocks %>% 
+  spread(year, return) %>% 
+  gather("year", "return", `2015`:`2016`, convert = TRUE)
+```
+
+### 2. Why does this code fail?
+
+
+table4a %>% 
+  gather(1999, 2000, key = "year", value = "cases")
+
+Error in combine_vars(vars, ind_list) : Position must be between 0 and n
+
+The code fails because the column names 1999 and 2000 are not standard and thus needs to be quoted. The tidyverse functions will interpret 1999 and 2000 without quotes as looking for the 1999th and 2000th column of the data frame.
+
+### 3. Why does spreading this tibble fail? How could you add a new column to fix the problem?
+
+```{r chapter12_exercise1233_3}
+people <- tribble(
+  ~name,             ~key,    ~value,
+  #-----------------|--------|------
+  "Phillip Woods",   "age",       45,
+  "Phillip Woods",   "height",   186,
+  "Phillip Woods",   "age",       50,
+  "Jessica Cordero", "age",       37,
+  "Jessica Cordero", "height",   156
+)
+glimpse(people)
+```
+
+
+spread(people, key, value)
+ Error: Duplicate identifiers for rows (1, 3)
+ 
+Spreading the data frame fails because there are two rows with “age” for “Phillip Woods”. We would need to add another column with an indicator for the number observation it is,
+
+```{r chapter12_exercise1233_3_2}
+people <- tribble(
+  ~name,             ~key,    ~value, ~obs,
+  #-----------------|--------|------|------
+  "Phillip Woods",   "age",       45, 1,
+  "Phillip Woods",   "height",   186, 1,
+  "Phillip Woods",   "age",       50, 2,
+  "Jessica Cordero", "age",       37, 1,
+  "Jessica Cordero", "height",   156, 1
+)
+spread(people, key, value)
+```
+
+### 4. Tidy the simple tibble below. Do you need to spread or gather it? What are the variables?
+
+```{r chapter12_exercise1233_4}
+preg <- tribble(
+  ~pregnant, ~male, ~female,
+  "yes",     NA,    10,
+  "no",      20,    12
+)
+```
+
+You need to gather male (values are logical) and count (integer count of gender)
+
+```{r chapter12_exercise1233_4_2}
+gather(preg, sex, count, male, female) %>%
+  mutate(pregnant = pregnant == "yes",
+         female = sex == "female") %>%
+  select(-sex)
+```
+
+## Exercise 12.4.3
+
+### 1. What do the extra and fill arguments do in separate()? Experiment with the various options for the following two toy datasets.
+
+```{r chapter12_exercise1243_1}
+tibble(x = c("a,b,c", "d,e,f,g", "h,i,j"))
+
+tibble(x = c("a,b,c", "d,e,f,g", "h,i,j")) %>% 
+  separate(x, c("one", "two", "three"),extra="merge")
+
+tibble(x = c("a,b,c", "d,e", "f,g,i"))
+
+tibble(x = c("a,b,c", "d,e", "f,g,i")) %>% 
+  separate(x, c("one", "two", "three"),fill="left")
+```
+
+fill and extra dictate how extra or missing values in rows are delt with when making a table. 
+
+If there's an extra value (like having multiple rows with the minority of the rows having more values), then we can indicate whether to give a warning about beingh dropped, drop the value without warning, or merge the last two values together. Or we can fill the missing value with NA frrom the left or right.
+
+### 2. Both unite() and separate() have a remove argument. What does it do? Why would you set it to FALSE?
+
+From jarnold, "You would set it to FALSE if you want to create a new variable, but keep the old one."
+
+### 3. Compare and contrast separate() and extract(), Why are there three variations of separation (by position, by separator, and with groups), but only one unite?
+
+From jarnold, "The function extract uses a regular expression to find groups and split into columns. In unite it is unambigous since it is many columns to one, and once the columns are specified, there is only one way to do it, the only choice is the sep. In separate, it is one to many, and there are multiple ways to split the character string."
+
+## Exercise 12.5.1
+
+### 1. Compare and contrast the fill arguments to spread() and complete().
+
+From jarnold, "In spread, the fill argument explicitly sets the value to replace NAs. In complete, the fill argument also sets a value to replace NAs but it is named list, allowing for different values for different variables. Also, both cases replace both implicit and explicit missing values."
+
+### 2. What does the direction argument to fill() do?
+
+From jarnold, "With fill, it determines whether NA values should be replaced by the previous non-missing value ("down") or the next non-missing value ("up")."
+
+## Exercise 12.6.1
+
+### 1. In this case study I set na.rm = TRUE just to make it easier to check that we had the correct values. Is this reasonable? Think about how missing values are represented in this dataset. Are there implicit missing values? What’s the difference between an NA and zero?
+
+With help from jarnold's solutions,
+
+```{r chapter12_exercise1261_1}
+who1 <- who %>%
+  gather(new_sp_m014:newrel_f65, key = "key", value = "cases", na.rm = TRUE)
+
+who1 %>% 
+  filter(cases == 0) %>% 
+  nrow()
+```
+Starting the tidy process gives us the number of cases of a type of TB for a country. We see above there's 11080 rows with 0 cases, indicating no representation of TB cases for a country. Setting na.rm=T or F doesn't matter since WHO seems to have no data entered if none were measured for a country (as far as we can tell just from the data). In the end, it doesn't matter the specification.
+
+### 2. What happens if you neglect the mutate() step? (mutate(key = stringr::str_replace(key, "newrel", "new_rel"))
+
+Neglecting the mutate step can be OK if we know that all cases are new and we just parse the case type after the 3rd character. But we may not know that so better to mutate.
+
+### 3. I claimed that iso2 and iso3 were redundant with country. Confirm this claim.
+
+From jarnold,
+
+```{r chapter12_exercise1261_3}
+select(who, country, iso2, iso3) %>%
+  distinct() %>%
+  group_by(country) %>%
+  filter(n() > 1)
+```
+
+If there were redundant values, after displaying only distinct rows, there would be a country represented >1 if it paired with a differet iso2 or iso3, thus they're redundant columns.
+
+### 4. For each country, year, and sex compute the total number of cases of TB. Make an informative visualisation of the data
+
+Because of the 0s for cases of TB types, it's better to just sum cases of all types. Also because there are no or few cases before 1195, we'll filter for after then. Also to distinguish cases by country and sex, we're making a new variable to group by to have the graph less cluttered. This is adapted from jarnold.
+
+```{r chapter12_exercise1261_4}
+who_new <- who %>%
+  gather(code, value, new_sp_m014:newrel_f65, na.rm = TRUE) %>% 
+  mutate(code = stringr::str_replace(code, "newrel", "new_rel")) %>%
+  separate(code, c("new", "var", "sexage")) %>% 
+  select(-new, -iso2, -iso3) %>% 
+  separate(sexage, c("sex", "age"), sep = 1)
+
+who_new %>% 
+  group_by(country, year, sex) %>%
+  filter(year > 1995) %>%
+  summarise(cases = sum(value)) %>%
+  unite(country_sex, country, sex, remove = FALSE) %>%
+  ggplot(aes(x = year, y = cases, group = country_sex, colour = sex)) +
+  geom_line()
+```
+
+# 13. Relational data
+
+## Exercise 13.2.1
+
+### 1. Imagine you wanted to draw (approximately) the route each plane flies from its origin to its destination. What variables would you need? What tables would you need to combine?
+
+To get the route, I need the origin and dest variables in the flights table. And I would connect the flights table to the tailnum variable in the planes table to account for each plane. The route would be constructed from the latitude and longtiude variablesin the airports table. 
+
+### 2. I forgot to draw the relationship between weather and airports. What is the relationship and how should it appear in the diagram?
+
+The tables weather and airports are connected by the airports (NYC only) in the faa or origins variables in the tables, respectively. 
+
+### 3. Weather only contains information for the origin (NYC) airports. If it contained weather records for all airports in the USA, what additional relation would it define with flights?
+
+year, month, day, hour, origin in weather would be matched to year, month, day, hour, dest in flight.
+
+### 4. We know that some days of the year are “special”, and fewer people than usual fly on them. How might you represent that data as a data frame? What would be the primary keys of that table? How would it connect to the existing tables?
+
+If I wanted to make a "special" table, I would indicate the year, month and day variables to be keys and include other variables which would connect to tables. 
+
+## Exercise 13.3.1
+
+### 1. Add a surrogate key to flights.
+
+```{r chapter13_exercise1331_1}
+library(tidyverse)
+library(nycflights13)
+
+flights %>% 
+  arrange(year,month,day,sched_dep_time,carrier,flight) %>% 
+  mutate(flight_id = row_number()) %>% 
+  count(flight_id) %>% 
+  filter(n > 1)
+```
+
+Without a surrogate key like above, we'd need to combine these 5 different variables to get a parent key. 
+
+### 2. Identify the keys in the following datasets
+
+* **Lahman::Batting,**
+* **babynames::babynames**
+* **nasaweather::atmos**
+* **fueleconomy::vehicles**
+* **ggplot2::diamonds**
+
+**(You might need to install some packages and read some documentation.)**
+
+```{r chapter13_exercise1331_2}
+Lahman::Batting %>%
+  group_by(playerID, yearID, stint) %>%
+  filter(n() > 1) %>%
+  nrow()
+
+babynames::babynames %>% 
+  group_by(year, sex, name) %>% 
+  filter(n() > 1) %>% 
+  nrow()
+  
+nasaweather::atmos %>%
+  group_by(lat, long, year, month) %>%
+  filter(n() > 1) %>%
+  nrow()
+
+fueleconomy::vehicles %>%
+  group_by(id) %>%
+  filter(n() > 1) %>%
+  nrow()
+```
+
+There is no primary key for ggplot2::diamonds. Using all variables in the data frame, the number of distinct rows is less than the total number of rows, meaning no combination of variables uniquely identifies the observations.
+
+### 3. Draw a diagram illustrating the connections between the Batting, Master, and Salaries tables in the Lahman package. Draw another diagram that shows the relationship between Master, Managers, AwardsManagers.
+
+**How would you characterise the relationship between the Batting, Pitching, and Fielding tables?**
+
+```{r chapter13_exercise1331_3}
+colnames(Lahman::Batting)
+
+colnames(Lahman::Master)
+
+colnames(Lahman::Salaries)
+```
+
+From jarnold (I'm too lazy to give this a good college try):
+
+
+Batting
+primary key: playerID, yearID, stint
+foreign keys:
+playerID -> Master.playerID
+Master
+primary key: playerID
+Salaries
+primary key: yearID, teamID, playerID
+foreign keys:
+playerID -> Master.playerID
+Managers:
+primary key: yearID, playerID, teamID, inseason
+foreign keys:
+playerID -> Master.teamID
+Managers:
+primary key: awardID, yearID
+AwardsManagers:
+primary key: playerID, awardID, yearID (since there are ties and while tie distinguishes those awards it has NA values)
+foreign keys:
+playerID -> Master.playerID
+playerID, yearID, lgID -> Managers.playerID, yearID, lgID
+lgID and teamID appear in multiple tables, but should be primary keys for league and team tables.
+
+## Exercise 13.4.6
+
+### 1. Compute the average delay by destination, then join on the airports data frame so you can show the spatial distribution of delays. Here’s an easy way to draw a map of the United States:
+
+```{r chapter13_exercise1345_1}
+airports %>%
+  semi_join(flights, c("faa" = "dest")) %>%
+  ggplot(aes(lon, lat)) +
+    borders("state") +
+    geom_point() +
+    coord_quickmap()
+```
+
+```{r chapter13_exercise1345_1_2}
+avg_dest_delays <-
+  flights %>%
+  group_by(dest) %>%
+  # arrival delay NA's are cancelled flights
+  summarise(delay = mean(arr_delay, na.rm = TRUE)) %>%
+  inner_join(airports, by = c(dest = "faa"))
+
+avg_dest_delays %>%
+  ggplot(aes(lon, lat, colour = delay)) +
+    borders("state") +
+    geom_point() +
+    coord_quickmap()
+```
+
+### 2. Add the location of the origin and destination (i.e. the lat and lon) to flights.
+
+```{r chapter13_exercise1345_2}
+flights %>% 
+  left_join(airports, c(origin = "faa")) %>% 
+  left_join(airports, c(dest = "faa"))
+```
+
+### 3. Is there a relationship between the age of a plane and its delays?
+
+from jarnold,
+
+Suprisingly not. If anything (departure) delay seems to decrease slightly with age (perhaps because of selection):
+
+```{r chapter13_exercise1345_3}
+plane_ages <- 
+  planes %>%
+  mutate(age = 2013 - year) %>%
+  select(tailnum, age)
+
+flights %>%
+  inner_join(plane_ages, by = "tailnum") %>%
+  group_by(age) %>%
+  filter(!is.na(dep_delay)) %>%
+  summarise(delay = mean(dep_delay)) %>%
+  ggplot(aes(x = age, y = delay)) +
+  geom_point() +
+  geom_line()
+```
+
+### 4. What weather conditions make it more likely to see a delay?
+
+```{r chapter13_exercise1345_4}
+flight_weather <- flights %>% 
+  inner_join(weather,by=c("origin" = "origin", 
+                          "year" = "year", 
+                          "month" = "month", 
+                          "day" = "day", 
+                          "hour" = "hour")
+             )
+
+flight_weather %>%
+  group_by(precip) %>%
+  summarise(delay = mean(dep_delay, na.rm = TRUE)) %>%
+  ggplot(aes(x = precip, y = delay)) +
+    geom_line() + geom_point()
+
+flight_weather %>%
+  group_by(wind_gust) %>%
+  summarise(delay = mean(dep_delay, na.rm = TRUE)) %>%
+  ggplot(aes(x = wind_gust, y = delay)) +
+    geom_line() + geom_point()
+
+flight_weather %>%
+  group_by(visib) %>%
+  summarise(delay = mean(dep_delay, na.rm = TRUE)) %>%
+  ggplot(aes(x = visib, y = delay)) +
+    geom_line() + geom_point()
+
+```
+
+### 5. What happened on June 13 2013? Display the spatial pattern of delays, and then use Google to cross-reference with the weather.
+
+```{r chapter13_exercise1345_5}
+
+library(viridis)
+flights %>%
+  filter(year == 2013, month == 6, day == 13) %>%
+  group_by(dest) %>%
+  summarise(delay = mean(arr_delay, na.rm = TRUE)) %>%
+  inner_join(airports, by = c("dest" = "faa")) %>%
+  ggplot(aes(y = lat, x = lon, size = delay, colour = delay)) +
+  borders("state") +
+  geom_point() +
+  coord_quickmap() + 
+  scale_color_viridis()
+
+```
+
+
+## Exercises 13.5.1
+
+### 1. What does it mean for a flight to have a missing tailnum? What do the tail numbers that don’t have a matching record in planes have in common? (Hint: one variable explains ~90% of the problems.)
+
+Looks like NA tailnums never departed though they were scheduled to
+
+American and Envoy airlines planes don't have tail numbers.
+```{r chapter13_exercise1351_1}
+na_flights <- filter(flights,is.na(flights$tailnum))
+
+flights %>%
+  anti_join(planes, by = "tailnum") %>%
+  count(carrier, sort = TRUE)
+```
+
+### 2. Filter flights to only show flights with planes that have flown at least 100 flights.
+
+```{r chapter13_exercise1351_2}
+flights %>% 
+  group_by(tailnum) %>% 
+  filter(n() > 100) 
+```
+
+### 3. Combine fueleconomy::vehicles and fueleconomy::common to find only the records for the most common models.
+
+```{r chapter13_exercise1351_3}
+com_models <- fueleconomy::common %>% 
+  semi_join(fueleconomy::vehicles)
+```
+
+### 4. Find the 48 hours (over the course of the whole year) that have the worst delays. Cross-reference it with the weather data. Can you see any patterns?
+
+2 day window with highest delay times
+
+```{r chapter13_exercise1351_4}
+flight_weather %>% 
+  mutate(time = day*24 + hour + (minute/60) ) %>% 
+  ggplot(aes(time)) +
+  geom_histogram()
+```
+
+Thought I had something...
+
+### 5. What does anti_join(flights, airports, by = c("dest" = "faa")) tell you? What does anti_join(airports, flights, by = c("faa" = "dest")) tell you?
+
+anti_join(flights, airports, by = c("dest" = "faa")) are flights that go to an airport that is not in FAA list of destinations, likely foreign airports.
+
+anti_join(airports, flights, by = c("faa" = "dest")) are US airports that don’t have a flight in the data, meaning that there were no flights to that aiport from New York in 2013.
+
+### 6. You might expect that there’s an implicit relationship between plane and airline, because each plane is flown by a single airline. Confirm or reject this hypothesis using the tools you’ve learned above.
+
+Is there a plane flown by more than 1 airline? Nope.
+
+```{r chapter13_exercise1351_6}
+flights %>%
+  group_by(tailnum, carrier) %>%
+  distinct() %>%  
+  distinct(tailnum) %>% 
+  group_by(tailnum) %>% 
+  count(carrier) %>% 
+  filter(n>1) %>% 
+  arrange(desc(n))
+```
+
+# 14. Strings
+
+## Exercise 14.2.5
+
+### 1. In code that doesn’t use stringr, you’ll often see paste() and paste0(). What’s the difference between the two functions? What stringr function are they equivalent to? How do the functions differ in their handling of NA?
+
+The paste0 separator in nothing ( "" ) and paste the default separator is space ( " " ). The equivalent stringr functions are str_c(), stri_paste(), stri_join(), and stri_flatten(). In paste, missing values, NA, are treated as strings, "NA".
+
+### 2. In your own words, describe the difference between the sep and collapse arguments to str_c().
+
+The collapse argument joins elements in a character vector while the sep argument joins elements from multiple character vectors.
+
+### 3. Use str_length() and str_sub() to extract the middle character from a string. What will you do if the string has an even number of characters?
+
+```{r chapter14_exercise1425_3}
+library(stringr)
+
+x <- "Apple"
+
+med <- ifelse(
+  str_length(x) %% 2 == 0, 
+  ceiling(str_length(x) / 2), 
+  floor(str_length(x) / 2)
+  )
+
+str_sub(x,med,med)
+```
+
+### 4. What does str_wrap() do? When might you want to use it?
+
+This is useful for reformatting text so that it doesn't run off the visible page or you want to indent.
+
+### 5. What does str_trim() do? What’s the opposite of str_trim()?
+
+str_trim() trims whitespace from the beginning or end of a string. The opposite, str_pad(), adds whitespace.
+
+### 6. Write a function that turns (e.g.) a vector c("a", "b", "c") into the string a, b, and c. Think carefully about what it should do if given a vector of length 0, 1, or 2.
+
+```{r chapter14_exercise1425_6}
+
+func <- function(x) {
+  if( length(x) < 2 ){warning("need string with atleast two characters")}else{
+    str_c(x,collapse=", ")
+  }
+}
+
+x0 <- c()
+x1 <- c("a")
+x2 <- c("a","b")
+
+func(x2)
+```
+
+
+## Exercise 14.3.1.1
+
+### 1. Explain why each of these strings don’t match a \: "\", "\\", "\\\".
+
+"\" doesn't match '\' because that is a special character. "\\" doesn't match '\' because even though it escaped the '\' in the regexp, we wrap it in a string first, and a string requires more escaping outside the special behavior. "\\\" doesn't match a literal '\' because in strings '\' is also used as an escape so we need "\\\\" to match a '\'.
+
+### 2. How would you match the sequence "'\ ?
+
+```{r chapter14_exercise14311_2}
+
+x <- "\"\'\\"
+x
+str_view(x,"\\\"\\'\\\\")
+
+```
+
+Escaping " three times, once for escaping the speical behavior then because we're in a string and then because we're escaping special behavior in a string. 
+
+Escaping ' twice, twice for escaping special behavior in the regexp and then in the string.
+
+Escaping \ for the reason stated in the question above.
+
+### 3. What patterns will the regular expression ```{r chapter14,eval=F}\..\..\..``` match? How would you represent it as a string?
+
+```{r chapter14_exercise14311_3}
+x <- "\\..\\..\\.."
+x
+```
+
+Can't figure out how to get rid of that second backslash...
+
+## Exercise 14.3.2.1
+
+### 1. How would you match the literal string "$^$"?
+
+```{r chapter14_exercise14321_1}
+
+x <- '"$^$"'
+
+str_view(x,'"$^$"')
+```
+I think that matches it...
+
+### 2. Given the corpus of common words in stringr::words, create regular expressions that find all words that:
+
+* Start with “y”.
+* End with “x”
+* Are exactly three letters long. (Don’t cheat by using str_length()!)
+* Have seven letters or more.
+* Since this list is long, you might want to use the match argument to str_view() to show only the matching or non-matching words.
+
+```{r chapter14_exercise14321_2}
+
+words <- stringr::words
+
+str_view(words,"^y",match=T)
+
+str_view(words,"x$",match=T)
+
+str_view(words,"\\b[[:alpha:]]{3}\\b",match = T)
+
+str_match(words,"\\b[[:alpha:]]{7,}\\b")
+
+```
+
+Go to ?regex in the base package to see more examples and details about regular expressions.
+
+## Exercise 14.3.3.1
+
+### 1. Create regular expressions to find all words that:
+
+* Start with a vowel.
+
+* That only contain consonants. (Hint: thinking about matching “not”-vowels.)
+
+* End with ed, but not with eed.
+
+* End with ing or ise.
+
+```{r chapter14_exercise14331_1}
+sub_words <- sample(words,20) 
+
+str_view(sub_words,"^[aeiou]",match=T)
+
+str_view(sub_words,"^[aeiou]",match=T)
+
+str_view(sub_words,"[^e]ed$",match=T)
+
+str_view(sub_words,"ing$|ise$",match=T)
+```
+
+### 2. Empirically verify the rule “i before e except after c”.
+
+```{r chapter14_exercise14331_2}
+
+str_view(words,"cei",match=T)
+
+str_view(words,"cie",match=T)
+
+str_view(words,"iec",match=T)
+
+str_view(words,"eic",match=T)
+```
+
+I think it's only "iec" not "eic".
+
+### 3. Is “q” always followed by a “u”?
+
+```{r chapter14_exercise14331_3}
+
+str_view(words,"uq|qu",match=T)
+```
+
+yes
+
+### 4. Write a regular expression that matches a word if it’s probably written in British English, not American English.
+
+colour
+```{r chapter14_exercise14331_4}
+
+str_view(words,"colour",match=T)
+
+```
+
+### 5. Create a regular expression that will match telephone numbers as commonly written in your country.
+
+```{r chapter14_exercise14331_5}
+
+("[0-9]{3}-[0-9]{3}-[0-9]{4}")
+
+```
+
+## Exercise 14.3.4.1
+
+### 1. Describe the equivalents of ?, +, * in {m,n} form.
+
+? <- {0,1}
+
++ <- {1,}
+
+* <- {0.}
+
+### 2. Describe in words what these regular expressions match: (read carefully to see if I’m using a regular expression or a string that defines a regular expression.)
+
+^.*$ # This matches a 0 or more periods at the beginning of the string to the end
+
+"\\{.+\\}" #this string of a regex that matches one or more periods
+
+\d{4}-\d{2}-\d{2} #this regex matches 4 digits, a dash, 2 digits, a dash then 2 digits
+
+"\\\\{4}" # this regex is in a string and matches 4 \'s.
+
+### 3. Create regular expressions to find all words that:
+
+* Start with three consonants.
+* Have three or more vowels in a row.
+* Have two or more vowel-consonant pairs in a row.
+
+```{r chapter14_exercise14341_3}
+
+str_view(words,"^[^aeiou]{3}.*",match=T)
+
+str_view(words,"[aeiou]{3,}",match=T)
+
+str_view(words,"([aeiou][^aeiou]){2,}.*",match=T)
+
+```
+
+### 4. Solve the beginner regexp crosswords at https://regexcrossword.com/challenges/beginner.
+
+No thanks I'll stick with this.
+
+## Exercise 14.3.5.1
+
+### 1. Describe, in words, what these expressions will match:
+
+(.)\1\1 #words with two of the same letter once
+
+"(.)(.)\\2\\1" # words with any two letters repeated twice consecutively once in the word
+
+(..)\1 # words with two letters repeated once
+
+"(.).\\1.\\1" # words with any letter, a specific letter repeated once then another letter repeated once 
+
+"(.)(.)(.).*\\3\\2\\1" # words with one letter, then two of the same letter, 3 of the same letter then 0 or more of a letter.
+
+
+### 2. Construct regular expressions to match words that:
+
+* Start and end with the same character.
+
+* Contain a repeated pair of letters (e.g. “church” contains “ch” repeated twice.)
+
+* Contain one letter repeated in at least three places (e.g. “eleven” contains three “e”s.)
+
+```{r chapter14_exercise14351_2}
+
+str_view(words,"^(.).*\\1$",match=T) #couldn't figure out how top feasibly expand to any character.
+
+str_view(words,"(..).*\\1",match = T)
+
+str_view(words,"(.).*\\1.*\\1",match = T)
+
+```
+
+## Exercise 14.4.2
+
+### 1. For each of the following challenges, try solving it by using both a single regular expression, and a combination of multiple str_detect() calls.
+
+* Find all words that start or end with x.
+
+```{r chapter14_exercise1442_1}
+
+# one regex
+words[str_detect(words, "^x|x$")]
+
+# split regex into parts
+start_with_x <- str_detect(words, "^x")
+end_with_x <- str_detect(words, "x$")
+words[start_with_x | end_with_x]
+
+
+```
+
+* Find all words that start with a vowel and end with a consonant.
+
+```{r chapter14_exercise1442_1_2}
+
+str_subset(words, "^[aeiou].*[^aeiou]$") %>% head()
+
+start_with_vowel <- str_detect(words, "^[aeiou]")
+end_with_consonant <- str_detect(words, "[^aeiou]$")
+words[start_with_vowel & end_with_consonant] %>% head()
+
+```
+* Are there any words that contain at least one of each different vowel?
+
+```{r chapter14_exercise1442_1_3}
+
+library(purrr)
+
+pattern <- 
+  cross(rerun(5, c("a", "e", "i", "o", "u")),
+        .filter = function(...) {
+          x <- as.character(unlist(list(...)))
+          length(x) != length(unique(x))
+        }) %>%
+  map_chr(~ str_c(unlist(.x), collapse = ".*")) %>%
+  str_c(collapse = "|")
+
+str_subset(words, pattern)
+
+words[str_detect(words, "a") &
+        str_detect(words, "e") &
+        str_detect(words, "i") &
+        str_detect(words, "o") &
+        str_detect(words, "u")]
+```
+
+all from jarnold
+
+### 2. What word has the highest number of vowels? What word has the highest proportion of vowels? (Hint: what is the denominator?)
+
+```{r chapter14_exercise1442_2}
+
+ind <- which.max(str_count(words,"[aeiou]"))
+
+words[ind]
+```
+
+## Exercise 14.4.3.1
+
+### 1. In the previous example, you might have noticed that the regular expression matched “flickered”, which is not a colour. Modify the regex to fix the problem.
+
+Add the "\b" before and after the pattern
+
+```{r chapter14_exercise14431_1}
+
+colours <- c("red", "orange", "yellow", "green", "blue", "purple")
+
+colour_match <- str_c(colours, collapse = "|")
+
+more <- sentences[str_count(sentences, colour_match) > 1]
+str_view_all(more, colour_match)
+
+colour_match2 <- str_c("\\b(", str_c(colours, collapse = "|"), ")\\b")
+
+more2 <- sentences[str_count(sentences, colour_match) > 1]
+
+str_view_all(more2, colour_match2, match = TRUE)
+
+
+```
+
+### 2. From the Harvard sentences data, extract:
+
+* The first word from each sentence.
+* All words ending in ing.
+* All plurals.
+
+```{r chapter14_exercise14431_2}
+
+str_extract(sentences, "[a-zA-X]+") %>% head()
+
+pattern <- "\\b[A-Za-z]+ing\\b"
+sentences_with_ing <- str_detect(sentences, pattern)
+unique(unlist(str_extract_all(sentences[sentences_with_ing], pattern))) %>%
+  head()
+
+unique(unlist(str_extract_all(sentences, "\\b[A-Za-z]{3,}s\\b"))) %>%
+  head()
+
+```
+
+## Exercise 14.4.4.1
+
+### 1. Find all words that come after a “number” like “one”, “two”, “three” etc. Pull out both the number and the word.
+
+from jarnold
+
+```{r chapter14_exercise14441_1}
+
+numword <- "(one|two|three|four|five|six|seven|eight|nine|ten) +(\\S+)"
+sentences[str_detect(sentences, numword)] %>%
+  str_extract(numword)
+
+```
+
+### 2. Find all contractions. Separate out the pieces before and after the apostrophe.
+
+```{r chapter14_exercise14441_2}
+
+contraction <- "([A-Za-z]+)'([A-Za-z]+)"
+
+sentences %>%
+  `[`(str_detect(sentences, contraction)) %>%
+  str_extract(contraction)
+              
+```
+
+## Exercise 14.4.5.1
+
+### 1. Replace all forward slashes in a string with backslashes.
+
+```{r chapter14_exercise14451_1}
+
+x <- c("apples, pears, and bananas")
+str_split(x, ", +(and +)?")[[1]]
+
+```
+
+
+### 2. Implement a simple version of str_to_lower() using replace_all()
+
+Can't find a replce_all function...
+
+### 3. Switch the first and last letters in words. Which of those strings are still words?
+
+Couldn't figure out how to do this...
+
+## Exercise 14.4.6.1
+
+### 1. Split up a string like "apples, pears, and bananas" into individual components.
+
+```{r chapter14_exercise14461_1}
+
+x <- c("apples, pears, and bananas")
+str_split(x, ", +(and +)?")[[1]]
+
+```
+
+### 2. Why is it better to split up by boundary("word") than " "?
+
+Splitting by boundary("word") splits on punctuation and not just whitespace.
+
+### 3. What does splitting with an empty string ("") do? Experiment, and then read the documentation.
+
+```{r chapter14_exercise14461_3}
+
+str_split("ab. cd|agt", "")[[1]]
+
+```
+
+from jarnold.
+
+## Exercise 14.5.1
+
+### 1. How would you find all strings containing \ with regex() vs. with fixed()? 
+
+
+```{r chapter14_exercise1451_1}
+
+str_subset(c("a\\b", "ab"), "\\\\")
+
+str_subset(c("a\\b", "ab"), fixed("\\"))
+
+```
+
+### 2. What are the five most common words in sentences?
+
+```{r chapter14_exercise1451_2}
+library(dplyr)
+str_extract_all(sentences, boundary("word")) %>%
+  unlist() %>%
+  str_to_lower() %>%
+  tibble() %>%
+  set_names("word") %>%
+  group_by(word) %>%
+  count(sort = TRUE) %>%
+  head(5)
+
+```
+
+from jarnold. 
+
+## Exercise 14.7.1
+
+### 1. Find the stringi functions that:
+
+* Count the number of words
+
+stri_count_words
+
+* Find duplicated strings
+
+stri_duplicated
+
+* Generate random text
+
+There are several functions beginning with stri_rand_. stri_rand_lipsum generates lorem ipsum text, stri_rand_strings generates random strings, stri_rand_shuffle randomly shuffles the code points in the text.
+
+### 2. How do you control the language that stri_sort() uses for sorting?
+
+Use the locale argument to the opts_collator argument.
+# 15. Factors
+
+## Exercise 15.3.1
+
+### 1. Explore the distribution of rincome (reported income). What makes the default bar chart hard to understand? How could you improve the plot?
+
+```{r chapter15_exercise1531_1}
+
+library(forcats)
+library(tidyverse)
+library(ggplot2)
+
+ggplot(gss_cat,aes(rincome)) +
+  geom_bar(drop=F) +
+  coord_flip()
+```
+
+This is ok-would be better if we sorted by decreasing order or in another meaningful way. 
+
+### 2. What is the most common relig in this survey? What’s the most common partyid?
+
+```{r chapter15_exercise1531_2}
+
+gss_cat %>% group_by(relig) %>% count() %>% arrange(desc(n))
+
+gss_cat %>% group_by(partyid) %>% count() %>% arrange(desc(n))
+
+```
+
+### 3. Which relig does denom (denomination) apply to? How can you find out with a table? How can you find out with a visualisation?
+
+```{r chapter15_exercise1531_3}
+
+gss_cat %>% group_by(denom) %>% count()
+
+```
+
+My educated guess is different sects of the religions but let's try to use our programming skillset.
+
+```{r chapter15_exercise1531_3_2}
+
+gss_cat %>% 
+  ggplot() +
+  geom_bar(aes(denom)) +
+  scale_x_discrete(drop=T) +
+  facet_wrap(~relig,scales = "free") +
+  ggtitle("All religions",subtitle = "and all denominations catalogued within")
+  coord_flip()
+
+denoms <- levels(gss_cat$denom)
+
+tmp <- filter(gss_cat,relig=="Protestant") %>% select(denom) %>% unique()
+protestant_denoms <- pull(tmp,denom)
+
+setdiff(denoms,protestant_denoms)
+
+filter(gss_cat,relig=="Protestant") %>% 
+  ggplot() +
+  geom_bar(aes(denom)) +
+  ggtitle("Protestant religion",subtitle = "and all denominations catalogued within") +
+  coord_flip()
+
+filter(gss_cat,denom=="Not applicable") %>% 
+  ggplot() +
+  geom_bar(aes(relig)) +
+  ggtitle("Not applicable denomination",subtitle = "within all religions") +
+  coord_flip()
+
+```
+
+## Exercise 15.4.1
+
+### 1. There are some suspiciously high numbers in tvhours. Is the mean a good summary?
+
+```{r chapter15_exercise1541_1}
+gss_cat %>% 
+  ggplot() +
+  geom_density(aes(tvhours))
+```
+
+The distribution of tvhours is a little wonkey-a lot of peaks and valleys. But depending on your question the mean (or median) wuld be what you want to use. Or viewing the histogram for different groups. 
+
+### 2. For each factor in gss_cat identify whether the order of the levels is arbitrary or principled.
+
+```{r chapter15_exercise1541_2}
+
+gss_cat
+
+```
+
+We want to look at marital, race, rincome, partyid, relig, and denom. 
+
+```{r chapter15_exercise1541_2_2}
+
+levs <- c("marital", "race", "rincome", "partyid", "relig", "denom")
+
+for(i in levs){
+  gg <- gss_cat %>%
+    ggplot() + geom_bar(aes_string(x = i)) + coord_flip()
+  print(gg)
+}
+```
+
+Only race is in descending order, the rest are more or less arbitrary.
+
+### 3. Why did moving “Not applicable” to the front of the levels move it to the bottom of the plot?
+
+From jarnold, "Because that gives the level “Not applicable” an integer value of 1."
+
+## Exercise 15.5.1
+
+### 1. How have the proportions of people identifying as Democrat, Republican, and Independent changed over time?
+
+```{r chapter15_exercise1551_1}
+gss_cat %>% 
+  group_by(year,partyid) %>% 
+  count(partyid) %>% 
+  ggplot() +
+  geom_line(aes(year,n,group=partyid,color=partyid))
+```
+
+We need to do some factor reciding...
+
+```{r chapter15_exercise1551_1_2}
+
+col_gss_cat <- gss_cat %>%
+  mutate(partyid = fct_collapse(partyid,
+    Other = c("No answer", "Don't know", "Other party"),
+    Republican = c("Strong republican", "Not str republican"),
+    Independent = c("Ind,near rep", "Independent", "Ind,near dem"),
+    Democrat = c("Not str democrat", "Strong democrat")
+  )) 
+
+col_gss_cat %>% 
+  group_by(year,partyid) %>% 
+  count(partyid) %>% 
+  ggplot() +
+  ylab("Number") +
+  geom_line(aes(year,n,group=partyid,color=partyid))
+
+```
+
+### 2. How could you collapse rincome into a small set of categories?
+
+From jarnold  (just being lazy myself :-) ):
+
+"Group all the non-responses into one category, and then group other categories into a smaller number. Since there is a clear ordering, we wouldn’t want to use something like fct_lump."
+
+```{r chapter15_exercise1551_2}
+
+library("stringr")
+gss_cat %>%
+  mutate(rincome = 
+           fct_collapse(
+             rincome,
+             `Unknown` = c("No answer", "Don't know", "Refused", "Not applicable"),
+             `Lt $5000` = c("Lt $1000", str_c("$", c("1000", "3000", "4000"),
+                                              " to ", c("2999", "3999", "4999"))),
+             `$5000 to 10000` = str_c("$", c("5000", "6000", "7000", "8000"),
+                                      " to ", c("5999", "6999", "7999", "9999"))
+           )) %>%
+  ggplot(aes(x = rincome)) +
+  geom_bar() + 
+  coord_flip()
+
+```
+# 16. Dates and times
+
+## Exercise 16.2.4
+
+### 1. What happens if you parse a string that contains invalid dates?
+
+```{r chapter16_exercise1624_1}
+
+library(tidyverse)
+library(lubridate)
+library(nycflights13)
+
+ymd(c("2010-10-10", "bananas")) 
+
+```
+
+### 2. What does the tzone argument to today() do? Why is it important?
+
+Time zone is very important because the time changes e.g. between NYC and London, and you want to have the right time.
+
+### 3. Use the appropriate lubridate function to parse each of the following dates:
+
+```{r chapter16_exercise1624_3}
+
+d1 <- "January 1, 2010"
+d2 <- "2015-Mar-07"
+d3 <- "06-Jun-2017"
+d4 <- c("August 19 (2015)", "July 1 (2015)")
+d5 <- "12/30/14" # Dec 30, 2014
+
+```
+
+```{r chapter16_exercise1624_3_2}
+
+mdy(d1)
+ymd(d2)
+dmy(d3)
+mdy(d4)
+mdy(d5)
+
+```
+
+## Exercise 16.3.4
+
+### 1. How does the distribution of flight times within a day change over the course of the year?
+
+making date time variables using jarnold's code
+
+```{r chapter16_exercise1634_1}
+
+make_datetime_100 <- function(year, month, day, time) {
+  make_datetime(year, month, day, time %/% 100, time %% 100)
+}
+
+flights_dt <- flights %>%
+  filter(!is.na(dep_time), !is.na(arr_time)) %>%
+  mutate(
+    dep_time = make_datetime_100(year, month, day, dep_time),
+    arr_time = make_datetime_100(year, month, day, arr_time),
+    sched_dep_time = make_datetime_100(year, month, day, sched_dep_time),
+    sched_arr_time = make_datetime_100(year, month, day, sched_arr_time)
+  ) %>%
+  select(origin, dest, ends_with("delay"), ends_with("time"))
+
+```
+
+We can show, over time in seconds and separated by each month, the departure time.
+
+```{r chapter16_exercise1634_1_2}
+
+flights_dt %>%
+  mutate(time = hour(dep_time) * 100 + minute(dep_time),
+         mon = as.factor(month
+                         (dep_time))) %>%
+  ggplot(aes(x = time, y = ..density.., group = mon, color = mon)) +
+  geom_freqpoly(binwidth = 100)
+
+
+```
+
+The distribution looks the same from month to month.
+
+### 2. Compare dep_time, sched_dep_time and dep_delay. Are they consistent? Explain your findings.
+
+If they are consistent, then dep_time = sched_dep_time + dep_delay
+
+```{r chapter16_exercise1634_2}
+
+flights_dt %>% 
+  mutate(dep_time_ = sched_dep_time + dep_delay * 60) %>%
+  filter(dep_time_ != dep_time) %>%
+  select(dep_time_, dep_time, sched_dep_time, dep_delay)
+
+
+```
+
+From jarnold:
+
+"There exist discrepencies. It looks like there are mistakes in the dates. These are flights in which the actual departure time is on the next day relative to the scheduled departure time. We forgot to account for this when creating the date-times. The code would have had to check if the departure time is less than the scheduled departure time. Alternatively, simply adding the delay time is more robust because it will automatically account for crossing into the next day."
+
+### 3. Compare air_time with the duration between the departure and arrival. Explain your findings.
+
+```{r chapter16_exercise1634_3}
+
+flights_dt %>% 
+    mutate(flight_duration = as.numeric(arr_time - dep_time),
+         air_time_mins = air_time,
+         diff = flight_duration - air_time_mins) %>%
+  select(origin, dest, flight_duration, air_time_mins, diff)
+
+```
+
+There seems to be a discrepency-air time should be always equal or less than flight duration right?
+
+### 4. How does the average delay time change over the course of a day? Should you use dep_time or sched_dep_time? Why?
+
+sched_dep_time is what's most interesting for passengers. From jarnold,
+
+```{r chapter16_exercise1634_4}
+
+flights_dt %>%
+  mutate(sched_dep_hour = hour(sched_dep_time)) %>%
+  group_by(sched_dep_hour) %>%
+  summarise(dep_delay = mean(dep_delay)) %>%
+  ggplot(aes(y = dep_delay, x = sched_dep_hour)) +
+  geom_point() +
+  geom_smooth()
+
+```
+
+### 5. On what day of the week should you leave if you want to minimise the chance of a delay?
+
+from jarnold,
+
+```{r chapter16_exercise1634_5}
+
+flights_dt %>%
+  mutate(dow = wday(sched_dep_time)) %>%
+  group_by(dow) %>%
+ summarise(dep_delay = mean(dep_delay),
+            arr_delay = mean(arr_delay, na.rm = TRUE),
+           tot_delay = dep_delay + arr_delay)
+
+```
+
+Sunday
+
+### 6. What makes the distribution of diamonds$carat and flights$sched_dep_time similar?
+
+```{r chapter16_exercise1634_6}
+
+diamonds %>% 
+  ggplot(aes(carat)) +
+  geom_histogram()
+
+flights_dt %>% 
+  ggplot(aes(sched_dep_time)) +
+  geom_histogram()
+
+```
+
+Let's look at more granularity,
+
+```{r chapter16_exercise1634_6_2}
+
+diamonds %>% 
+  ggplot(aes(carat)) +
+  geom_histogram(bins=100) +
+  xlim(0,1)
+
+flights_dt %>% 
+  ggplot(aes(minute(sched_dep_time))) +
+  geom_histogram()
+
+```
+
+Both distributions have multi-modal distributions, reflecting diamond carats at 1/3, 1/2, 2/3, etc and sched_dep_time of flights being close to every 5 minutes of the hour. 
+
+### 7. Confirm my hypothesis that the early departures of flights in minutes 20-30 and 50-60 are caused by scheduled flights that leave early. Hint: create a binary variable that tells you whether or not a flight was delayed.
+
+```{r chapter16_exercise1634_7}
+
+flights_dt %>% 
+  mutate( wn2030or5060 = ifelse(
+    (minute(sched_dep_time)>=20 & minute(sched_dep_time)<=30) |
+      (minute(sched_dep_time)>=50 & minute(sched_dep_time)<=60),
+    1,0)) %>% 
+  select(sched_dep_time,wn2030or5060,dep_delay) %>% 
+  ggplot() +
+  geom_violin(aes(factor(wn2030or5060),dep_delay)) +
+  ylim(-25,25)
+
+```
+
+I would expect there to be a lower-value distribution to go with the hypothesis. Doesn't seem like it.
+
+## Exercise 16.4.5
+
+### 1. Why is there months() but no dmonths()?
+
+From jarnold,
+
+"There is no direct unambigous value of months in seconds:
+
+31 days: Jan, Mar, May, Jul, Aug, Oct,
+30 days: Apr, Jun, Sep, Nov, Dec
+28 or 29 days: Feb
+
+Though in the past, in the pre-computer era, for arithmetic convenience, bankers adopoted a 360 day year with 30 day months."
+
+### 2. Explain days(overnight * 1) to someone who has just started learning R. How does it work?
+
+In R we can easily manipulate the concept of time using variables. This is helpful when we have messy time data, such as times for overnight flights. We can clean up time discrepencies by accomidating for whether there was an overnight flight-the variables overnight is either TRUE or FALSE so by multiplying by 1 all overnight flights get added a day and those not overnight stay the same.
+
+### 3. Create a vector of dates giving the first day of every month in 2015. Create a vector of dates giving the first day of every month in the current year.
+
+from jarnold,
+
+```{r chapter16_exercise1645_3}
+
+ymd("2015-01-01") + months(0:11)
+
+
+floor_date(today(), unit = "year") + months(0:11)
+
+```
+
+### 4. Write a function that given your birthday (as a date), returns how old you are in years.
+
+```{r chapter16_exercise1645_4}
+func <- function(date){
+  todays_yr <- year(today())
+  birth_yr <- year(ymd(date))
+  cat("You are ",todays_yr - birth_yr, " years old!")
+}
+
+func("1992-07-15")
+```
+
+### 5. Why can’t (today() %--% (today() + years(1))) / months(1) work?
+
+It doesn't throw an error, but the functions provide different time classes. 
+
+```{r chapter16_exercise1645_5}
+
+(today() %--% (today() + years(1))) / months(1)
+
+```
+# Part III Program
+# 17. Introduction
+
+No Exercises
+
+# 18. Pipes
+
+No Exercises
+
+# 19. Functions
+
+## 19.2.1 Practice
+
+### 1. Why is TRUE not a parameter to rescale01()? What would happen if x contained a single missing value, and na.rm was FALSE?
+
+```{r chapter19_practice1921_1}
+x <- c(0,.5,1, NA)
+range(x,na.rm = T)
+range(x,na.rm = F)
+
+```
+
+na.rm = F makes all the elements NA values. Instead with na.rm = T, you can tell how many NA values you have. 
+
+### 2. In the second variant of rescale01(), infinite values are left unchanged. Rewrite rescale01() so that -Inf is mapped to 0, and Inf is mapped to 1.
+
+from jarnold (I can't beat his work...)
+
+```{r chapter19_practice1921_2}
+
+x <- c(1:10, Inf, -Inf)
+
+#second variant
+rescale01 <- function(x) {
+  rng <- range(x, na.rm = TRUE, finite = TRUE)
+  (x - rng[1]) / (rng[2] - rng[1])
+  
+}
+
+rescale01(x)
+
+
+rescale01_alt <- function(x) {
+  rng <- range(x, na.rm = TRUE, finite = TRUE)
+  y <- (x - rng[1]) / (rng[2] - rng[1])
+  y[ y== Inf] <- 1
+  y[ y== -Inf] <- 0
+}
+
+rescale01_alt(x)
+
+```
+
+### 3. Practice turning the following code snippets into functions. Think about what each function does. What would you call it? How many arguments does it need? Can you rewrite it to be more expressive or less duplicative?
+
+```{r chapter19_practice1921_3}
+
+mean(is.na(x))
+
+x / sum(x, na.rm = TRUE)
+
+sd(x, na.rm = TRUE) / mean(x, na.rm = TRUE)
+
+```
+
+Not really sure what the mean of a logical is doing...
+
+The second one I can do `r frequencies = function(x,logical=TRUE) { x / sum(x, na.rm=logical) }` which has a transparent name and reducing duplication a little.
+
+And the third one I would do `r sd_over_mean = function(x,logical=TRUE) { sd(x,na.rm=logical) / mean(x,na.rm=TRUE)}` which does the same as above. This is the coefficient of variation so maybe _coef\_var_ would be a better name.
+
+### 4. Follow http://nicercode.github.io/intro/writing-functions.html to write your own functions to compute the variance and skew of a numeric vector.
+
+Looks easy enough, but I'll move on.
+
+### 5. Write both_na(), a function that takes two vectors of the same length and returns the number of positions that have an NA in both vectors.
+
+jarnold has a better answer, of course, but here's mine. 
+
+```{r chapter19_practice1921_5}
+
+both_na <- function(x,y){
+  
+  if(length(x) != length(y)){
+    stop("You're two vectors need to be the same length")
+  }
+  
+  x_ints <- as.integer( is.na(x) )
+  y_ints <- as.integer( is.na(y) )
+  
+  sum((x_ints + y_ints)==2)
+}
+
+x <- c(NA,2,NA)
+y <- c(NA,1,2)
+both_na(x,y)
+```
+
+### 6. What do the following functions do? Why are they useful even though they are so short?
+
+```{r chapter19_practice1921_6}
+
+is_directory <- function(x) file.info(x)$isdir
+is_readable <- function(x) file.access(x, 4) == 0
+
+```
+
+_is\_directory_ extracts whether x is a directory and _is\_readable_ extracts how many files have read permission in my directory. Their still useful even though they're short because the function name is a bit more intuitive and requires a bit less thinking about what it's doing compared to the code in the function calls.
+
+To me, I'd not do functions for these unless there's a lot of repitition because I would still take the time to see what the functions are doing and then read the help pages on the called functions.
+
+### 7. Read the [complete lyrics](https://en.wikipedia.org/wiki/Little_Bunny_Foo_Foo) to “Little Bunny Foo Foo”. There’s a lot of duplication in this song. Extend the initial piping example to recreate the complete song, and use functions to reduce the duplication.
+
+I like jarnold's answer, but it's broken...it still gets the point across of writing functions to reduce duplication and increase interpretability. 
+
+```{r chapter19_practice1921_7,eval=F}
+
+library(dplyr)
+
+threat <- function(chances) {
+  give_chances(from = Good_Fairy,
+               to = foo_foo,
+               number = chances,
+               condition = "Don't behave",
+               consequence = turn_into_goon)  
+}
+  
+lyric <- function() {
+  foo_foo %>%
+    hop(through = forest) %>%
+    scoop(up = field_mouse) %>%
+    bop(on = head)
+  
+  down_came(Good_Fairy)
+  said(Good_Fairy, 
+      c("Little bunny Foo Foo",
+        "I don't want to see you",
+        "Scooping up the field mice",
+        "And bopping them on the head."))
+}
+
+lyric()
+threat(3)
+lyric()
+threat(2)
+lyric()
+threat(1)
+lyric()
+turn_into_goon(Good_Fairy, foo_foo)
+
+```
+
+## Exercise 19.3.1
+
+Quick note: in an R script use **Cmd/Ctrl + Shift + R** to get a cool comment line!
+
+### 1. Read the source code for each of the following three functions, puzzle out what they do, and then brainstorm better names.
+
+```{r chapter19_exercise1931_1}
+
+f1 <- function(string, prefix) {
+  substr(string, 1, nchar(prefix)) == prefix
+}
+f2 <- function(x) {
+  if (length(x) <= 1) return(NULL)
+  x[-length(x)]
+}
+f3 <- function(x, y) {
+  rep(y, length.out = length(x))
+}
+
+```
+
+from jarnold,
+
+_f1_ returns whether a function has a common prefix.
+
+The function _f2_ drops the last elemen. A better name for f2 is drop_last().
+
+The function _f3_ repeats y once for each element of x. This is a harder one to name. I would say something like recycle (R’s name for this behavior), or expand.
+
+### 2. Take a function that you’ve written recently and spend 5 minutes brainstorming a better name for it and its arguments.
+
+Haven't written a function in a while, so I'll pass.
+
+### 3. Compare and contrast rnorm() and MASS::mvrnorm(). How could you make them more consistent?
+
+from jarnold,
+
+You can ignore.
+
+rnorm samples from the univariate normal distribution, while MASS::mvrnorm samples from the multivariate normal distribution. The main arguments in rnorm are n, mean, sd. The main arguments is MASS::mvrnorm are n, mu, Sigma. To be consistent they should have the same names. However, this is difficult. In general, it is better to be consistent with more widely used functions, e.g. rmvnorm should follow the conventions of rnorm. However, while mean is correct in the multivariate case, sd does not make sense in the multivariate case. Both functions an internally consistent though; it would be bad to have mu and sd or mean and Sigma.
+
+### 4. Make a case for why norm_r(), norm_d() etc would be better than rnorm(), dnorm(). Make a case for the opposite.
+
+from jarnold,
+
+If named norm_r and norm_d, it groups the family of functions related to the normal distribution. If named rnorm, and dnorm, functions related to are grouped into families by the action they perform. r\* functions always sample from distributions: rnorm, rbinom, runif, rexp. d\* functions calculate the probability density or mass of a distribution: dnorm, dbinom, dunif, dexp.
+
+## Exercise 19.4.4
+
+### 1. What’s the difference between if and ifelse()? Carefully read the help and construct three examples that illustrate the key differences.
+
+_if_ statements execute upon a true condition and _ifelse_ executes always because the otherwise option is given. 
+
+```{r chapter19_exercise1944_1}
+
+x <- FALSE
+
+if(x) "Hi"
+
+ifelse(x,"Hi","FALSE condition")
+
+
+```
+
+### 2. Write a greeting function that says “good morning”, “good afternoon”, or “good evening”, depending on the time of day. (Hint: use a time argument that defaults to lubridate::now(). That will make it easier to test your function.)
+
+```{r chapter19_exercise1944_2}
+
+library(lubridate)
+
+greet <- function(x){
+  hr <- hour(x)
+  if(hr<12){
+    "Good morning"
+  } else if(hr>17){
+    "Good evening"
+  } else{
+    "Good afternoon"
+  }
+}
+
+greet( now() )
+```
+
+### 3. Implement a fizzbuzz function. It takes a single number as input. If the number is divisible by three, it returns “fizz”. If it’s divisible by five it returns “buzz”. If it’s divisible by three and five, it returns “fizzbuzz”. Otherwise, it returns the number. Make sure you first write working code before you create the function.
+
+```{r chapter19_exercise1944_3}
+
+fizzbuzz <- function(x){
+  stopifnot( length(x)==1 && is.numeric(x) )
+  if(x %% 3==0){
+    print("fizz")
+  } else if(x %% 5==0){
+    print("buzz")
+  } else if((x %% 3==0) && (x %% 5==0)){
+    print("fizzbuzz")
+  } else{
+    print(x)
+  }
+}
+
+fizzbuzz(9)
+
+```
+
+### 4. How could you use cut() to simplify this set of nested if-else statements?
+
+I like jarnold's explanation that _cut_ works with vectors while _if_ works only with single values. 
+
+```{r chapter19_exercise1944_4}
+
+temp <- seq(-10, 50, by = 5)
+
+# this
+if (temp <= 0) {
+  "freezing"
+} else if (temp <= 10) {
+  "cold"
+} else if (temp <= 20) {
+  "cool"
+} else if (temp <= 30) {
+  "warm"
+} else {
+  "hot"
+}
+
+#is converted to this
+cut(temp, c(-Inf, 0, 10, 20, 30, Inf), right = TRUE,
+    labels = c("freezing", "cold", "cool", "warm", "hot"))
+
+```
+
+This is cool-the intervals could be equally spaced by specifying an integer for breaks or you can specify the breakpoints like above. 
+
+### 5. What happens if you use switch() with numeric values?
+
+from jarnold,
+
+It selects that number argument from _..._
+
+`r switch(2, "one", "two", "three")`
+
+### 6. What does this switch() call do? What happens if x is "e"?
+
+```{r chapter19_exercise1944_6}
+
+x <- "e"
+switch(x, 
+  a = ,
+  b = "ab",
+  c = ,
+  d = "cd"
+)
+
+x <- "a"
+switch(x, 
+  a = ,
+  b = "ab",
+  c = ,
+  d = "cd"
+)
+```
+
+Nothing happens because e isn't a named argument in _switch_. But if a named argument is given, it points to that-but if nothing is given like in "a" above it'll point to the next argument in _switch_.
+
+## Exercise 19.5.5
+
+### 1. What does commas(letters, collapse = "-") do? Why?
+
+_letters_ is `r (letters = c("a", "b", "c"))` and 
+
+```{r chapter19_exercise1955_1}
+
+library(stringr)
+
+letters = c("a", "b", "c")
+
+commas <- function(...) stringr::str_c(..., collapse = ", ")
+
+#commas(letters, collapse = "-")
+
+```
+
+is supposed to concatenates the letters and connects them by '-'. But it throws an error: The argument collapse is passed to str_c as part of ..., so it tries to run str_c(letters, collapse = "-", collapse = ", ").
+
+### 2. It’d be nice if you could supply multiple characters to the pad argument, e.g. rule("Title", pad = "-+"). Why doesn’t this currently work? How could you fix it?
+
+from jarnold,
+
+```{r chapter19_exercise1955_2}
+
+rule <- function(..., pad = "-") {
+  title <- paste0(...)
+  width <- getOption("width") - nchar(title) - 5
+  cat(title, " ", stringr::str_dup(pad, width), "\n", sep = "")
+}
+rule("Important output")
+
+rule("Important output", pad = "-+")
+
+```
+
+It does not work because it duplicates pad by the width minus the length of the string. This is implictly assuming that pad is only one character. I could adjust the code to calculate the length of pad. The trickiest part is handling what to do if width is not a multiple of the number of characters of pad.
+
+```{r chapter19_exercise1955_2_2}
+
+rule <- function(..., pad = "-") {
+  title <- paste0(...)
+  width <- getOption("width") - nchar(title) - 5
+  padchar <- nchar(pad)
+  cat(title, " ",
+      stringr::str_dup(pad, width %/% padchar),
+      # if not multiple, fill in the remaining characters
+      stringr::str_sub(pad, 1, width %% padchar),
+      "\n", sep = "")
+}
+rule("Important output")
+
+rule("Important output", pad = "-+")
+
+rule("Important output", pad = "-+-")
+
+
+```
+
+### 3. What does the trim argument to mean() do? When might you use it?
+
+The _trim_ argument omits the end proportion of elements in 'x'. Why do this? Maybe if you know the end data is faulty? Remove outliers from calculation?
+
+### 4. The default value for the method argument to cor() is c("pearson", "kendall", "spearman"). What does that mean? What value is used by default?
+
+Those are the options-if others are given the function will stop. The first is used by default. 
+
+# 20. Vectors
+
+## Exercise 20.3.5
+
+### 1. Describe the difference between is.finite(x) and !is.infinite(x).
+
+From the docs,
+
+* is.finite returns a vector of the same length as x the jth element of which is TRUE if x[j] is finite (i.e., it is not one of the values NA, NaN, Inf or -Inf) and FALSE otherwise.
+
+* is.infinite returns a vector of the same length as x the jth element of which is TRUE if x[j] is infinite (i.e., equal to one of Inf or -Inf) and FALSE otherwise.
+
+So _!is.infinite()_ will be true for everything but _Inf_ or _-Inf_. is.finite() will be false for NA, NaN while !is.infinite() will be true. 
+
+### 2. Read the source code for dplyr::near() (Hint: to see the source code, drop the ()). How does it work?
+
+It determines of the difference between the two numbers given is less than a tolerance threshold, which is 1.490116e-08 encoded by .Machine$double.eps^0.5. This gives greater precision for determining equality of two numbers. Also you can change the threshold to your liking. 
+
+### 3. A logical vector can take 3 possible values. How many possible values can an integer vector take? How many possible values can a double take? Use google to do some research.
+
+from the docs of ?is.integer,
+
+An integer vector can actually contain onlyin the range of +/-2*10^9. Doubles can hold much larger integers exactly.
+
+### 4. Brainstorm at least four functions that allow you to convert a double to an integer. How do they differ? Be precise.
+
+from jarnold,
+
+Broadly, could convert a double to an integer by truncating or rounding to the nearest integer. For truncating or for handling ties (doubles ending in 0.5), there are multiple methods for determing which integer value to go to.
+
+For rounding, R and many programming languages use the IEEE standard. This is “round to nearest, ties to even”. This is not the same as what you See the value of looking at the value of .Machine$double.rounding and its documentation.
+
+He provides a [list](https://www.ma.utexas.edu/users/arbogast/misc/disasters.html) of cool links for rounding errors.
+
+### 5. What functions from the readr package allow you to turn a string into logical, integer, and double vector?
+
+The parse_* functions for those types
+
+## Exerise 20.4.6
+
+### 1. What does mean(is.na(x)) tell you about a vector x? What about sum(!is.finite(x))?
+
+The former tells is you the average amount of NA values in vector x, which the the sum of NAs divided by the length of NAs and non-NAs. The latter returns the number of elements in x that are either NA, NaN, Inf or -Inf. 
+
+### 2. Carefully read the documentation of is.vector(). What does it actually test for? Why does is.atomic() not agree with the definition of atomic vectors above?
+
+from the help page,
+
+is.vector returns TRUE if x is a vector of the specified mode having no attributes other than names. It returns FALSE otherwise.
+
+is.atomic returns TRUE if x is of an atomic type (or NULL) and FALSE otherwise.
+
+it is common to call the atomic types ‘atomic vectors’, but note that is.vector imposes further restrictions: an object can be atomic but not a vector (in that sense).
+
+is.atomic(list()) gives FALSE and is.vector(list()) gives TRUE
+
+### 3. Compare and contrast setNames() with purrr::set_names().
+
+```{r chapter20_exercise2046_3}
+
+setNames
+
+purrr::set_names
+
+```
+
+set_names adds a few sanity checks: x has to be a vector, and the lengths of the object and the names have to be the same.
+
+Create functions that take a vector as input and returns:
+
+- The last value. Should you use [ or [[? 2 The elements at even numbered positions.
+- Every element except the last value.
+- Only even numbers (and no missing values).
+
+### 4. Create functions that take a vector as input and returns:
+
+1. The last value. Should you use [ or [[?
+
+2. The elements at even numbered positions.
+
+3. Every element except the last value.
+
+4. Only even numbers (and no missing values).
+
+see [jarnold](https://jrnold.github.io/e4qf/vectors.html#using-atomic-vectors)
+
+### 5. Why is x[-which(x > 0)] not the same as x[x <= 0]?
+
+from jarnold,
+
+```{r chapter20_exercise2046_5}
+
+x <- c(-5:5, Inf, -Inf, NaN, NA)
+x[-which(x > 0)]
+-which(x > 0)
+x[x <= 0]
+x <= 0
+
+```
+
+-which(x > 0) which calculates the indexes for any value that is TRUE and ignores NA. Thus is keeps NA and NaN because the comparison is not TRUE. x <= 0 works slightly differently. If x <= 0 returns TRUE or FALSE it works the same way. Hoewver, if the comparison generates a NA, then it will always keep that entry, but set it to NA. This is why the last two values of x[x <= 0] are NA rather than c(NaN, NA).
+
+### 6. What happens when you subset with a positive integer that’s bigger than the length of the vector? What happens when you subset with a name that doesn’t exist?
+
+From jarnold,
+
+When you subset with positive integers that are larger than the length of the vector, NA values are returned for those integers larger than the length of the vector.
+
+When a vector is subset with a name that doesn’t exist, an error is generated.
+
+
+
+
+## Exercise 20.5.4
+
+### 1. Draw the following lists as nested sets:
+
+list(a, b, list(c, d), list(e, f))
+list(list(list(list(list(list(a))))))
+
+Sorry, not drawing-see the chapter for drawing representations.
+
+### 2. What happens if you subset a tibble as if you’re subsetting a list? What are the key differences between a list and a tibble?
+
+From jarnold,
+
+Subsetting a tibble works the same way as a list; a data frame can be thought of as a list of columns. The key different between a list and a tibble is that a tibble (data frame) has the restriction that all its elements (columns) must have the same length.
+
+## Exercise 20.7.4
+
+### 1. What does hms::hms(3600) return? How does it print? What primitive type is the augmented vector built on top of? What attributes does it use?
+
+```{r chapter20_exercise2074_1}
+x <- hms::hms(3600)
+class(x)
+str(x)
+typeof(x)
+attributes(x)
+```
+
+### 2. Try and make a tibble that has columns with different lengths. What happens?
+
+```{r chapter20_exercise2074_2,eval=F}
+library(dplyr)
+
+tibble(x = 1:2, y = 1:3)
+#Error: Column `x` must be length 1 or 3, not 2
+```
+
+### 3. Based on the definition above, is it ok to have a list as a column of a tibble?
+
+
+Only if the length is equal to the other column vectors/lists. 
+
+# 21. Iteration
+
+## Exercise 21.2.1
+
+### 1. Write for loops to:
+
+1. Compute the mean of every column in mtcars.
+2. Determine the type of each column in nycflights13::flights.
+3. Compute the number of unique values in each column of iris.
+4. Generate 10 random normals for each of  μ= −10, 0, 10 , and 100.
+
+Think about the output, sequence, and body before you start writing the loop.
+
+```{r chapter21_exercise_2121_1}
+# 1
+col_means <- vector("double",length = ncol(mtcars))
+for(i in seq_along(mtcars)){
+  col_means[[i]] <- mean(mtcars[[i]])
+}
+col_means
+
+#2
+types <- vector("list",length = ncol(nycflights13::flights)) #class can  have multiple values
+names(types) <- names(nycflights13::flights)
+for(i in seq_along(nycflights13::flights)){
+  types[[i]] <- class(nycflights13::flights[[i]])
+}
+types
+
+#3
+uniq_in_col <- vector("integer",ncol(iris))
+names(uniq_in_col) <- names(iris)
+for(i in seq_along(iris)){
+  uniq_in_col[[i]] <- length(unique(iris[[i]]))
+}
+uniq_in_col
+
+#4
+means <- c(-10,0,10,100)
+ran_norms <- vector("list",length=length(means))
+n <- 10
+names(ran_norms) <- means
+for(i in seq_along(ran_norms)){
+  ran_norms[[i]] <- rnorm(n = n, mean=means[i])
+}
+ran_norms
+
+#jarnold notes we can just make a matrix because rnorm recycles the means (vectorized operation)
+matrix(rnorm(n * length(means), mean = means), ncol = n)
+```
+
+### 2. Eliminate the for loop in each of the following examples by taking advantage of an existing function that works with vectors:
+
+```{r chapter21_exercise_2121_2,eval=F}
+#1
+out <- ""
+for (x in letters) {
+  out <- stringr::str_c(out, x)
+}
+#2
+x <- sample(100)
+sd <- 0
+for (i in seq_along(x)) {
+  sd <- sd + (x[i] - mean(x)) ^ 2
+}
+sd <- sqrt(sd / (length(x) - 1))
+#3
+x <- runif(100)
+out <- vector("numeric", length(x))
+out[1] <- x[1]
+for (i in 2:length(x)) {
+  out[i] <- out[i - 1] + x[i]
+}
+```
+
+from jarnold-takes advantage of the fact that many of these functions are vectorized (know to work through each element in a vector).
+
+```{r chapter21_exercise_2121_2_2}
+#1
+stringr::str_c(letters, collapse = "")
+
+#2
+x <- sample(100)
+sd(x) #or
+sqrt(sum((x - mean(x)) ^ 2) / (length(x) - 1))
+
+#3-this is a cumulative summation so we just use the cumsum function 
+x <- runif(100)
+cumsum(x)
+```
+
+### 3 Combine your function writing and for loop skills:
+
+1. Write a for loop that prints() the lyrics to the children’s song ["Alice the camel""](https://www.kididdles.com/lyrics/a012.html).
+
+2. Convert the nursery rhyme ["ten in the bed"](https://supersimpleonline.com/song/ten-in-the-bed/) to a function. Generalise it to any number of people in any sleeping structure.
+
+3. Convert the song "99 bottles of beer on the wall" to a function. Generalise to any number of any vessel containing any liquid on any surface.
+
+just going to use jarnold's solutions
+
+```{r chapter21_exercise_2121_3}
+library(stringr)
+#1
+humps <- c("five", "four", "three", "two", "one", "no")
+for (i in humps) {
+  cat(str_c("Alice the camel has ", rep(i, 3), " humps.",
+             collapse = "\n"), "\n")
+  if (i == "no") {
+    cat("Now Alice is a horse.\n")
+  } else {
+    cat("So go, Alice, go.\n")
+  }
+  cat("\n")
+}
+#2
+numbers <- c("ten", "nine", "eight", "seven", "six", "five",
+             "four", "three", "two", "one")
+for (i in numbers) {
+  cat(str_c("There were ", i, " in the bed\n"))
+  cat("and the little one said\n")
+  if (i == "one") {
+    cat("I'm lonely...")
+  } else {
+    cat("Roll over, roll over\n")
+    cat("So they all rolled over and one fell out.\n")
+  }
+  cat("\n")
+}
+#3
+bottles <- function(i) {
+  if (i > 2) {
+   bottles <- str_c(i - 1, " bottles")
+  } else if (i == 2) {
+   bottles <- "1 bottle"
+  } else {
+   bottles <- "no more bottles"
+  }
+  bottles
+}
+
+beer_bottles <- function(n) {
+  # should test whether n >= 1.
+  for (i in seq(n, 1)) {
+     cat(str_c(bottles(i), " of beer on the wall, ", bottles(i), " of beer.\n"))
+     cat(str_c("Take one down and pass it around, ", bottles(i - 1),
+                " of beer on the wall.\n\n"))
+  }
+  cat("No more bottles of beer on the wall, no more bottles of beer.\n")
+  cat(str_c("Go to the store and buy some more, ", bottles(n), " of beer on the wall.\n"))
+}
+beer_bottles(3)
+```
+
+### 4. It’s common to see for loops that don’t preallocate the output and instead increase the length of a vector at each step:
+
+```{r chapter21_exercise_2121_4,eval=F}
+output <- vector("integer", 0)
+for (i in seq_along(x)) {
+  output <- c(output, lengths(x[[i]]))
+}
+output
+```
+
+How does this affect performance? Design and execute an experiment.
+
+How I would do this:
+
+```{r chapter21_exercise_2121_5}
+
+output <- vector("integer", 0)
+system.time( for (i in seq_along(x)) {
+  output <- c(output, lengths(x[[i]]))
+} )
+output
+
+output <- vector("integer", length(length(x)))
+system.time( for (i in seq_along(x)) {
+  output <- c(output, lengths(x[[i]]))
+} )
+output
+
+```
+
+How jarnold  does this:
+
+```{r chapter21_exercise_2121_5_2}
+#not allocated
+library(microbenchmark)
+add_to_vector <- function(n) {
+  output <- vector("integer", 0)
+  for (i in seq_len(n)) {
+    output <- c(output, i)
+  }
+  output  
+}
+microbenchmark(add_to_vector(10000), times = 3,unit = "ms")
+
+#pre-allocated
+add_to_vector_2 <- function(n) {
+  output <- vector("integer", n)
+  for (i in seq_len(n)) {
+    output[[i]] <- i
+  }
+  output
+}
+microbenchmark(add_to_vector_2(10000), times = 3,unit = "ms")
+```
+
+Dang, what a difference! I better pre-allocate...
+
+## Exercise 21.3.5
+
+### 1. Imagine you have a directory full of CSV files that you want to read in. You have their paths in a vector, files <- dir("data/", pattern ="//.csv", full.names = TRUE), and now want to read each one with read_csv(). Write the for loop that will load them into a single data frame. (use two back slashes instead of forward slashes-back slashes are special characters so had to change here).
+
+from jarnold
+
+```{r chapter21_exercise2135_1,eval=F}
+df <- vector("list", length(files))
+for (fname in seq_along(files)) {
+  df[[i]] <- read_csv(files[[i]])
+}
+df <- bind_rows(df)
+```
+
+### 2. What happens if you use for (nm in names(x)) and x has no names? What if only some of the elements are named? What if the names are not unique?
+
+names(x) will yield NULL if there's no names, nothing will happen-the for loop will quietly end. If only some elements are named, then you'll get an error. If there are duplicates, that's fine-that'll work. 
+
+### 3. Write a function that prints the mean of each numeric column in a data frame, along with its name. For example, show_mean(iris) would print:
+
+```{r chapter21_exercise2135_3}
+show_mean <- function(df, digits = 2) {
+  # Get max length of any variable in the dataset
+  maxstr <- max(str_length(names(df)))
+  for (nm in names(df)) {
+    if (is.numeric(df[[nm]])) {
+      cat(str_c(str_pad(str_c(nm, ":"), maxstr + 1L, side = "right"),
+                format(mean(df[[nm]]), digits = digits, nsmall = digits),
+                sep = " "),
+          "\n")
+    }
+  }
+}
+show_mean(iris)
+```
+
+from jarnold:
+
+```{r chapter21_exercise2135_3_2}
+show_mean(iris)
+```
+
+### 4. What does this code do? How does it work?
+
+```{r chapter21_exercise2135_4,eval=F}
+trans <- list( 
+  disp = function(x) x * 0.0163871,
+  am = function(x) {
+    factor(x, labels = c("auto", "manual"))
+  }
+)
+for (var in names(trans)) {
+  mtcars[[var]] <- trans[[var]](mtcars[[var]])
+}
+```
+
+trans is a named list of functions, and the for loop changes the same named columns in mtcars per those functions. 
+
+## Exercise 21.4.1
+
+### 1. Read the documentation for apply(). In the 2d case, what two for loops does it generalise?
+
+It generalises for loops applied to the column, then elements in the resulting vector of a matrix. 
+
+### 2. Adapt col_summary() so that it only applies to numeric columns You might want to start with an is_numeric() function that returns a logical vector that has a TRUE corresponding to each numeric column.
+
+from jarnold:
+
+```{r chapter21_exercise2141_2}
+col_summary2 <- function(df, fun) {
+  # test whether each colum is numeric
+  numeric_cols <- vector("logical", length(df))
+  for (i in seq_along(df)) {
+    numeric_cols[[i]] <- is.numeric(df[[i]])
+  }
+  # indexes of numeric columns
+  idxs <- seq_along(df)[numeric_cols]
+  # number of numeric columns
+  n <- sum(numeric_cols)
+  out <- vector("double", n)
+  for (i in idxs) {
+    out[i] <- fun(df[[i]])
+  }
+  out
+}
+df <- tibble(
+  a = rnorm(10),
+  b = rnorm(10),
+  c = letters[1:10],
+  d = rnorm(10)
+)
+col_summary2(df, mean)
+```
+
+
+## Exercise 21.5.3
+
+### 1. Write code that uses one of the map functions to:
+
+1. Compute the mean of every column in mtcars.
+2. Determine the type of each column in nycflights13::flights.
+3. Compute the number of unique values in each column of iris.
+4. Generate 10 random normals for each of  μ = -10, 0, 10, 100
+
+from jarnold
+
+```{r chapter21_exercise2153_1}
+#1
+purrr::map_dbl(mtcars, mean)
+#2
+purrr::map(nycflights13::flights, class)
+purrr::map_chr(nycflights13::flights, typeof)
+#3
+purrr::map_int(iris, ~ length(unique(.)))
+#4
+purrr::map(c(-10, 0, 10, 100), rnorm, n = 10)
+```
+
+### 2. How can you create a single vector that for each column in a data frame indicates whether or not it’s a factor?
+
+from jarnold
+
+```{r chapter21_exercise2153_2}
+map_lgl(mtcars, is.factor)
+```
+
+### 3. What happens when you use the map functions on vectors that aren’t lists? What does map(1:5, runif) do? Why?
+
+```{r chapter21_exercise2153_3}
+purrr::map(1:5,runif)
+```
+
+applies runif( n = each_element_of_1:5 )
+
+### 4. What does map(-2:2, rnorm, n = 5) do? Why? What does map_dbl(-2:2, rnorm, n = 5) do? Why?
+
+```{r chapter21_exercise2153_4}
+#1
+purrr::map(-2:2, rnorm, n = 5)
+#2
+#purrr::map_dbl(-2:2, rnorm, n = 5)
+```
+
+  #1 uses the mean value given in -2:2 to generate 5 rnorms, and in #2 throws an error because map_dbl expects to return a single vector-we can do that by nesting the map function call in flatten_dbl.
+  
+### 5. Rewrite map(x, function(df) lm(mpg ~ wt, data = df)) to eliminate the anonymous function.
+
+put mtcars into a list and the map functions can then use it. 
+
+```{r chapter21_exercise2153_5}
+purrr::map( list(mtcars), ~lm(mpg ~ wt, data = .) )
+```
+
+## Exercise 21.9.3
+
+### 1. Implement your own version of every() using a for loop. Compare it with purrr::every(). What does purrr’s version do that your version doesn’t?
+
+from jarnold
+
+```{r chapter21_exercise2193_1}
+# Use ... to pass arguments to the function
+every2 <- function(.x, .p, ...) {
+  for (i in .x) {
+    if (!.p(i, ...)) {
+      # If any is FALSE we know not all of then were TRUE
+      return(FALSE)
+    }
+  }
+  # if nothing was FALSE, then it is TRUE
+  TRUE  
+}
+
+every2(1:3, function(x) {x > 1})
+every2(1:3, function(x) {x > 0})
+```
+
+The function purrr::every does fancy things with .p, like taking a logical vector instead of a function, or being able to test part of a string if the elements of .x are lists.
+
+### 2. Create an enhanced col_sum() that applies a summary function to every numeric column in a data frame.
+
+from jarnold
+
+```{r chapter21_exercise2193_2}
+#Note this question has a typo. It is referring to col_summary.
+
+#I will use map to apply the function to all the columns, and keep to only select numeric columns.
+
+col_sum2 <- function(df, f, ...) {
+  purrr::map(keep(df, is.numeric), f, ...)
+}
+col_sum2(iris, mean)
+
+```
+
+### 3. A possible base R equivalent of col_sum() is:
+
+```{r chapter21_exercise2193_3}
+col_sum3 <- function(df, f) {
+  is_num <- sapply(df, is.numeric)
+  df_num <- df[, is_num]
+
+  sapply(df_num, f)
+}
+```
+
+But it has a number of bugs as illustrated with the following inputs:
+
+```{r chapter21_exercise2193_3_2, eval=F}
+
+df <- dplyr::tibble(
+  x = 1:3, 
+  y = 3:1,
+  z = c("a", "b", "c")
+)
+# OK
+col_sum3(df, mean)
+# Has problems: don't always return numeric vector
+#col_sum3(df[1:2], mean)
+#col_sum3(df[1], mean)
+#col_sum3(df[0], mean)
+```
+
+What causes the bugs?
+
+
+from jarnold
+
+The problem is that sapply doesn’t always return numeric vectors. If no columns are selected, instead of gracefully exiting, it returns an empty list. This causes an error since we can’t use a list with [.
+
+
+```{r chapter21_exercise2193_3_3}
+
+sapply(df[0], is.numeric)
+
+sapply(df[1], is.numeric)
+
+sapply(df[1:2], is.numeric)
+
+```
+
+
+# Part IV Model
+# 22. Introduction
+
+**No Exercises**
+
+# 23. Model Basics
+
+## Exercise 23.2.1
+
+### 1. One downside of the linear model is that it is sensitive to unusual values because the distance incorporates a squared term. Fit a linear model to the simulated data below, and visualise the results. Rerun a few times to generate different simulated datasets. What do you notice about the model?
+
+```{r chapter23_exercise2321_1}
+library(dplyr)
+library(modelr)
+
+sim1a <- tibble(
+  x = rep(1:10, each = 3),
+  y = x * 1.5 + 6 + rt(length(x), df = 2)
+)
+
+```
+
+Let's view this with a model using ggplot
+
+```{r chapter23_exercise2321_1_2}
+
+library(ggplot2)
+
+ggplot(sim1a, aes(x, y)) + 
+  geom_point() +
+  geom_smooth(method = "lm",se = F)
+
+```
+
+If we rerun to get a new _sim1a_, I'll use the solution from jarnold that computes this well.
+
+```{r chapter23_exercise2321_1_3}
+
+
+simt <- function(i) {
+  tibble(
+    x = rep(1:10, each = 3),
+    y = x * 1.5 + 6 + rt(length(x), df = 2),
+    .id = i
+  )
+}
+
+lm_df <- function(.data) {
+  mod <- lm(y ~ x, data = .data)
+  beta <- coef(mod)
+  tibble(intercept = beta[1], slope = beta[2])
+}
+
+sims <- purrr::map(1:100, simt) %>%
+  purrr::map_df(lm_df)
+
+ggplot(sims, aes(x = intercept, y = slope)) +
+  geom_point()
+
+
+```
+
+This is showing that The slope decreases as the intercept increases, which in turn is regulated by where the data lie. So the linear models and the slopes/intercepts are determined by the variability present in the data (outliers).
+
+### 2. One way to make linear models more robust is to use a different distance measure. For example, instead of root-mean-squared distance, you could use mean-absolute distance:
+
+```{r chapter23_exercise2321_2}
+
+measure_distance <- function(mod, data) {
+  diff <- data$y - make_prediction(mod, data)
+  mean(abs(diff))
+}
+
+```
+
+Use optim() to fit this model to the simulated data above and compare it to the linear model.
+
+First, there is no _make_prediction_ function so I won't be using  that measure. However, I'll still use optim to find the best distance. 
+
+```{r chapter23_exercise2321_2_2}
+
+sim1a <- tibble(
+  x = rep(1:10, each = 3),
+  y = x * 1.5 + 6 + rt(length(x), df = 2)
+)
+
+model1 <- function(a, data) {
+  a[1] + data$x * a[2]
+}
+
+measure_distance <- function(mod, data) {
+  diff <- data$y - model1(mod, data)
+  sqrt(mean(diff ^ 2))
+}
+
+#finds minimum distance from the initial values
+best <- optim(par=c(0, 0), fn=measure_distance, data = sim1a)
+
+#best model (intercept, slope) values
+best$par
+```
+
+### 3. One challenge with performing numerical optimisation is that it’s only guaranteed to find one local optima. What’s the problem with optimising a three parameter model like this?
+
+```{r chapter23_exercise2321_3}
+
+model1 <- function(a, data) {
+  a[1] + data$x * a[2] + a[3]
+}
+
+```
+
+Let's see
+
+```{r chapter23_exercise2321_3_2}
+
+sim1a <- tibble(
+  x = rep(1:10, each = 3),
+  y = x * 1.5 + 6 + rt(length(x), df = 2)
+)
+
+measure_distance <- function(mod, data) {
+  diff <- data$y - model1(mod, data)
+  sqrt(mean(diff ^ 2))
+}
+
+#finds minimum distance from the initial values
+best <- optim(par=c(0, 0, 0), fn=measure_distance, data = sim1a)
+
+#best model (intercept, slope) values
+best$par
+
+```
+
+It works. However, the way the model is doesn't disambiguate between a[1] and a[3], meaning the model can have multiple optimum values. So that might be a problem (actually, it contradicts the term optimum since it implies only one solution).
+
+## Exercise 23.3.2
+
+### 1. Instead of using lm() to fit a straight line, you can use loess() to fit a smooth curve. Repeat the process of model fitting, grid generation, predictions, and visualisation on sim1 using loess() instead of lm(). How does the result compare to geom_smooth()?
+
+I'll use the solution from jarnold, but I'll detail his process
+
+
+
+```{r chapter23_exercise2332_1}
+
+sim1
+
+sim1_loess <- loess(y ~ x, data = sim1)
+sim1_loess
+```
+
+```{r chapter23_exercise2332_1_2}
+grid_loess <- sim1 %>%
+  add_predictions(sim1_loess)
+grid_loess
+```
+
+```{r chapter23_exercise2332_1_3}
+sim1 <- sim1 %>%
+  add_residuals(sim1_loess, var = "resid_loess") %>%
+  add_predictions(sim1_loess, var = "pred_loess")
+sim1
+```
+
+```{r chapter23_exercise2332_1_4}
+
+plot_sim1_loess <- 
+  ggplot(sim1, aes(x = x, y = y)) +
+  geom_point() +
+  geom_line(aes(x = x, y = pred), data = grid_loess, colour = "red")
+plot_sim1_loess
+
+```
+
+you could also use the loess method within geom_smooth.
+
+### 2. add_predictions() is paired with gather_predictions() and spread_predictions(). How do these three functions differ?
+
+From the help of _add_predictions_:
+
+add_prediction adds a single new column, .pred, to the input data. spread_predictions adds one column for each model. gather_prections adds two columns .model and .pred, and repeats the input rows for each model.
+
+So gather makes a model column as well, there's one column for the predictions called _pred_. Spread does not but has the model name as the column name.
+
+### 3. What does geom_ref_line() do? What package does it come from? Why is displaying a reference line in plots showing residuals useful and important?
+
+It comes from _ggplot2_, and it just adds a line (specified) that allows easy comparison with the plotted data. It's good to use with showing residuals cause then you can see if your model is appropriate for your data (kinda random residuals) versus not (higher residuals in certain places). This can help you choose a useful model.
+
+### 4. Why might you want to look at a frequency polygon of absolute residuals? What are the pros and cons compared to looking at the raw residuals?
+
+Like I mentioned in Q3, it would be useful to see what the distribution of residuals is. Geom_freqpoly helps with that-so visually any patterns pop out at you. 
+
+## Exercise 23.4.5
+
+### 1. What happens if you repeat the analysis of sim2 using a model without an intercept. What happens to the model equation? What happens to the predictions?
+
+```{r chapter23_exercise2345_1}
+
+mod2 <- lm(y ~ x, data = sim2)
+
+grid <- sim2 %>% 
+  data_grid(x) %>% 
+  add_predictions(mod2)
+
+ggplot(sim2, aes(x)) + 
+  geom_point(aes(y = y)) +
+  geom_point(data = grid, aes(y = pred), colour = "red", size = 4) +
+  ggtitle("With intercept")
+
+mod2 <- lm(y ~ x - 1, data = sim2)
+
+grid <- sim2 %>% 
+  data_grid(x) %>% 
+  add_predictions(mod2)
+
+ggplot(sim2, aes(x)) + 
+  geom_point(aes(y = y)) +
+  geom_point(data = grid, aes(y = pred), colour = "red", size = 4) +
+  ggtitle("Without intercept")
+```
+
+Nothing happens to the predictions. And the intercept column is just taken out from the model equation. Without the intercept, the other predictor is included in the equation because then the intercept can't be used to make that lost column (xa) with the intercept. 
+
+```{r chapter23_exercise2345_1_2}
+
+model_matrix(sim2, y ~ x)
+
+model_matrix(sim2, y ~ x - 1)
+
+```
+
+### 2. Use model_matrix() to explore the equations generated for the models I fit to sim3 and sim4. Why is * a good shorthand for interaction?
+
+```{r chapter23_exercise2345_2}
+
+model_matrix(sim3, y ~ x1 + x2) %>% head()
+
+model_matrix(sim3, y ~ x1 * x2) %>% head()
+
+model_matrix(sim4, y ~ x1 + x2) %>% head()
+
+model_matrix(sim4, y ~ x1 * x2) %>% head()
+
+```
+
+It's a good shorthand because then I don't have to manually specify. 
+
+### 3. Using the basic principles, convert the formulas in the following two models into functions. (Hint: start by converting the categorical variable into 0-1 variables.)
+
+```{r chapter23_exercise2345_3}
+
+#a_0 + a_1 * x1 + a_2 * x2
+mod1 <- lm(y ~ x1 + x2, data = sim3)
+
+#a_0 + a_1 * x1 + a_2 * x2 + a_12 * x1:x2
+mod2 <- lm(y ~ x1 * x2, data = sim3)
+
+```
+
+I'm not making the functions, but basically for each predicting you make a column and the value is the value for the predictor, but only if it's non-categorical. For categorical predictors, you spread them into separate columns for each factor. For interactions, you give 1 if both are 1 for the predictors and 0 otherwise. 
+
+### 4. For sim4, which of mod1 and mod2 is better? I think mod2 does a slightly better job at removing patterns, but it’s pretty subtle. Can you come up with a plot to support my claim?
+
+To better see the pattern, instead of points I'd use the loess method in ggplot to see how the line deviates from 0, indicating the residuals are larger in particular areas which indicates a bad model.
+
+```{r chapter23_exercise2345_4}
+
+mod1 <- lm(y ~ x1 + x2, data = sim3)
+mod2 <- lm(y ~ x1 * x2, data = sim3)
+
+sim3 <- sim3 %>% 
+  gather_residuals(mod1, mod2)
+
+ggplot(sim3, aes(x1, resid, colour = x2)) + 
+  geom_smooth(method="loess") + 
+  facet_grid(model ~ x2)
+```
+
+
+###
+# 24. Model Building
+
+## Exercise 24.2.3
+
+### 1. In the plot of lcarat vs. lprice, there are some bright vertical strips. What do they represent?
+
+The bright vertical stripes in the lprice vs. lcarat plot represent areas of high counts (very dense) of diamonds. These areas are actually at round or human-friendly carat cuts. 
+
+### 2. If log(price) = a_0 + a_1 * log(carat), what does that say about the relationship between price and carat?
+
+from jarnold,
+
+An 1% increase in carat is associated with an  a1a1 % increase in price.
+
+### 3. Extract the diamonds that have very high and very low residuals. Is there anything unusual about these diamonds? Are the particularly bad or good, or do you think these are pricing errors?
+
+```{r chapter24_exercise2423_3}
+
+library(dplyr)
+library(ggplot2)
+library(modelr)
+
+diamonds2 <- diamonds %>% 
+  filter(carat <= 2.5) %>% 
+  mutate(lprice = log2(price), lcarat = log2(carat))
+
+mod_diamond <- lm(lprice ~ lcarat, data = diamonds2)
+
+diamonds2 <- diamonds2 %>% 
+  add_residuals(mod_diamond, "lresid")
+
+resid_quants <- quantile(diamonds2$lresid)
+
+filtered <- diamonds2 %>% 
+  filter( 
+    !((lresid < resid_quants[["25%"]]) & (lresid > resid_quants[["75%"]])) 
+    )
+
+ggplot(filtered, aes(cut, price)) + geom_boxplot()
+ggplot(filtered, aes(color, price)) + geom_boxplot()
+ggplot(filtered, aes(clarity, price)) + geom_boxplot()
+
+```
+
+From the plots, they don't seem to be pricing errors since there aren't any strong trends of cut, color or clarity with price after filtering for extreme values of residuals in the predictions. 
+
+### 4. Does the final model, mod_diamonds2, do a good job of predicting diamond prices? Would you trust it to tell you how much to spend if you were buying a diamond?
+
+```{r chapter24_exercise2423_4}
+
+mod_diamond2 <- lm(lprice ~ lcarat + color + cut + clarity, data = diamonds2)
+
+diamonds2 <- diamonds2 %>% 
+  add_residuals(mod_diamond2, "lresid2")
+
+diamonds2 %>% ggplot() +
+  geom_histogram(aes(lresid),binwidth=.05)
+
+```
+
+from jarnold,
+
+```{r chapter24_exercise2423_4_2}
+
+diamonds2 %>% 
+  add_predictions(mod_diamond2) %>%
+  add_residuals(mod_diamond2) %>%
+  summarise(sq_err = sqrt(mean(resid^2)),
+            abs_err = mean(abs(resid)),
+            p975_err = quantile(resid, 0.975),
+            p025_err = quantile(resid, 0.025))
+
+
+```
+
+The average squared and absolute errors are  2^0.19^=1.14 and  2^0.10^ so on average, the error is  ±10−−15%. And the 95% range of residuals is about  2^0.37^=1.3  so within  ±30%. This doesn’t seem terrible to me.
+
+## Exercise 24.3.5
+
+### 1. Use your Google sleuthing skills to brainstorm why there were fewer than expected flights on Jan 20, May 26, and Sep 1. (Hint: they all have the same explanation.) How would these days generalise to another year?
+
+from jarnold,
+
+These are the Sundays before Monday holidays Martin Luther King Day, Memorial Day, and Labor Day.
+
+### 2. What do the three days with high positive residuals represent? How would these days generalise to another year?
+
+```{r chapter24_exercise2435_2}
+
+library("nycflights13")
+daily <- flights %>% 
+  mutate(date = make_date(year, month, day)) %>% 
+  group_by(date) %>% 
+  summarise(n = n())
+
+daily <- daily %>% 
+  mutate(wday = wday(date, label = TRUE))
+
+term <- function(date) {
+  cut(date, 
+    breaks = ymd(20130101, 20130605, 20130825, 20140101),
+    labels = c("spring", "summer", "fall") 
+  )
+}
+
+daily <- daily %>% 
+  mutate(term = term(date)) 
+
+mod3 <- MASS::rlm(n ~ wday * term, data = daily)
+
+daily <- daily %>% 
+  add_residuals(mod3, "resid")
+
+daily %>% 
+  top_n(3, resid)
+
+```
+
+These three days represent saturdays before or after major holidays (thanksgiving and christmas). Traveling on those days from home is probably particularly high.
+
+### 3. Create a new variable that splits the wday variable into terms, but only for Saturdays, i.e. it should have Thurs, Fri, but Sat-summer, Sat-spring, Sat-fall. How does this model compare with the model with every combination of wday and term?
+
+from jarnold,
+
+```{r chapter24_exercise2435_3}
+
+daily <- daily %>%
+  mutate(wday2 = 
+         case_when(.$wday == "Sat" & .$term == "summer" ~ "Sat-summer",
+         .$wday == "Sat" & .$ term == "fall" ~ "Sat-fall",
+         .$wday == "Sat" & .$term == "spring" ~ "Sat-spring",
+         TRUE ~ as.character(.$wday)))
+
+mod2 <- lm(n ~ wday * term, data = daily)
+
+mod4 <- lm(n ~ wday2, data = daily)
+
+daily %>% 
+  gather_residuals(sat_term = mod4, all_interact = mod2) %>% 
+  ggplot(aes(date, resid, colour = model)) +
+    geom_line(alpha = 0.75)
+
+```
+
+I think the overlapping plot is hard to understand. If we are interested in the differences, it is better to plot the differences directly. In this code I use spread_residuals to add one column per model, rather than gather_residuals which creates a new row for each model.
+
+```{r chapter24_exercise2435_3_2}
+
+daily %>% 
+  spread_residuals(sat_term = mod4, all_interact = mod2) %>%
+  mutate(resid_diff = sat_term - all_interact) %>%
+  ggplot(aes(date, resid_diff)) +
+    geom_line(alpha = 0.75)
+
+```
+
+The model with terms x Saturday has higher residuals in the fall, and lower residuals in the spring than the model with all interactions.
+
+Using overall model comparison terms, mod4 has a lower  R2  and regression standard error, σ^ , despite using fewer variables. More importantly for prediction purposes, it has a higher AIC - which is an estimate of the out of sample error.
+
+```{r chapter24_exercise2435_3_3}
+
+library(broom)
+
+glance(mod4) %>% select(r.squared, sigma, AIC, df)
+
+glance(mod2) %>% select(r.squared, sigma, AIC, df)
+
+```
+
+### 4. Create a new wday variable that combines the day of week, term (for Saturdays), and public holidays. What do the residuals of that model look like?
+
+from jarnold,
+
+The question is unclear how to handle the public holidays. We could include a dummy for all public holidays? or the Sunday before public holidays?
+
+Including a level for the public holidays themselves is insufficient because (1) public holiday’s effects on travel varies dramatically, (2) the effect can occur on the day itself or the day before and after, and (3) with Thanksgiving and Christmas there are increases in travel as well.
+
+```{r chapter24_exercise2435_4}
+
+daily <- daily %>%
+  mutate(wday3 = 
+         case_when(
+           .$date %in% lubridate::ymd(c(20130101, # new years
+                                        20130121, # mlk
+                                        20130218, # presidents
+                                        20130527, # memorial
+                                        20130704, # independence
+                                        20130902, # labor
+                                        20131028, # columbus
+                                        20131111, # veterans
+                                        20131128, # thanksgiving
+                                        20131225)) ~
+             "holiday",
+           .$wday == "Sat" & .$term == "summer" ~ "Sat-summer",
+           .$wday == "Sat" & .$ term == "fall" ~ "Sat-fall",
+           .$wday == "Sat" & .$term == "spring" ~ "Sat-spring",
+           TRUE ~ as.character(.$wday)))
+
+mod5 <- lm(n ~ wday3, data = daily)
+
+daily %>% 
+  spread_residuals(mod5) %>%
+  arrange(desc(abs(resid))) %>%
+  slice(1:20) %>% select(date, wday, resid)
+
+
+```
+
+### 5. What happens if you fit a day of week effect that varies by month (i.e. n ~ wday * month)? Why is this not very helpful?
+
+You don't have many samples (4-5) per month so your power to predict is pretty small.
+
+### 6. What would you expect the model n ~ wday + ns(date, 5) to look like? Knowing what you know about the data, why would you expect it to be not particularly effective?
+
+There isn't really a weekday trend across months, but really a trend around holidays and other miscallaneous things so the model wouldn't really take advantage of that.
+
+### 7. We hypothesised that people leaving on Sundays are more likely to be business travellers who need to be somewhere on Monday. Explore that hypothesis by seeing how it breaks down based on distance and time: if it’s true, you’d expect to see more Sunday evening flights to places that are far away
+
+from jarnold,
+
+```{r chapter24_exercise_2435_7}
+
+flights %>% 
+  mutate(date = make_date(year, month, day),
+         wday = wday(date, label = TRUE)) %>%
+  group_by(wday) %>%
+  summarise(dist_mean =  mean(distance),
+            dist_median = median(distance)) %>%
+  ggplot(aes(y = dist_mean, x = wday)) +
+  geom_point()
+
+
+flights %>% 
+  mutate(date = make_date(year, month, day),
+         wday = wday(date, label = TRUE)) %>%
+  group_by(wday, hour) %>%
+  summarise(dist_mean =  mean(distance),
+            dist_median = median(distance)) %>%
+  ggplot(aes(y = dist_mean, x = hour, colour = wday)) +
+  geom_point() + 
+  geom_line()
+
+```
+
+Maybe someone can look at the Sunday evening/Monday scheduled arrivals?
+
+### 8. It’s a little frustrating that Sunday and Saturday are on separate ends of the plot. Write a small function to set the levels of the factor so that the week starts on Monday.
+
+```{r chapter24_exercise2435_8}
+
+monday_first <- function(x) {
+  forcats::fct_relevel(x, levels(x)[-1])  
+}
+
+daily <- daily %>% 
+  mutate(wday = wday(date, label = TRUE))
+ggplot(daily, aes(monday_first(wday), n)) + 
+  geom_boxplot() +
+  labs(x = "Day of Week", y = "Number of flights")
+
+```
+
+# 25. Many Models
+
+## Exercise 25.2.5
+
+### 1. A linear trend seems to be slightly too simple for the overall trend. Can you do better with a quadratic polynomial? How can you interpret the coefficients of the quadratic? (Hint you might want to transform year so that it has mean zero.)
+
+```{r chapter25_exercise2525_1}
+
+print("here")
+library(modelr)
+library(tidyverse)
+if(!require(gapminder)){install.packages("gapminder")}
+library(gapminder)
+
+by_country <- gapminder %>% 
+  group_by(country, continent) %>% 
+  nest()
+
+by_country <- by_country %>% 
+  mutate(
+    one_mod = purrr::map(data, ~ lm(lifeExp ~ poly(year,1),data = .)),
+    two_mod = purrr::map(data, ~ lm(lifeExp ~ poly(year,2),data = .)),
+    three_mod = purrr::map(data, ~ lm(lifeExp ~ poly(year,3),data = .))
+         )
+
+by_country <- by_country %>% 
+  mutate(
+    one_resids = purrr::map2(data, one_mod, add_residuals),
+    two_resids = purrr::map2(data, two_mod, add_residuals),
+    three_resids = purrr::map2(data, three_mod, add_residuals)
+  )
+
+one_resids <- unnest(by_country, one_resids)
+two_resids <- unnest(by_country, two_resids)
+three_resids <- unnest(by_country, three_resids)
+
+plot <- function(df,title){
+    df %>% 
+    ggplot(aes(year, resid)) +
+    geom_line(aes(group = country), alpha = 1 / 3) + 
+    geom_smooth(se = FALSE) +
+    ggtitle(title)
+}
+
+plot(one_resids,"Linear model")
+plot(two_resids,"Degree 2 polynomial model")
+plot(three_resids,"Degree 3 polynomial model")
+
+glance <- by_country %>% 
+  mutate(one_glance = purrr::map(one_mod, broom::glance),
+         two_glance = purrr::map(two_mod, broom::glance),
+         three_glance = purrr::map(three_mod, broom::glance)) %>% 
+  unnest(one_glance,two_glance,three_glance, .drop = TRUE)
+
+
+
+glance %>% 
+  ggplot() +
+  geom_point(aes("model_degree1",median(r.squared)),color="blue") +
+  geom_point(aes("model_degree2",median(r.squared1)),color="red") +
+  geom_point(aes("model_degree3",median(r.squared2)),color="green")
+
+
+```
+
+I think I violated the "no copy/paste more than two times" rule. But that's learning for another time, the point is you can see the model has a better fit when increasing the polynomial degree in the model fitted to the data. How can the coefficients be interpreted? They allow extra flexibilty in fitting the data-so the quadratic terms account for deviations from a linear trend. 
+
+### 2. Explore other methods for visualising the distribution of R2  per continent. You might want to try the ggbeeswarm package, which provides similar methods for avoiding overlaps as jitter, but uses deterministic methods.
+
+from jarnold,
+
+```{r chapter25_exercise2525_2}
+library(gapminder)
+country_model <- function(df) {
+  lm(lifeExp ~ poly(year - median(year), 2), data = df)
+}
+
+by_country <- gapminder %>% 
+  group_by(country, continent) %>% 
+  nest()
+
+by_country <- by_country %>%
+  mutate(model = purrr::map(data, country_model))
+
+library("ggbeeswarm")
+by_country %>% 
+  mutate(glance = purrr::map(model, broom::glance)) %>%
+  unnest(glance, .drop = TRUE) %>%
+  ggplot(aes(continent, r.squared)) +
+  geom_beeswarm()
+
+```
+
+### 3. To create the last plot (showing the data for the countries with the worst model fits), we needed two steps: we created a data frame with one row per country and then semi-joined it to the original dataset. It’s possible avoid this join if we use unnest() instead of unnest(.drop = TRUE). How?
+
+```{r chapter25_exercise2552_3}
+
+glance <- by_country %>% 
+  mutate(glance = purrr::map(model, broom::glance)) %>% 
+  unnest(glance)
+glance
+
+```
+We can give the data variable directly to ggplot
+
+```{r chapter25_exercise2552_3_2}
+
+country_model <- function(df) {
+  lm(lifeExp ~ poly(year,1), data = df)
+}
+
+by_country <- by_country %>% 
+  mutate(model = purrr::map(data, country_model))
+
+glance <- by_country %>% 
+  mutate(glance = purrr::map(model, broom::glance)) %>% 
+  unnest(glance)
+
+glance %>% 
+  filter(r.squared < 0.25) %>% 
+  select(country,data) %>% 
+  unnest() %>% 
+  ggplot() +
+  geom_line(aes(year,lifeExp,color=country))
+```
+Interesting how when the polynomial degree is 1 then these 6 countries are below .25 r^2^ but when the model is degree 2 only rwanda is there. Thus the degree 2 model allows for greater flexibility to fit those 5 countries' data. Interesting.
+
+## Exercise 25.4.5
+
+### 1. List all the functions that you can think of that take a atomic vector and return a list.
+
+from jarnold, many of the stringr functions
+
+### 2. Brainstorm useful summary functions that, like quantile(), return multiple values.
+
+range, fivenum etc. 
+
+### 3. What’s missing in the following data frame? How does quantile() return that missing piece? Why isn’t that helpful here?
+
+```{r chapter25_exercise2545_3}
+
+mtcars %>% 
+  group_by(cyl) %>% 
+  summarise(q = list(quantile(mpg))) %>% 
+  unnest()
+
+```
+
+What's missing is the list of values given from quantile(). unnest() drops the names of the quantiles so we lose those labels. 
+
+### 4. What does this code do? Why might might it be useful?
+
+```{r chapter25_exercise2545_4}
+
+mtcars %>% 
+  group_by(cyl) %>% 
+  summarise_each(funs(list))
+
+```
+Seems like this puts of of the non-grouped variables data together while keeping the grouped variable present but still representing the data from all the other variables. I think this might streamline analyses in parallel but not sure the advantage except for compacting data into view.
+
+## Exercise 25.5.3
+
+### 1. Why might the lengths() function be useful for creating atomic vector columns from list-columns?
+
+from jarnold,
+
+The lengths() function gets the lengths of each element in a list. It could be useful for testing whether all elements in a list-column are the same length. You could get the maximum length to determine how many atomic vector columns to create. It is also a replacement for something like map_int(x, length) or sapply(x, length).
+
+### 2. List the most common types of vector found in a data frame. What makes lists different?
+
+Most common types would be character, integer, numeric, logical, and factor. Lists are non-atomic, meaning they are a mixture of the mentioned object types. 
+# Part IV Communicate 
+# 26. Introduction
+
+No Exercises
+
+# 27. R Markdown
+
+## Exercise 27.2.1
+
+### 1. Create a new notebook using File > New File > R Notebook. Read the instructions. Practice running the chunks. Verify that you can modify the code, re-run it, and see modified output.
+
+See _MyNotebook.Rmd
+
+### 2. Create a new R Markdown document with File > New File > R Markdown… Knit it by clicking the appropriate button. Knit it by using the appropriate keyboard short cut. Verify that you can modify the input and see the output update
+
+See _MyRmarkdown.Rmd_
+
+### 3. Compare and contrast the R notebook and R markdown files you created above. How are the outputs similar? How are they different? How are the inputs similar? How are they different? What happens if you copy the YAML header from one to the other?
+
+Similar output: Both produce an html-rendered file.
+
+Different output: The notebook html ending is \*.nb.html where the RMarkdown ending is \*.html. Also, the notebook has a _Code_ button in the top right to hide/show the code or download the Rmd. 
+
+Similar input: Same 3 components: YAML header, mixed prose and embedded code.
+
+Different input: YAML header in the notebook has _output: html\_notebook_ and the RMarkdown variant is _output: html\_document_. 
+
+### 4. Create one new R Markdown document for each of the three built-in formats: HTML, PDF and Word. Knit each of the three documents. How does the output differ? How does the input differ? (You may need to install LaTeX in order to build the PDF output — RStudio will prompt you if this is necessary.)
+
+Similar output: Some file format with content rendered.
+
+Different output: html, word, or pdf document.
+
+Similar input: Same content.
+
+Different input: In the YAML, the output was either _html\_document_, _word\_document_, or _pdf\_document_.
+
+## Exercise 27.3.1
+
+### 1. Practice what you’ve learned by creating a brief CV. The title should be your name, and you should include headings for (at least) education or employment. Each of the sections should include a bulleted list of jobs/degrees. Highlight the year in bold.
+
+See _BriefCV.Rmd_
+
+### 2. Using the R Markdown quick reference, figure out how to:
+
+1. Add a footnote.
+2. Add a horizontal rule.
+3. Add a block quote.
+
+See _BriefCV.Rmd_
+
+### 3. Copy and paste the contents of diamond-sizes.Rmd from https://github.com/hadley/r4ds/tree/master/rmarkdown in to a local R markdown document. Check that you can run it, then add text after the frequency polygon that describes its most striking features.
+
+See _Diamond-sizes.Rmd_
+
+## Exercise 27.4.7
+
+### 1. Add a section that explores how diamond sizes vary by cut, colour, and clarity. Assume you’re writing a report for someone who doesn’t know R, and instead of setting echo = FALSE on each chunk, set a global option.
+
+See section _Exercise 27.4.7 #1 description_ in _Diamond-sizes.Rmd_.
+
+### 2. Download diamond-sizes.Rmd from https://github.com/hadley/r4ds/tree/master/rmarkdown. Add a section that describes the largest 20 diamonds, including a table that displays their most important attributes.
+
+See section _Exercise 27.4.7 #2 description_ in _Diamond-sizes.Rmd_.
+
+### 3. Modify diamonds-sizes.Rmd to use comma() to produce nicely formatted output. Also include the percentage of diamonds that are larger than 2.5 carats.
+
+I couldn't get a global commas command unfortunately...
+
+### 4. Set up a network of chunks where d depends on c and b, and both b and c depend on a. Have each chunk print lubridate::now(), set cache = TRUE, then verify your understanding of caching.
+
+See section _Exercise 27.4.7 #2\4 description_ in _Diamond-sizes.Rmd_.
+
+
+
+# SessionInfo
+
+```{r sessionInfo}
+sessionInfo()
+```
