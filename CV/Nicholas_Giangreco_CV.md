@@ -113,10 +113,11 @@ Leadership and Management Experience
         + Organize and plan professional/social engagement events.
         + Network and connect with NYC-wide entrepreneurs and professionals.
 - [Graduate Student Organization at Columbia University Irving Medical Center](https://www.gsas.cuimc.columbia.edu/student-life/graduate-student-organization)
-    + President
+    + Co-President
         + Organize and manage team of Biomedical PhDs for social and professional activities serving hundreds of CUIMC PhD students. 
 - [Columbia Graduate Council](https://www.cc-seas.columbia.edu/student-group/columbia-graduate-council)
-    + Treasurer
+    + Former Treasurer
+        + Establish budget and expense sheets and annual reports
         + Manage forty thousand dollar budget for Columbia inter-school activities. 
 - NYC MeetUps
     + [New York Health Artificial Intelligence Society](https://www.meetup.com/NYHAIS/)
@@ -124,6 +125,9 @@ Leadership and Management Experience
         + Promote public discourse on a wide range of topics such as AI & Society, AI & Healthcare, and economic impact by AI. 
         + Facilitate group engagement, AI study groups, and group organization.
         + Consultant on data science and education projects and initiatives. 
+- University of Rochester Alumni Undergraduate Interviewer
+    + Assess potential and suitability for undergraduate college 
+    + Interviewer at large and small event settings
         
 MENTORING, TUTORING, and WRITING
 ----------
