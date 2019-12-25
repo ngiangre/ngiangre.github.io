@@ -14,11 +14,11 @@ address : 154 Haven Avenue, New York, New York, 10032
 phone : 7167132124
 ---
 
-<u>**Date of preparation:**</u> October 13th 2019 | 
+<u>**Date of preparation:**</u> December 25th 2019 | 
 ---- | ----:
 <u>**Email Address:**</u> | nick.giangreco@gmail.com |
 <u>**Formatting:**</u> | Markdown, Rmarkdown, Jupyter Notebooks |
-<u>**Programming Languages:**</u> | R, Python, Bash, SQL, Java |
+<u>**Programming Languages:**</u> | Python, R, Bash, SQL, Java |
 <u>**Programming Techniques:**</u> | Parallelization, Out-of-core learning, Distributed computing |
 <u>**Programming Platforms:**</u> | Multicore machines, Amazon services (e.g. EC2), Databricks |
 <u>**Project Management:**</u> | Teamwork, Slack, Asana, Basecamp, Gitter, DropBox, Google |
@@ -64,6 +64,8 @@ August 2014-May 2019
 
 FELLOWSHIPS AND AWARDS
 ----------
+
+-   Three-Minute Thesis finalist @ Columbia Graduate School of Arts and Sciences
 
 -   Best contribution in methodological research at the [OHDSI 2018 Symposium](https://www.ohdsi.org/2018-ohdsi-symposium/) for [Pediatric Drug Safety](http://10.7490/f1000research.1116203.1) poster.
 
@@ -153,7 +155,7 @@ CONFERENCES AND HACKATHONS
 
 - [OHDSI 2018 Symposium](https://www.ohdsi.org/2018-ohdsi-symposium/)
 
-- [New York Genome Center NCBI-Style Hackathon](https://biohackathons.github.io/)
+- [NCBI hackathon @ New York Genome Center August 2018](https://biohackathons.github.io/)
    - Project lead for developing data science notebooks and web application interfacing with drug safety data.
    - See [SafeDrugs](https://github.com/NCBI-Hackathons/SafeDrugs) github repository. 
    
