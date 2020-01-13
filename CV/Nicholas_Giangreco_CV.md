@@ -157,7 +157,7 @@ MENTORING, TUTORING, and WRITING
 CONFERENCES AND HACKATHONS
 ----------
 
-- [NCBI hackathon @ Carnegie Mellon University January 2020](https://biohackathons.github.io/)
+- [NCBI Hackathon @ Carnegie Mellon University January 2020](https://biohackathons.github.io/)
    - Project co-lead for developing and extending common data model to represent biological 'omics data for reproducible queries and analyses. 
    - See [OMOPOmics](https://github.com/NCBI-Codeathons/OMOPOmics) github repository. 
    
@@ -165,7 +165,7 @@ CONFERENCES AND HACKATHONS
 
 - [OHDSI 2018 Symposium](https://www.ohdsi.org/2018-ohdsi-symposium/)
 
-- [NCBI hackathon @ New York Genome Center August 2018](https://biohackathons.github.io/)
+- [NCBI Hackathon @ New York Genome Center August 2018](https://biohackathons.github.io/)
    - Project lead for developing data science notebooks and web application interfacing with drug safety data.
    - See [SafeDrugs](https://github.com/NCBI-Hackathons/SafeDrugs) github repository. 
    
