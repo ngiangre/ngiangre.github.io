@@ -14,7 +14,7 @@ address : 154 Haven Avenue, New York, New York, 10032
 phone : 7167132124
 ---
 
-<u>**Date of preparation:**</u> December 25th 2019 | 
+<u>**Date of preparation:**</u> January 12th 2020 | 
 ---- | ----:
 <u>**Email Address:**</u> | nick.giangreco@gmail.com |
 <u>**Formatting:**</u> | Markdown, Rmarkdown, Jupyter Notebooks |
@@ -33,7 +33,7 @@ EDUCATION
 August 2016 - Present
 :     [**PhD Candidate, Systems Biology**](http://systemsbiology.columbia.edu/people/nicholas-giangreco); Columbia University, New York City, NY
 
-     PhD advisor: [Nicholas Tatonetti](http://tatonettilab.org)
+     PhD advisor: [Dr. Nicholas Tatonetti](http://tatonettilab.org)
      
      Masters of Arts (2018) and Masters of Philosophy (2019)
      
@@ -107,23 +107,25 @@ Leadership and Management Experience
 ----------
 
 - [CUIMC Data Science Club](https://sites.google.com/view/cumcdatasciencegroup/home)
-    + President
+    + President 2017-
     + Organize and manage team of officers, oversee activities, manage budget, and promote outreach portfolio to support and strengthen the data science skills of biomedical scientists at CUIMC
 - [Health Tech Assembly](http://www.healthtechassembly.com/)
     + President
         + Manage business, medical, public health, and engineering representatives for inter-school events, panels, and conferences at Columbia. 
         + Organize and plan professional/social engagement events.
         + Network and connect with NYC-wide entrepreneurs and professionals.
+     + Medical campus representative 2018-2019
 - [Graduate Student Organization at Columbia University Irving Medical Center](https://www.gsas.cuimc.columbia.edu/student-life/graduate-student-organization)
-    + Co-President
+    + Co-President 2019-
         + Organize and manage team of Biomedical PhDs for social and professional activities serving hundreds of CUIMC PhD students. 
+    + Finance Chair 2018-2019
 - [Columbia Graduate Council](https://www.cc-seas.columbia.edu/student-group/columbia-graduate-council)
-    + Former Treasurer
+    + Treasurer 2018-2019
         + Establish budget and expense sheets and annual reports
         + Manage forty thousand dollar budget for Columbia inter-school activities. 
 - NYC MeetUps
     + [New York Health Artificial Intelligence Society](https://www.meetup.com/NYHAIS/)
-        + Co-organizer
+        + Co-organizer 2018-
         + Promote public discourse on a wide range of topics such as AI & Society, AI & Healthcare, and economic impact by AI. 
         + Facilitate group engagement, AI study groups, and group organization.
         + Consultant on data science and education projects and initiatives. 
@@ -135,12 +137,16 @@ MENTORING, TUTORING, and WRITING
 ----------
 
 - ["Hack nights -- Solving healthcare data-science/AI/ML problems"](https://www.eventbrite.com/e/healthcare-hack-night-tickets-72013860395) Introduction to cancer genomics three part series.  Co-led by Nicholas Giangreco and Matthew Eng
+    * Adventures In Hacking Healthcare Medium Publication
+        * [Part 1](https://medium.com/adventures-in-healthcare-data/cancer-genomics-i-an-introduction-to-working-with-gene-expression-data-using-python-4f46e309c52b)
 - Nicholas Giangreco. ["The Importance of being Open"](http://www.phdish.com/blog/openscience). *PHDISH* January 9th 2019. 
-- Undergraduate Mentoring:
-    * Payal Chandak, Columbia University
+- Mentoring:
+    * Payal Chandak, Undergraduate at Columbia University
         * Provide guidance and instruction in biomedical data science and research training.
         * Provided guidance and mentoring for summer 2018 research internship in the Tatonetti Lab
            + ["Drugs with sex-linked risk for adverse drug reactions"](https://github.com/tatonetti-lab/sex_risks)
+    * SMRI high school mentorship
+        * Provide guidance to high school student in biomedical data science research project 
 - Curiology tutor
     + Managed and co-led science experiments with NIH fellows for middle school students in Washington D.C. 
 - College Bound tutor
@@ -151,6 +157,10 @@ MENTORING, TUTORING, and WRITING
 CONFERENCES AND HACKATHONS
 ----------
 
+- [NCBI hackathon @ Carnegie Mellon University January 2020](https://biohackathons.github.io/)
+   - Project co-lead for developing and extending common data model to represent biological 'omics data for reproducible queries and analyses. 
+   - See [OMOPOmics](https://github.com/NCBI-Codeathons/OMOPOmics) github repository. 
+   
 - [CSHL Biological Data Science meeting November 2018.](https://meetings.cshl.edu/meetings.aspx?meet=data&year=20)
 
 - [OHDSI 2018 Symposium](https://www.ohdsi.org/2018-ohdsi-symposium/)
