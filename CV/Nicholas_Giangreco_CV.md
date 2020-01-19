@@ -110,7 +110,7 @@ Leadership and Management Experience
     + President 2017-
     + Organize and manage team of officers, oversee activities, manage budget, and promote outreach portfolio to support and strengthen the data science skills of biomedical scientists at CUIMC
 - [Health Tech Assembly](http://www.healthtechassembly.com/)
-    + President
+    + President 2019-
         + Manage business, medical, public health, and engineering representatives for inter-school events, panels, and conferences at Columbia. 
         + Organize and plan professional/social engagement events.
         + Network and connect with NYC-wide entrepreneurs and professionals.
@@ -139,6 +139,7 @@ MENTORING, TUTORING, and WRITING
 - ["Hack nights -- Solving healthcare data-science/AI/ML problems"](https://www.eventbrite.com/e/healthcare-hack-night-tickets-72013860395) Introduction to cancer genomics three part series.  Co-led by Nicholas Giangreco and Matthew Eng
     * Adventures In Hacking Healthcare Medium Publication
         * [Part 1](https://medium.com/adventures-in-healthcare-data/cancer-genomics-i-an-introduction-to-working-with-gene-expression-data-using-python-4f46e309c52b)
+        * [Part II](https://medium.com/adventures-in-healthcare-data/cancer-genomics-ii-exploring-biomarkers-of-liver-cancer-in-gene-expression-data-using-python-b719b519b406)
 - Nicholas Giangreco. ["The Importance of being Open"](http://www.phdish.com/blog/openscience). *PHDISH* January 9th 2019. 
 - Mentoring:
     * Payal Chandak, Undergraduate at Columbia University
