@@ -125,7 +125,8 @@ Leadership and Management Experience
         + Manage forty thousand dollar budget for Columbia inter-school activities. 
 - NYC MeetUps
     + [New York Health Artificial Intelligence Society](https://www.meetup.com/NYHAIS/)
-        + Co-organizer 2018-
+        + 501(c)(3) not-for-profit cofounder and Secretary
+        + Meetup co-organizer 2018-
         + Promote public discourse on a wide range of topics such as AI & Society, AI & Healthcare, and economic impact by AI. 
         + Facilitate group engagement, AI study groups, and group organization.
         + Consultant on data science and education projects and initiatives. 
@@ -136,10 +137,8 @@ Leadership and Management Experience
 MENTORING, TUTORING, and WRITING
 ----------
 
-- ["Hack nights -- Solving healthcare data-science/AI/ML problems"](https://www.eventbrite.com/e/healthcare-hack-night-tickets-72013860395) Introduction to cancer genomics three part series.  Co-led by Nicholas Giangreco and Matthew Eng
-    * Adventures In Hacking Healthcare Medium Publication
-        * [Part 1](https://medium.com/adventures-in-healthcare-data/cancer-genomics-i-an-introduction-to-working-with-gene-expression-data-using-python-4f46e309c52b)
-        * [Part II](https://medium.com/adventures-in-healthcare-data/cancer-genomics-ii-exploring-biomarkers-of-liver-cancer-in-gene-expression-data-using-python-b719b519b406)
+- ["Hack nights -- Solving healthcare data-science/AI/ML problems"](https://www.eventbrite.com/e/healthcare-hack-night-tickets-72013860395) Introduction to cancer genomics four part series.  Co-led by Nicholas Giangreco and Matthew Eng
+    * [Adventures In Hacking Healthcare Medium Publication](https://medium.com/adventures-in-healthcare-data)
 - Nicholas Giangreco. ["The Importance of being Open"](http://www.phdish.com/blog/openscience). *PHDISH* January 9th 2019. 
 - Mentoring:
     * Payal Chandak, Undergraduate at Columbia University
