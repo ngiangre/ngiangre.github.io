@@ -123,13 +123,12 @@ Leadership and Management Experience
     + Treasurer 2018-2019
         + Establish budget and expense sheets and annual reports
         + Manage forty thousand dollar budget for Columbia inter-school activities. 
-- NYC MeetUps
-    + [New York Health Artificial Intelligence Society](https://www.meetup.com/NYHAIS/)
-        + 501(c)(3) not-for-profit cofounder and Secretary
-        + Meetup co-organizer 2018-
-        + Promote public discourse on a wide range of topics such as AI & Society, AI & Healthcare, and economic impact by AI. 
-        + Facilitate group engagement, AI study groups, and group organization.
-        + Consultant on data science and education projects and initiatives. 
+- [New York Health Artificial Intelligence Society](https://www.meetup.com/NYHAIS/)
+   + 501(c)(3) not-for-profit cofounder and Secretary
+   + Meetup co-organizer 2018-
+   + Promote public discourse on a wide range of topics such as AI & Society, AI & Healthcare, and economic impact by AI. 
+   + Organize and facilitate group engagement, workshops, AI study groups, and not-for-profit organization.
+   + Consultant on data science and education projects and initiatives. 
 - University of Rochester Alumni Undergraduate Interviewer
     + Assess potential and suitability for undergraduate college 
     + Interviewer at large and small event settings
@@ -196,6 +195,6 @@ NYC Medical Research and Bioinformatics Group](https://www.meetup.com/NYC-Medica
 PROFESSIONAL MEMBERSHIPS
 ----------
 
-- American Heart Association, 2017-.
-- American Medical Informatics Association, 2017-.
-- International Society of Computational Biology, 2013-2014 & 2017-.
+- International Society of Computational Biology, 2013-2014 & 2017-
+- American Heart Association, 2017-2018.
+- American Medical Informatics Association, 2017-2018.
