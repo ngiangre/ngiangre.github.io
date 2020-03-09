@@ -14,7 +14,7 @@ address : 154 Haven Avenue, New York, New York, 10032
 phone : 7167132124
 ---
 
-<u>**Date of preparation:**</u> January 12th 2020 | 
+<u>**Date of preparation:**</u> March 9th 2020 | 
 ---- | ----:
 <u>**Email Address:**</u> | nick.giangreco@gmail.com |
 <u>**Presentation:**</u> | Microsoft/Apple Office, Markdown, Rmarkdown, Jupyter Notebooks |
@@ -35,6 +35,8 @@ August 2016 - Present
 
      PhD advisor: [Dr. Nicholas Tatonetti](http://tatonettilab.org)
      
+     Thesis: Predictive analytics and risk calculation for adverse clinical outcome detection and biomedical knowledge discovery
+     
      Masters of Arts (2018) and Masters of Philosophy (2019)
      
 August 2010 - May 2014
@@ -48,10 +50,14 @@ June 2019 - August 2019
 
 	  Clinical informatics intern
 	  
+	  - Population modeling for data-driven clinical phenotyping
+	  
 July 2018 - September 2018
 :    [**Genetic Intelligence Inc.**](https://www.geneticintelligence.com/); New York, NY
 
 	  Computational biology intern
+	  
+	  - Conducted independent and collaborative genomics research
 	  
 August 2014-May 2019
 :    **National Human Genome Research Institute**; Bethesda, MD
@@ -62,6 +68,8 @@ August 2014-May 2019
      
      Special volunteer 2016-2019
 
+     - Investigated ovarian endometrioid tumorigenesis by integrating and ananlyzing RNASeq and DNA methylation sequencing (MBD-Seq).
+     
 FELLOWSHIPS AND AWARDS
 ----------
 
@@ -82,6 +90,7 @@ FELLOWSHIPS AND AWARDS
 PUBLICATIONS 
 ----------
 
+- **Nicholas Giangreco**, Jonathan Elias, and Nicholas Tatonetti. No population left behind: improving pediatric drug safety using informatics and systems biology. British Journal of Clinical Pharmacology (in submission). 
 - **Nicholas P. Giangreco**, Barry Fine, Nicholas P. Tatonetti. cohorts: A Python package for clinical ‘omics data management. [bioarxiv](https://www.biorxiv.org/content/10.1101/626051v1.article-info)
 - Benjamin S Glicksberg, Boris Oskotsky, Phyllis M Thangaraj, **Nicholas Giangreco**, Marcus A Badgeley, Kipp W Johnson, Debajyoti Datta, Vivek A Rudrapatna, Nadav Rappoport, Mark M Shervey, Riccardo Miotto, Theodore C Goldstein, Eugenia Rutenberg, Remi Frazier, Nelson Lee, Sharat Israni, Rick Larsen, Bethany Percha, Li Li, Joel T Dudley, Nicholas P Tatonetti, Atul J Butte, PatientExploreR: an extensible application for dynamic visualization of patient clinical history from electronic health records in the OMOP common data model, Bioinformatics, , btz409, [https://doi.org/10.1093/bioinformatics/btz409](https://doi.org/10.1093/bioinformatics/btz409)
 - Benjamin S Glicksberg, Boris Oskotsky, **Nicholas Giangreco**, Phyllis M Thangaraj, Vivek Rudrapatna, Debajyoti Datta, Remi Frazier, Nelson Lee, Rick Larsen, Nicholas P Tatonetti, Atul J Butte, ROMOP: a light-weight R package for interfacing with OMOP-formatted electronic health record data, JAMIA Open, Volume 2, Issue 1, April 2019, Pages 10–14, [https://doi.org/10.1093/jamiaopen/ooy059](https://doi.org/10.1093/jamiaopen/ooy059)
