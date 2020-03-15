@@ -157,7 +157,7 @@ MENTORING, TUTORING, and WRITING
     * [Adventures In Hacking Healthcare Medium Publication](https://medium.com/adventures-in-healthcare-data)
 - Nicholas Giangreco. ["The Importance of being Open"](http://www.phdish.com/blog/openscience). *PHDISH* January 9th 2019. 
 - Mentoring:
-    * Payal Chandak, Undergraduate at Columbia University
+    * [Payal Chandak](https://www.linkedin.com/in/payal-chandak-366403132/), Undergraduate at Columbia University
         * Provide guidance and instruction in biomedical data science and research training.
         * Provided guidance and mentoring for summer 2018 research internship in the Tatonetti Lab
            + ["Drugs with sex-linked risk for adverse drug reactions"](https://github.com/tatonetti-lab/sex_risks)
