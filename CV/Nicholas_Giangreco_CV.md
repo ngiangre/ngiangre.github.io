@@ -119,17 +119,17 @@ Leadership and Management Experience
     + President 2017-
     + Organize and manage team of officers, oversee activities, manage budget, and promote outreach portfolio to support and strengthen the data science skills of biomedical scientists at CUIMC
 - [Health Tech Assembly](http://www.healthtechassembly.com/)
-    + President 2019-
+    + President 2019-2020
         + Manage business, medical, public health, and engineering representatives for inter-school events, panels, and conferences at Columbia. 
         + Organize and plan professional/social engagement events.
         + Network and connect with NYC-wide entrepreneurs and professionals.
      + Medical campus representative 2018-2019
 - [Graduate Student Organization at Columbia University Irving Medical Center](https://www.gsas.cuimc.columbia.edu/student-life/graduate-student-organization)
-    + Co-President 2019-
+    + Co-President 2019-2020
         + Organize and manage team of Biomedical PhDs for social and professional activities serving hundreds of CUIMC PhD students. 
     + Finance Chair 2018-2019
 - [Columbia Graduate Council](https://www.cc-seas.columbia.edu/student-group/columbia-graduate-council)
-    + Treasurer 2018-2019
+    + Treasurer 2019-2020
         + Establish budget and expense sheets and annual reports
         + Manage forty thousand dollar budget for Columbia inter-school activities. 
 - Department of Biomedical Informatics
@@ -162,7 +162,7 @@ MENTORING, TUTORING, and WRITING
         * Provided guidance and mentoring for summer 2018 research internship in the Tatonetti Lab
            + ["Drugs with sex-linked risk for adverse drug reactions"](https://github.com/tatonetti-lab/sex_risks)
     * SMRI high school mentorship
-        * Provide guidance to high school student in biomedical data science research project 
+        * Provide guidance to high school student in [biomedical data science research project](https://github.com/veronikabreton/smri2020)
 - Curiology tutor
     + Managed and co-led science experiments with NIH fellows for middle school students in Washington D.C. 
 - College Bound tutor
@@ -173,6 +173,9 @@ MENTORING, TUTORING, and WRITING
 CONFERENCES AND HACKATHONS
 ----------
 
+- [Virtual Interoperathon 2020](https://interoperabilityinstitute.org/virtual-interopathon/)
+   - Project developer for personalized health record accessed with fhir-client python api
+   - Developed flask application [proof-of-concept](https://github.com/ngiangre/District-13_Sandbox).
 - [NCBI Hackathon @ Carnegie Mellon University January 2020](https://biohackathons.github.io/)
    - Project co-lead for developing and extending common data model to represent biological 'omics data for reproducible queries and analyses. 
    - See [OMOPOmics](https://github.com/NCBI-Codeathons/OMOPOmics) github repository. 
