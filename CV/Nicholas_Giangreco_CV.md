@@ -14,7 +14,7 @@ address : 154 Haven Avenue, New York, New York, 10032
 phone : 7167132124
 ---
 
-<u>**Date of preparation:**</u> May 10th 2020 | 
+<u>**Date of preparation:**</u> June 21st 2020 | 
 ---- | ----:
 <u>**Email Address:**</u> | nick.giangreco@gmail.com |
 <u>**Presentation:**</u> | Microsoft/Apple Office, Markdown, Rmarkdown, Jupyter Notebooks |
@@ -153,6 +153,7 @@ MENTORING, TUTORING, and WRITING
 ----------
 
 - Freelance Statistics and Data Science tutor
+- Volunteer data science and statistics mentor to a handful of high school, college, and professional students
 - ["Hack nights -- Solving healthcare data-science/AI/ML problems"](https://www.eventbrite.com/e/healthcare-hack-night-tickets-72013860395) Introduction to cancer genomics four part series.  Co-led by Nicholas Giangreco and Matthew Eng
     * [Adventures In Hacking Healthcare Medium Publication](https://medium.com/adventures-in-healthcare-data)
 - Nicholas Giangreco. ["The Importance of being Open"](http://www.phdish.com/blog/openscience). *PHDISH* January 9th 2019. 
