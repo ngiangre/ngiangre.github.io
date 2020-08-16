@@ -7,6 +7,7 @@ The CSS is attributable to the above blog post
 This is another great post influencing this document https://mszep.github.io/pandoc_resume/
 
 see github repo for licensing information
+
 -->
 ---
 title : Nicholas Giangreco
@@ -19,7 +20,7 @@ phone : 7167132124
 <u>**Email Address:**</u> | nick.giangreco@gmail.com |
 <u>**Presentation:**</u> | Microsoft/Apple Office, Markdown, Rmarkdown, Jupyter Notebooks |
 <u>**Programming Languages:**</u> | Python, R, Bash, SQL, Java |
-<u>**Programming Techniques:**</u> | Parallelization, Out-of-core learning, Distributed computing |
+<u>**Programming Techniques:**</u> | Parallelization, Out-of-core learning, Distributed computing,  |
 <u>**Programming Platforms:**</u> | Multicore machines, Amazon services (e.g. EC2), Databricks |
 <u>**Project Management:**</u> | Teamwork, Slack, Asana, Basecamp, Gitter, DropBox, Google |
 <u>**Web design:**</u> | Plotly (Dash & Shiny), HTML, CSS, Bootstrap |
@@ -35,7 +36,7 @@ August 2016 - Present
 
      PhD advisor: [Dr. Nicholas Tatonetti](http://tatonettilab.org)
      
-     Thesis: Predictive analysis and risk quantification of adverse clinical outcomes for biomedical knowledge discovery
+     Thesis: Predictive analysis and risk quantification of adverse clinical and biomedical outcomes
      
      Masters of Arts (2018) and Masters of Philosophy (2019)
      
@@ -152,7 +153,7 @@ Leadership and Management Experience
 MENTORING, TUTORING, and WRITING
 ----------
 
-- Volunteer data science and statistics mentor to a handful of high school, college, and professional students
+- Mentor and tutor for project management, R and python programming, and statistics and machine learning to high school and college students, graduates, and professionals.
 - ["Hack nights -- Solving healthcare data-science/AI/ML problems"](https://www.eventbrite.com/e/healthcare-hack-night-tickets-72013860395) Introduction to cancer genomics four part series.  Co-led by Nicholas Giangreco and Matthew Eng
     * [Adventures In Hacking Healthcare Medium Publication](https://medium.com/adventures-in-healthcare-data)
 - Nicholas Giangreco. ["The Importance of being Open"](http://www.phdish.com/blog/openscience). *PHDISH* January 9th 2019. 
