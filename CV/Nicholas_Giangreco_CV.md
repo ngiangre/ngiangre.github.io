@@ -74,7 +74,7 @@ August 2014-May 2019
 FELLOWSHIPS AND AWARDS
 ----------
 
--   Three-Minute Thesis finalist @ Columbia Graduate School of Arts and Sciences
+- Three-Minute Thesis finalist @ Columbia Graduate School of Arts and Sciences
 
 -   Best contribution in methodological research at the [OHDSI 2018 Symposium](https://www.ohdsi.org/2018-ohdsi-symposium/) for [Pediatric Drug Safety](http://10.7490/f1000research.1116203.1) poster.
 
@@ -174,9 +174,12 @@ MENTORING, TUTORING, and WRITING
 CONFERENCES AND HACKATHONS
 ----------
 
+- Judge, Predictive analytics track, Columbia University COVID-19 Data Challenge
+
 - [Virtual Interoperathon 2020](https://interoperabilityinstitute.org/virtual-interopathon/)
    - Project developer for personalized health record accessed with fhir-client python api
    - Developed flask application [proof-of-concept](https://github.com/ngiangre/District-13_Sandbox).
+   
 - [NCBI Hackathon @ Carnegie Mellon University January 2020](https://biohackathons.github.io/)
    - Project co-lead for developing and extending common data model to represent biological 'omics data for reproducible queries and analyses. 
    - See [OMOPOmics](https://github.com/NCBI-Codeathons/OMOPOmics) github repository. 
