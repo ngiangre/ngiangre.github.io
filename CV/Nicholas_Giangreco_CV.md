@@ -15,14 +15,14 @@ address : 154 Haven Avenue, New York, New York, 10032
 phone : 7167132124
 ---
 
-<u>**Date of preparation:**</u> July 5th 2020 | 
+<u>**Date of preparation:**</u> October 25th 2020 | 
 ---- | ----:
 <u>**Email Address:**</u> | nick.giangreco@gmail.com |
 <u>**Presentation:**</u> | Microsoft/Apple Office, Markdown, Rmarkdown, Jupyter Notebooks |
 <u>**Programming Languages:**</u> | Python, R, Bash, SQL, Java |
-<u>**Programming Techniques:**</u> | Parallelization, Out-of-core learning, Distributed computing,  |
-<u>**Programming Platforms:**</u> | Multicore machines, Amazon services (e.g. EC2), Databricks |
-<u>**Project Management:**</u> | Teamwork, Slack, Asana, Basecamp, Gitter, DropBox, Google |
+<u>**Programming Techniques:**</u> | Parallelization, Out-of-core learning, Machine learning, Resampling |
+<u>**Programming Platforms:**</u> | Multicore machines, Amazon Web Services (e.g. EC2), Databricks |
+<u>**Project Management Tools:**</u> | Teamwork, Slack, Discord, Asana, Basecamp, DropBox, Google Drive |
 <u>**Web design:**</u> | Plotly (Dash & Shiny), HTML, CSS, Bootstrap |
 <u>**Web links:**</u> | [Github](http://github.com/ngiangre) [Linkedin](http://www.linkedin.com/in/nickgiangreco/) [ORCID](https://orcid.org/0000-0001-8138-4947) [nickg.bio](http://nickg.bio) |
 
@@ -74,7 +74,7 @@ August 2014-May 2019
 FELLOWSHIPS AND AWARDS
 ----------
 
-- Three-Minute Thesis finalist @ Columbia Graduate School of Arts and Sciences
+- Three-Minute Thesis 2019 finalist @ Columbia Graduate School of Arts and Sciences.
 
 -   Best contribution in methodological research at the [OHDSI 2018 Symposium](https://www.ohdsi.org/2018-ohdsi-symposium/) for [Pediatric Drug Safety](http://10.7490/f1000research.1116203.1) poster.
 
@@ -141,7 +141,7 @@ Leadership and Management Experience
    + Secured funding and launched event portfolio for trainee development
    + Manage monthly departmental happy hours
 - [New York Health Artificial Intelligence Society](https://www.meetup.com/NYHAIS/)
-   + 501(c)(3) not-for-profit cofounder and Secretary
+   + 501(c)(3) not-for-profit Cofounder and Secretary
    + Meetup co-organizer 2018-
    + Promote public discourse on a wide range of topics such as AI & Society, AI & Healthcare, and economic impact by AI. 
    + Organize and facilitate group engagement, workshops, AI study groups, and not-for-profit organization.
@@ -154,7 +154,7 @@ MENTORING, TUTORING, and WRITING
 ----------
 
 - Mentor and tutor for project management, R and python programming, and statistics and machine learning to high school and college students, graduates, and professionals.
-- ["Hack nights -- Solving healthcare data-science/AI/ML problems"](https://www.eventbrite.com/e/healthcare-hack-night-tickets-72013860395) Introduction to cancer genomics four part series.  Co-led by Nicholas Giangreco and Matthew Eng
+- ["Hack nights -- Solving healthcare data-science/AI/ML problems"](https://www.eventbrite.com/e/healthcare-hack-night-tickets-72013860395) Introduction to cancer genomics four part series.  Co-led with Matthew Eng
     * [Adventures In Hacking Healthcare Medium Publication](https://medium.com/adventures-in-healthcare-data)
 - Nicholas Giangreco. ["The Importance of being Open"](http://www.phdish.com/blog/openscience). *PHDISH* January 9th 2019. 
 - Mentoring:
@@ -174,6 +174,10 @@ MENTORING, TUTORING, and WRITING
 CONFERENCES AND HACKATHONS
 ----------
 
+- [Hack for NF, Children's Tumor Foundation](https://nfhack-platform.bemyapp.com/#/event)
+   - Co-lead web developer coordination and product development
+   - A FHIR-complient but primarily patient-centric profile for NF management and centralized repository for medical journey. 
+
 - Judge, Predictive analytics track, Columbia University COVID-19 Data Challenge
 
 - [Virtual Interoperathon 2020](https://interoperabilityinstitute.org/virtual-interopathon/)
@@ -182,7 +186,7 @@ CONFERENCES AND HACKATHONS
    
 - [NCBI Hackathon @ Carnegie Mellon University January 2020](https://biohackathons.github.io/)
    - Project co-lead for developing and extending common data model to represent biological 'omics data for reproducible queries and analyses. 
-   - See [OMOPOmics](https://github.com/NCBI-Codeathons/OMOPOmics) github repository. 
+   - See original [OMOPOmics](https://github.com/NCBI-Codeathons/OMOPOmics) and R package [ROMOPOmics](https://github.com/AndrewC160/ROMOPOmics) github repository. 
    
 - [CSHL Biological Data Science meeting November 2018.](https://meetings.cshl.edu/meetings.aspx?meet=data&year=20)
 
