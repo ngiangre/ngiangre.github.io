@@ -31,7 +31,7 @@ WORK EXPERIENCE
 ----------
 
 2016 - Present
-:    **Systems Biology PhD Student** [(Columbia University)](https://systemsbiology.columbia.edu/people/nicholas-giangreco); New York, NY
+:    **Systems Biologist** [(Columbia University)](https://systemsbiology.columbia.edu/people/nicholas-giangreco); New York, NY
 
      Thesis: Predictive analysis and risk quantification of adverse clinical and biomedical outcomes
    
