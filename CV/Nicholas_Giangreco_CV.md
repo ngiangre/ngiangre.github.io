@@ -15,7 +15,7 @@ address : 154 Haven Avenue, New York, New York, 10032
 phone : 7167132124
 ---
 
-<u>**Date of preparation:**</u> October 25th 2020 | 
+<u>**Date of preparation:**</u> November 1st 2020 | 
 ---- | ----:
 <u>**Email Address:**</u> | nick.giangreco@gmail.com |
 <u>**Presentation:**</u> | Microsoft/Apple Office, Markdown, Rmarkdown, Jupyter Notebooks |
@@ -27,50 +27,47 @@ phone : 7167132124
 <u>**Web links:**</u> | [Github](http://github.com/ngiangre) [Linkedin](http://www.linkedin.com/in/nickgiangreco/) [ORCID](https://orcid.org/0000-0001-8138-4947) [nickg.bio](http://nickg.bio) |
 
 
+WORK EXPERIENCE
+----------
+
+2016 - Present
+:    **Systems Biology PhD Student** [(Columbia University)](https://systemsbiology.columbia.edu/people/nicholas-giangreco); New York, NY
+
+     Thesis: Predictive analysis and risk quantification of adverse clinical and biomedical outcomes
+   
+June 2019 - August 2019
+:    **Clinical informatics intern** [(Regeneron Genetics Center)](https://www.regeneron.com/genetics-center)); Tarrytown, NY
+	  
+	  - Developed database of multivariate clinical associations using incremental learning on amazon web services. 
+	  
+July 2018 - September 2018
+:    **Computational biology intern** [(Genetic Intelligence Inc.)](https://www.geneticintelligence.com/); New York, NY
+	  
+	  - Conducted independent and collaborative genomics research using NCBI APIs and amazon web services.
+	  
+2014-2019
+:    **Cancer bioinformatician** [(National Human Genome Research Institute)](https://www.genome.gov/staff/Laura-Elnitski-PhD); Bethesda, MD
+     
+     Postbaccalauureate trainee 2014-2016
+     
+     Special volunteer 2016-2019
+
+     - Investigated ovarian endometrioid tumorigenesis by integrating and analyzing RNASeq and DNA methylation sequencing (MBD-Seq).
+     
 EDUCATION
 ----------
 
 
-August 2016 - Present
+2016 - Present
 :     [**PhD Candidate, Systems Biology**](http://systemsbiology.columbia.edu/people/nicholas-giangreco); Columbia University, New York City, NY
 
      PhD advisor: [Dr. Nicholas Tatonetti](http://tatonettilab.org)
      
-     Thesis: Predictive analysis and risk quantification of adverse clinical and biomedical outcomes
-     
      Masters of Arts (2018) and Masters of Philosophy (2019)
      
-August 2010 - May 2014
+2010 - 2014
 :     **BS, Biochemistry**; University of Rochester, Rochester, NY
 
-WORK EXPERIENCE
-----------
-
-June 2019 - August 2019
-:    [**Regeneron Genetics Center**](https://www.regeneron.com/genetics-center); Tarrytown, NY
-
-	  Clinical informatics intern
-	  
-	  - Population modeling for data-driven clinical phenotyping
-	  
-July 2018 - September 2018
-:    [**Genetic Intelligence Inc.**](https://www.geneticintelligence.com/); New York, NY
-
-	  Computational biology intern
-	  
-	  - Conducted independent and collaborative genomics research
-	  
-August 2014-May 2019
-:    **National Human Genome Research Institute**; Bethesda, MD
-
-     Principal Investigator: [Dr. Laura Elnitski](https://www.genome.gov/12514761/elnitski--group/)
-     
-     Cancer bioinformatics trainee 2014-2016
-     
-     Special volunteer 2016-2019
-
-     - Investigated ovarian endometrioid tumorigenesis by integrating and ananlyzing RNASeq and DNA methylation sequencing (MBD-Seq).
-     
 FELLOWSHIPS AND AWARDS
 ----------
 
@@ -176,7 +173,7 @@ CONFERENCES AND HACKATHONS
 
 - [Hack for NF, Children's Tumor Foundation](https://nfhack-platform.bemyapp.com/#/event)
    - Co-lead web developer coordination and product development
-   - A FHIR-complient but primarily patient-centric profile for NF management and centralized repository for medical journey. 
+   - A FHIR-complient and primarily patient-centric profile for NF management and centralized repository for medical journey. 
 
 - Judge, Predictive analytics track, Columbia University COVID-19 Data Challenge
 
