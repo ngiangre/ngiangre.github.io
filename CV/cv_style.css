@@ -44,6 +44,10 @@ h2:before {
     background-color: #757575;
 }
 
+/* for front sentence */
+h3 {
+    text-align:center;
+}
 /* Definitions */
 dt {
     float: left;

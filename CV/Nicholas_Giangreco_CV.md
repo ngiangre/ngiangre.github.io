@@ -15,16 +15,11 @@ address : 154 Haven Avenue, New York, New York, 10032
 phone : 7167132124
 ---
 
-<u>**Date of preparation:**</u> November 1st 2020 | 
----- | ----:
-<u>**Email Address:**</u> | nick.giangreco@gmail.com |
-<u>**Presentation:**</u> | Microsoft/Apple Office, Markdown, Rmarkdown, Jupyter Notebooks |
-<u>**Programming Languages:**</u> | Python, R, Bash, SQL, Java |
-<u>**Programming Techniques:**</u> | Parallelization, Out-of-core learning, Machine learning, Resampling |
-<u>**Programming Platforms:**</u> | Multicore machines, Amazon Web Services (e.g. EC2), Databricks |
-<u>**Project Management Tools:**</u> | Teamwork, Slack, Discord, Asana, Basecamp, DropBox, Google Drive |
-<u>**Web design:**</u> | Plotly (Dash & Shiny), HTML, CSS, Bootstrap |
-<u>**Web links:**</u> | [Github](http://github.com/ngiangre) [Linkedin](http://www.linkedin.com/in/nickgiangreco/) [ORCID](https://orcid.org/0000-0001-8138-4947) [nickg.bio](http://nickg.bio) |
+### *Industry-experienced and collaborative translational bioinformatician* 
+
+[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** November 1st 2020 
+
+**Programming Languages:** Python, R, bash **Papers:** 2 first-author (in preparation), 4 collaborations, 1 on bioarxiv **Posters:** 5 first-author **Team projects/Hackathons:** 1 R package, 1 python package, 1 R Shiny App, 1 Dash/Plotly app, 6 analysis workflows in python, R, bash **Leadership roles:** 4 club president, 1 treasurer, 1 501(c)(3) nonprofit secretary
 
 
 WORK EXPERIENCE
@@ -33,26 +28,24 @@ WORK EXPERIENCE
 2016 - Present
 :    **Systems biologist** [(Columbia University)](https://systemsbiology.columbia.edu/people/nicholas-giangreco); New York, NY
 
-     Thesis: Predictive analysis and risk quantification of adverse clinical and biomedical outcomes
+	Thesis: Predictive analysis and risk quantification of adverse clinical and biomedical outcomes
    
 June 2019 - August 2019
 :    **Clinical informatics intern** [(Regeneron Genetics Center)](https://www.regeneron.com/genetics-center)); Tarrytown, NY
 	  
-	  - Developed database of multivariate clinical associations using incremental learning on amazon web services. 
+	Developed database of multivariate clinical associations using incremental learning on amazon web services. 
 	  
 July 2018 - September 2018
 :    **Computational biology intern** [(Genetic Intelligence Inc.)](https://www.geneticintelligence.com/); New York, NY
 	  
-	  - Conducted independent and collaborative genomics research using NCBI APIs and amazon web services.
+	Conducted independent and collaborative genomics research using NCBI APIs and amazon web services.
 	  
 2014-2019
 :    **Cancer bioinformatician** [(National Human Genome Research Institute)](https://www.genome.gov/staff/Laura-Elnitski-PhD); Bethesda, MD
      
-     Postbaccalauureate trainee 2014-2016
-     
-     Special volunteer 2016-2019
+	Post-baccalaureate trainee 2014-2016; Special volunteer 2016-2019
 
-     - Investigated ovarian endometrioid tumorigenesis by integrating and analyzing RNASeq and DNA methylation sequencing (MBD-Seq).
+	Investigated ovarian endometrioid tumorigenesis by integrating and analyzing RNASeq and DNA methylation sequencing (MBD-Seq).
      
 EDUCATION
 ----------
@@ -130,10 +123,10 @@ Leadership and Management Experience
     + Treasurer 2019-2020
         + Establish budget and expense sheets and annual reports
         + Manage forty thousand dollar budget for Columbia inter-school activities. 
-- Department of Biomedical Informatics
+- [Department of Biomedical Informatics](https://www.dbmi.columbia.edu/)
    + Co-lead weekly seminar series
    + Manage presentation schedule, speaker logistics and travel, and promote team coordination.
-- Department of Systems Biology
+- [Department of Systems Biology](https://systemsbiology.columbia.edu/)
    + Point person for Systems Biology Trainee Council
    + Secured funding and launched event portfolio for trainee development
    + Manage monthly departmental happy hours
@@ -170,6 +163,9 @@ MENTORING, TUTORING, and WRITING
 
 CONFERENCES AND HACKATHONS
 ----------
+
+- [Elixir biohackathon](https://github.com/elixir-europe/BioHackathon-projects-2020)
+   - Collaborated with bioinformatics team to integrate nextflow scheme and cancer mutation data (vcf files) into OMOP standard structure using [ROMOPOmics](https://github.com/AndrewC160/ROMOPOmics).
 
 - [Hack for NF, Children's Tumor Foundation](https://nfhack-platform.bemyapp.com/#/event)
    - Co-lead web developer coordination and product development
