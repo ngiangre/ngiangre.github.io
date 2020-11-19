@@ -19,7 +19,14 @@ phone : 7167132124
 
 [Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** November 1st 2020 
 
-**Programming Languages:** Python, R, bash **Papers:** 2 first-author (in preparation), 4 collaborations, 1 on bioarxiv **Posters:** 5 first-author **Team projects/Hackathons:** 1 R package, 1 python package, 1 R Shiny App, 1 Dash/Plotly app, 6 analysis workflows in python, R, bash **Leadership roles:** 4 club president, 1 treasurer, 1 501(c)(3) nonprofit secretary
+| |
+| :------ |
+| **Research areas:** Pediatric drug safety, Cardiovascular biomarker development, Heart disease mechanisms, Integrative analysis via clinical and biomarker standardization |
+| **Technical expertise:** Differential analysis, Interpretable machine learning, Statistical simulation, Data cleaning and engineering, Data-driven hypothesis generation and hypothesis testing |
+| **Programming Languages:** Python, R, bash | 
+| **Publications:** 2 first-author manuscripts (in preparation), 4 collaborations, 1 on bioarxiv, 5 first-author posters | 
+| **Team projects/Hackathons:** 1 R package, 1 python package, 1 R Shiny App, 1 Dash/Plotly app, 6 analysis workflows in python, R, bash |
+| **Leadership roles:** 3 club president, 2 treasurer, 1 501(c)(3) nonprofit secretary |
 
 
 WORK EXPERIENCE
