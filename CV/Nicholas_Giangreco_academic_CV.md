@@ -15,27 +15,27 @@ address : 154 Haven Avenue, New York, New York, 10032
 phone : 7167132124
 ---
 
-### *Independent and collaborative translational bioinformatician* 
-
 [Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** November 1st 2020 
 
-| |
-| :------ |
-| **Research areas:** Pediatric drug safety, Cardiovascular biomarker development, Heart disease mechanisms, Integrative analysis via clinical and biomarker standardization |
-| **Technical expertise:** Differential analysis, Interpretable machine learning, Statistical simulation, Data cleaning and engineering, Data-driven hypothesis generation and hypothesis testing |
-| **Programming Languages:** Python, R, bash | 
-| **Publications:** 2 first-author manuscripts (in preparation), 4 collaborations, 1 on bioarxiv, 5 first-author posters | 
-| **Team projects/Hackathons:** 1 R package, 1 python package, 1 R Shiny App, 1 Dash/Plotly app, 6 analysis workflows in python, R, bash |
-| **Leadership roles:** 3 club president, 2 treasurer, 1 501(c)(3) nonprofit secretary |
+EDUCATION
+----------
 
+
+2016 - Present
+:     [**PhD Candidate, Systems Biology**](http://systemsbiology.columbia.edu/people/nicholas-giangreco); Columbia University, New York City, NY
+     
+     Masters of Arts (2018) and Masters of Philosophy (2019)
+     
+2010 - 2014
+:     **BS, Biochemistry**; University of Rochester, Rochester, NY
 
 WORK EXPERIENCE
 ----------
 
 2016 - Present
-:    **Systems biologist** [(Columbia University)](https://systemsbiology.columbia.edu/people/nicholas-giangreco); New York, NY
-
-	Thesis: Predictive analysis and risk quantification of adverse clinical and biomedical outcomes
+:    **Systems biology Graduate Research Assistant** [(Columbia University)](https://systemsbiology.columbia.edu/people/nicholas-giangreco); New York, NY
+   
+    PhD advisor: [Dr. Nicholas Tatonetti](http://tatonettilab.org)
    
 June 2019 - August 2019
 :    **Clinical informatics intern** [(Regeneron Genetics Center)](https://www.regeneron.com/genetics-center)); Tarrytown, NY
@@ -54,19 +54,6 @@ July 2018 - September 2018
 
 	Investigated ovarian endometrioid tumorigenesis by integrating and analyzing RNASeq and DNA methylation sequencing (MBD-Seq).
      
-EDUCATION
-----------
-
-
-2016 - Present
-:     [**PhD Candidate, Systems Biology**](http://systemsbiology.columbia.edu/people/nicholas-giangreco); Columbia University, New York City, NY
-
-     PhD advisor: [Dr. Nicholas Tatonetti](http://tatonettilab.org)
-     
-     Masters of Arts (2018) and Masters of Philosophy (2019)
-     
-2010 - 2014
-:     **BS, Biochemistry**; University of Rochester, Rochester, NY
 
 FELLOWSHIPS AND AWARDS
 ----------
@@ -88,7 +75,7 @@ FELLOWSHIPS AND AWARDS
 PUBLICATIONS 
 ----------
 
-- **Nicholas Giangreco**, Jonathan Elias, and Nicholas Tatonetti. No population left behind: improving pediatric drug safety using informatics and systems biology. British Journal of Clinical Pharmacology [(DOI)](http://dx.doi.org/10.1111/bcp.14705). 
+- **Nicholas Giangreco**, Jonathan Elias, and Nicholas Tatonetti. No population left behind: improving pediatric drug safety using informatics and systems biology. British Journal of Clinical Pharmacology [(DOI)](https://doi.org/10.1111/bcp.14705). 
 - **Nicholas P. Giangreco**, Barry Fine, Nicholas P. Tatonetti. cohorts: A Python package for clinical ‘omics data management. [bioarxiv](https://www.biorxiv.org/content/10.1101/626051v1.article-info)
 - Benjamin S Glicksberg, Boris Oskotsky, Phyllis M Thangaraj, **Nicholas Giangreco**, Marcus A Badgeley, Kipp W Johnson, Debajyoti Datta, Vivek A Rudrapatna, Nadav Rappoport, Mark M Shervey, Riccardo Miotto, Theodore C Goldstein, Eugenia Rutenberg, Remi Frazier, Nelson Lee, Sharat Israni, Rick Larsen, Bethany Percha, Li Li, Joel T Dudley, Nicholas P Tatonetti, Atul J Butte, PatientExploreR: an extensible application for dynamic visualization of patient clinical history from electronic health records in the OMOP common data model, Bioinformatics, , btz409, [https://doi.org/10.1093/bioinformatics/btz409](https://doi.org/10.1093/bioinformatics/btz409)
 - Benjamin S Glicksberg, Boris Oskotsky, **Nicholas Giangreco**, Phyllis M Thangaraj, Vivek Rudrapatna, Debajyoti Datta, Remi Frazier, Nelson Lee, Rick Larsen, Nicholas P Tatonetti, Atul J Butte, ROMOP: a light-weight R package for interfacing with OMOP-formatted electronic health record data, JAMIA Open, Volume 2, Issue 1, April 2019, Pages 10–14, [https://doi.org/10.1093/jamiaopen/ooy059](https://doi.org/10.1093/jamiaopen/ooy059)
