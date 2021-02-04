@@ -211,6 +211,7 @@ CONFERENCES AND HACKATHONS
 TALKS AND PANELS
 --------
 
+- "Understanding dynamics with statistical modeling" Coding workshop, CUIMC Data Science Club, [YouTube video](https://www.youtube.com/watch?v=ObmdJ-1Ok_Q)
 - "Intro to Bioinformatics and How to Analyze Brain Tissue with Data Science". Invited presentation at [
 NYC Medical Research and Bioinformatics Group](https://www.meetup.com/NYC-Medical-Research-and-Bioinformatics-Group/). November 2018. [Presentation link](https://github.com/ngiangre/Miscellaneous_but_Useful/blob/master/20181113_Bioinformatics_Meetup_Presentation.pdf).
 - Medical Research Career Panelist, Minds Matter NYC, June 2018
