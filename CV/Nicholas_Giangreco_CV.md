@@ -17,7 +17,7 @@ phone : 7167132124
 
 ### *Independent and collaborative translational bioinformatician* 
 
-[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** November 1st 2020 
+[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** February 14th 2021 
 
 | |
 | :------ |
@@ -35,7 +35,7 @@ WORK EXPERIENCE
 2016 - Present
 :    **Systems biologist** [(Columbia University)](https://systemsbiology.columbia.edu/people/nicholas-giangreco); New York, NY
 
-	Thesis: Predictive analysis and risk quantification of adverse clinical and biomedical outcomes
+	Thesis work includes predictive analysis and detecting risk factors of adverse clinical and biomedical outcomes
    
 June 2019 - August 2019
 :    **Clinical informatics intern** [(Regeneron Genetics Center)](https://www.regeneron.com/genetics-center)); Tarrytown, NY
@@ -212,6 +212,7 @@ TALKS AND PANELS
 --------
 
 - "Understanding dynamics with statistical modeling" Coding workshop, CUIMC Data Science Club, [YouTube video](https://www.youtube.com/watch?v=ObmdJ-1Ok_Q)
+- "Introduction to programming and bioinformatics" Tutorial for 2021 Columbia University Science Matters Research Internship
 - "Intro to Bioinformatics and How to Analyze Brain Tissue with Data Science". Invited presentation at [
 NYC Medical Research and Bioinformatics Group](https://www.meetup.com/NYC-Medical-Research-and-Bioinformatics-Group/). November 2018. [Presentation link](https://github.com/ngiangre/Miscellaneous_but_Useful/blob/master/20181113_Bioinformatics_Meetup_Presentation.pdf).
 - Medical Research Career Panelist, Minds Matter NYC, June 2018
