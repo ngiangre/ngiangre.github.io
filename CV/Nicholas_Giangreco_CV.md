@@ -21,7 +21,7 @@ phone : 7167132124
 
 | |
 | :------ |
-| **Research areas:** Pediatric drug safety, Cardiovascular biomarker development, Heart disease mechanisms, Integrative analysis via clinical and biomarker standardization |
+| **Topic areas:** Pediatric drug safety, Cardiovascular biomarker development, Integrative analysis via clinical and biomarker standardization |
 | **Technical expertise:** Differential analysis, Interpretable machine learning, Statistical simulation, Data cleaning and engineering, Data-driven hypothesis generation and hypothesis testing |
 | **Programming Languages:** Python, R, bash | 
 | **Publications:** 2 first-author manuscripts (in preparation), 4 collaborations, 1 on bioarxiv, 5 first-author posters | 
@@ -37,6 +37,10 @@ WORK EXPERIENCE
 
 	Thesis work includes predictive analysis and detecting risk factors of adverse clinical and biomedical outcomes
    
+February 2021 - Present
+:   **Bioinformatics intern** [(DNAnexus)](https://www.dnanexus.com/); San Francisco, CA
+
+
 June 2019 - August 2019
 :    **Clinical informatics intern** [(Regeneron Genetics Center)](https://www.regeneron.com/genetics-center)); Tarrytown, NY
 	  
