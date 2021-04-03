@@ -15,16 +15,16 @@ address : 154 Haven Avenue, New York, New York, 10032
 phone : 7167132124
 ---
 
-### *Independent and collaborative translational bioinformatician* 
+### *Independent and collaborative translational informatician* 
 
-[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** March 28th 2021 
+[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** April 3rd 2021 
 
 | |
 | :------ |
-| **Topic areas:** Pediatric drug safety, Cardiovascular biomarker development, Integrative analysis via clinical and biomarker standardization |
-| **Technical expertise:** Differential analysis, Interpretable machine learning, Statistical simulation, Data cleaning and engineering, Data-driven hypothesis generation and hypothesis testing |
+| **Topic areas:** Pediatric drug safety, Explainable machine learning, Cardiovascular biomarker development, Clinical and biomarker data integration and analysis |
+| **Technical expertise:** Differential expression analysis, Interpretable machine learning, Statistical simulation, Data cleaning and engineering, Data-driven hypothesis generation and hypothesis testing |
 | **Programming Languages:** Python, R, bash | 
-| **Publications:** 2 first-author manuscripts (in preparation), 4 collaborations, 1 on bioarxiv, 5 first-author posters | 
+| **Publications:** 6 first-author manuscripts (1 published, 1 accepted, 4 in preparation), 4 collaborations, 1 on bioarxiv, 5 first-author posters | 
 | **Team projects/Hackathons:** 1 R package, 1 python package, 1 R Shiny App, 1 Dash/Plotly app, 6 analysis workflows in python, R, bash |
 | **Leadership roles:** 3 club president, 2 treasurer, 1 501(c)(3) nonprofit secretary |
 
@@ -94,6 +94,9 @@ PUBLICATIONS
 ----------
 
 - **Nicholas Giangreco**, Jonathan Elias, and Nicholas Tatonetti. No population left behind: improving pediatric drug safety using informatics and systems biology. British Journal of Clinical Pharmacology [(DOI)](http://dx.doi.org/10.1111/bcp.14705). 
+- **Nicholas P. Giangreco** et al. Plasma kallikrein predicts primary graft dysfunction after heart transplant. Journal of Heart and Lung Transplantation (*accepted*)
+- Andrew Clugston^, **Nicholas Giangreco^**, Alex Francette, Ben Busby. ROMOPOmics: An R package for integrating patient molecular data in OMOP-format to facilitate precision medicine. (*in preparation*)
+- **Nicholas P. Giangreco** et al. Pediatric data from the All of Us Research Program: demonstration of pediatric obesity over time. (*in preparation*)
 - **Nicholas P. Giangreco**, Barry Fine, Nicholas P. Tatonetti. cohorts: A Python package for clinical ‘omics data management. [bioarxiv](https://www.biorxiv.org/content/10.1101/626051v1.article-info)
 - Benjamin S Glicksberg, Boris Oskotsky, Phyllis M Thangaraj, **Nicholas Giangreco**, Marcus A Badgeley, Kipp W Johnson, Debajyoti Datta, Vivek A Rudrapatna, Nadav Rappoport, Mark M Shervey, Riccardo Miotto, Theodore C Goldstein, Eugenia Rutenberg, Remi Frazier, Nelson Lee, Sharat Israni, Rick Larsen, Bethany Percha, Li Li, Joel T Dudley, Nicholas P Tatonetti, Atul J Butte, PatientExploreR: an extensible application for dynamic visualization of patient clinical history from electronic health records in the OMOP common data model, Bioinformatics, , btz409, [https://doi.org/10.1093/bioinformatics/btz409](https://doi.org/10.1093/bioinformatics/btz409)
 - Benjamin S Glicksberg, Boris Oskotsky, **Nicholas Giangreco**, Phyllis M Thangaraj, Vivek Rudrapatna, Debajyoti Datta, Remi Frazier, Nelson Lee, Rick Larsen, Nicholas P Tatonetti, Atul J Butte, ROMOP: a light-weight R package for interfacing with OMOP-formatted electronic health record data, JAMIA Open, Volume 2, Issue 1, April 2019, Pages 10–14, [https://doi.org/10.1093/jamiaopen/ooy059](https://doi.org/10.1093/jamiaopen/ooy059)
@@ -102,6 +105,7 @@ PUBLICATIONS
 - **Giangreco N.**, Petrykowska H., Scott A., Margolin G., Gotea V., Cho K. R., and Elnitski L. Inactivation of _Arid1a_ drives aberrant epigenetic traits in a mouse model of _Apc_/_Pten_ defective ovarian endometrioid tumors. *(in preparation)*
 
 
+^Co-first authors
 
 [**Peer-Reviewed Publications on Pubmed**](https://www.ncbi.nlm.nih.gov/pubmed/?term=Giangreco+N%5BAuthor%5D)
 
