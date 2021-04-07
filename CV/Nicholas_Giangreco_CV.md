@@ -73,6 +73,22 @@ EDUCATION
 2010 - 2014
 :     **BS, Biochemistry**; University of Rochester, Rochester, NY
 
+PUBLICATIONS
+----------
+
+- **Nicholas P. Giangreco** and Nicholas P. Tatonetti. Evaluating risk detection methods to uncover ontogenic-mediated adverse drug effect mechanisms in children. medRxiv doi: [https://doi.org/10.1101/2021.03.10.21253302](https://doi.org/10.1101/2021.03.10.21253302).
+- **Giangreco, NP**, Elias, JE, Tatonetti, NP. No population left behind: Improving paediatric drug safety using informatics and systems biology. Br J Clin Pharmacol. 2021; 1– 7. [https://doi.org/10.1111/bcp.14705](https://doi.org/10.1111/bcp.14705).
+- **Nicholas P. Giangreco**, Barry Fine, Nicholas P. Tatonetti. cohorts: A Python package for clinical ‘omics data management. bioaRxiv doi: [https://www.biorxiv.org/content/10.1101/626051](https://www.biorxiv.org/content/10.1101/626051)
+- Benjamin S Glicksberg, Boris Oskotsky, Phyllis M Thangaraj, **Nicholas Giangreco**, Marcus A Badgeley, Kipp W Johnson, Debajyoti Datta, Vivek A Rudrapatna, Nadav Rappoport, Mark M Shervey, Riccardo Miotto, Theodore C Goldstein, Eugenia Rutenberg, Remi Frazier, Nelson Lee, Sharat Israni, Rick Larsen, Bethany Percha, Li Li, Joel T Dudley, Nicholas P Tatonetti, Atul J Butte, PatientExploreR: an extensible application for dynamic visualization of patient clinical history from electronic health records in the OMOP common data model, Bioinformatics, Volume 35, Issue 21, 1 November 2019, Pages 4515–4518, [https://doi.org/10.1093/bioinformatics/btz409](https://doi.org/10.1093/bioinformatics/btz409).
+- Benjamin S Glicksberg, Boris Oskotsky, **Nicholas Giangreco**, Phyllis M Thangaraj, Vivek Rudrapatna, Debajyoti Datta, Remi Frazier, Nelson Lee, Rick Larsen, Nicholas P Tatonetti, Atul J Butte, ROMOP: a light-weight R package for interfacing with OMOP-formatted electronic health record data, JAMIA Open, Volume 2, Issue 1, April 2019, Pages 10–14, [https://doi.org/10.1093/jamiaopen/ooy059](https://doi.org/10.1093/jamiaopen/ooy059)
+- Estibaliz Castillero, Ziad A. Ali, Hirokazu Akashi, Nicholas Giangreco, Catherine Wang, Eric J. Stöhr, Ruping Ji, Xiaokan Zhang, Nathaniel Kheysin, Joo-Eun S. Park, Sheetal Hegde, Sanatkumar Patel, Samantha Stein, Carlos Cuenca, Diana Leung, Shunichi Homma, Nicholas P. Tatonetti, Veli K. Topkara, Koji Takeda, Paolo C. Colombo, Yoshifumi Naka, H. Lee Sweeney, P. Christian Schulze, and Isaac George
+American Journal of Physiology-Heart and Circulatory Physiology 2018 315:5, [H1463-H1476](https://www.physiology.org/doi/10.1152/ajpheart.00187.2018).
+- Kim-Hellmuth, S., Bechheim, M., Pütz, B., Mohammadi, P., Néd´lec, Y, Giangreco, N., et al. Genetic regulatory effects modified by immune activation contribute to autoimmune disease associations. Nat Commun 8, 266 (2017). [https://doi.org/10.1038/s41467-017-00366-1](https://doi.org/10.1038/s41467-017-00366-1).
+- **Giangreco N.**, Petrykowska H., Scott A., Margolin G., Gotea V., Cho K. R., and Elnitski L. Inactivation of _Arid1a_ drives aberrant epigenetic traits in a mouse model of _Apc_ / _Pten_ defective ovarian endometrioid tumors. *(in preparation)*
+
+
+[**Peer-Reviewed Publications on Pubmed**](https://www.ncbi.nlm.nih.gov/pubmed/?term=Giangreco+N%5BAuthor%5D)
+
 FELLOWSHIPS AND AWARDS
 ----------
 
@@ -89,25 +105,6 @@ FELLOWSHIPS AND AWARDS
 -   Fulbright Fellowship Alternate 2013-2014: Sweden, Molecular Modeling, “Novel Antibody-SpA Complex Modeling”.
 
 -   Travel Award to 9<sup>th</sup> Student Council and ISMB/ECCB conference 2013 Berlin, Germany.
-
-PUBLICATIONS 
-----------
-
-- **Nicholas Giangreco**, Jonathan Elias, and Nicholas Tatonetti. No population left behind: improving pediatric drug safety using informatics and systems biology. British Journal of Clinical Pharmacology [(DOI)](http://dx.doi.org/10.1111/bcp.14705). 
-- **Nicholas P. Giangreco** et al. Plasma kallikrein predicts primary graft dysfunction after heart transplant. Journal of Heart and Lung Transplantation (*accepted*)
-- Andrew Clugston^, **Nicholas Giangreco^**, Alex Francette, Ben Busby. ROMOPOmics: An R package for integrating patient molecular data in OMOP-format to facilitate precision medicine. (*in preparation*)
-- **Nicholas P. Giangreco** et al. Pediatric data from the All of Us Research Program: demonstration of pediatric obesity over time. (*in preparation*)
-- **Nicholas P. Giangreco**, Barry Fine, Nicholas P. Tatonetti. cohorts: A Python package for clinical ‘omics data management. [bioarxiv](https://www.biorxiv.org/content/10.1101/626051v1.article-info)
-- Benjamin S Glicksberg, Boris Oskotsky, Phyllis M Thangaraj, **Nicholas Giangreco**, Marcus A Badgeley, Kipp W Johnson, Debajyoti Datta, Vivek A Rudrapatna, Nadav Rappoport, Mark M Shervey, Riccardo Miotto, Theodore C Goldstein, Eugenia Rutenberg, Remi Frazier, Nelson Lee, Sharat Israni, Rick Larsen, Bethany Percha, Li Li, Joel T Dudley, Nicholas P Tatonetti, Atul J Butte, PatientExploreR: an extensible application for dynamic visualization of patient clinical history from electronic health records in the OMOP common data model, Bioinformatics, , btz409, [https://doi.org/10.1093/bioinformatics/btz409](https://doi.org/10.1093/bioinformatics/btz409)
-- Benjamin S Glicksberg, Boris Oskotsky, **Nicholas Giangreco**, Phyllis M Thangaraj, Vivek Rudrapatna, Debajyoti Datta, Remi Frazier, Nelson Lee, Rick Larsen, Nicholas P Tatonetti, Atul J Butte, ROMOP: a light-weight R package for interfacing with OMOP-formatted electronic health record data, JAMIA Open, Volume 2, Issue 1, April 2019, Pages 10–14, [https://doi.org/10.1093/jamiaopen/ooy059](https://doi.org/10.1093/jamiaopen/ooy059)
-- Castillero E., Ali Z., Akashi H., **Giangreco N.**, Wang C., Ji R., Zhang X., Kheysin N., Park J., Hegde S., Patel S., Stein S., Cuenca C., Leung D., Homma S., Tatonetti N., Topkara V., Takeda K., Colombo P., Naka Y., Sweeny L., Schulze C., George I. Structural and Functional Cardiac Profile after Prolonged Duration of Mechanical Unloading: Potential Implications for Myocardial Recovery. [*American Journal of Heart and Circulation Physiology*, article in press](https://www.physiology.org/doi/10.1152/ajpheart.00187.2018)
-- Sarah Kim-Hellmuth, Matthias Bechheim, Benno Puetz, Pejman Mohammadi, Yohann Nedelec, **Nicholas Giangreco**, Jessica Becker, Vera Kaiser, Nadine Fricker, Esther Beier, Peter Boor, Stephane Castel, Markus M. Noethen, Luis B. Barreiro, Joseph K. Pickrell, Bertram Mueller-Myhsok, Tuuli Lappalainen, Johannes Schumacher, Veit Hornung. Genetic regulatory effects modified by immune activation contribute to autoimmune disease associations [*Nature Communications*, 8 (266): 1-10](https://www.nature.com/articles/s41467-017-00366-1). 
-- **Giangreco N.**, Petrykowska H., Scott A., Margolin G., Gotea V., Cho K. R., and Elnitski L. Inactivation of _Arid1a_ drives aberrant epigenetic traits in a mouse model of _Apc_/_Pten_ defective ovarian endometrioid tumors. *(in preparation)*
-
-
-^Co-first authors
-
-[**Peer-Reviewed Publications on Pubmed**](https://www.ncbi.nlm.nih.gov/pubmed/?term=Giangreco+N%5BAuthor%5D)
 
 POSTERS AND SOFTWARE
 ----------
