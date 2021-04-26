@@ -87,10 +87,14 @@ American Journal of Physiology-Heart and Circulatory Physiology 2018 315:5, [H14
 - **Giangreco N.**, Petrykowska H., Scott A., Margolin G., Gotea V., Cho K. R., and Elnitski L. Inactivation of _Arid1a_ drives aberrant epigenetic traits in a mouse model of _Apc_ / _Pten_ defective ovarian endometrioid tumors. *(in preparation)*
 
 
-[**Peer-Reviewed Publications on Pubmed**](https://www.ncbi.nlm.nih.gov/pubmed/?term=Giangreco+N%5BAuthor%5D)
+[**Peer-reviewed publications on pubmed**](https://www.ncbi.nlm.nih.gov/pubmed/?term=Giangreco+N%5BAuthor%5D)
+
+[**Google scholar profile**](https://scholar.google.com/citations?user=Q3m0Jl8AAAAJ&hl=en&oi=ao)
 
 FELLOWSHIPS AND AWARDS
 ----------
+
+- 2021 Diversity & Inclusion Commercialization and Entrepreneurship Fellow
 
 - Three-Minute Thesis 2019 finalist @ Columbia Graduate School of Arts and Sciences.
 
