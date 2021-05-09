@@ -40,9 +40,9 @@ WORK EXPERIENCE
 February 2021 - Present
 :   **Bioinformatics intern** [(DNAnexus)](https://www.dnanexus.com/); San Francisco, CA
 
-   Product management
-   
-   Initiating internal and external projects such as interpretable machine learning and genomic/phenomic data integration
+    Product management
+    
+    Initiating internal and external projects such as interpretable machine learning and genomic/phenomic data integration
 
 June 2019 - August 2019
 :    **Clinical informatics intern** [(Regeneron Genetics Center)](https://www.regeneron.com/genetics-center)); Tarrytown, NY
