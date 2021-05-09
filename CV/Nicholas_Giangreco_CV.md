@@ -24,7 +24,7 @@ phone : 7167132124
 | **Topic areas:** Pediatric drug safety, Explainable machine learning, Cardiovascular biomarker development, Clinical and biomarker data integration and analysis |
 | **Technical expertise:** Differential expression analysis, Interpretable machine learning, Statistical simulation, Data cleaning and engineering, Data-driven hypothesis generation and hypothesis testing |
 | **Programming Languages:** Python, R, bash | 
-| **Publications:** 6 first-author manuscripts (1 published, 1 accepted, 4 in preparation), 4 collaborations, 1 on bioarxiv, 5 first-author posters | 
+| **Publications:** 6 first-author manuscripts (1 published, 1 submitted, 4 in preparation), 4 collaborations, 1 on bio and medarxiv, 5 first-author posters | 
 | **Team projects/Hackathons:** 1 R package, 1 python package, 1 R Shiny App, 1 Dash/Plotly app, 6 analysis workflows in python, R, bash |
 | **Leadership roles:** 3 club president, 2 treasurer, 1 501(c)(3) nonprofit secretary |
 
@@ -41,6 +41,8 @@ February 2021 - Present
 :   **Bioinformatics intern** [(DNAnexus)](https://www.dnanexus.com/); San Francisco, CA
 
    Product management
+   
+    Initiating internal and external projects such as interpretable machine learning and genomic/phenomic data integration
 
 June 2019 - August 2019
 :    **Clinical informatics intern** [(Regeneron Genetics Center)](https://www.regeneron.com/genetics-center)); Tarrytown, NY
@@ -221,6 +223,7 @@ CONFERENCES AND HACKATHONS
 TALKS AND PANELS
 --------
 
+- 2021 Graduate Scholar for research talk entitled 'Mind the developmental gap: Identifying adverse drug effects across childhood to evaluate biological mechanisms from growth and development' with [Emuritus Professors at Columbia (EPIC)](https://www.youtube.com/channel/UCf6KOt3vTnXZQua94atQ1Dg)
 - "Understanding dynamics with statistical modeling" Coding workshop, CUIMC Data Science Club, [YouTube video](https://www.youtube.com/watch?v=ObmdJ-1Ok_Q)
 - "Introduction to programming and bioinformatics" Tutorial for 2021 Columbia University Science Matters Research Internship
 - "Intro to Bioinformatics and How to Analyze Brain Tissue with Data Science". Invited presentation at [
