@@ -21,7 +21,7 @@ phone : 7167132124
 
 | |
 | :------ |
-| **Topic areas:** Pediatric drug safety, Explainable machine learning, Cardiovascular biomarker development, Clinical and biomarker data integration and analysis |
+| **Topic areas:** Pediatric drug safety, Explainable machine learning, Cardiovascular biomarker development, Clinical and biomedical data integration and analysis |
 | **Technical expertise:** Differential expression analysis, Interpretable machine learning, Statistical simulation, Data cleaning and engineering, Data-driven hypothesis generation and hypothesis testing |
 | **Programming Languages:** Python, R, bash | 
 | **Publications:** 6 first-author manuscripts (1 published, 1 submitted, 4 in preparation), 4 collaborations, 1 on bio and medarxiv, 5 first-author posters | 
@@ -183,6 +183,8 @@ MENTORING, TUTORING, and WRITING
 CONFERENCES AND HACKATHONS
 ----------
 
+-[Clinical Reporting of Multi 'Omics data](https://www.library.cmu.edu/about/publications/news/upcoming-event-hackathon-2021)
+   - Led team and managed hackathon teams to manage and streamline integration of genomic, transcriptomic, and poolygenic risk score data into the OMOP common data model. See [github](https://github.com/collaborativebioinformatics/omics_to_omop).
 - [Elixir biohackathon](https://github.com/elixir-europe/BioHackathon-projects-2020)
    - Collaborated with bioinformatics team to integrate nextflow scheme and cancer mutation data (vcf files) into OMOP standard structure using [ROMOPOmics](https://github.com/AndrewC160/ROMOPOmics).
 
