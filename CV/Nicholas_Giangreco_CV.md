@@ -21,10 +21,10 @@ phone : 7167132124
 
 | |
 | :------ |
-| **Topic areas:** Pediatric drug safety, Explainable machine learning, Cardiovascular biomarker development, Clinical and biomedical data integration and analysis |
+| **Topic areas:** Pediatric drug safety, Explainable machine learning, Cardiovascular biomarker development, Clinical and biomedical data management/integration/ analysis |
 | **Technical expertise:** Differential expression analysis, Interpretable machine learning, Statistical simulation, Data cleaning and engineering, Data-driven hypothesis generation and hypothesis testing |
 | **Programming Languages:** Python, R, bash | 
-| **Publications:** 6 first-author manuscripts (1 published, 1 submitted, 4 in preparation), 4 collaborations, 1 on bio and medarxiv, 5 first-author posters | 
+| **Publications:** 5 first-author manuscripts (1 published, 2 accepted, 2 in preparation), 4 collaborations, 1 on bio and medarxiv, 5 first-author posters | 
 | **Team projects/Hackathons:** 1 R package, 1 python package, 1 R Shiny App, 1 Dash/Plotly app, 6 analysis workflows in python, R, bash |
 | **Leadership roles:** 3 club president, 2 treasurer, 1 501(c)(3) nonprofit secretary |
 
@@ -42,7 +42,7 @@ February 2021 - Present
 
     Product management
     
-    Initiating internal and external projects such as interpretable machine learning and genomic/phenomic data integration
+    Initiating internal and external projects such as interpretable machine learning and genomic/phenomic data integration/analysis
 
 June 2019 - August 2019
 :    **Clinical informatics intern** [(Regeneron Genetics Center)](https://www.regeneron.com/genetics-center)); Tarrytown, NY
@@ -78,7 +78,7 @@ EDUCATION
 PUBLICATIONS
 ----------
 
-- **Nicholas P. Giangreco** and Nicholas P. Tatonetti. Evaluating risk detection methods to uncover ontogenic-mediated adverse drug effect mechanisms in children. medRxiv doi: [https://doi.org/10.1101/2021.03.10.21253302](https://doi.org/10.1101/2021.03.10.21253302).
+- **Nicholas P. Giangreco** and Nicholas P. Tatonetti. Evaluating risk detection methods to uncover ontogenic-mediated adverse drug effect mechanisms in children. (accepted in BioData Mining) medRxiv doi: [https://doi.org/10.1101/2021.03.10.21253302](https://doi.org/10.1101/2021.03.10.21253302).
 - **Giangreco, NP**, Elias, JE, Tatonetti, NP. No population left behind: Improving paediatric drug safety using informatics and systems biology. Br J Clin Pharmacol. 2021; 1– 7. [https://doi.org/10.1111/bcp.14705](https://doi.org/10.1111/bcp.14705).
 - **Nicholas P. Giangreco**, Barry Fine, Nicholas P. Tatonetti. cohorts: A Python package for clinical ‘omics data management. bioaRxiv doi: [https://www.biorxiv.org/content/10.1101/626051](https://www.biorxiv.org/content/10.1101/626051)
 - Benjamin S Glicksberg, Boris Oskotsky, Phyllis M Thangaraj, **Nicholas Giangreco**, Marcus A Badgeley, Kipp W Johnson, Debajyoti Datta, Vivek A Rudrapatna, Nadav Rappoport, Mark M Shervey, Riccardo Miotto, Theodore C Goldstein, Eugenia Rutenberg, Remi Frazier, Nelson Lee, Sharat Israni, Rick Larsen, Bethany Percha, Li Li, Joel T Dudley, Nicholas P Tatonetti, Atul J Butte, PatientExploreR: an extensible application for dynamic visualization of patient clinical history from electronic health records in the OMOP common data model, Bioinformatics, Volume 35, Issue 21, 1 November 2019, Pages 4515–4518, [https://doi.org/10.1093/bioinformatics/btz409](https://doi.org/10.1093/bioinformatics/btz409).
@@ -96,7 +96,7 @@ American Journal of Physiology-Heart and Circulatory Physiology 2018 315:5, [H14
 FELLOWSHIPS AND AWARDS
 ----------
 
-- 2021 Diversity & Inclusion Commercialization and Entrepreneurship Fellow
+- 2021 Diversity & Inclusion Commercialization and Entrepreneurship Fellow @ Columbia Technology Ventures
 
 - Three-Minute Thesis 2019 finalist @ Columbia Graduate School of Arts and Sciences.
 
