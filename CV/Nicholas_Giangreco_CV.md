@@ -11,20 +11,20 @@ see github repo for licensing information
 -->
 ---
 title : Nicholas Giangreco
-address : 154 Haven Avenue, New York, New York, 10032
+address : 27 W Girard Boulevard, Kenmore NY 14217
 phone : 7167132124
 ---
 
 ### *Independent and collaborative translational informatician* 
 
-[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** June 20th 2021 
+[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** July 4th 2021 
 
 | |
 | :------ |
 | **Topic areas:** Pediatric drug safety, Explainable machine learning, Cardiovascular biomarker development, Clinical and biomedical data management/integration/ analysis |
 | **Technical expertise:** Differential expression analysis, Interpretable machine learning, Statistical simulation, Data cleaning and engineering, Data-driven hypothesis generation and hypothesis testing |
 | **Programming Languages:** Python, R, bash | 
-| **Publications:** 5 first-author manuscripts (1 published, 2 accepted, 2 in preparation), 4 collaborations, 1 on bio and medarxiv, 5 first-author posters | 
+| **Publications:** 5 first-author manuscripts (1 published, 2 accepted, 2 in preparation), 4 collaborations, 1 on bio and medrxiv, 5 first-author posters | 
 | **Team projects/Hackathons:** 1 R package, 1 python package, 1 R Shiny App, 1 Dash/Plotly app, 6 analysis workflows in python, R, bash |
 | **Leadership roles:** 3 club president, 2 treasurer, 1 501(c)(3) nonprofit secretary |
 
@@ -226,6 +226,7 @@ CONFERENCES AND HACKATHONS
 TALKS AND PANELS
 --------
 
+- "Pediatrics data in *All of Us*". All of Us Research Workbench Onramp Virtual Event June 2021.
 - 2021 Graduate Scholar for research talk entitled 'Mind the developmental gap: Identifying adverse drug effects across childhood to evaluate biological mechanisms from growth and development' with [Emuritus Professors at Columbia (EPIC)](https://www.youtube.com/channel/UCf6KOt3vTnXZQua94atQ1Dg)
 - "Understanding dynamics with statistical modeling" Coding workshop, CUIMC Data Science Club, [YouTube video](https://www.youtube.com/watch?v=ObmdJ-1Ok_Q)
 - "Introduction to programming and bioinformatics" Tutorial for 2021 Columbia University Science Matters Research Internship
