@@ -15,7 +15,7 @@ address : 27 W Girard Boulevard, Kenmore NY 14217
 phone : 7167132124
 ---
 
-### *Independent and collaborative translational informatician* 
+### *Independent and collaborative precision medicine scientist* 
 
 [Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** July 4th 2021 
 
