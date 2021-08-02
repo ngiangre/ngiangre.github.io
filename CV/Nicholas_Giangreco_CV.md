@@ -78,6 +78,7 @@ EDUCATION
 PUBLICATIONS
 ----------
 
+- **Giangreco NP**, Lebreton G, Restaino S, Jane Farr M, Zorn E, Colombo PC, Patel J, Levine R, Truby L, Soni RK, Leprince P, Kobashigawa J, Tatonetti NP, Fine BM. Plasma kallikrein predicts primary graft dysfunction after heart transplant. J Heart Lung Transplant. 2021 Jul 10:S1053-2498(21)02391-3. doi: [10.1016/j.healun.2021.07.001](https://doi.org/10.1016/j.healun.2021.07.001). 
 - **Giangreco, N.P.**, Tatonetti, N.P. Evaluating risk detection methods to uncover ontogenic-mediated adverse drug effect mechanisms in children. BioData Mining 14, 34 (2021). [https://doi.org/10.1186/s13040-021-00264-9](https://doi.org/10.1186/s13040-021-00264-9).
 - **Giangreco, NP**, Elias, JE, Tatonetti, NP. No population left behind: Improving paediatric drug safety using informatics and systems biology. Br J Clin Pharmacol. 2021; 1– 7. [https://doi.org/10.1111/bcp.14705](https://doi.org/10.1111/bcp.14705).
 - **Giangreco, Nicholas P.** and Tatonetti, Nicholas P. A database of pediatric drug effects to evaluate ontogenic mechanisms from child growth and development. medRxiv (2021). [https://www.medrxiv.org/content/early/2021/07/19/2021.07.15.21260602](ttps://www.medrxiv.org/content/early/2021/07/19/2021.07.15.21260602).
