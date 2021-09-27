@@ -17,7 +17,7 @@ phone : 7167132124
 
 ### *Independent and collaborative precision medicine scientist* 
 
-[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** August 1st 2021 
+[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** September 26th 2021 
 
 | |
 | :------ |
@@ -37,7 +37,7 @@ WORK EXPERIENCE
 
 	Thesis work includes predictive analysis and detecting risk factors of adverse clinical and biomedical outcomes
    
-February 2021 - Present
+February 2021 - August 2021
 :   **Bioinformatics intern** [(DNAnexus)](https://www.dnanexus.com/); San Francisco, CA
 
     Product management
@@ -117,6 +117,7 @@ FELLOWSHIPS AND AWARDS
 POSTERS AND SOFTWARE
 ----------
 
+- **Nicholas Giangreco**, Salvatore G. Volpe, Meghana Tandon, Kamileh Narisnh, Ben Busby. All Genes Lead to ROMOPOmics. [OHDSI symposium video demo](https://ohdsi.org/2021-global-symposium-showcase-77/)
 - **Nick Giangreco** and Nicholas Tatonetti. Using precision pharmacovigilance to detect developmentally-regulated adverse drug reactions: a case study with antiepileptic drugs. [poster](https://doi.org/10.7490/f1000research.1116203.1) [github](https://github.com/ngiangre/pediatric_pharmacovigilance)
 - **Nick Giangreco** and Nicholas Tatonetti. Using precision pharmacovigilance to detect and evaluate antiepileptic drug associated adverse reactions in pediatric patients. [poster](https://f1000research.com/posters/7-1091)
 - **Nick Giangreco** and Nicholas Tatonetti. cohorts. [github](https://github.com/ngiangre/cohorts)
@@ -128,7 +129,7 @@ Leadership and Management Experience
 ----------
 
 - [CUIMC Data Science Club](https://sites.google.com/view/cumcdatasciencegroup/home)
-    + President 2017-
+    + President 2017-2021
     + Organize and manage team of officers, oversee activities, manage budget, and promote outreach portfolio to support and strengthen the data science skills of biomedical scientists at CUIMC
 - [Health Tech Assembly](http://www.healthtechassembly.com/)
     + President 2019-2020
