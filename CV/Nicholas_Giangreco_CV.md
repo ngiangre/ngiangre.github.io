@@ -17,12 +17,12 @@ phone : 7167132124
 
 ### *Independent and collaborative precision medicine scientist* 
 
-[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** September 26th 2021 
+[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** October 12th 2021 
 
 | |
 | :------ |
-| **Topic areas:** Pediatric drug safety, Explainable machine learning, Cardiovascular biomarker development, Clinical and biomedical data management/integration/ analysis |
-| **Technical expertise:** Differential expression analysis, Interpretable machine learning, Statistical simulation, Data cleaning and engineering, Data-driven hypothesis generation and hypothesis testing |
+| **Topic areas:** Pediatric drug safety, Explainable machine learning, Fairness and equity in digital health, Cardiovascular biomarker development, Clinical and biomedical data management/integration/ analysis |
+| **Technical expertise:** Differential expression analysis, Interpretable machine learning, Statistical simulation, Data cleaning and engineering, dashboard development, AWS/Google cloud computing, Data-driven hypothesis generation and hypothesis testing |
 | **Programming Languages:** Python, R, bash | 
 | **Pending patents:** [CU18316 Prediction of post-heart transplant primary graft dysfunction using exosome proteins](http://innovation.columbia.edu/technologies/CU18316)|
 | **Team projects/Hackathons:** 1 R package, 1 python package, 1 R Shiny App, 1 Dash/Plotly app, 6 analysis workflows in python, R, bash |
