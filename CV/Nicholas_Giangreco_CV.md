@@ -9,22 +9,17 @@ This is another great post influencing this document https://mszep.github.io/pan
 see github repo for licensing information
 
 -->
----
-title : Nicholas Giangreco
-address : 27 W Girard Boulevard, Kenmore NY 14217
-phone : 7167132124
----
 
 ### *Independent and collaborative precision medicine scientist* 
 
-[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** October 12th 2021 
+[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** October 24th 2021 
 
 | |
 | :------ |
-| **Topic areas:** Pediatric drug safety, Explainable machine learning, Fairness and equity in digital health, Cardiovascular biomarker development, Clinical and biomedical data management/integration/ analysis |
+| **Topic areas:** Pediatric drug safety, Explainable machine learning, Fairness and equity in biomedical informatics, Biomarker discovery, Biomedical outcome prediction, Clinical and biomedical data management/integration/ analysis |
 | **Technical expertise:** Differential expression analysis, Interpretable machine learning, Statistical simulation, Data cleaning and engineering, dashboard development, AWS/Google cloud computing, Data-driven hypothesis generation and hypothesis testing |
 | **Programming Languages:** Python, R, bash | 
-| **Pending patents:** [CU18316 Prediction of post-heart transplant primary graft dysfunction using exosome proteins](http://innovation.columbia.edu/technologies/CU18316)|
+| **Provisional patents:** [CU18316 Prediction of post-heart transplant primary graft dysfunction using exosome proteins](http://innovation.columbia.edu/technologies/CU18316)|
 | **Team projects/Hackathons:** 1 R package, 1 python package, 1 R Shiny App, 1 Dash/Plotly app, 6 analysis workflows in python, R, bash |
 | **Leadership roles:** 3 club president, 2 treasurer, 1 501(c)(3) nonprofit secretary |
 
@@ -128,6 +123,10 @@ POSTERS AND SOFTWARE
 Leadership and Management Experience
 ----------
 
+- [CUIMC Department of Biomedical Informatics Justice Informatics Reading group](https://github.com/adriennepichon/DBMI_JusticeInformatics)
+    + Member 2021-
+    + Read and discuss publications and books on fairness and ethics for informatics development and their application
+
 - [CUIMC Data Science Club](https://sites.google.com/view/cumcdatasciencegroup/home)
     + President 2017-2021
     + Organize and manage team of officers, oversee activities, manage budget, and promote outreach portfolio to support and strengthen the data science skills of biomedical scientists at CUIMC
@@ -229,6 +228,7 @@ CONFERENCES AND HACKATHONS
 TALKS AND PANELS
 --------
 
+- DBMI Justice Informatics Joint Forum. Internal, collaborative meeting discussing the impact of Big Data and mathematical models on inequity and how that applies to research. 
 - "Pediatrics data in *All of Us*". All of Us Research Workbench Onramp Virtual Event June 2021.
 - 2021 Graduate Scholar for research talk entitled 'Mind the developmental gap: Identifying adverse drug effects across childhood to evaluate biological mechanisms from growth and development' with [Emuritus Professors at Columbia (EPIC)](https://www.youtube.com/channel/UCf6KOt3vTnXZQua94atQ1Dg)
 - "Understanding dynamics with statistical modeling" Coding workshop, CUIMC Data Science Club, [YouTube video](https://www.youtube.com/watch?v=ObmdJ-1Ok_Q)
