@@ -16,30 +16,30 @@ title: Nick Giangrecco
 
 ### *Independent and collaborative precision medicine scientist* 
 
-[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** October 24th 2021 
+[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** November 23rd 2021 
 
 | |
 | :------ |
-| **Topic areas:** Pediatric drug safety, Explainable machine learning, Fairness and equity in biomedical informatics, Biomarker discovery, Biomedical outcome prediction, Clinical and biomedical data management/integration/ analysis |
-| **Technical expertise:** Differential expression analysis, Interpretable machine learning, Statistical simulation, Data cleaning and engineering, dashboard development, AWS/Google cloud computing, Data-driven hypothesis generation and hypothesis testing |
+| **Topic areas:** Pediatric drug safety, explainable machine learning, fairness and equity in biomedical informatics, biomarker discovery, prediction and risk estimation, data management/integration/analysis |
+| **Technical expertise:** Differential expression analysis, interpretable machine learning, statistical simulation and evaluation, data cleaning and engineering, dashboard development, AWS/Google cloud computing, data-driven hypothesis generation and hypothesis testing |
 | **Programming Languages:** Python, R, bash | 
 | **Provisional patents:** [CU18316 Prediction of post-heart transplant primary graft dysfunction using exosome proteins](http://innovation.columbia.edu/technologies/CU18316)|
-| **Team projects/Hackathons:** 1 R package, 1 python package, 1 R Shiny App, 1 Dash/Plotly app, 6 analysis workflows in python, R, bash |
+| **Team projects/Hackathons:** 1 R package, 1 python package, 2 R Shiny Apps, 1 Dash/Plotly app, 6 analysis workflows in python, R, bash |
 | **Leadership roles:** 3 club president, 2 treasurer, 1 501(c)(3) nonprofit secretary |
 
 
 WORK EXPERIENCE
 ----------
 
-2016 - Present
+2016 - 2021
 :    **Systems biologist** [(Columbia University)](https://systemsbiology.columbia.edu/people/nicholas-giangreco); New York, NY
 
-	Thesis work includes predictive analysis and detecting risk factors of adverse clinical and biomedical outcomes
+	Thesis: [Mind the developmental gap: Identifying adverse drug effects across childhood to evaluate biological mechanisms from growth and development](https://doi.org/10.7916/d8-5d9b-6738)
    
 February 2021 - August 2021
 :   **Bioinformatics intern** [(DNAnexus)](https://www.dnanexus.com/); San Francisco, CA
 
-    Product management
+    Customer success development team
     
     Initiating internal and external projects such as interpretable machine learning and genomic/phenomic data integration/analysis
 
@@ -64,7 +64,7 @@ EDUCATION
 ----------
 
 
-2016 - Present
+2016 - 2021
 :     [**PhD Candidate, Systems Biology**](http://systemsbiology.columbia.edu/people/nicholas-giangreco); Columbia University, New York City, NY
 
      PhD advisor: [Dr. Nicholas Tatonetti](http://tatonettilab.org)
@@ -97,9 +97,13 @@ American Journal of Physiology-Heart and Circulatory Physiology 2018 315:5, [H14
 FELLOWSHIPS AND AWARDS
 ----------
 
-- 2021 Diversity & Inclusion Commercialization and Entrepreneurship Fellow @ Columbia Technology Ventures
+-   Travel award to 2021 Elixir biohackathon in Barcelona Spain.
 
-- Three-Minute Thesis 2019 finalist @ Columbia Graduate School of Arts and Sciences.
+-   Special recognition from Columbia for service during the COVID-19 crisis
+
+-   2021 Diversity & Inclusion Commercialization and Entrepreneurship Fellow @ Columbia Technology Ventures
+
+-   Three-Minute Thesis 2019 finalist @ Columbia Graduate School of Arts and Sciences.
 
 -   Best contribution in methodological research at the [OHDSI 2018 Symposium](https://www.ohdsi.org/2018-ohdsi-symposium/) for [Pediatric Drug Safety](http://10.7490/f1000research.1116203.1) poster.
 
@@ -129,7 +133,7 @@ Leadership and Management Experience
 
 - [CUIMC Department of Biomedical Informatics Justice Informatics Reading group](https://github.com/adriennepichon/DBMI_JusticeInformatics)
     + Member 2021-
-    + Read and discuss publications and books on fairness and ethics for informatics development and their application
+    + Read and discuss publications, books, and policy on fairness and ethics within informatics development and their application
 
 - [CUIMC Data Science Club](https://sites.google.com/view/cumcdatasciencegroup/home)
     + President 2017-2021
@@ -189,6 +193,9 @@ MENTORING, TUTORING, and WRITING
 CONFERENCES AND HACKATHONS
 ----------
 
+- [2021 Elixir biohackathon](https://biohackathon-europe.org/)
+   - Front-end developer
+   - Built prototype dashboard for improved disease subtyping and treatment pathways for colorectal cancer. See [github](https://github.com/collaborativebioinformatics/CRC-Dashboard) and [shiny dashboard](https://nick-giangreco.shinyapps.io/cds-dashboard/).
 - [Clinical Reporting of Multi 'Omics data](https://www.library.cmu.edu/about/publications/news/upcoming-event-hackathon-2021)
    - Led team and managed hackathon teams to manage and streamline integration of genomic, transcriptomic, and polygenic risk score data into the OMOP common data model. See [github](https://github.com/collaborativebioinformatics/omics_to_omop).
 
