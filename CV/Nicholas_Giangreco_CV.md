@@ -11,12 +11,12 @@ see github repo for licensing information
 -->
 
 ---
-title: Nick Giangrecco
+title: Nick Giangreco
 ---
 
 ### *Independent and collaborative precision medicine scientist* 
 
-[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** November 23rd 2021 
+[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** December 24th 2021 
 
 | |
 | :------ |
@@ -31,6 +31,11 @@ title: Nick Giangrecco
 WORK EXPERIENCE
 ----------
 
+2021 - Present
+:    **Associate Scientist, Quantitative Translational Scientist** [(Regeneron Pharmaceuticals Inc.)](https://www.regeneron.com); Tarrytown, NY
+     
+     Precision Medicine
+    
 2016 - 2021
 :    **Systems biologist** [(Columbia University)](https://systemsbiology.columbia.edu/people/nicholas-giangreco); New York, NY
 
@@ -132,7 +137,7 @@ Leadership and Management Experience
 ----------
 
 - [CUIMC Department of Biomedical Informatics Justice Informatics Reading group](https://github.com/adriennepichon/DBMI_JusticeInformatics)
-    + Member 2021-
+    + Member 2021-Present
     + Read and discuss publications, books, and policy on fairness and ethics within informatics development and their application
 
 - [CUIMC Data Science Club](https://sites.google.com/view/cumcdatasciencegroup/home)
