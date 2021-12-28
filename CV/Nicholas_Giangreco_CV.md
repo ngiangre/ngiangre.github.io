@@ -16,7 +16,7 @@ title: Nick Giangreco
 
 ### *Independent and collaborative precision medicine scientist* 
 
-[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** December 24th 2021 
+[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** December 28th 2021 
 
 | |
 | :------ |
@@ -82,6 +82,7 @@ EDUCATION
 PUBLICATIONS
 ----------
 
+- **Nicholas P Giangreco**, Sulieman Lina, Jun Qian, Aymone Kuoame, Vignesh Subbian, Eric Boerwinkle, Mine Cicek, Cheryl R Clark, Elizabeth Cohen, Kelly A Gebo, Roxana Loperena-Cortes, Kelsey Mayo, Stephen Mockrin, Lucila Ohno-Machado, Sheri D Schully, Nicholas P Tatonetti, Andrea H Ramirez, Pediatric data from the All of Us research program: demonstration of pediatric obesity over time, JAMIA Open, Volume 4, Issue 4, October 2021, ooab112, [https://doi.org/10.1093/jamiaopen/ooab112](https://doi.org/10.1093/jamiaopen/ooab112)
 - **Giangreco NP**, Lebreton G, Restaino S, Jane Farr M, Zorn E, Colombo PC, Patel J, Levine R, Truby L, Soni RK, Leprince P, Kobashigawa J, Tatonetti NP, Fine BM. Plasma kallikrein predicts primary graft dysfunction after heart transplant. J Heart Lung Transplant. 2021 Jul 10:S1053-2498(21)02391-3. doi: [10.1016/j.healun.2021.07.001](https://doi.org/10.1016/j.healun.2021.07.001). 
 - **Giangreco, N.P.**, Tatonetti, N.P. Evaluating risk detection methods to uncover ontogenic-mediated adverse drug effect mechanisms in children. BioData Mining 14, 34 (2021). [https://doi.org/10.1186/s13040-021-00264-9](https://doi.org/10.1186/s13040-021-00264-9).
 - **Giangreco, NP**, Elias, JE, Tatonetti, NP. No population left behind: Improving paediatric drug safety using informatics and systems biology. Br J Clin Pharmacol. 2021; 1– 7. [https://doi.org/10.1111/bcp.14705](https://doi.org/10.1111/bcp.14705).
