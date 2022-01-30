@@ -16,15 +16,15 @@ title: Nick Giangreco
 
 ### *Independent and collaborative precision medicine scientist* 
 
-[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** December 28th 2021 
+[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** January 30th 2022
 
 | |
 | :------ |
-| **Topic areas:** Pediatric drug safety, explainable machine learning, fairness and equity in biomedical informatics, biomarker discovery, prediction and risk estimation, data management/integration/analysis |
-| **Technical expertise:** Differential expression analysis, interpretable machine learning, statistical simulation and evaluation, data cleaning and engineering, dashboard development, AWS/Google cloud computing, data-driven hypothesis generation and hypothesis testing |
+| **Topic areas:** Pediatric drug safety, explainable machine learning, fairness and equity in biomedical informatics, biomarker evaluation and discovery, prediction and risk estimation, biomedical data management/integration/analysis |
+| **Technical expertise:** Differential expression analysis, interpretable machine learning, statistical learning, simulation, data cleaning and engineering, dashboard development, AWS/Google cloud computing, data-driven hypothesis generation and hypothesis testing |
 | **Programming Languages:** Python, R, bash | 
 | **Provisional patents:** [CU18316 Prediction of post-heart transplant primary graft dysfunction using exosome proteins](http://innovation.columbia.edu/technologies/CU18316)|
-| **Team projects/Hackathons:** 1 R package, 1 python package, 2 R Shiny Apps, 1 Dash/Plotly app, 6 analysis workflows in python, R, bash |
+| **Team projects/Hackathons:** 1 R package, 1 python package, 2 R Shiny Apps, 1 Dash/Plotly app, 7 analysis workflows in python, R, bash |
 | **Leadership roles:** 3 club president, 2 treasurer, 1 501(c)(3) nonprofit secretary |
 
 
@@ -178,7 +178,8 @@ Leadership and Management Experience
 MENTORING, TUTORING, and WRITING
 ----------
 
-- Mentor and tutor for project management, R and python programming, and statistics and machine learning to high school and college students, graduates, and professionals.
+- Mentor in technical and entrepreneurship development for the [Innovate Children's Health Challenge](https://www.innovatechildrenshealth.com/)
+- Mentor and tutor for project management, R and python programming, and statistics and machine learning to high school/college/graduate students and professionals.
 - ["Hack nights -- Solving healthcare data-science/AI/ML problems"](https://www.eventbrite.com/e/healthcare-hack-night-tickets-72013860395) Introduction to cancer genomics four part series.  Co-led with Matthew Eng
     * [Adventures In Hacking Healthcare Medium Publication](https://medium.com/adventures-in-healthcare-data)
 - Nicholas Giangreco. ["The Importance of being Open"](http://www.phdish.com/blog/openscience). *PHDISH* January 9th 2019. 
