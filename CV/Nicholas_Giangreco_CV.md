@@ -16,7 +16,7 @@ title: Nick Giangreco
 
 ### *Independent and collaborative precision medicine scientist* 
 
-[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** January 30th 2022
+[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** March 2nd 2022
 
 | |
 | :------ |
@@ -25,7 +25,7 @@ title: Nick Giangreco
 | **Programming Languages:** Python, R, bash | 
 | **Provisional patents:** [CU18316 Prediction of post-heart transplant primary graft dysfunction using exosome proteins](http://innovation.columbia.edu/technologies/CU18316)|
 | **Team projects/Hackathons:** 1 R package, 1 python package, 2 R Shiny Apps, 1 Dash/Plotly app, 7 analysis workflows in python, R, bash |
-| **Leadership roles:** 3 club president, 2 treasurer, 1 501(c)(3) nonprofit secretary |
+| **Leadership roles:** 501(c)(3) nonprofit secretary, Mentor for digital health start-up incubator; As PhD student: 3 club president, 2 treasurer |
 
 
 WORK EXPERIENCE
@@ -54,8 +54,10 @@ June 2019 - August 2019
 	Developed database of multivariate clinical associations using incremental learning on amazon web services. 
 	  
 July 2018 - September 2018
-:    **Computational biology intern** [(Genetic Intelligence Inc.)](https://www.geneticintelligence.com/); New York, NY
+:    **Computational biology intern** [(Genetic Leap)](https://www.genetic-leap.com); New York, NY
 	  
+	Formerly Genetic Intelligence Inc.
+	
 	Conducted independent and collaborative genomics research using NCBI APIs and amazon web services.
 	  
 2014-2019
@@ -70,7 +72,7 @@ EDUCATION
 
 
 2016 - 2021
-:     [**PhD Candidate, Systems Biology**](http://systemsbiology.columbia.edu/people/nicholas-giangreco); Columbia University, New York City, NY
+:     [**PhD, Systems Biology**](http://systemsbiology.columbia.edu/people/nicholas-giangreco); Columbia University, New York City, NY
 
      PhD advisor: [Dr. Nicholas Tatonetti](http://tatonettilab.org)
      
@@ -105,7 +107,7 @@ FELLOWSHIPS AND AWARDS
 
 -   Travel award to 2021 Elixir biohackathon in Barcelona Spain.
 
--   Special recognition from Columbia for service during the COVID-19 crisis
+-   Special recognition from ColumbiaU for service during the COVID-19 crisis
 
 -   2021 Diversity & Inclusion Commercialization and Entrepreneurship Fellow @ Columbia Technology Ventures
 
