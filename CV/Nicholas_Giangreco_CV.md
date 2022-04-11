@@ -16,12 +16,12 @@ title: Nick Giangreco
 
 ### *Independent and collaborative precision medicine scientist* 
 
-[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** March 29th 2022
+[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** April 10th 2022
 
 | |
 | :------ |
 | **Topic areas:** Pediatric drug safety, explainable machine learning, fairness and equity in biomedical informatics, biomarker evaluation and discovery, prediction and risk estimation, biomedical data management/integration/analysis |
-| **Technical expertise:** Differential expression analysis, interpretable machine learning, statistical learning, simulation, data cleaning and engineering, dashboard development, AWS/Google cloud computing, data-driven hypothesis generation and hypothesis testing |
+| **Technical expertise:** Interpretable machine learning, differential expression analysis, predictive analyses, simulation, data cleaning and modeling, dashboard development and AWS deployment, data-driven hypothesis generation and hypothesis testing |
 | **Programming Languages:** Python, R, bash | 
 | **Provisional patents:** [CU18316 Prediction of post-heart transplant primary graft dysfunction using exosome proteins](http://innovation.columbia.edu/technologies/CU18316)|
 | **Team projects/Hackathons:** 1 R package, 1 python package, 2 R Shiny Apps, 1 Dash/Plotly app, 7 analysis workflows in python, R, bash |
@@ -95,7 +95,6 @@ PUBLICATIONS
 - Estibaliz Castillero, Ziad A. Ali, Hirokazu Akashi, **Nicholas Giangreco**, Catherine Wang, Eric J. Stöhr, Ruping Ji, Xiaokan Zhang, Nathaniel Kheysin, Joo-Eun S. Park, Sheetal Hegde, Sanatkumar Patel, Samantha Stein, Carlos Cuenca, Diana Leung, Shunichi Homma, Nicholas P. Tatonetti, Veli K. Topkara, Koji Takeda, Paolo C. Colombo, Yoshifumi Naka, H. Lee Sweeney, P. Christian Schulze, and Isaac George
 American Journal of Physiology-Heart and Circulatory Physiology 2018 315:5, [H1463-H1476](https://www.physiology.org/doi/10.1152/ajpheart.00187.2018).
 - Kim-Hellmuth, S., Bechheim, M., Pütz, B., Mohammadi, P., Néd´lec, Y, **Giangreco, N.**, et al. Genetic regulatory effects modified by immune activation contribute to autoimmune disease associations. Nat Commun 8, 266 (2017). [https://doi.org/10.1038/s41467-017-00366-1](https://doi.org/10.1038/s41467-017-00366-1).
-- **Giangreco N.**, Petrykowska H., Scott A., Margolin G., Gotea V., Cho K. R., and Elnitski L. Inactivation of _Arid1a_ drives aberrant epigenetic traits in a mouse model of _Apc_ / _Pten_ defective ovarian endometrioid tumors. *(in preparation)*
 
 
 [**Peer-reviewed publications on pubmed**](https://www.ncbi.nlm.nih.gov/pubmed/?term=Giangreco+N%5BAuthor%5D)
@@ -141,8 +140,18 @@ POSTERS AND SOFTWARE
 Leadership and Management Experience
 ----------
 
+- [New York Health Artificial Intelligence Society](https://www.meetup.com/NYHAIS/)
+   + 501(c)(3) not-for-profit Cofounder and Secretary, 2019-Present
+   + Promote public discourse on a wide range of topics such as AI & Society, AI & Healthcare, and economic impact by AI. 
+   + Organize and facilitate group engagement, workshops, AI study groups, and not-for-profit organization.
+   + Consultant on data science and education projects and initiatives. 
+
+- University of Rochester Alumni Undergraduate Interviewer
+    + Assess potential and suitability for undergraduate college 
+    + Interviewer at large and small event settings
+
 - [CUIMC Department of Biomedical Informatics Justice Informatics Reading group](https://github.com/adriennepichon/DBMI_JusticeInformatics)
-    + Member 2021-Present
+    + Member January 2021-December 2021
     + Read and discuss publications, books, and policy on fairness and ethics within informatics development and their application
 
 - [CUIMC Data Science Club](https://sites.google.com/view/cumcdatasciencegroup/home)
@@ -169,15 +178,6 @@ Leadership and Management Experience
    + Point person for Systems Biology Trainee Council
    + Secured funding and launched event portfolio for trainee development
    + Manage monthly departmental happy hours
-- [New York Health Artificial Intelligence Society](https://www.meetup.com/NYHAIS/)
-   + 501(c)(3) not-for-profit Cofounder and Secretary
-   + Meetup co-organizer 2018-
-   + Promote public discourse on a wide range of topics such as AI & Society, AI & Healthcare, and economic impact by AI. 
-   + Organize and facilitate group engagement, workshops, AI study groups, and not-for-profit organization.
-   + Consultant on data science and education projects and initiatives. 
-- University of Rochester Alumni Undergraduate Interviewer
-    + Assess potential and suitability for undergraduate college 
-    + Interviewer at large and small event settings
         
 MENTORING, TUTORING, and WRITING
 ----------
@@ -249,7 +249,7 @@ CONFERENCES AND HACKATHONS
 
 TALKS AND PANELS
 --------
-
+- Panelist for S14: "Utility of the All of Us Researcher Workbench in Educational and Research Settings" [American Medical Informatics Association Informatics Summit](https://amia.org/education-events/amia-2022-informatics-summit) March 2022 Chicago.
 - DBMI Justice Informatics Joint Forum. Internal, collaborative meeting discussing the impact of Big Data and mathematical models on inequity and how that applies to research. 
 - "Pediatrics data in *All of Us*". All of Us Research Workbench Onramp Virtual Event June 2021.
 - 2021 Graduate Scholar for research talk entitled 'Mind the developmental gap: Identifying adverse drug effects across childhood to evaluate biological mechanisms from growth and development' with [Emuritus Professors at Columbia (EPIC)](https://www.youtube.com/channel/UCf6KOt3vTnXZQua94atQ1Dg)
