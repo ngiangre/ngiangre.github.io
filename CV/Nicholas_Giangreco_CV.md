@@ -16,14 +16,14 @@ title: Nick Giangreco
 
 ### *Independent and collaborative precision medicine scientist* 
 
-[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** April 10th 2022
+[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** May 22nd 2022
 
 | |
 | :------ |
 | **Topic areas:** Pediatric drug safety, explainable machine learning, fairness and equity in biomedical informatics, biomarker evaluation and discovery, prediction and risk estimation, biomedical data management/integration/analysis |
-| **Technical expertise:** Interpretable machine learning, differential expression analysis, predictive analyses, simulation, data cleaning and modeling, dashboard development and AWS deployment, data-driven hypothesis generation and hypothesis testing |
-| **Programming Languages:** Python, R, bash | 
-| **Provisional patents:** [CU18316 Prediction of post-heart transplant primary graft dysfunction using exosome proteins](http://innovation.columbia.edu/technologies/CU18316)|
+| **Technical expertise:** Interpretable machine learning, differential expression analysis, predictive analyses, simulation, data cleaning and modeling, dashboard development and AWS deployment, data-driven hypothesis generation and hypothesis testing, statistical software development |
+| **Programming Languages:** Python, R, SQL, bash | 
+| **Pending patents:** [CU18316 Prediction of post-heart transplant primary graft dysfunction using exosome proteins](http://innovation.columbia.edu/technologies/CU18316)|
 | **Team projects/Hackathons:** 1 R package, 1 python package, 2 R Shiny Apps, 1 Dash/Plotly app, 7 analysis workflows in python, R, bash |
 | **Leadership roles:** 501(c)(3) nonprofit secretary, Mentor for digital health start-up incubator; As PhD student: 3 club president, 2 treasurer |
 
@@ -40,6 +40,10 @@ WORK EXPERIENCE
 :    **Systems biologist** [(Columbia University)](https://systemsbiology.columbia.edu/people/nicholas-giangreco); New York, NY
 
 	Thesis: [Mind the developmental gap: Identifying adverse drug effects across childhood to evaluate biological mechanisms from growth and development](https://doi.org/10.7916/d8-5d9b-6738)
+   
+   [PDSportal](http://pdsportal.shinyapps.io/)
+   
+   [PDSdatabase](http://nickg.bio/PDSdatabase/)
    
 February 2021 - August 2021
 :   **Bioinformatics intern** [(DNAnexus)](https://www.dnanexus.com/); San Francisco, CA
@@ -204,6 +208,7 @@ MENTORING, TUTORING, and WRITING
 CONFERENCES AND HACKATHONS
 ----------
 
+- [American Medical Informatics Association Translational Summit 2022 Chicago USA](https://amia.org/education-events/amia-2022-informatics-summit)
 - [2021 Elixir biohackathon](https://biohackathon-europe.org/)
    - Front-end developer
    - Built prototype dashboard for improved disease subtyping and treatment pathways for colorectal cancer. See [github](https://github.com/collaborativebioinformatics/CRC-Dashboard) and [shiny dashboard](https://nick-giangreco.shinyapps.io/cds-dashboard/).
