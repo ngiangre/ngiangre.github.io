@@ -41,9 +41,9 @@ WORK EXPERIENCE
 
 	Thesis: [Mind the developmental gap: Identifying adverse drug effects across childhood to evaluate biological mechanisms from growth and development](https://doi.org/10.7916/d8-5d9b-6738)
    
-   [PDSportal](http://pdsportal.shinyapps.io/)
+    [PDSportal](http://pdsportal.shinyapps.io/)
    
-   [PDSdatabase](http://nickg.bio/PDSdatabase/)
+    [PDSdatabase](http://nickg.bio/PDSdatabase/)
    
 February 2021 - August 2021
 :   **Bioinformatics intern** [(DNAnexus)](https://www.dnanexus.com/); San Francisco, CA
