@@ -16,11 +16,11 @@ title: Nick Giangreco
 
 ### *Independent and collaborative precision medicine scientist* 
 
-[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** June 27th 2022
+[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** July 4th 2022
 
 | |
 | :------ |
-| **Topic areas:** Pediatric drug safety, explainable machine learning, fairness and equity in biomedical informatics, biomarker evaluation and discovery, prediction and risk estimation, biomedical data management/integration/analysis |
+| **Topic areas:** Pediatric drug safety, interpretable machine learning, fairness and equity in biomedical informatics, biomarker evaluation and discovery, prediction and risk estimation, biomedical data management/integration/analysis |
 | **Technical expertise:** Interpretable machine learning, differential expression analysis, predictive analyses, simulation, data cleaning and modeling, dashboard development and AWS deployment, data-driven hypothesis generation and hypothesis testing, statistical software development |
 | **Programming Languages:** Python, R, SQL, bash | 
 | **Pending patents:** [CU18316 Prediction of post-heart transplant primary graft dysfunction using exosome proteins](http://innovation.columbia.edu/technologies/CU18316)|
@@ -50,7 +50,7 @@ February 2021 - August 2021
 
     Customer success development team
     
-    Initiating internal and external projects such as interpretable machine learning and genomic/phenomic data integration/analysis
+    Initiated internal and external projects such as interpretable machine learning and genomic/phenomic data integration/analysis
 
 June 2019 - August 2019
 :    **Clinical informatics intern** [(Regeneron Genetics Center)](https://www.regeneron.com/genetics-center)); Tarrytown, NY
@@ -89,6 +89,7 @@ PUBLICATIONS
 ----------
 
 - **Giangreco NP**, Tatonetti NP. A database of pediatric drug effects to evaluate ontogenic mechanisms from child growth and development. Med (N Y). 2022 Jun 20:S2666-6340(22)00232-X. doi: [10.1016/j.medj.2022.06.001](https://doi.org/10.1016/j.medj.2022.06.001). Epub ahead of print. PMID: 35752163.
+- **Giangreco, Nicholas** (2022), Longitudinal trends of EHR concepts in pediatric patients, Dryad, Dataset, [https://doi.org/10.5061/dryad.j0zpc86g3](https://doi.org/10.5061/dryad.j0zpc86g3)
 - **Nicholas P Giangreco**, Sulieman Lina, Jun Qian, Aymone Kuoame, Vignesh Subbian, Eric Boerwinkle, Mine Cicek, Cheryl R Clark, Elizabeth Cohen, Kelly A Gebo, Roxana Loperena-Cortes, Kelsey Mayo, Stephen Mockrin, Lucila Ohno-Machado, Sheri D Schully, Nicholas P Tatonetti, Andrea H Ramirez, Pediatric data from the All of Us research program: demonstration of pediatric obesity over time, JAMIA Open, Volume 4, Issue 4, October 2021, ooab112, [https://doi.org/10.1093/jamiaopen/ooab112](https://doi.org/10.1093/jamiaopen/ooab112)
 - **Giangreco NP**, Lebreton G, Restaino S, Jane Farr M, Zorn E, Colombo PC, Patel J, Levine R, Truby L, Soni RK, Leprince P, Kobashigawa J, Tatonetti NP, Fine BM. Plasma kallikrein predicts primary graft dysfunction after heart transplant. J Heart Lung Transplant. 2021 Jul 10:S1053-2498(21)02391-3. doi: [10.1016/j.healun.2021.07.001](https://doi.org/10.1016/j.healun.2021.07.001). 
 - **Giangreco, N.P.**, Tatonetti, N.P. Evaluating risk detection methods to uncover ontogenic-mediated adverse drug effect mechanisms in children. BioData Mining 14, 34 (2021). [https://doi.org/10.1186/s13040-021-00264-9](https://doi.org/10.1186/s13040-021-00264-9).
@@ -113,7 +114,7 @@ FELLOWSHIPS AND AWARDS
 
 -   Travel award to 2021 Elixir biohackathon in Barcelona Spain.
 
--   Special recognition from ColumbiaU for service during the COVID-19 crisis
+-   Special recognition from Columbia University for service during the COVID-19 crisis
 
 -   2021 Diversity & Inclusion Commercialization and Entrepreneurship Fellow @ Columbia Technology Ventures
 
@@ -273,6 +274,6 @@ NYC Medical Research and Bioinformatics Group](https://www.meetup.com/NYC-Medica
 PROFESSIONAL MEMBERSHIPS
 ----------
 
-- International Society of Computational Biology, 2013-2014 & 2017-
+- International Society of Computational Biology, 2013-2014 & 2017-2018
 - American Heart Association, 2017-2018.
 - American Medical Informatics Association, 2017-2018.
