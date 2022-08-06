@@ -16,15 +16,15 @@ title: Nick Giangreco
 
 ### *Independent and collaborative precision medicine scientist* 
 
-[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** July 4th 2022
+[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** August 6th 2022
 
 | |
 | :------ |
-| **Topic areas:** Pediatric drug safety, interpretable machine learning, fairness and equity in biomedical informatics, biomarker evaluation and discovery, prediction and risk estimation, biomedical data management/integration/analysis |
+| **Topic areas:** Pediatric drug safety, interpretable machine learning, fairness and equity in biomedical informatics, biomarker evaluation and discovery, prediction and risk estimation, biomedical data science |
 | **Technical expertise:** Interpretable machine learning, differential expression analysis, predictive analyses, simulation, data cleaning and modeling, dashboard development and AWS deployment, data-driven hypothesis generation and hypothesis testing, statistical software development |
 | **Programming Languages:** Python, R, SQL, bash | 
 | **Pending patents:** [CU18316 Prediction of post-heart transplant primary graft dysfunction using exosome proteins](http://innovation.columbia.edu/technologies/CU18316)|
-| **Team projects/Hackathons:** 1 R package, 1 python package, 2 R Shiny Apps, 1 Dash/Plotly app, 7 analysis workflows in python, R, bash |
+| **Team projects/Hackathons:** 2 R packages, 2 python packages, 2 R Shiny Apps, 1 Dash/Plotly app, 7 analysis workflows in python, R, bash |
 | **Leadership roles:** 501(c)(3) nonprofit secretary, Mentor for digital health start-up incubator; As PhD student: 3 club president, 2 treasurer |
 
 
@@ -210,10 +210,14 @@ MENTORING, TUTORING, and WRITING
 CONFERENCES AND HACKATHONS
 ----------
 
+- [rstudio::conf(2022)](https://www.rstudio.com/conference/)
+
 - [American Medical Informatics Association Translational Summit 2022 Chicago USA](https://amia.org/education-events/amia-2022-informatics-summit)
+
 - [2021 Elixir biohackathon](https://biohackathon-europe.org/)
    - Front-end developer
    - Built prototype dashboard for improved disease subtyping and treatment pathways for colorectal cancer. See [github](https://github.com/collaborativebioinformatics/CRC-Dashboard) and [shiny dashboard](https://nick-giangreco.shinyapps.io/cds-dashboard/).
+
 - [Clinical Reporting of Multi 'Omics data](https://www.library.cmu.edu/about/publications/news/upcoming-event-hackathon-2021)
    - Led team and managed hackathon teams to manage and streamline integration of genomic, transcriptomic, and polygenic risk score data into the OMOP common data model. See [github](https://github.com/collaborativebioinformatics/omics_to_omop).
 
