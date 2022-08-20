@@ -16,7 +16,7 @@ title: Nick Giangreco
 
 ### *Independent and collaborative precision medicine scientist* 
 
-[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** August 14th 2022
+[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** August 20th 2022
 
 | |
 | :------ |
@@ -90,6 +90,7 @@ EDUCATION
 PUBLICATIONS
 ----------
 
+- **Giangreco, N.P.**, Lebreton, G., Restaino, S. et al. Alterations in the kallikrein-kinin system predict death after heart transplant. Sci Rep 12, 14167 (2022). [https://doi.org/10.1038/s41598-022-18573-2](https://doi.org/10.1038/s41598-022-18573-2)
 - **Giangreco NP**, Tatonetti NP. A database of pediatric drug effects to evaluate ontogenic mechanisms from child growth and development. Med (N Y). 2022 Jun 20:S2666-6340(22)00232-X. doi: [10.1016/j.medj.2022.06.001](https://doi.org/10.1016/j.medj.2022.06.001). Epub ahead of print. PMID: 35752163.
 - **Giangreco, Nicholas** (2022), Longitudinal trends of EHR concepts in pediatric patients, Dryad, Dataset, [https://doi.org/10.5061/dryad.j0zpc86g3](https://doi.org/10.5061/dryad.j0zpc86g3)
 - **Nicholas P Giangreco**, Sulieman Lina, Jun Qian, Aymone Kuoame, Vignesh Subbian, Eric Boerwinkle, Mine Cicek, Cheryl R Clark, Elizabeth Cohen, Kelly A Gebo, Roxana Loperena-Cortes, Kelsey Mayo, Stephen Mockrin, Lucila Ohno-Machado, Sheri D Schully, Nicholas P Tatonetti, Andrea H Ramirez, Pediatric data from the All of Us research program: demonstration of pediatric obesity over time, JAMIA Open, Volume 4, Issue 4, October 2021, ooab112, [https://doi.org/10.1093/jamiaopen/ooab112](https://doi.org/10.1093/jamiaopen/ooab112)
