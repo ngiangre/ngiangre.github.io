@@ -16,15 +16,15 @@ title: Nick Giangreco
 
 ### *Independent and collaborative precision medicine scientist* 
 
-[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** July 4th 2022
+[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** September 25th 2022
 
 | |
 | :------ |
-| **Topic areas:** Pediatric drug safety, interpretable machine learning, fairness and equity in biomedical informatics, biomarker evaluation and discovery, prediction and risk estimation, biomedical data management/integration/analysis |
-| **Technical expertise:** Interpretable machine learning, differential expression analysis, predictive analyses, simulation, data cleaning and modeling, dashboard development and AWS deployment, data-driven hypothesis generation and hypothesis testing, statistical software development |
-| **Programming Languages:** Python, R, SQL, bash | 
+| **Topic areas:** Pediatric drug safety, interpretable machine learning, fairness and equity in biomedical informatics, biomarker evaluation and discovery, prediction and risk estimation, biomedical data science |
+| **Technical expertise:** Interpretable machine learning, differential expression analysis, predictive analyses, simulation, data cleaning and modeling, dashboard development, data-driven hypothesis generation and testing, (R/python) software development, RMarkdown/Quarto, Microsoft Power User |
+| **Programming Languages:** Python, R, SQL, HTML, CSS, bash | 
 | **Pending patents:** [CU18316 Prediction of post-heart transplant primary graft dysfunction using exosome proteins](http://innovation.columbia.edu/technologies/CU18316)|
-| **Team projects/Hackathons:** 1 R package, 1 python package, 2 R Shiny Apps, 1 Dash/Plotly app, 7 analysis workflows in python, R, bash |
+| **Team projects/Hackathons:** 2 R packages, 2 python packages, 2 R Shiny Apps, 1 Dash/Plotly app, 7 analysis workflows in python, R, bash |
 | **Leadership roles:** 501(c)(3) nonprofit secretary, Mentor for digital health start-up incubator; As PhD student: 3 club president, 2 treasurer |
 
 
@@ -41,6 +41,8 @@ WORK EXPERIENCE
 
 	Thesis: [Mind the developmental gap: Identifying adverse drug effects across childhood to evaluate biological mechanisms from growth and development](https://doi.org/10.7916/d8-5d9b-6738)
    
+    [Cell Press cover art](https://www.cell.com/med/current#fullCover)
+    
     [PDSportal](http://pdsportal.shinyapps.io/)
    
     [PDSdatabase](http://nickg.bio/PDSdatabase/)
@@ -88,6 +90,7 @@ EDUCATION
 PUBLICATIONS
 ----------
 
+- **Giangreco, N.P.**, Lebreton, G., Restaino, S. et al. Alterations in the kallikrein-kinin system predict death after heart transplant. Sci Rep 12, 14167 (2022). [https://doi.org/10.1038/s41598-022-18573-2](https://doi.org/10.1038/s41598-022-18573-2)
 - **Giangreco NP**, Tatonetti NP. A database of pediatric drug effects to evaluate ontogenic mechanisms from child growth and development. Med (N Y). 2022 Jun 20:S2666-6340(22)00232-X. doi: [10.1016/j.medj.2022.06.001](https://doi.org/10.1016/j.medj.2022.06.001). Epub ahead of print. PMID: 35752163.
 - **Giangreco, Nicholas** (2022), Longitudinal trends of EHR concepts in pediatric patients, Dryad, Dataset, [https://doi.org/10.5061/dryad.j0zpc86g3](https://doi.org/10.5061/dryad.j0zpc86g3)
 - **Nicholas P Giangreco**, Sulieman Lina, Jun Qian, Aymone Kuoame, Vignesh Subbian, Eric Boerwinkle, Mine Cicek, Cheryl R Clark, Elizabeth Cohen, Kelly A Gebo, Roxana Loperena-Cortes, Kelsey Mayo, Stephen Mockrin, Lucila Ohno-Machado, Sheri D Schully, Nicholas P Tatonetti, Andrea H Ramirez, Pediatric data from the All of Us research program: demonstration of pediatric obesity over time, JAMIA Open, Volume 4, Issue 4, October 2021, ooab112, [https://doi.org/10.1093/jamiaopen/ooab112](https://doi.org/10.1093/jamiaopen/ooab112)
@@ -210,10 +213,14 @@ MENTORING, TUTORING, and WRITING
 CONFERENCES AND HACKATHONS
 ----------
 
+- [rstudio::conf(2022)](https://www.rstudio.com/conference/)
+
 - [American Medical Informatics Association Translational Summit 2022 Chicago USA](https://amia.org/education-events/amia-2022-informatics-summit)
+
 - [2021 Elixir biohackathon](https://biohackathon-europe.org/)
    - Front-end developer
    - Built prototype dashboard for improved disease subtyping and treatment pathways for colorectal cancer. See [github](https://github.com/collaborativebioinformatics/CRC-Dashboard) and [shiny dashboard](https://nick-giangreco.shinyapps.io/cds-dashboard/).
+
 - [Clinical Reporting of Multi 'Omics data](https://www.library.cmu.edu/about/publications/news/upcoming-event-hackathon-2021)
    - Led team and managed hackathon teams to manage and streamline integration of genomic, transcriptomic, and polygenic risk score data into the OMOP common data model. See [github](https://github.com/collaborativebioinformatics/omics_to_omop).
 
