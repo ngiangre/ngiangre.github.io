@@ -1,0 +1,14 @@
+---
+title: "Example"
+subtitle: "Example of how posts will look like"
+image: "images/noun-example-2923788.svg"
+image-alt: "example by Agung Cahyo from Noun Project"
+date: "09/04/2022"
+date-format: "MMMM D, YYYY"
+page-layout: article
+toc: true
+comments:
+  utterances:
+    repo: ngiangre/quarto_site
+---
+

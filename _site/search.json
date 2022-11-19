@@ -1,0 +1,219 @@
+[
+  {
+    "objectID": "content/garden/posts/20220904welcome/index.html",
+    "href": "content/garden/posts/20220904welcome/index.html",
+    "title": "Hello, world!",
+    "section": "",
+    "text": "This is the redesign of my original website\nThis redesigned website is made using Quarto\nThis redesigned website is now hosting my digital garden\n\n\nMy digital garden is like a virtual showcase\nIn Buffalo, I learned that there’s an annual garden walk, where people all over the city can venture through and see wonderful gardens carefully crafted and skillfully maintained by their gardeners. These gardens are open to the public and showcase plants and outdoor designs serving as inspiration and just very nice places to experience.\nSimilar to a real garden, I want to craft a digital garden. My digital garden will be carefully crafted to showcase new and old projects, both matured content and content in development. What makes this digital garden deviate from my profile on Github is that 1) it is organized as a mixture of long-term, project work and short-term, stand-alone posts, and 2) it is meant as sort of an “official” landing page from my personal website.\nI acknowledge how my digital garden will deviate from a digital knowledge tree or mind map, as described in this article about the ethos. However, I really like the idea of thinking-out-loud and sharing knowledge and resources openly. So here we are.\n\n\nI will make an effort to work on my digital garden like a gardener tends to their garden in the backyard\nCurrently, alot of the work in my garden is projects from my time as a graduate student. I’m very proud of the work I contributed to and the open access work. After my time as a graduate student, there’s still so muc to explore and to work on! Obviously I won’t have a ton of time to devote to personal projects; besides work and family, I also need to catch up to my partner on the Marvel universe on Disney+…But when I can I will be definitely working more on growing existing work and knowledge in an effort to think-out-loud and develop as a scientist.\n\n\nHow Quarto is fantastic software for making your digital garden\nI wanted to give my original website a face-lift. It was my first foray into web development, even if extremely basic. I knew I would have to do it eventually, but I wasn’t keen on any particular tool out there. I wanted 1) customization but also ease-of-use, 2) community support for tool development so I wouldn’t be stuck with broken code later, 3) a way to do coding in different languages and frameworks so my projects are only limited by content and not technology, and 4) I wanted ti use a tool that would persist a long time.\nQuarto seemed to fit these criteria as a new tool, support by a community, offering amazing customization and a friendly user-interface, and it fit my projects with code from different languages. I also searched for some other cool features (see the typing text on my homepage) that I could implement using Quarto. The site is also pretty mobile friendly which is a must these days! The tool seems to be great for putting together my digital garden.\nHere’s hoping we all get to see some cool content result from ‘tending’ to my digital garden!"
+  },
+  {
+    "objectID": "content/garden/projects/pds/pds-portal.html",
+    "href": "content/garden/projects/pds/pds-portal.html",
+    "title": "PDSportal",
+    "section": "",
+    "text": "Giangreco NP, Tatonetti NP. A database of pediatric drug effects to evaluate ontogenic mechanisms from child growth and development. Med (N Y). 2022 Jun 20:S2666-6340(22)00232-X. doi: 10.1016/j.medj.2022.06.001. Epub ahead of print. PMID: 35752163.\nThe PDSportal contains an Overview section with further instructions on how to use it. Feel free to play around!"
+  },
+  {
+    "objectID": "content/garden/projects/pds/pds-database.html",
+    "href": "content/garden/projects/pds/pds-database.html",
+    "title": "PDSdatabase",
+    "section": "",
+    "text": "An R data package to connect with real-world drug safety data in children. See the github link for details."
+  },
+  {
+    "objectID": "content/garden/projects/pds/index.html",
+    "href": "content/garden/projects/pds/index.html",
+    "title": "Pediatric Drug Safety",
+    "section": "",
+    "text": "PDSdatabase\n\n\nAn R data package to access publicly available pediatric drug safety information\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nPDSportal\n\n\nR shinydashboard application to access publicly available pediatric drug safety information\n\n\n\n\n \n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "content/garden/projects/buffalo/index.html",
+    "href": "content/garden/projects/buffalo/index.html",
+    "title": "Buffalo & Western New York",
+    "section": "",
+    "text": "Moving back to my hometown, Buffalo NY, has been a fantastic experience. Buffalo and Western New York generally speaking has been going through tremendous economic development and growth over the past decade. I wasn’t able to appreciate what the city and surrounding area had to offer until recently. As a citizen scientist, I want to explore Buffalo and WNY through data. I plan on using publicly available data, like from the Open Data Buffalo initiative, to explore, understand, and communicate about my hometown and why I love living here. Stay tuned for more on this project!\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "content/garden/projects/mccv/index.html",
+    "href": "content/garden/projects/mccv/index.html",
+    "title": "Monte Carlo Cross Validation",
+    "section": "",
+    "text": "Giangreco NP, Lebreton G, Restaino S, Jane Farr M, Zorn E, Colombo PC, Patel J, Levine R, Truby L, Soni RK, Leprince P, Kobashigawa J, Tatonetti NP, Fine BM. Plasma kallikrein predicts primary graft dysfunction after heart transplant. J Heart Lung Transplant. 2021 Jul 10:S1053-2498(21)02391-3. doi: 10.1016/j.healun.2021.07.001.\nGiangreco, N.P., Lebreton, G., Restaino, S. et al. Alterations in the kallikrein-kinin system predict death after heart transplant. Sci Rep 12, 14167 (2022). https://doi.org/10.1038/s41598-022-18573-2\n\nThe prediction scheme, Monte Carlo Cross Validation (MCCV), is composed of 5 steps repeated multiple times (e.g. N=200):\n\nSplit the data into 85% training and 15% validation sets.\nSeparately normalize, or subtract the sample mean and divide by the sample standard deviation, the training and testing data.\nUsing only the sampled training data, compute ten-fold cross validation and choose the top performing model parameters for predicting the response.\nRefit the training dataset using the top-prediction model parameters determined in step 3.\nPredict patient response in the yet-to-be-seen validation set using the refit model calculated in step 4.\n\nThe above publications resulted from my PhD work at Columbia University. In my free time after my PhD, I put together the python functions and scripts as a package for MCCV routines. Additionally, I am conducting a simulation experiment to evaluate outcome prediction for different biomarker distributions.\n\n\n\n\n\n\n  \n\n\n\n\nMCCV for Biomarker Prediction\n\n\nA simulation study to evaluate prediction of clinical outcomes and responses using biomarker data\n\n\n\n\npython\n\n\nbiomarker\n\n\ndistributions\n\n\nsimulation\n\n\nprediction\n\n\ndifferential expression\n\n\n \n\n\n \n\n\n\n\n  \n\n\n\n\nMonte Carlo Cross Validation\n\n\nA python package for implementing MCCV\n\n\n\n\npython\n\n\npackage\n\n\n \n\n\n \n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "content/garden/projects/mccv/mccv-simulation.html",
+    "href": "content/garden/projects/mccv/mccv-simulation.html",
+    "title": "MCCV for Biomarker Prediction",
+    "section": "",
+    "text": "The motivation for this study is to compare MCCV and traditional hypothesis testing, such as the t-test, as methods for learning outcomes from varied biomarker distributions. The work is being implemented in a collection of notebooks in the github repository. The evaluation results and presentation is being made as Reavel.js slides."
+  },
+  {
+    "objectID": "content/garden/projects/mccv/mccv-package.html",
+    "href": "content/garden/projects/mccv/mccv-package.html",
+    "title": "Monte Carlo Cross Validation",
+    "section": "",
+    "text": "MCCV routines implemented within a python class. See the github for code, details, and issues."
+  },
+  {
+    "objectID": "content/garden/index.html#welcome-to-my-digital-garden",
+    "href": "content/garden/index.html#welcome-to-my-digital-garden",
+    "title": "Nicholas Giangreco",
+    "section": "🌳Welcome to my digital garden🌳",
+    "text": "🌳Welcome to my digital garden🌳\nA digital garden is an online space for sharing and cultivating knowledge 🌈 It embodies the notion of working out loud 🤓\n\nProjects ➡️ Collection of code, notebooks, packages, and/or writings\nPosts ➡️ Announcements, standalone essay, or opinions\nDiscussion ➡️ Github issues"
+  },
+  {
+    "objectID": "content/cv/Nicholas_Giangreco_CV.html",
+    "href": "content/cv/Nicholas_Giangreco_CV.html",
+    "title": "Nick Giangreco",
+    "section": "",
+    "text": "Github | Linkedin | ORCID | nickg.bio | nick.giangreco@gmail.com | Date of preparation: July 4th 2022\n\n\n\nTopic areas: Pediatric drug safety, interpretable machine learning, fairness and equity in biomedical informatics, biomarker evaluation and discovery, prediction and risk estimation, biomedical data management/integration/analysis\n\n\nTechnical expertise: Interpretable machine learning, differential expression analysis, predictive analyses, simulation, data cleaning and modeling, dashboard development and AWS deployment, data-driven hypothesis generation and hypothesis testing, statistical software development\n\n\nProgramming Languages: Python, R, SQL, bash\n\n\nPending patents: CU18316 Prediction of post-heart transplant primary graft dysfunction using exosome proteins\n\n\nTeam projects/Hackathons: 1 R package, 1 python package, 2 R Shiny Apps, 1 Dash/Plotly app, 7 analysis workflows in python, R, bash\n\n\nLeadership roles: 501(c)(3) nonprofit secretary, Mentor for digital health start-up incubator; As PhD student: 3 club president, 2 treasurer"
+  },
+  {
+    "objectID": "content/cv/Nicholas_Giangreco_CV.html#work-experience",
+    "href": "content/cv/Nicholas_Giangreco_CV.html#work-experience",
+    "title": "Nick Giangreco",
+    "section": "WORK EXPERIENCE",
+    "text": "WORK EXPERIENCE\n\n2021 - Present\n\nAssociate Scientist, Quantitative Translational Scientist (Regeneron Pharmaceuticals Inc.); Tarrytown, NY\nPrecision Medicine\n\n2016 - 2021\n\nSystems biologist (Columbia University); New York, NY\nThesis: Mind the developmental gap: Identifying adverse drug effects across childhood to evaluate biological mechanisms from growth and development\nPDSportal\nPDSdatabase\n\nFebruary 2021 - August 2021\n\nBioinformatics intern (DNAnexus); San Francisco, CA\nCustomer success development team\nInitiated internal and external projects such as interpretable machine learning and genomic/phenomic data integration/analysis\n\nJune 2019 - August 2019\n\nClinical informatics intern (Regeneron Genetics Center)); Tarrytown, NY\nDeveloped database of multivariate clinical associations using incremental learning on amazon web services.\n\nJuly 2018 - September 2018\n\nComputational biology intern (Genetic Leap); New York, NY\nFormerly Genetic Intelligence Inc.\nConducted independent and collaborative genomics research using NCBI APIs and amazon web services.\n\n2014-2019\n\nCancer bioinformatician (National Human Genome Research Institute); Bethesda, MD\nPost-baccalaureate trainee 2014-2016; Special volunteer 2016-2019\nInvestigated ovarian endometrioid tumorigenesis by integrating and analyzing RNASeq and DNA methylation sequencing (MBD-Seq)."
+  },
+  {
+    "objectID": "content/cv/Nicholas_Giangreco_CV.html#education",
+    "href": "content/cv/Nicholas_Giangreco_CV.html#education",
+    "title": "Nick Giangreco",
+    "section": "EDUCATION",
+    "text": "EDUCATION\n\n2016 - 2021\n\nPhD, Systems Biology; Columbia University, New York City, NY\nPhD advisor: Dr. Nicholas Tatonetti\nMasters of Arts (2018) and Masters of Philosophy (2019)\n\n2010 - 2014\n\nBS, Biochemistry; University of Rochester, Rochester, NY"
+  },
+  {
+    "objectID": "content/cv/Nicholas_Giangreco_CV.html#publications",
+    "href": "content/cv/Nicholas_Giangreco_CV.html#publications",
+    "title": "Nick Giangreco",
+    "section": "PUBLICATIONS",
+    "text": "PUBLICATIONS\n\nGiangreco NP, Tatonetti NP. A database of pediatric drug effects to evaluate ontogenic mechanisms from child growth and development. Med (N Y). 2022 Jun 20:S2666-6340(22)00232-X. doi: 10.1016/j.medj.2022.06.001. Epub ahead of print. PMID: 35752163.\nGiangreco, Nicholas (2022), Longitudinal trends of EHR concepts in pediatric patients, Dryad, Dataset, https://doi.org/10.5061/dryad.j0zpc86g3\nNicholas P Giangreco, Sulieman Lina, Jun Qian, Aymone Kuoame, Vignesh Subbian, Eric Boerwinkle, Mine Cicek, Cheryl R Clark, Elizabeth Cohen, Kelly A Gebo, Roxana Loperena-Cortes, Kelsey Mayo, Stephen Mockrin, Lucila Ohno-Machado, Sheri D Schully, Nicholas P Tatonetti, Andrea H Ramirez, Pediatric data from the All of Us research program: demonstration of pediatric obesity over time, JAMIA Open, Volume 4, Issue 4, October 2021, ooab112, https://doi.org/10.1093/jamiaopen/ooab112\nGiangreco NP, Lebreton G, Restaino S, Jane Farr M, Zorn E, Colombo PC, Patel J, Levine R, Truby L, Soni RK, Leprince P, Kobashigawa J, Tatonetti NP, Fine BM. Plasma kallikrein predicts primary graft dysfunction after heart transplant. J Heart Lung Transplant. 2021 Jul 10:S1053-2498(21)02391-3. doi: 10.1016/j.healun.2021.07.001.\nGiangreco, N.P., Tatonetti, N.P. Evaluating risk detection methods to uncover ontogenic-mediated adverse drug effect mechanisms in children. BioData Mining 14, 34 (2021). https://doi.org/10.1186/s13040-021-00264-9.\nGiangreco, NP, Elias, JE, Tatonetti, NP. No population left behind: Improving paediatric drug safety using informatics and systems biology. Br J Clin Pharmacol. 2021; 1– 7. https://doi.org/10.1111/bcp.14705.\nGiangreco, Nicholas P. and Tatonetti, Nicholas P., A Database of Pediatric Drug Effects to Evaluate Ontogenic Mechanisms From Child Growth and Development. Available at SSRN: https://ssrn.com/abstract=3898786 or http://dx.doi.org/10.2139/ssrn.3898786\nNicholas P. Giangreco, Barry Fine, Nicholas P. Tatonetti. cohorts: A Python package for clinical ’omics data management. bioaRxiv doi: https://www.biorxiv.org/content/10.1101/626051\nBenjamin S Glicksberg, Boris Oskotsky, Phyllis M Thangaraj, Nicholas Giangreco, Marcus A Badgeley, Kipp W Johnson, Debajyoti Datta, Vivek A Rudrapatna, Nadav Rappoport, Mark M Shervey, Riccardo Miotto, Theodore C Goldstein, Eugenia Rutenberg, Remi Frazier, Nelson Lee, Sharat Israni, Rick Larsen, Bethany Percha, Li Li, Joel T Dudley, Nicholas P Tatonetti, Atul J Butte, PatientExploreR: an extensible application for dynamic visualization of patient clinical history from electronic health records in the OMOP common data model, Bioinformatics, Volume 35, Issue 21, 1 November 2019, Pages 4515–4518, https://doi.org/10.1093/bioinformatics/btz409.\nBenjamin S Glicksberg, Boris Oskotsky, Nicholas Giangreco, Phyllis M Thangaraj, Vivek Rudrapatna, Debajyoti Datta, Remi Frazier, Nelson Lee, Rick Larsen, Nicholas P Tatonetti, Atul J Butte, ROMOP: a light-weight R package for interfacing with OMOP-formatted electronic health record data, JAMIA Open, Volume 2, Issue 1, April 2019, Pages 10–14, https://doi.org/10.1093/jamiaopen/ooy059\nEstibaliz Castillero, Ziad A. Ali, Hirokazu Akashi, Nicholas Giangreco, Catherine Wang, Eric J. Stöhr, Ruping Ji, Xiaokan Zhang, Nathaniel Kheysin, Joo-Eun S. Park, Sheetal Hegde, Sanatkumar Patel, Samantha Stein, Carlos Cuenca, Diana Leung, Shunichi Homma, Nicholas P. Tatonetti, Veli K. Topkara, Koji Takeda, Paolo C. Colombo, Yoshifumi Naka, H. Lee Sweeney, P. Christian Schulze, and Isaac George American Journal of Physiology-Heart and Circulatory Physiology 2018 315:5, H1463-H1476.\nKim-Hellmuth, S., Bechheim, M., Pütz, B., Mohammadi, P., Néd´lec, Y, Giangreco, N., et al. Genetic regulatory effects modified by immune activation contribute to autoimmune disease associations. Nat Commun 8, 266 (2017). https://doi.org/10.1038/s41467-017-00366-1.\n\nPeer-reviewed publications on pubmed\nGoogle scholar profile"
+  },
+  {
+    "objectID": "content/cv/Nicholas_Giangreco_CV.html#fellowships-and-awards",
+    "href": "content/cv/Nicholas_Giangreco_CV.html#fellowships-and-awards",
+    "title": "Nick Giangreco",
+    "section": "FELLOWSHIPS AND AWARDS",
+    "text": "FELLOWSHIPS AND AWARDS\n\nTravel award to present on a panel at the 2022 American Medical Informatics Association Summit in Chicago, USA\nTravel award to 2021 Elixir biohackathon in Barcelona Spain.\nSpecial recognition from Columbia University for service during the COVID-19 crisis\n2021 Diversity & Inclusion Commercialization and Entrepreneurship Fellow @ Columbia Technology Ventures\nThree-Minute Thesis 2019 finalist @ Columbia Graduate School of Arts and Sciences.\nBest contribution in methodological research at the OHDSI 2018 Symposium for Pediatric Drug Safety poster.\nColumbia Diversity Fellowship.\nDepartment of Systems Biology Merit Fellowship.\nDonald Charles Award, University of Rochester Department of Biology.\nFulbright Fellowship Alternate 2013-2014: Sweden, Molecular Modeling, “Novel Antibody-SpA Complex Modeling”.\nTravel Award to 9th Student Council and ISMB/ECCB conference 2013 Berlin, Germany."
+  },
+  {
+    "objectID": "content/cv/Nicholas_Giangreco_CV.html#posters-and-software",
+    "href": "content/cv/Nicholas_Giangreco_CV.html#posters-and-software",
+    "title": "Nick Giangreco",
+    "section": "POSTERS AND SOFTWARE",
+    "text": "POSTERS AND SOFTWARE\n\nNicholas Giangreco, Salvatore G. Volpe, Meghana Tandon, Kamileh Narisnh, Ben Busby. All Genes Lead to ROMOPOmics. OHDSI symposium video demo\nNick Giangreco and Nicholas Tatonetti. Using precision pharmacovigilance to detect developmentally-regulated adverse drug reactions: a case study with antiepileptic drugs. poster github\nNick Giangreco and Nicholas Tatonetti. Using precision pharmacovigilance to detect and evaluate antiepileptic drug associated adverse reactions in pediatric patients. poster\nNick Giangreco and Nicholas Tatonetti. cohorts. github\nNick Giangreco. Scan2CNV. OMICSTools\nGiangreco N, Zorn E, Chen E et al. Identification of novel primary graft dysfunction biomarkers using exosome proteomics [version 1; not peer reviewed]. F1000Research 2017, 6:2080 (poster) (doi: 10.7490/f1000research.1115115.1)\nGiangreco N and Lezon T. Alternative conformation prediction of Vibrio Cholerae concentrative nucleoside transporter. F1000Posters 2013, 4:776 (poster)."
+  },
+  {
+    "objectID": "content/cv/Nicholas_Giangreco_CV.html#leadership-and-management-experience",
+    "href": "content/cv/Nicholas_Giangreco_CV.html#leadership-and-management-experience",
+    "title": "Nick Giangreco",
+    "section": "Leadership and Management Experience",
+    "text": "Leadership and Management Experience\n\nNew York Health Artificial Intelligence Society\n\n501(c)(3) not-for-profit Cofounder and Secretary, 2019-Present\nPromote public discourse on a wide range of topics such as AI & Society, AI & Healthcare, and economic impact by AI.\nOrganize and facilitate group engagement, workshops, AI study groups, and not-for-profit organization.\nConsultant on data science and education projects and initiatives.\n\nUniversity of Rochester Alumni Undergraduate Interviewer\n\nAssess potential and suitability for undergraduate college\nInterviewer at large and small event settings\n\nCUIMC Department of Biomedical Informatics Justice Informatics Reading group\n\nMember January 2021-December 2021\nRead and discuss publications, books, and policy on fairness and ethics within informatics development and their application\n\nCUIMC Data Science Club\n\nPresident 2017-2021\nOrganize and manage team of officers, oversee activities, manage budget, and promote outreach portfolio to support and strengthen the data science skills of biomedical scientists at CUIMC\n\nHealth Tech Assembly\n\nPresident 2019-2020\n\nManage business, medical, public health, and engineering representatives for inter-school events, panels, and conferences at Columbia.\nOrganize and plan professional/social engagement events.\nNetwork and connect with NYC-wide entrepreneurs and professionals.\n\nMedical campus representative 2018-2019\n\nGraduate Student Organization at Columbia University Irving Medical Center\n\nCo-President 2019-2020\n\nOrganize and manage team of Biomedical PhDs for social and professional activities serving hundreds of CUIMC PhD students.\n\nFinance Chair 2018-2019\n\nColumbia Graduate Council\n\nTreasurer 2019-2020\n\nEstablish budget and expense sheets and annual reports\nManage forty thousand dollar budget for Columbia inter-school activities.\n\n\nDepartment of Biomedical Informatics\n\nCo-lead weekly seminar series\nManage presentation schedule, speaker logistics and travel, and promote team coordination.\n\nDepartment of Systems Biology\n\nPoint person for Systems Biology Trainee Council\nSecured funding and launched event portfolio for trainee development\nManage monthly departmental happy hours"
+  },
+  {
+    "objectID": "content/cv/Nicholas_Giangreco_CV.html#mentoring-tutoring-and-writing",
+    "href": "content/cv/Nicholas_Giangreco_CV.html#mentoring-tutoring-and-writing",
+    "title": "Nick Giangreco",
+    "section": "MENTORING, TUTORING, and WRITING",
+    "text": "MENTORING, TUTORING, and WRITING\n\nMentor in technical and entrepreneurship development for the Innovate Children’s Health Challenge\nMentor and tutor for project management, R and python programming, and statistics and machine learning to high school/college/graduate students and professionals.\n“Hack nights – Solving healthcare data-science/AI/ML problems” Introduction to cancer genomics four part series. Co-led with Matthew Eng\n\nAdventures In Hacking Healthcare Medium Publication\n\nNicholas Giangreco. “The Importance of being Open”. PHDISH January 9th 2019.\nMentoring:\n\nPayal Chandak, Undergraduate at Columbia University\n\nProvide guidance and instruction in biomedical data science and research training.\nProvided guidance and mentoring for summer 2018 research internship in the Tatonetti Lab\n\n“Drugs with sex-linked risk for adverse drug reactions”\n\n\nSMRI high school mentorship\n\nProvide guidance to high school student in biomedical data science research project\n\n\nCuriology tutor\n\nManaged and co-led science experiments with NIH fellows for middle school students in Washington D.C.\n\nCollege Bound tutor\n\nFacilitated completion of homework assignments in STEM for Washington D.C. high school students.\n\nGenetics Study Group Leader, Center for Excellence in Teaching and Learning, University of Rochester."
+  },
+  {
+    "objectID": "content/cv/Nicholas_Giangreco_CV.html#conferences-and-hackathons",
+    "href": "content/cv/Nicholas_Giangreco_CV.html#conferences-and-hackathons",
+    "title": "Nick Giangreco",
+    "section": "CONFERENCES AND HACKATHONS",
+    "text": "CONFERENCES AND HACKATHONS\n\nAmerican Medical Informatics Association Translational Summit 2022 Chicago USA\n2021 Elixir biohackathon\n\nFront-end developer\nBuilt prototype dashboard for improved disease subtyping and treatment pathways for colorectal cancer. See github and shiny dashboard.\n\nClinical Reporting of Multi ’Omics data\n\nLed team and managed hackathon teams to manage and streamline integration of genomic, transcriptomic, and polygenic risk score data into the OMOP common data model. See github.\n\nElixir biohackathon\n\nCollaborated with bioinformatics team to integrate nextflow scheme and cancer mutation data (vcf files) into OMOP standard structure using ROMOPOmics.\n\nHack for NF, Children’s Tumor Foundation\n\nCo-lead web developer coordination and product development\nA FHIR-complient and primarily patient-centric profile for NF management and centralized repository for medical journey.\n\nJudge, Predictive analytics track, Columbia University COVID-19 Data Challenge\nVirtual Interoperathon 2020\n\nProject developer for personalized health record accessed with fhir-client python api\nDeveloped flask application proof-of-concept.\n\nNCBI Hackathon @ Carnegie Mellon University January 2020\n\nProject co-lead for developing and extending common data model to represent biological ’omics data for reproducible queries and analyses.\nSee original OMOPOmics and R package ROMOPOmics github repository.\n\nCSHL Biological Data Science meeting November 2018.\nOHDSI 2018 Symposium\nNCBI Hackathon @ New York Genome Center August 2018\n\nProject lead for developing data science notebooks and web application interfacing with drug safety data.\nSee SafeDrugs github repository.\n\nIntelligent Systems in Molecular Biology, July 2018\nSecond Northeast Computational Health Summit, April 2018\nAmerican Heart Association Scientific Sessions 2017, poster presentation Giangreco et al. 2017.\nNCBI Hackathon @ New York Genome Center June 2017.\nNCBI Hackathon @ NCBI March 2017.\nCSHL Biological Data Science meeting October 2016.\nJHU DaSH Hackathon September 2015.\nISMB/ECCB conference @ Berlin, Germany July 2013, poster presentation Giangreco et al. 2013."
+  },
+  {
+    "objectID": "content/cv/Nicholas_Giangreco_CV.html#talks-and-panels",
+    "href": "content/cv/Nicholas_Giangreco_CV.html#talks-and-panels",
+    "title": "Nick Giangreco",
+    "section": "TALKS AND PANELS",
+    "text": "TALKS AND PANELS\n\nPanelist for S14: “Utility of the All of Us Researcher Workbench in Educational and Research Settings” American Medical Informatics Association Informatics Summit March 2022 Chicago.\nDBMI Justice Informatics Joint Forum. Internal, collaborative meeting discussing the impact of Big Data and mathematical models on inequity and how that applies to research.\n“Pediatrics data in All of Us”. All of Us Research Workbench Onramp Virtual Event June 2021.\n2021 Graduate Scholar for research talk entitled ‘Mind the developmental gap: Identifying adverse drug effects across childhood to evaluate biological mechanisms from growth and development’ with Emuritus Professors at Columbia (EPIC)\n“Understanding dynamics with statistical modeling” Coding workshop, CUIMC Data Science Club, YouTube video\n“Introduction to programming and bioinformatics” Tutorial for 2021 Columbia University Science Matters Research Internship\n“Intro to Bioinformatics and How to Analyze Brain Tissue with Data Science”. Invited presentation at NYC Medical Research and Bioinformatics Group. November 2018. Presentation link.\nMedical Research Career Panelist, Minds Matter NYC, June 2018\nStandardized and Reproducible Analysis Enables Identification of Novel Primary Graft Dysfunction Biomarkers using Exosome Proteomics, Second NorthEast Computational Health Summit 2018, April 2018.\n“Tools, Libraries and Analyses in Biomedical Data Science”, New York Healthcare Artificial Intelligence Society, December 2017.\n“Doing Science with Big Data”, Late Night Science, Columbia University Neuroscience Outreach, December 2017.\n“AI, Life Sciences, and Big Data”, New York Healthcare Artificial Intelligence Society, August 2017. Presentation link.\nNIDDK Undergraduate Step-Up Judge, NIH, Bethesda MD, August 2015."
+  },
+  {
+    "objectID": "content/cv/Nicholas_Giangreco_CV.html#professional-memberships",
+    "href": "content/cv/Nicholas_Giangreco_CV.html#professional-memberships",
+    "title": "Nick Giangreco",
+    "section": "PROFESSIONAL MEMBERSHIPS",
+    "text": "PROFESSIONAL MEMBERSHIPS\n\nInternational Society of Computational Biology, 2013-2014 & 2017-2018\nAmerican Heart Association, 2017-2018.\nAmerican Medical Informatics Association, 2017-2018."
+  },
+  {
+    "objectID": "content/cv/Nicholas_Giangreco_academic_CV.html",
+    "href": "content/cv/Nicholas_Giangreco_academic_CV.html",
+    "title": "Nicholas Giangreco",
+    "section": "",
+    "text": "Github | Linkedin | ORCID | nickg.bio | nick.giangreco@gmail.com | Date of preparation: November 1st 2020"
+  },
+  {
+    "objectID": "content/cv/Nicholas_Giangreco_academic_CV.html#education",
+    "href": "content/cv/Nicholas_Giangreco_academic_CV.html#education",
+    "title": "Nicholas Giangreco",
+    "section": "EDUCATION",
+    "text": "EDUCATION\n\n2016 - Present\n\nPhD Candidate, Systems Biology; Columbia University, New York City, NY\nMasters of Arts (2018) and Masters of Philosophy (2019)\n\n2010 - 2014\n\nBS, Biochemistry; University of Rochester, Rochester, NY"
+  },
+  {
+    "objectID": "content/cv/Nicholas_Giangreco_academic_CV.html#work-experience",
+    "href": "content/cv/Nicholas_Giangreco_academic_CV.html#work-experience",
+    "title": "Nicholas Giangreco",
+    "section": "WORK EXPERIENCE",
+    "text": "WORK EXPERIENCE\n\n2016 - Present\n\nSystems biology Graduate Research Assistant (Columbia University); New York, NY\nPhD advisor: Dr. Nicholas Tatonetti\n\nJune 2019 - August 2019\n\nClinical informatics intern (Regeneron Genetics Center)); Tarrytown, NY\nDeveloped database of multivariate clinical associations using incremental learning on amazon web services.\n\nJuly 2018 - September 2018\n\nComputational biology intern (Genetic Intelligence Inc.); New York, NY\nConducted independent and collaborative genomics research using NCBI APIs and amazon web services.\n\n2014-2019\n\nCancer bioinformatician (National Human Genome Research Institute); Bethesda, MD\nPost-baccalaureate trainee 2014-2016; Special volunteer 2016-2019\nInvestigated ovarian endometrioid tumorigenesis by integrating and analyzing RNASeq and DNA methylation sequencing (MBD-Seq)."
+  },
+  {
+    "objectID": "content/cv/Nicholas_Giangreco_academic_CV.html#fellowships-and-awards",
+    "href": "content/cv/Nicholas_Giangreco_academic_CV.html#fellowships-and-awards",
+    "title": "Nicholas Giangreco",
+    "section": "FELLOWSHIPS AND AWARDS",
+    "text": "FELLOWSHIPS AND AWARDS\n\nThree-Minute Thesis 2019 finalist @ Columbia Graduate School of Arts and Sciences.\nBest contribution in methodological research at the OHDSI 2018 Symposium for Pediatric Drug Safety poster.\nColumbia Diversity Fellowship.\nDepartment of Systems Biology Merit Fellowship.\nDonald Charles Award, University of Rochester Department of Biology.\nFulbright Fellowship Alternate 2013-2014: Sweden, Molecular Modeling, “Novel Antibody-SpA Complex Modeling”.\nTravel Award to 9th Student Council and ISMB/ECCB conference 2013 Berlin, Germany."
+  },
+  {
+    "objectID": "content/cv/Nicholas_Giangreco_academic_CV.html#publications",
+    "href": "content/cv/Nicholas_Giangreco_academic_CV.html#publications",
+    "title": "Nicholas Giangreco",
+    "section": "PUBLICATIONS",
+    "text": "PUBLICATIONS\n\nNicholas Giangreco, Jonathan Elias, and Nicholas Tatonetti. No population left behind: improving pediatric drug safety using informatics and systems biology. British Journal of Clinical Pharmacology (DOI).\nNicholas P. Giangreco, Barry Fine, Nicholas P. Tatonetti. cohorts: A Python package for clinical ’omics data management. bioarxiv\nBenjamin S Glicksberg, Boris Oskotsky, Phyllis M Thangaraj, Nicholas Giangreco, Marcus A Badgeley, Kipp W Johnson, Debajyoti Datta, Vivek A Rudrapatna, Nadav Rappoport, Mark M Shervey, Riccardo Miotto, Theodore C Goldstein, Eugenia Rutenberg, Remi Frazier, Nelson Lee, Sharat Israni, Rick Larsen, Bethany Percha, Li Li, Joel T Dudley, Nicholas P Tatonetti, Atul J Butte, PatientExploreR: an extensible application for dynamic visualization of patient clinical history from electronic health records in the OMOP common data model, Bioinformatics, , btz409, https://doi.org/10.1093/bioinformatics/btz409\nBenjamin S Glicksberg, Boris Oskotsky, Nicholas Giangreco, Phyllis M Thangaraj, Vivek Rudrapatna, Debajyoti Datta, Remi Frazier, Nelson Lee, Rick Larsen, Nicholas P Tatonetti, Atul J Butte, ROMOP: a light-weight R package for interfacing with OMOP-formatted electronic health record data, JAMIA Open, Volume 2, Issue 1, April 2019, Pages 10–14, https://doi.org/10.1093/jamiaopen/ooy059\nCastillero E., Ali Z., Akashi H., Giangreco N., Wang C., Ji R., Zhang X., Kheysin N., Park J., Hegde S., Patel S., Stein S., Cuenca C., Leung D., Homma S., Tatonetti N., Topkara V., Takeda K., Colombo P., Naka Y., Sweeny L., Schulze C., George I. Structural and Functional Cardiac Profile after Prolonged Duration of Mechanical Unloading: Potential Implications for Myocardial Recovery. American Journal of Heart and Circulation Physiology, article in press\nSarah Kim-Hellmuth, Matthias Bechheim, Benno Puetz, Pejman Mohammadi, Yohann Nedelec, Nicholas Giangreco, Jessica Becker, Vera Kaiser, Nadine Fricker, Esther Beier, Peter Boor, Stephane Castel, Markus M. Noethen, Luis B. Barreiro, Joseph K. Pickrell, Bertram Mueller-Myhsok, Tuuli Lappalainen, Johannes Schumacher, Veit Hornung. Genetic regulatory effects modified by immune activation contribute to autoimmune disease associations Nature Communications, 8 (266): 1-10.\nGiangreco N., Petrykowska H., Scott A., Margolin G., Gotea V., Cho K. R., and Elnitski L. Inactivation of Arid1a drives aberrant epigenetic traits in a mouse model of Apc/Pten defective ovarian endometrioid tumors. (in preparation)\n\nPeer-Reviewed Publications on Pubmed"
+  },
+  {
+    "objectID": "content/cv/Nicholas_Giangreco_academic_CV.html#posters-and-software",
+    "href": "content/cv/Nicholas_Giangreco_academic_CV.html#posters-and-software",
+    "title": "Nicholas Giangreco",
+    "section": "POSTERS AND SOFTWARE",
+    "text": "POSTERS AND SOFTWARE\n\nNick Giangreco and Nicholas Tatonetti. Using precision pharmacovigilance to detect developmentally-regulated adverse drug reactions: a case study with antiepileptic drugs. poster github\nNick Giangreco and Nicholas Tatonetti. Using precision pharmacovigilance to detect and evaluate antiepileptic drug associated adverse reactions in pediatric patients. poster\nNick Giangreco and Nicholas Tatonetti. cohorts. github\nNick Giangreco. Scan2CNV. OMICSTools\nGiangreco N, Zorn E, Chen E et al. Identification of novel primary graft dysfunction biomarkers using exosome proteomics [version 1; not peer reviewed]. F1000Research 2017, 6:2080 (poster) (doi: 10.7490/f1000research.1115115.1)\nGiangreco N and Lezon T. Alternative conformation prediction of Vibrio Cholerae concentrative nucleoside transporter. F1000Posters 2013, 4:776 (poster)."
+  },
+  {
+    "objectID": "content/cv/Nicholas_Giangreco_academic_CV.html#leadership-and-management-experience",
+    "href": "content/cv/Nicholas_Giangreco_academic_CV.html#leadership-and-management-experience",
+    "title": "Nicholas Giangreco",
+    "section": "Leadership and Management Experience",
+    "text": "Leadership and Management Experience\n\nCUIMC Data Science Club\n\nPresident 2017-\nOrganize and manage team of officers, oversee activities, manage budget, and promote outreach portfolio to support and strengthen the data science skills of biomedical scientists at CUIMC\n\nHealth Tech Assembly\n\nPresident 2019-2020\n\nManage business, medical, public health, and engineering representatives for inter-school events, panels, and conferences at Columbia.\nOrganize and plan professional/social engagement events.\nNetwork and connect with NYC-wide entrepreneurs and professionals.\n\nMedical campus representative 2018-2019\n\nGraduate Student Organization at Columbia University Irving Medical Center\n\nCo-President 2019-2020\n\nOrganize and manage team of Biomedical PhDs for social and professional activities serving hundreds of CUIMC PhD students.\n\nFinance Chair 2018-2019\n\nColumbia Graduate Council\n\nTreasurer 2019-2020\n\nEstablish budget and expense sheets and annual reports\nManage forty thousand dollar budget for Columbia inter-school activities.\n\n\nDepartment of Biomedical Informatics\n\nCo-lead weekly seminar series\nManage presentation schedule, speaker logistics and travel, and promote team coordination.\n\nDepartment of Systems Biology\n\nPoint person for Systems Biology Trainee Council\nSecured funding and launched event portfolio for trainee development\nManage monthly departmental happy hours\n\nNew York Health Artificial Intelligence Society\n\n501(c)(3) not-for-profit Cofounder and Secretary\nMeetup co-organizer 2018-\nPromote public discourse on a wide range of topics such as AI & Society, AI & Healthcare, and economic impact by AI.\nOrganize and facilitate group engagement, workshops, AI study groups, and not-for-profit organization.\nConsultant on data science and education projects and initiatives.\n\nUniversity of Rochester Alumni Undergraduate Interviewer\n\nAssess potential and suitability for undergraduate college\nInterviewer at large and small event settings"
+  },
+  {
+    "objectID": "content/cv/Nicholas_Giangreco_academic_CV.html#mentoring-tutoring-and-writing",
+    "href": "content/cv/Nicholas_Giangreco_academic_CV.html#mentoring-tutoring-and-writing",
+    "title": "Nicholas Giangreco",
+    "section": "MENTORING, TUTORING, and WRITING",
+    "text": "MENTORING, TUTORING, and WRITING\n\nMentor and tutor for project management, R and python programming, and statistics and machine learning to high school and college students, graduates, and professionals.\n“Hack nights – Solving healthcare data-science/AI/ML problems” Introduction to cancer genomics four part series. Co-led with Matthew Eng\n\nAdventures In Hacking Healthcare Medium Publication\n\nNicholas Giangreco. “The Importance of being Open”. PHDISH January 9th 2019.\nMentoring:\n\nPayal Chandak, Undergraduate at Columbia University\n\nProvide guidance and instruction in biomedical data science and research training.\nProvided guidance and mentoring for summer 2018 research internship in the Tatonetti Lab\n\n“Drugs with sex-linked risk for adverse drug reactions”\n\n\nSMRI high school mentorship\n\nProvide guidance to high school student in biomedical data science research project\n\n\nCuriology tutor\n\nManaged and co-led science experiments with NIH fellows for middle school students in Washington D.C.\n\nCollege Bound tutor\n\nFacilitated completion of homework assignments in STEM for Washington D.C. high school students.\n\nGenetics Study Group Leader, Center for Excellence in Teaching and Learning, University of Rochester."
+  },
+  {
+    "objectID": "content/cv/Nicholas_Giangreco_academic_CV.html#conferences-and-hackathons",
+    "href": "content/cv/Nicholas_Giangreco_academic_CV.html#conferences-and-hackathons",
+    "title": "Nicholas Giangreco",
+    "section": "CONFERENCES AND HACKATHONS",
+    "text": "CONFERENCES AND HACKATHONS\n\nElixir biohackathon\n\nCollaborated with bioinformatics team to integrate nextflow scheme and cancer mutation data (vcf files) into OMOP standard structure using ROMOPOmics.\n\nHack for NF, Children’s Tumor Foundation\n\nCo-lead web developer coordination and product development\nA FHIR-complient and primarily patient-centric profile for NF management and centralized repository for medical journey.\n\nJudge, Predictive analytics track, Columbia University COVID-19 Data Challenge\nVirtual Interoperathon 2020\n\nProject developer for personalized health record accessed with fhir-client python api\nDeveloped flask application proof-of-concept.\n\nNCBI Hackathon @ Carnegie Mellon University January 2020\n\nProject co-lead for developing and extending common data model to represent biological ’omics data for reproducible queries and analyses.\nSee original OMOPOmics and R package ROMOPOmics github repository.\n\nCSHL Biological Data Science meeting November 2018.\nOHDSI 2018 Symposium\nNCBI Hackathon @ New York Genome Center August 2018\n\nProject lead for developing data science notebooks and web application interfacing with drug safety data.\nSee SafeDrugs github repository.\n\nIntelligent Systems in Molecular Biology, July 2018\nSecond Northeast Computational Health Summit, April 2018\nAmerican Heart Association Scientific Sessions 2017, poster presentation Giangreco et al. 2017.\nNCBI Hackathon @ New York Genome Center June 2017.\nNCBI Hackathon @ NCBI March 2017.\nCSHL Biological Data Science meeting October 2016.\nJHU DaSH Hackathon September 2015.\nISMB/ECCB conference @ Berlin, Germany July 2013, poster presentation Giangreco et al. 2013."
+  },
+  {
+    "objectID": "content/cv/Nicholas_Giangreco_academic_CV.html#talks-and-panels",
+    "href": "content/cv/Nicholas_Giangreco_academic_CV.html#talks-and-panels",
+    "title": "Nicholas Giangreco",
+    "section": "TALKS AND PANELS",
+    "text": "TALKS AND PANELS\n\n“Intro to Bioinformatics and How to Analyze Brain Tissue with Data Science”. Invited presentation at NYC Medical Research and Bioinformatics Group. November 2018. Presentation link.\nMedical Research Career Panelist, Minds Matter NYC, June 2018\nStandardized and Reproducible Analysis Enables Identification of Novel Primary Graft Dysfunction Biomarkers using Exosome Proteomics, Second NorthEast Computational Health Summit 2018, April 2018.\n“Tools, Libraries and Analyses in Biomedical Data Science”, New York Healthcare Artificial Intelligence Society, December 2017.\n“Doing Science with Big Data”, Late Night Science, Columbia University Neuroscience Outreach, December 2017.\n“AI, Life Sciences, and Big Data”, New York Healthcare Artificial Intelligence Society, August 2017. Presentation link.\nNIDDK Undergraduate Step-Up Judge, NIH, Bethesda MD, August 2015."
+  },
+  {
+    "objectID": "content/cv/Nicholas_Giangreco_academic_CV.html#professional-memberships",
+    "href": "content/cv/Nicholas_Giangreco_academic_CV.html#professional-memberships",
+    "title": "Nicholas Giangreco",
+    "section": "PROFESSIONAL MEMBERSHIPS",
+    "text": "PROFESSIONAL MEMBERSHIPS\n\nInternational Society of Computational Biology, 2013-2014 & 2017-\nAmerican Heart Association, 2017-2018.\nAmerican Medical Informatics Association, 2017-2018."
+  }
+]

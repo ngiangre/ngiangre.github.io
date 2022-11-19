@@ -1,0 +1,4 @@
+- source: project
+  netlify:
+    - id: 3a80bd75-e82a-4aa3-a497-629a07af4813
+      url: 'https://stellar-naiad-42928a.netlify.app'

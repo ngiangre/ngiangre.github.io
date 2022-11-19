@@ -1,0 +1,51 @@
+---
+title: ""
+subtitle: This is where I till my projects and collect my musings
+page-layout: custom
+listing:
+  - id: projects
+    contents: "projects/*/index.qmd"
+    type: grid
+    fields: [title, subtitle, image]
+    image-height: 10em
+    grid-columns: 5
+    grid-item-border: true
+    grid-item-align: center
+    sort-ui: false
+  - id: posts
+    contents: "posts/*/index.qmd"
+    type: default
+    image-align: left
+    fields: [title, subtitle, date, image]
+    sort-ui: true
+---
+
+::: grid
+::: {.g-col-10 .g-start-2}
+## 🌳Welcome to my digital garden🌳 {style="text-align: center"}
+
+*A digital garden is an online space for sharing and cultivating knowledge* 🌈 *It embodies the notion of working out loud* 🤓
+
+------------------------------------------------------------------------
+
+Projects ➡️ Collection of code, notebooks, packages, and/or writings
+
+Posts ➡️ Announcements, standalone essay, or opinions
+
+Discussion ➡️ Github issues
+:::
+:::
+
+::: grid
+::: {.panel-tabset .g-col-10 .g-start-2}
+# Projects
+
+::: {#projects}
+:::
+
+# Posts
+
+::: {#posts}
+:::
+:::
+:::

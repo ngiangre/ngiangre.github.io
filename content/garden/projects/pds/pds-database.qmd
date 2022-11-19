@@ -1,0 +1,23 @@
+---
+title: "PDSdatabase"
+subtitle: "An R data package to access publicly available pediatric drug safety information"
+categories:
+    - R 
+    - database
+    - package
+image: "images/noun-database-1035249.svg"
+about: 
+  template: marquee
+  links: 
+    - icon: github
+      text: Github
+      href: https://github.com/ngiangre/pdsdatabase
+    - icon: badge-cc-fill
+      text: Icon attribute
+      href: https://thenounproject.com/browse/icons/term/database/
+comments:
+  utterances:
+    repo: ngiangre/pdsdatabase
+---
+
+An R data package to connect with real-world drug safety data in children. See the github link for details.

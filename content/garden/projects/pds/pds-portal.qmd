@@ -1,0 +1,30 @@
+---
+title: "PDSportal"
+subtitle: "R shinydashboard application to access publicly available pediatric drug safety information"
+categories:
+    - Portal
+    - R Shiny
+    - Web app
+image: "images/noun-portal-3859593.svg"
+about: 
+  template: marquee
+  links: 
+    - icon: github
+      text: Github
+      href: https://github.com/ngiangre/pdsportal
+    - icon: caret-right-square-fill
+      text: Portal
+      href: https://pdsportal.shinyapps.io/pdsportal/
+    - icon: badge-cc-fill
+      text: Icon attribute
+      href: https://thenounproject.com/browse/icons/term/portal/
+comments:
+  utterances:
+    repo: ngiangre/pdsportal
+---
+
+Drug side effects in children were mined from openFDA, the publicly available repository of the FDA. This is the first resource of 460,837 adverse drug events (ADEs) with estimated risk across child development stages. This R shinydashboard application is the publicly accessible web application of this resource. See the publication for more details:
+
+*Giangreco NP, Tatonetti NP. A database of pediatric drug effects to evaluate ontogenic mechanisms from child growth and development. Med (N Y). 2022 Jun 20:S2666-6340(22)00232-X. doi: 10.1016/j.medj.2022.06.001. Epub ahead of print. PMID: 35752163.*
+    
+The PDSportal contains an Overview section with further instructions on how to use it. Feel free to play around!

@@ -1,0 +1,36 @@
+
+
+project:
+  type: website
+
+website:
+  title: "Nicholas Giangreco"
+  description: "This is Nick's online landing page."
+  background: "primary"
+  foreground: "secondary"
+  search: true
+  pinned: true
+  collapse: true
+  navbar:
+    left:
+      - icon: github
+        href: https://github.com/ngiangre
+      - icon: linkedin
+        href: https://www.linkedin.com/in/nickgiangreco/
+      - text: "About"
+        file : content/about/index.qmd
+      - text: "Digital Garden"
+        file: content/garden/index.qmd
+      - text: "CV"
+        href: content/cv/Nicholas_Giangreco_CV.pdf
+  open-graph:
+    locale: en_US
+
+format:
+  html:
+    page-layout: full
+    smooth-scroll: true
+    theme: pulse
+    css: styles.css
+
+editor: source

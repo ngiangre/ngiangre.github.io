@@ -1,0 +1,43 @@
+---
+title: "Hello, world!"
+subtitle: "First post! Starting and describing my digital space. "
+image: "images/noun-hi-1994887.svg"
+date: "09/04/2022"
+date-format: "MMMM D, YYYY"
+page-layout: article
+toc: true
+draft: false
+comments:
+  utterances:
+    repo: ngiangre/quarto-site
+---
+
+Hello! This is exciting for a couple of reasons:
+
+-   This is the redesign of my [original website](nickgiangreco.netlify.app)
+
+-   This redesigned website is made using [Quarto](quarto.org)
+
+-   This redesigned website is now hosting my digital garden
+
+# My digital garden is like a virtual showcase 
+
+In Buffalo, I learned that there's an annual garden walk, where people all over the city can venture through and see wonderful gardens carefully crafted and skillfully maintained by their gardeners. These gardens are open to the public and showcase plants and outdoor designs serving as inspiration and just very nice places to experience. 
+
+Similar to a real garden, I want to craft a digital garden. My digital garden will be carefully crafted to showcase new and old projects, both matured content and content in development. What makes this digital garden deviate from my profile on Github is that 1) it is organized as a mixture of long-term, project work and short-term, stand-alone posts, and 2) it is meant as sort of an "official" landing page from my personal website.
+
+I acknowledge how my digital garden will deviate from a digital knowledge tree or mind map, as described in this article about the [ethos](https://maggieappleton.com/garden-history). However, I really like the idea of thinking-out-loud and sharing knowledge and resources openly. So here we are.
+
+# I will make an effort to work on my digital garden like a gardener tends to their garden in the backyard
+
+Currently, alot of the work in my garden is projects from my time as a graduate student. I'm very proud of the work I contributed to and the open access work. After my time as a graduate student, there's still so muc to explore and to work on! Obviously I won't have a ton of time to devote to personal projects; besides work and family, I also need to catch up to my partner on the Marvel universe on Disney+...But when I can I will be definitely working more on growing existing work and knowledge in an effort to think-out-loud and develop as a scientist. 
+
+# How Quarto is fantastic software for making your digital garden
+
+I wanted to give my [original website](nickgiangreco.netlify.app) a face-lift. It was my first foray into web development, even if extremely basic. I knew I would have to do it eventually, but I wasn't keen on any particular tool out there. I wanted 1) customization but also ease-of-use, 2) community support for tool development so I wouldn't be stuck with broken code later, 3) a way to do coding in different languages and frameworks so my projects are only limited by content and not technology, and 4) I wanted ti use a tool that would persist a long time.
+
+Quarto seemed to fit these criteria as a new tool, support by a community, offering amazing customization and a friendly user-interface, and it fit my projects with code from different languages. I also searched for some other cool features (see the typing text on my homepage) that I could implement using Quarto. The site is also pretty mobile friendly which is a must these days! The tool seems to be great for putting together my digital garden. 
+
+Here's hoping we all get to see some cool content result from 'tending' to my digital garden!
+
+

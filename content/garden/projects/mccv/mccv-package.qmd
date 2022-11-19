@@ -1,0 +1,22 @@
+---
+title: "Monte Carlo Cross Validation"
+subtitle: "A python package for implementing MCCV"
+categories:
+    - python 
+    - package
+image: "https://static.thenounproject.com/attribution/2827576-600.png"
+about: 
+  template: marquee
+  links: 
+    - icon: github
+      text: Github
+      href: https://github.com/ngiangre/mccv
+    - icon: badge-cc-fill
+      text: Icon attribute
+      href: https://thenounproject.com/browse/icons/term/software/
+comments:
+  utterances:
+    repo: ngiangre/mccv
+---
+
+MCCV routines implemented within a python class. See the github for code, details, and issues. 

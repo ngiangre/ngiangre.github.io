@@ -1,0 +1,30 @@
+[
+  {
+    "listing": "/content/garden/projects/pds/index.html",
+    "items": [
+      "/content/garden/projects/pds/pds-database.html",
+      "/content/garden/projects/pds/pds-portal.html"
+    ]
+  },
+  {
+    "listing": "/content/garden/projects/buffalo/index.html",
+    "items": []
+  },
+  {
+    "listing": "/content/garden/projects/mccv/index.html",
+    "items": [
+      "/content/garden/projects/mccv/mccv-simulation.html",
+      "/content/garden/projects/mccv/mccv-package.html"
+    ]
+  },
+  {
+    "listing": "/content/garden/index.html",
+    "items": [
+      "/content/garden/projects/buffalo/index.html",
+      "/content/garden/projects/mccv/index.html",
+      "/content/garden/projects/pds/index.html",
+      "/content/garden/posts/example/index.html",
+      "/content/garden/posts/20220904welcome/index.html"
+    ]
+  }
+]

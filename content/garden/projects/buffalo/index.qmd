@@ -1,0 +1,27 @@
+---
+title: "Buffalo & Western New York"
+subtitle: Exploring my hometown through data
+image: "images/open_data_buffalo.png"
+about: marquee
+listing: 
+    type: default
+    image-align: left
+    fields: [title, image, subtitle]
+    contents: "/buffalo*"
+---
+
+```{r}
+library(leaflet)
+dat <- data.frame()
+leaflet(data=dat) %>% 
+    addTiles() %>% 
+    addProviderTiles(provider="HERE") %>% 
+    leaflet::setView(-78.878, 42.886, zoom = 10) %>% 
+  addRectangles(
+    lng1=-78.6, lat1=42.7,
+    lng2=-79, lat2=43.1,
+    fillColor = "transparent"
+  )
+```
+
+Moving back to my hometown, Buffalo NY, has been a fantastic experience. Buffalo and Western New York generally speaking has been going through tremendous economic development and growth over the past decade. I wasn't able to appreciate what the city and surrounding area had to offer until recently. As a citizen scientist, I want to explore Buffalo and WNY through data. I plan on using publicly available data, like from the [Open Data Buffalo initiative](https://www.buffalony.gov/1257/Open-Data-Buffalo), to explore, understand, and communicate about my hometown and why I love living here. Stay tuned for more on this project!

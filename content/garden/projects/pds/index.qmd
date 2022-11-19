@@ -1,0 +1,14 @@
+---
+title: "Pediatric Drug Safety"
+subtitle: Research, data, and analyses on reported adverse medication outcomes across childood
+about: marquee
+image: "images/med_cover.jpeg"
+listing:
+    type: default
+    image-align: left
+    fields: [title, image, subtitle]
+    contents: "/pds-*"
+---
+
+Drug safety in children can be affected by a number of dynamic variables such as enzymatic activity and hormonal levels that change during child growth and development. However, tools to predict adverse events in pediatric patients currently do not take into account these dynamics. My PhD advisor, Nicholas Tatonetti, and I developed a pharmacovigilance signal-detection algorithm to identify dynamic adverse events (such as metabolic and psychiatric disorders). We developed a database and a web application that provides the first resource to identify and evaluate drug safety signals across child-development stages. The cover symbolizes the data-driven method of the authors to provide more clarity on drug safety in pediatric patients, as parts of the image become better refined. Cover credit: adapted by Kip Lyall from FG Trade/E+ via Getty Images.
+

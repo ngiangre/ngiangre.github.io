@@ -1,0 +1,26 @@
+---
+title: "MCCV for Biomarker Prediction"
+subtitle: "A simulation study to evaluate prediction of clinical outcomes and responses using biomarker data"
+categories:
+    - python
+    - biomarker
+    - distributions
+    - simulation
+    - prediction
+    - differential expression
+image: "images/noun-simulation-3843789.svg"
+about: 
+  template: marquee
+  links: 
+    - icon: github
+      text: Github
+      href: https://github.com/ngiangre/mccv
+    - icon: share
+      text: Presentation
+      href: https://htmlpreview.github.io/?https://github.com/ngiangre/mccv/blob/main/MCCV_presentation.html#/title-slide
+    - icon: badge-cc-fill
+      text: Icon attribute
+      href: https://thenounproject.com/icon/simulation-3843789/
+---
+
+The motivation for this study is to compare MCCV and traditional hypothesis testing, such as the t-test, as methods for learning outcomes from varied biomarker distributions. The work is being implemented in a collection of notebooks in the github repository. The evaluation results and presentation is being made as Reavel.js slides. 
