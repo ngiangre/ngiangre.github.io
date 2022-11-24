@@ -16,12 +16,12 @@ title: Nick Giangreco
 
 ### *Independent and collaborative precision medicine scientist* 
 
-[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** September 25th 2022
+[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** November 24th 2022
 
 | |
 | :------ |
 | **Topic areas:** Pediatric drug safety, interpretable machine learning, fairness and equity in biomedical informatics, biomarker evaluation and discovery, prediction and risk estimation, biomedical data science |
-| **Technical expertise:** Interpretable machine learning, differential expression analysis, predictive analyses, simulation, data cleaning and modeling, dashboard development, data-driven hypothesis generation and testing, (R/python) software development, RMarkdown/Quarto, Microsoft Power User |
+| **Technical expertise:** Interpretable machine learning, differential expression analysis, predictive analyses, simulation, data cleaning and modeling, dashboard/app development, data-driven hypothesis generation and testing, (R/python) software development, RMarkdown/Quarto, Microsoft Power User |
 | **Programming Languages:** Python, R, SQL, HTML, CSS, bash | 
 | **Pending patents:** [CU18316 Prediction of post-heart transplant primary graft dysfunction using exosome proteins](http://innovation.columbia.edu/technologies/CU18316)|
 | **Team projects/Hackathons:** 2 R packages, 2 python packages, 2 R Shiny Apps, 1 Dash/Plotly app, 7 analysis workflows in python, R, bash |
@@ -45,7 +45,7 @@ WORK EXPERIENCE
     
     [PDSportal](http://pdsportal.shinyapps.io/)
    
-    [PDSdatabase](http://nickg.bio/PDSdatabase/)
+    [PDSdatabase](https://github.com/ngiangre/PDSdatabase)
    
 February 2021 - August 2021
 :   **Bioinformatics intern** [(DNAnexus)](https://www.dnanexus.com/); San Francisco, CA
@@ -90,6 +90,7 @@ EDUCATION
 PUBLICATIONS
 ----------
 
+- Biswas S, Shahriar S, **Giangreco NP**, Arvanitis P, Winkler M, Tatonetti NP, Brunken WJ, Cutforth T, Agalliu D. Mural Wnt/β-catenin signaling regulates Lama2 expression to promote neurovascular unit maturation. Development. 2022 Sep 1;149(17):dev200610. doi: [10.1242/dev.200610](https://doi.org/10.1242/dev.200610). Epub 2022 Sep 13. PMID: 36098369; PMCID: PMC9578690.
 - **Giangreco, N.P.**, Lebreton, G., Restaino, S. et al. Alterations in the kallikrein-kinin system predict death after heart transplant. Sci Rep 12, 14167 (2022). [https://doi.org/10.1038/s41598-022-18573-2](https://doi.org/10.1038/s41598-022-18573-2)
 - **Giangreco NP**, Tatonetti NP. A database of pediatric drug effects to evaluate ontogenic mechanisms from child growth and development. Med (N Y). 2022 Jun 20:S2666-6340(22)00232-X. doi: [10.1016/j.medj.2022.06.001](https://doi.org/10.1016/j.medj.2022.06.001). Epub ahead of print. PMID: 35752163.
 - **Giangreco, Nicholas** (2022), Longitudinal trends of EHR concepts in pediatric patients, Dryad, Dataset, [https://doi.org/10.5061/dryad.j0zpc86g3](https://doi.org/10.5061/dryad.j0zpc86g3)

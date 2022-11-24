@@ -6,11 +6,7 @@ project:
 website:
   title: "Nicholas Giangreco"
   description: "This is Nick's online landing page."
-  background: "primary"
-  foreground: "secondary"
   search: true
-  pinned: true
-  collapse: true
   navbar:
     left:
       - icon: github
