@@ -7,6 +7,7 @@ project:
 website:
   title: "Nicholas Giangreco"
   description: "This is Nick's online landing page."
+  site-url: "https://nickg.bio"
   search: true
   navbar:
     left:
@@ -14,6 +15,14 @@ website:
         href: https://github.com/ngiangre
       - icon: linkedin
         href: https://www.linkedin.com/in/nickgiangreco/
+      - icon: twitter
+        href: https://twitter.com/nickgiangreco
+      - icon: facebook
+        href: https://www.facebook.com/ngiangreco/
+      - icon: instagram
+        href: https://www.instagram.com/ngiangreco/
+      - icon: envelope
+        href: mailto:nick.giangreco@gmail.com
       - text: "About"
         file : content/about/index.qmd
       - text: "Digital Garden"
@@ -31,3 +40,6 @@ format:
     css: styles.css
 
 editor: source
+
+execute:
+  freeze: auto
