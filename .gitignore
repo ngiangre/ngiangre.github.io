@@ -7,4 +7,5 @@
 _cache
 *_files/
 
+_publish.yml
 /.quarto/
