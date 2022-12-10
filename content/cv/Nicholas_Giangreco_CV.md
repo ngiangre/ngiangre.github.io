@@ -46,6 +46,8 @@ WORK EXPERIENCE
     [PDSportal](http://pdsportal.shinyapps.io/)
    
     [PDSdatabase](https://github.com/ngiangre/PDSdatabase)
+    
+    [Media release](https://www.dbmi.columbia.edu/pediatric-drug-side-effects-study-tatonetti/)
    
 February 2021 - August 2021
 :   **Bioinformatics intern** [(DNAnexus)](https://www.dnanexus.com/); San Francisco, CA
