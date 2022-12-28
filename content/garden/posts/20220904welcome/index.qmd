@@ -14,7 +14,7 @@ comments:
 
 Hello! This is exciting for a couple of reasons:
 
--   This is the redesign of my [original website](nickgiangreco.netlify.app)
+-   This is the redesign of my [original website](https://thunderous-conkies-5ca337.netlify.app/)
 
 -   This redesigned website is made using [Quarto](quarto.org)
 
@@ -34,7 +34,7 @@ Currently, alot of the work in my garden is projects from my time as a graduate 
 
 # How Quarto is fantastic software for making your digital garden
 
-I wanted to give my [original website](nickgiangreco.netlify.app) a face-lift. It was my first foray into web development, even if extremely basic. I knew I would have to do it eventually, but I wasn't keen on any particular tool out there. I wanted 1) customization but also ease-of-use, 2) community support for tool development so I wouldn't be stuck with broken code later, 3) a way to do coding in different languages and frameworks so my projects are only limited by content and not technology, and 4) I wanted ti use a tool that would persist a long time.
+I wanted to give my [original website](https://thunderous-conkies-5ca337.netlify.app/) a face-lift. It was my first foray into web development, even if extremely basic. I knew I would have to do it eventually, but I wasn't keen on any particular tool out there. I wanted 1) customization but also ease-of-use, 2) community support for tool development so I wouldn't be stuck with broken code later, 3) a way to do coding in different languages and frameworks so my projects are only limited by content and not technology, and 4) I wanted ti use a tool that would persist a long time.
 
 Quarto seemed to fit these criteria as a new tool, support by a community, offering amazing customization and a friendly user-interface, and it fit my projects with code from different languages. I also searched for some other cool features (see the typing text on my homepage) that I could implement using Quarto. The site is also pretty mobile friendly which is a must these days! The tool seems to be great for putting together my digital garden. 
 

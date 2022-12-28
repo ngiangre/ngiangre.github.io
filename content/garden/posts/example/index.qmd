@@ -6,6 +6,7 @@ image-alt: "example by Agung Cahyo from Noun Project"
 date: "09/04/2022"
 date-format: "MMMM D, YYYY"
 page-layout: article
+draft: true
 toc: true
 comments:
   utterances:
