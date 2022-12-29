@@ -5,7 +5,6 @@
 
 .DS_Store
 _cache
-*_files/
 
 _publish.yml
 /.quarto/
