@@ -16,7 +16,7 @@ title: Nick Giangreco
 
 ### *Independent and collaborative precision medicine scientist* 
 
-[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** December 4th 2022
+[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** January 2nd 2023
 
 | |
 | :------ |
@@ -32,7 +32,7 @@ WORK EXPERIENCE
 ----------
 
 2021 - Present
-:    **Associate Scientist, Quantitative Translational Scientist** [(Regeneron Pharmaceuticals Inc.)](https://www.regeneron.com); Tarrytown, NY
+:    **Scientist, Quantitative Translational Scientist** [(Regeneron Pharmaceuticals Inc.)](https://www.regeneron.com); Tarrytown, NY
      
      Precision Medicine
     
@@ -89,7 +89,7 @@ EDUCATION
 2010 - 2014
 :     **BS, Biochemistry**; University of Rochester, Rochester, NY
 
-PUBLICATIONS
+SELECT PUBLICATIONS
 ----------
 
 - Biswas S, Shahriar S, **Giangreco NP**, Arvanitis P, Winkler M, Tatonetti NP, Brunken WJ, Cutforth T, Agalliu D. Mural Wnt/β-catenin signaling regulates Lama2 expression to promote neurovascular unit maturation. Development. 2022 Sep 1;149(17):dev200610. doi: [10.1242/dev.200610](https://doi.org/10.1242/dev.200610). Epub 2022 Sep 13. PMID: 36098369; PMCID: PMC9578690.
@@ -100,7 +100,6 @@ PUBLICATIONS
 - **Giangreco NP**, Lebreton G, Restaino S, Jane Farr M, Zorn E, Colombo PC, Patel J, Levine R, Truby L, Soni RK, Leprince P, Kobashigawa J, Tatonetti NP, Fine BM. Plasma kallikrein predicts primary graft dysfunction after heart transplant. J Heart Lung Transplant. 2021 Jul 10:S1053-2498(21)02391-3. doi: [10.1016/j.healun.2021.07.001](https://doi.org/10.1016/j.healun.2021.07.001). 
 - **Giangreco, N.P.**, Tatonetti, N.P. Evaluating risk detection methods to uncover ontogenic-mediated adverse drug effect mechanisms in children. BioData Mining 14, 34 (2021). [https://doi.org/10.1186/s13040-021-00264-9](https://doi.org/10.1186/s13040-021-00264-9).
 - **Giangreco, NP**, Elias, JE, Tatonetti, NP. No population left behind: Improving paediatric drug safety using informatics and systems biology. Br J Clin Pharmacol. 2021; 1– 7. [https://doi.org/10.1111/bcp.14705](https://doi.org/10.1111/bcp.14705).
-- **Giangreco, Nicholas P.** and Tatonetti, Nicholas P., A Database of Pediatric Drug Effects to Evaluate Ontogenic Mechanisms From Child Growth and Development. Available at SSRN: [https://ssrn.com/abstract=3898786](https://ssrn.com/abstract=3898786) or [http://dx.doi.org/10.2139/ssrn.3898786](http://dx.doi.org/10.2139/ssrn.3898786)
 - **Nicholas P. Giangreco**, Barry Fine, Nicholas P. Tatonetti. cohorts: A Python package for clinical ‘omics data management. bioaRxiv doi: [https://www.biorxiv.org/content/10.1101/626051](https://www.biorxiv.org/content/10.1101/626051)
 - Benjamin S Glicksberg, Boris Oskotsky, Phyllis M Thangaraj, **Nicholas Giangreco**, Marcus A Badgeley, Kipp W Johnson, Debajyoti Datta, Vivek A Rudrapatna, Nadav Rappoport, Mark M Shervey, Riccardo Miotto, Theodore C Goldstein, Eugenia Rutenberg, Remi Frazier, Nelson Lee, Sharat Israni, Rick Larsen, Bethany Percha, Li Li, Joel T Dudley, Nicholas P Tatonetti, Atul J Butte, PatientExploreR: an extensible application for dynamic visualization of patient clinical history from electronic health records in the OMOP common data model, Bioinformatics, Volume 35, Issue 21, 1 November 2019, Pages 4515–4518, [https://doi.org/10.1093/bioinformatics/btz409](https://doi.org/10.1093/bioinformatics/btz409).
 - Benjamin S Glicksberg, Boris Oskotsky, **Nicholas Giangreco**, Phyllis M Thangaraj, Vivek Rudrapatna, Debajyoti Datta, Remi Frazier, Nelson Lee, Rick Larsen, Nicholas P Tatonetti, Atul J Butte, ROMOP: a light-weight R package for interfacing with OMOP-formatted electronic health record data, JAMIA Open, Volume 2, Issue 1, April 2019, Pages 10–14, [https://doi.org/10.1093/jamiaopen/ooy059](https://doi.org/10.1093/jamiaopen/ooy059)
@@ -195,7 +194,7 @@ MENTORING, TUTORING, and WRITING
 ----------
 
 - Mentor in technical and entrepreneurship development for the [Innovate Children's Health Challenge](https://www.innovatechildrenshealth.com/)
-- Mentor and tutor for project management, R and python programming, and statistics and machine learning to high school/college/graduate students and professionals.
+- Advisor, mentor and tutor for project management, R and python programming, and statistics and machine learning to high school/college/graduate students and professionals.
 - ["Hack nights -- Solving healthcare data-science/AI/ML problems"](https://www.eventbrite.com/e/healthcare-hack-night-tickets-72013860395) Introduction to cancer genomics four part series.  Co-led with Matthew Eng
     * [Adventures In Hacking Healthcare Medium Publication](https://medium.com/adventures-in-healthcare-data)
 - Nicholas Giangreco. ["The Importance of being Open"](http://www.phdish.com/blog/openscience). *PHDISH* January 9th 2019. 
