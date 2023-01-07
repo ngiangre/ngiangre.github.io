@@ -22,8 +22,8 @@ theme_set(theme_bw())
 ```
 
 ```{r}
-PDSdatabase::download_sqlite_db()
-con <- PDSdatabase::connect_sqlite_db()
+kidsides::download_sqlite_db()
+con <- kidsides::connect_sqlite_db()
 ```
 
 In this notebook, I want to investigate more into a claim I made in my [paper](https://doi.org/10.1016/j.medj.2022.06.001) on pediatric drug safety:
@@ -212,5 +212,5 @@ cowplot::plot_grid(plotlist=g_objs,ncol = 5)
 You can see that few systematic disorders had higher-than-the-null signal at stages. Psychiatric disorders do seem to be uniquely induced in toddlers by montelukast.
 
 ```{r}
-PDSdatabase::disconnect_sqlite_db(con)
+kidsides::disconnect_sqlite_db(con)
 ```

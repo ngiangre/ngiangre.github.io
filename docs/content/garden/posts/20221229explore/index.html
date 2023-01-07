@@ -263,11 +263,11 @@ The following object is masked from 'package:purrr':
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_set</span>(<span class="fu">theme_bw</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>PDSdatabase<span class="sc">::</span><span class="fu">download_sqlite_db</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>kidsides<span class="sc">::</span><span class="fu">download_sqlite_db</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>/Users/nickgiangreco/Library/Caches/org.R-project.R/R/PDSdatabase/effect_peds_19q2_v0.3_20211119.sqlite already exists!</code></pre>
+<pre><code>Attempt failed to check sqlite exists or to download from the URL: https://tlab-kidsides.s3.amazonaws.com/data/effect_peds_19q2_v0.3_20211119.sqlite.gz</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>con <span class="ot">&lt;-</span> PDSdatabase<span class="sc">::</span><span class="fu">connect_sqlite_db</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>con <span class="ot">&lt;-</span> kidsides<span class="sc">::</span><span class="fu">connect_sqlite_db</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>In this notebook, I want to investigate more into a claim I made in my <a href="https://doi.org/10.1016/j.medj.2022.06.001">paper</a> on pediatric drug safety:</p>
 <blockquote class="blockquote">
@@ -461,7 +461,7 @@ The following object is masked from 'package:purrr':
 </div>
 <p>You can see that few systematic disorders had higher-than-the-null signal at stages. Psychiatric disorders do seem to be uniquely induced in toddlers by montelukast.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>PDSdatabase<span class="sc">::</span><span class="fu">disconnect_sqlite_db</span>(con)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>kidsides<span class="sc">::</span><span class="fu">disconnect_sqlite_db</span>(con)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 

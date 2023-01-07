@@ -1,6 +1,6 @@
 ---
-title: "PDSdatabase"
-subtitle: "An R data package to access publicly available pediatric drug safety information"
+title: "KidSIDES"
+subtitle: "An R data package to access publically available pediatric drug safety information"
 categories:
     - R 
     - database
@@ -11,13 +11,13 @@ about:
   links: 
     - icon: github
       text: Github
-      href: https://github.com/ngiangre/pdsdatabase
+      href: https://github.com/ngiangre/kidsides
     - icon: badge-cc-fill
       text: Icon attribute
       href: https://thenounproject.com/browse/icons/term/database/
 comments:
   utterances:
-    repo: ngiangre/pdsdatabase
+    repo: ngiangre/kidsides
 ---
 
-An R data package to connect with real-world drug safety data in children. See the github link for details.
+An R data package to connect with real-world drug safety signals during childhood. See the github link for details.
