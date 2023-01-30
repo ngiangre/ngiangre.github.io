@@ -21,7 +21,7 @@ title: Nick Giangreco
 | |
 | :------ |
 | **Topic areas:** Pediatric drug safety, interpretable machine learning, fairness and equity in biomedical informatics, biomarker evaluation and discovery, prediction and risk estimation, biomedical data science |
-| **Technical expertise:** Precision medicine software development, differential expression analysis, predictive analysis, statistical simulation, data cleaning and modeling, dashboard/app development, data-driven hypothesis generation and testing, (R/python) software development, RMarkdown/Jupyter/Quarto documentation, Microsoft Power User |
+| **Technical expertise:** Precision medicine software development, differential expression analysis, predictive analysis, statistical simulation, data cleaning and modeling, Shiny dashboard/app development, data-driven hypothesis generation and testing, (R/python) software development, RMarkdown/Jupyter/Quarto documentation, Microsoft Power User |
 | **Programming Languages:** Python, R, SQL, HTML, CSS, bash | 
 | **Pending patents:** [CU18316 Prediction of post-heart transplant primary graft dysfunction using exosome proteins](http://innovation.columbia.edu/technologies/CU18316)|
 | **Team projects/Hackathons:** 2 R packages, 2 python packages, 2 R Shiny Apps, 1 Dash/Plotly app, 7 analysis workflows in python, R, bash |
@@ -45,7 +45,7 @@ WORK EXPERIENCE
     
     [PDSportal](http://pdsportal.shinyapps.io/)
    
-    [PDSdatabase](https://github.com/ngiangre/PDSdatabase)
+    [kidsides](https://github.com/ngiangre/kidsides)
     
     [Media release](https://www.dbmi.columbia.edu/pediatric-drug-side-effects-study-tatonetti/)
    
@@ -94,7 +94,7 @@ SELECT PUBLICATIONS
 
 - Biswas S, Shahriar S, **Giangreco NP**, Arvanitis P, Winkler M, Tatonetti NP, Brunken WJ, Cutforth T, Agalliu D. Mural Wnt/β-catenin signaling regulates Lama2 expression to promote neurovascular unit maturation. Development. 2022 Sep 1;149(17):dev200610. doi: [10.1242/dev.200610](https://doi.org/10.1242/dev.200610). Epub 2022 Sep 13. PMID: 36098369; PMCID: PMC9578690.
 - **Giangreco, N.P.**, Lebreton, G., Restaino, S. et al. Alterations in the kallikrein-kinin system predict death after heart transplant. Sci Rep 12, 14167 (2022). [https://doi.org/10.1038/s41598-022-18573-2](https://doi.org/10.1038/s41598-022-18573-2)
-- **Giangreco NP**, Tatonetti NP. A database of pediatric drug effects to evaluate ontogenic mechanisms from child growth and development. Med (N Y). 2022 Jun 20:S2666-6340(22)00232-X. doi: [10.1016/j.medj.2022.06.001](https://doi.org/10.1016/j.medj.2022.06.001). Epub ahead of print. PMID: 35752163.
+- **Giangreco NP**, Tatonetti NP. A database of pediatric drug effects to evaluate ontogenic mechanisms from child growth and development. Med (N Y). 2022 Aug 12;3(8):579-595.e7. doi: [10.1016/j.medj.2022.06.001](https://doi.org/10.1016/j.medj.2022.06.001). Epub 2022 Jun 24. PMID: 35752163; PMCID: PMC9378670.
 - **Giangreco, Nicholas** (2022), Longitudinal trends of EHR concepts in pediatric patients, Dryad, Dataset, [https://doi.org/10.5061/dryad.j0zpc86g3](https://doi.org/10.5061/dryad.j0zpc86g3)
 - **Nicholas P Giangreco**, Sulieman Lina, Jun Qian, Aymone Kuoame, Vignesh Subbian, Eric Boerwinkle, Mine Cicek, Cheryl R Clark, Elizabeth Cohen, Kelly A Gebo, Roxana Loperena-Cortes, Kelsey Mayo, Stephen Mockrin, Lucila Ohno-Machado, Sheri D Schully, Nicholas P Tatonetti, Andrea H Ramirez, Pediatric data from the All of Us research program: demonstration of pediatric obesity over time, JAMIA Open, Volume 4, Issue 4, October 2021, ooab112, [https://doi.org/10.1093/jamiaopen/ooab112](https://doi.org/10.1093/jamiaopen/ooab112)
 - **Giangreco NP**, Lebreton G, Restaino S, Jane Farr M, Zorn E, Colombo PC, Patel J, Levine R, Truby L, Soni RK, Leprince P, Kobashigawa J, Tatonetti NP, Fine BM. Plasma kallikrein predicts primary graft dysfunction after heart transplant. J Heart Lung Transplant. 2021 Jul 10:S1053-2498(21)02391-3. doi: [10.1016/j.healun.2021.07.001](https://doi.org/10.1016/j.healun.2021.07.001). 
