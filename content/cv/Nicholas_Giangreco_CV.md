@@ -16,16 +16,14 @@ title: Nick Giangreco
 
 ### *Independent and collaborative precision medicine scientist* 
 
-[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** January 29th 2023
+[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** February 17th 2023
 
 | |
 | :------ |
-| **Topic areas:** Pediatric drug safety, interpretable machine learning, fairness and equity in biomedical informatics, biomarker evaluation and discovery, prediction and risk estimation, biomedical data science |
-| **Technical expertise:** Precision medicine software development, differential expression analysis, predictive analysis, statistical simulation, data cleaning and modeling, Shiny dashboard/app development, data-driven hypothesis generation and testing, (R/python) software development, RMarkdown/Jupyter/Quarto documentation, Microsoft Power User |
-| **Programming Languages:** Python, R, SQL, HTML, CSS, bash | 
+| **Topic areas:** Precision medicine, biomarker evaluation and discovery,Pediatric drug safety, interpretable machine learning, fairness and equity in biomedical informatics, prediction and risk estimation |
+| **Technical expertise:** biomedical data science and (R/python) software development, predictive analysis, statistical simulation, data cleaning and modeling, Shiny dashboard/app development, data-driven hypothesis generation and testing, RMarkdown/Jupyter/Quarto documentation, Microsoft Power User |
+| **Programming Languages:** Python, R, SQL, HTML, CSS, Java, bash | 
 | **Pending patents:** [CU18316 Prediction of post-heart transplant primary graft dysfunction using exosome proteins](http://innovation.columbia.edu/technologies/CU18316)|
-| **Team projects/Hackathons:** 2 R packages, 2 python packages, 2 R Shiny Apps, 1 Dash/Plotly app, 7 analysis workflows in python, R, bash |
-| **Leadership roles:** 501(c)(3) nonprofit secretary, Mentor for digital health start-up incubator; As PhD student: 3 club president, 2 treasurer |
 
 
 WORK EXPERIENCE
@@ -34,7 +32,7 @@ WORK EXPERIENCE
 2021 - Present
 :    **Scientist, Quantitative Translational Scientist** [(Regeneron Pharmaceuticals Inc.)](https://www.regeneron.com); Tarrytown, NY
      
-     Precision Medicine
+     Precision Medicine - scientist, software developer, and app developer
     
 2016 - 2021
 :    **Systems biologist** [(Columbia University)](https://systemsbiology.columbia.edu/people/nicholas-giangreco); New York, NY
@@ -193,6 +191,8 @@ Leadership and Management Experience
 MENTORING, TUTORING, and WRITING
 ----------
 
+- Mentor in the [Say Yes not-for-profit](https://sayyesbuffalo.org) in Buffalo NY
+   * Mission is to remove barriers to educational and economic attainment for our young people.
 - Mentor in technical and entrepreneurship development for the [Innovate Children's Health Challenge](https://www.innovatechildrenshealth.com/)
 - Advisor, mentor and tutor for project management, R and python programming, and statistics and machine learning to high school/college/graduate students and professionals.
 - ["Hack nights -- Solving healthcare data-science/AI/ML problems"](https://www.eventbrite.com/e/healthcare-hack-night-tickets-72013860395) Introduction to cancer genomics four part series.  Co-led with Matthew Eng
