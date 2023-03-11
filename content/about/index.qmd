@@ -32,8 +32,9 @@ I like learning about how the body re-learns movement patterns through
 ::: {.column-screen style="text-align: center; font-size:8px"}
 <style>
 	mermaid.flowchartConfig = {
-	width: 100%
-	text-align: center
+	width: 100%;
+	text-align: center;
+	overflow-x: scroll;
 	}
 </style>
 ```{mermaid}
@@ -41,7 +42,7 @@ I like learning about how the body re-learns movement patterns through
 %%| fig-cap: Education and experience timeline
 %%| fig-height: 20
 
-%%{init: {'theme': 'base', 'themeVariables': { 'fontSize': '90%', 'fontFamily': 'Inter'}}}%%
+%%{init: {'theme': 'base', 'sequence':{'useMaxWidth': false}, 'themeVariables': { 'fontSize': '13px', 'fontFamily': 'Inter'}}}%%
 
 flowchart LR
   HSCoding[[Liked science but didn't want to be a doctor]] --- HS
