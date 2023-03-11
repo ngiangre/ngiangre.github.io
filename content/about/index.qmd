@@ -41,7 +41,7 @@ I like learning about how the body re-learns movement patterns through
 
 %%{init: {'theme': 'base', 'sequence':{'useMaxWidth': false}, 'themeVariables': { 'fontSize': '13px', 'fontFamily': 'Inter', 'wrap': true}}}%%
 
-flowchart LR
+flowchart BT
   HSCoding[Liked science] --- HS
   CollegeCoding[Learned biology, logic, and Java] --- College
   PostbacCoding[Hacked genomics with R] --- Postbac
