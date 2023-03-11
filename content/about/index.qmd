@@ -29,7 +29,8 @@ I like learning about how the body re-learns movement patterns through
 [pilates](http://www.koppelemethod.com/).**</p>
 
 ```{mermaid}
-
+%%| fig-width: 15
+%%| fig-height: 15
 flowchart BT
   HSCoding[[Liked science but didn't want to be a doctor]] --- HS
   CollegeCoding[[Biology background learned, with some logic and java]] --- College
