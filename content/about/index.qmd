@@ -28,11 +28,9 @@ survivor](https://www.wgrz.com/article/life/wny-native-continues-recovery-from-s
 I like learning about how the body re-learns movement patterns through
 [pilates](http://www.koppelemethod.com/).**</p>
 :::
-
-::: {.column-screen style="text-align: center; font-size:8px"}
 <style>
-	mermaid.flowchartConfig = {
-	width: 100%;
+	.fig-mermaid-flowchart  {
+	width: 200%;
 	text-align: center;
 	overflow-x: scroll;
 	}
@@ -56,4 +54,3 @@ flowchart LR
   Phd -- Really loved Precision Medicine -->  Job(Regeneron<br>2021-Present<br>Quantitative Translational Scientist, Precision Medicine)
  
 ```
-:::
