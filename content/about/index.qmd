@@ -28,14 +28,14 @@ survivor](https://www.wgrz.com/article/life/wny-native-continues-recovery-from-s
 I like learning about how the body re-learns movement patterns through
 [pilates](http://www.koppelemethod.com/).**</p>
 :::
+
 <style>
-	.fig-mermaid-flowchart  {
-	width: 200%;
+	.mermaid  {
 	text-align: center;
 	overflow-x: scroll;
 	}
 </style>
-```{mermaid}
+```{mermaid .mermaid}
 %%| label: fig-mermaid-flowchart
 %%| fig-cap: Education and experience timeline
 
@@ -48,9 +48,9 @@ flowchart BT
   PhdCoding[ML, Systems Biology using R/Python] --- Phd
   JobCoding[Scientist/developer using R/Python] --- Job
 
-  HS(St. Joes) -- Figuring out if I liked doing science --> College(University of Rochester<br>2010-2014<br>BS Biochemistry, Philosophy minor)
-  College -- Deciding on Ph.D. --> Postbac(National Human Genome Research Institute<br>2014-2016<br>Post-baccalaureate trainee)
-  Postbac -- Fast-tracking to be a better scientist --> Phd(Columbia University<br>2016-2021<br>Ph.D. Cellular, Molecular, and Biomedical Studies)
-  Phd -- Really loved Precision Medicine -->  Job(Regeneron<br>2021-Present<br>Quantitative Translational Scientist, Precision Medicine)
+  HS(SJCI) --> College(URochester<br>2010-2014<br>BS Biochemistry, Philosophy minor)
+  College --> Postbac(NIH<br>2014-2016<br>Post-baccalaureate trainee)
+  Postbac --> Phd(Columbia<br>2016-2021<br>Ph.D. Cellular, Molecular, and Biomedical Studies)
+  Phd -->  Job(Regeneron<br>2021-Present<br>Quantitative Translational Scientist, Precision Medicine)
  
 ```
