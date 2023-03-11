@@ -34,6 +34,9 @@ I like learning about how the body re-learns movement patterns through
 %%| label: fig-mermaid-flowchart
 %%| fig-cap: Education and experience timeline
 %%| fig-height: 20
+
+%%{init: {'theme': 'base', 'themeVariables': { 'fontSize': '13px', 'fontFamily': 'Inter'}}}%%
+
 flowchart BT
   HSCoding[[Liked science but didn't want to be a doctor]] --- HS
   CollegeCoding[[Biology background learned, with some logic and java]] --- College
@@ -45,6 +48,6 @@ flowchart BT
   College -- Deciding on Ph.D. --> Postbac[[National Human Genome Research Institute<br>2014-2016<br>Post-baccalaureate trainee]]
   Postbac -- Fast-tracking to be a better scientist --> Phd[[Columbia University<br>2016-2021<br>Ph.D. Cellular, Molecular, and Biomedical Studies]]
   Phd -- Really loved Precision Medicine -->  Job[[Regeneron<br>2021-Present<br>Quantitative Translational Scientist, Precision Medicine]]
-  
+ 
 ```
 :::
