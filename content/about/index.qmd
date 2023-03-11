@@ -28,18 +28,23 @@ survivor](https://www.wgrz.com/article/life/wny-native-continues-recovery-from-s
 I like learning about how the body re-learns movement patterns through
 [pilates](http://www.koppelemethod.com/).**</p>
 :::
+
+::: {.column-screen style="text-align: center; font-size:8px"}
 ```{mermaid}
+%%| label: fig-mermaid-flowchart
+%%| fig-cap: Education and experience timeline
+%%| fig-height: 20
 flowchart BT
   HSCoding[[Liked science but didn't want to be a doctor]] --- HS
   CollegeCoding[[Biology background learned, with some logic and java]] --- College
   PostbacCoding[[Learned about genomics and became R hacker]] --- Postbac
   PhdCoding[[Learned about ML, Systems Biology and became proficient in R/Python]] --- Phd
   JobCoding[[Scientist and developer using mostly R but some python at work]] --- Job
-  subgraph Education
+
   HS[[St. Joseph's Collegiate Institute]] -- Figuring out if I liked doing science --> College[[University of Rochester<br>2010-2014<br>BS Biochemistry, Philosophy minor]]
   College -- Deciding on Ph.D. --> Postbac[[National Human Genome Research Institute<br>2014-2016<br>Post-baccalaureate trainee]]
   Postbac -- Fast-tracking to be a better scientist --> Phd[[Columbia University<br>2016-2021<br>Ph.D. Cellular, Molecular, and Biomedical Studies]]
   Phd -- Really loved Precision Medicine -->  Job[[Regeneron<br>2021-Present<br>Quantitative Translational Scientist, Precision Medicine]]
-  end
   
 ```
+:::
