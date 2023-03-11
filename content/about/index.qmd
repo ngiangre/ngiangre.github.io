@@ -40,21 +40,20 @@ I like learning about how the body re-learns movement patterns through
 ```{mermaid}
 %%| label: fig-mermaid-flowchart
 %%| fig-cap: Education and experience timeline
-%%| fig-height: 20
 
-%%{init: {'theme': 'base', 'sequence':{'useMaxWidth': false}, 'themeVariables': { 'fontSize': '13px', 'fontFamily': 'Inter'}}}%%
+%%{init: {'theme': 'base', 'sequence':{'useMaxWidth': false}, 'themeVariables': { 'fontSize': '13px', 'fontFamily': 'Inter', 'wrap': true}}}%%
 
 flowchart LR
-  HSCoding[[Liked science but didn't want to be a doctor]] --- HS
-  CollegeCoding[[Biology background learned, with some logic and java]] --- College
-  PostbacCoding[[Learned about genomics and became R hacker]] --- Postbac
-  PhdCoding[[Learned about ML, Systems Biology and became proficient in R/Python]] --- Phd
-  JobCoding[[Scientist and developer using mostly R but some python at work]] --- Job
+  HSCoding[Liked science] --- HS
+  CollegeCoding[Learned biology, logic, and Java] --- College
+  PostbacCoding[Hacked genomics with R] --- Postbac
+  PhdCoding[ML, Systems Biology using R/Python] --- Phd
+  JobCoding[Scientist/developer using R/Python] --- Job
 
-  HS[[St. Joseph's Collegiate Institute]] -- Figuring out if I liked doing science --> College[[University of Rochester<br>2010-2014<br>BS Biochemistry, Philosophy minor]]
-  College -- Deciding on Ph.D. --> Postbac[[National Human Genome Research Institute<br>2014-2016<br>Post-baccalaureate trainee]]
-  Postbac -- Fast-tracking to be a better scientist --> Phd[[Columbia University<br>2016-2021<br>Ph.D. Cellular, Molecular, and Biomedical Studies]]
-  Phd -- Really loved Precision Medicine -->  Job[[Regeneron<br>2021-Present<br>Quantitative Translational Scientist, Precision Medicine]]
+  HS(St. Joes) -- Figuring out if I liked doing science --> College(University of Rochester<br>2010-2014<br>BS Biochemistry, Philosophy minor)
+  College -- Deciding on Ph.D. --> Postbac(National Human Genome Research Institute<br>2014-2016<br>Post-baccalaureate trainee)
+  Postbac -- Fast-tracking to be a better scientist --> Phd(Columbia University<br>2016-2021<br>Ph.D. Cellular, Molecular, and Biomedical Studies)
+  Phd -- Really loved Precision Medicine -->  Job(Regeneron<br>2021-Present<br>Quantitative Translational Scientist, Precision Medicine)
  
 ```
 :::
