@@ -59,6 +59,9 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -142,11 +145,36 @@ ul.task-list li input[type="checkbox"] {
 <div class="column-screen" style="text-align: center; font-size:18px">
 <p><img src="headshot.png" class="img-fluid" data-max-width="100%" width="400"></p>
 <p style="font-size:27px">
-<strong>Hi, I’m Nick 👋</strong>
-</p>
-<p>
-</p><p><strong>I am a data science enthusiast, life-long learner, and student of life. Currently, I work as a (remote) Quantitative Translational Scientist at Regeneron Pharmaceuticals. Previously, I was a Systems Biology PhD student at Columbia University in New York City. My homebase is Buffalo, New York, where, as a native of the “All America City”, I am paradoxically indifferent to snow and a very cold person 😬. Outside of work, I enjoy spending time with my family, my partner, and carving out time for my hobbies. I’m also interested in rehabilitative science. As <a href="https://www.wgrz.com/article/life/wny-native-continues-recovery-from-stroke/244046774">a stroke survivor</a>, I like learning about how the body re-learns movement patterns through <a href="http://www.koppelemethod.com/">pilates</a>.</strong></p>
+</p><p><strong>Hi, I’m Nick 👋</strong></p>
 <p></p>
+<p>
+<strong>I am a data science enthusiast, life-long learner, and student of life. Currently, I work as a (remote) Quantitative Translational Scientist at Regeneron Pharmaceuticals. Previously, I was a Systems Biology PhD student at Columbia University in New York City. My homebase is Buffalo, New York, where, as a native of the “All America City”, I am paradoxically indifferent to snow and a very cold person 😬. Outside of work, I enjoy spending time with my family, my partner, and carving out time for my hobbies. I’m also interested in rehabilitative science. As <a href="https://www.wgrz.com/article/life/wny-native-continues-recovery-from-stroke/244046774">a stroke survivor</a>, I like learning about how the body re-learns movement patterns through <a href="http://www.koppelemethod.com/">pilates</a>.</strong>
+</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<p>
+</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-1">flowchart BT
+  HSCoding[[Liked science but didn't want to be a doctor]] --- HS
+  CollegeCoding[[Biology background learned, with some logic and java]] --- College
+  PostbacCoding[[Learned about genomics and became R hacker]] --- Postbac
+  PhdCoding[[Learned about ML, Systems Biology and became proficient in R/Python]] --- Phd
+  JobCoding[[Scientist and developer using mostly R but some python at work]] --- Job
+  subgraph Education
+  HS[[St. Joseph's Collegiate Institute]] -- Figuring out if I liked doing science --&gt; College[[University of Rochester&lt;br&gt;2010-2014&lt;br&gt;BS Biochemistry, Philosophy minor]]
+  College -- Deciding on Ph.D. --&gt; Postbac[[National Human Genome Research Institute&lt;br&gt;2014-2016&lt;br&gt;Post-baccalaureate trainee]]
+  Postbac -- Fast-tracking to be a better scientist --&gt; Phd[[Columbia University&lt;br&gt;2016-2021&lt;br&gt;Ph.D. Cellular, Molecular, and Biomedical Studies]]
+  Phd -- Really loved Precision Medicine --&gt;  Job[[Regeneron&lt;br&gt;2021-Present&lt;br&gt;Quantitative Translational Scientist, Precision Medicine]]
+  end
+  
+</pre>
+<div id="mermaid-tooltip-1" class="mermaidTooltip">
+
+</div>
+<p></p>
+</div>
+</div>
+</div>
 </div>
 
 

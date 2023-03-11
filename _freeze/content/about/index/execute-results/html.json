@@ -1,0 +1,18 @@
+{
+  "hash": "d73821e2a034004c4601a4ba8b44a3ec",
+  "result": {
+    "markdown": "---\ntitle: \"\"\npage-layout: custom\neditor: \n  markdown: \n    wrap: 72\n---\n\n\n::: {.column-screen style=\"text-align: center; font-size:18px\"}\n![](headshot.png){width=\"400px\" max-width=\"100%\"}\n\n<p style=\"font-size:27px\">\n\n**Hi, I'm Nick 👋**\n\n</p>\n\n<p>**I am a data science enthusiast, life-long learner, and student of\nlife. Currently, I work as a (remote) Quantitative Translational\nScientist at Regeneron Pharmaceuticals. Previously, I was a Systems\nBiology PhD student at Columbia University in New York City. My homebase\nis Buffalo, New York, where, as a native of the \"All America City\", I am\nparadoxically indifferent to snow and a very cold person 😬. Outside of\nwork, I enjoy spending time with my family, my partner, and carving out\ntime for my hobbies. I'm also interested in rehabilitative science. As\n[a stroke\nsurvivor](https://www.wgrz.com/article/life/wny-native-continues-recovery-from-stroke/244046774),\nI like learning about how the body re-learns movement patterns through\n[pilates](http://www.koppelemethod.com/).**</p>\n\n\n::: {.cell}\n\n```{.r .cell-code}\nDiagrammeR::mermaid(\"graph BT\n  A(Univerisity of Rochester) --> B(National Human Genome Research Institute)\n  B --> C(Columbia University)\n  C --> D(Regeneron)\")\n```\n\n::: {.cell-output-display}\n```{=html}\n<div class=\"DiagrammeR html-widget html-fill-item-overflow-hidden html-fill-item\" id=\"htmlwidget-8a05158d24ad75168ff2\" style=\"width:100%;height:464px;\"></div>\n<script type=\"application/json\" data-for=\"htmlwidget-8a05158d24ad75168ff2\">{\"x\":{\"diagram\":\"graph BT\\n  A(Univerisity of Rochester) --> B(National Human Genome Research Institute)\\n  B --> C(Columbia University)\\n  C --> D(Regeneron)\"},\"evals\":[],\"jsHooks\":[]}</script>\n```\n:::\n:::\n\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-in-header": [
+        "<script src=\"../../site_libs/htmlwidgets-1.6.1/htmlwidgets.js\"></script>\n<script src=\"../../site_libs/d3-3.3.8/d3.min.js\"></script>\n<script src=\"../../site_libs/dagre-0.4.0/dagre-d3.min.js\"></script>\n<link href=\"../../site_libs/mermaid-0.3.0/dist/mermaid.css\" rel=\"stylesheet\" />\n<script src=\"../../site_libs/mermaid-0.3.0/dist/mermaid.slim.min.js\"></script>\n<link href=\"../../site_libs/DiagrammeR-styles-0.2/styles.css\" rel=\"stylesheet\" />\n<script src=\"../../site_libs/chromatography-0.1/chromatography.js\"></script>\n<script src=\"../../site_libs/DiagrammeR-binding-1.0.9/DiagrammeR.js\"></script>\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -1,30 +1,47 @@
 ---
 title: ""
 page-layout: custom
+editor: 
+  markdown: 
+    wrap: 72
 ---
 
-
 ::: {.column-screen style="text-align: center; font-size:18px"}
-![](headshot.png){width=400px max-width=100%}
+![](headshot.png){width="400px" max-width="100%"}
 
 <p style="font-size:27px">
+
 **Hi, I'm Nick 👋**
+
 </p>
 
-<p>
-
-**I am a data science enthusiast, life-long learner, and student of
-life. Currently, I work as a (remote) Quantitative Translational Scientist
-at Regeneron Pharmaceuticals. Previously, I was a Systems Biology PhD
-student at Columbia University in New York City. My homebase is Buffalo, New York, where, as a native of the "All
-America City", I am paradoxically indifferent to snow and a very cold
-person 😬. Outside of work, I enjoy spending time with my family, my partner, and
-carving out time for my hobbies. I'm also interested in rehabilitative science. As [a stroke
+<p>**I am a data science enthusiast, life-long learner, and student of
+life. Currently, I work as a (remote) Quantitative Translational
+Scientist at Regeneron Pharmaceuticals. Previously, I was a Systems
+Biology PhD student at Columbia University in New York City. My homebase
+is Buffalo, New York, where, as a native of the "All America City", I am
+paradoxically indifferent to snow and a very cold person 😬. Outside of
+work, I enjoy spending time with my family, my partner, and carving out
+time for my hobbies. I'm also interested in rehabilitative science. As
+[a stroke
 survivor](https://www.wgrz.com/article/life/wny-native-continues-recovery-from-stroke/244046774),
 I like learning about how the body re-learns movement patterns through
-[pilates](http://www.koppelemethod.com/).**
+[pilates](http://www.koppelemethod.com/).**</p>
 
-</p>
+```{mermaid}
 
+flowchart BT
+  HSCoding[[Liked science but didn't want to be a doctor]] --- HS
+  CollegeCoding[[Biology background learned, with some logic and java]] --- College
+  PostbacCoding[[Learned about genomics and became R hacker]] --- Postbac
+  PhdCoding[[Learned about ML, Systems Biology and became proficient in R/Python]] --- Phd
+  JobCoding[[Scientist and developer using mostly R but some python at work]] --- Job
+  subgraph Education
+  HS[[St. Joseph's Collegiate Institute]] -- Figuring out if I liked doing science --> College[[University of Rochester<br>2010-2014<br>BS Biochemistry, Philosophy minor]]
+  College -- Deciding on Ph.D. --> Postbac[[National Human Genome Research Institute<br>2014-2016<br>Post-baccalaureate trainee]]
+  Postbac -- Fast-tracking to be a better scientist --> Phd[[Columbia University<br>2016-2021<br>Ph.D. Cellular, Molecular, and Biomedical Studies]]
+  Phd -- Really loved Precision Medicine -->  Job[[Regeneron<br>2021-Present<br>Quantitative Translational Scientist, Precision Medicine]]
+  end
+  
+```
 :::
-
