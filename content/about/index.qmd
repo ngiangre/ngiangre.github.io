@@ -32,8 +32,9 @@ I like learning about how the body re-learns movement patterns through
 ::: {.column-screen style="text-align: center; font-size:8px"}
 <style>
 	mermaid.flowchartConfig = {
-width: 100%
-}
+	width: 100%
+	text-align: center
+	}
 </style>
 ```{mermaid}
 %%| label: fig-mermaid-flowchart
@@ -42,7 +43,7 @@ width: 100%
 
 %%{init: {'theme': 'base', 'themeVariables': { 'fontSize': '90%', 'fontFamily': 'Inter'}}}%%
 
-flowchart BT
+flowchart LR
   HSCoding[[Liked science but didn't want to be a doctor]] --- HS
   CollegeCoding[[Biology background learned, with some logic and java]] --- College
   PostbacCoding[[Learned about genomics and became R hacker]] --- Postbac
