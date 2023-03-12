@@ -42,15 +42,16 @@ I like learning about how the body re-learns movement patterns through
 %%{init: {'theme': 'base', 'sequence':{'useMaxWidth': false}, 'themeVariables': { 'fontSize': '13px', 'fontFamily': 'Inter', 'wrap': true}}}%%
 
 flowchart BT
-  HSCoding[ Liked science <br>] --- HS
-  CollegeCoding[ Learned biology, logic, and Java ] --- College
-  PostbacCoding[ Hacked genomics with R ] --- Postbac
-  PhdCoding[ ML, Systems Biology using R/Python ] --- Phd
-  JobCoding[ Scientist/developer using R/Python ] --- Job
 
   HS( High School ) --> College( URochester <br>2010-2014<br>BS Biochemistry, Philosophy minor)
   College --> Postbac( NIH <br>2014-2016<br>Post-baccalaureate trainee)
   Postbac --> Phd( Columbia <br>2016-2021<br>Ph.D. Cellular, Molecular, and Biomedical Studies)
   Phd -->  Job( Regeneron <br>2021-Present<br>Quantitative Translational Scientist, Precision Medicine)
  
+  HSCoding[ Liked science <br>] <--- HS
+  CollegeCoding[ Learned biology, logic, and Java ] <--- College
+  PostbacCoding[ Hacked genomics with R ] <--- Postbac
+  PhdCoding[ ML, Systems Biology using R/Python ] <--- Phd
+  JobCoding[ Scientist/developer using R/Python ] <--- Job
+  
 ```
