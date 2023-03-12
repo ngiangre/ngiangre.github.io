@@ -16,12 +16,12 @@ title: Nick Giangreco
 
 ### *Independent and collaborative precision medicine scientist* 
 
-[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** February 17th 2023
+[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** March 12th 2023
 
 | |
 | :------ |
-| **Topic areas:** Precision medicine, biomarker evaluation and discovery,Pediatric drug safety, interpretable machine learning, fairness and equity in biomedical informatics, prediction and risk estimation |
-| **Technical expertise:** biomedical data science and (R/python) software development, predictive analysis, statistical simulation, data cleaning and modeling, Shiny dashboard/app development, data-driven hypothesis generation and testing, RMarkdown/Jupyter/Quarto documentation, Microsoft Power User |
+| **Topic areas:** Precision medicine, biomarker evaluation and discovery, Pediatric drug safety, interpretable machine learning, fairness and equity in biomedical informatics, prediction and risk estimation |
+| **Technical expertise:** biomedical data science and (R/Python) software development, predictive analysis, statistical simulation, data cleaning and modeling, Shiny dashboard/app development, data-driven hypothesis generation and testing, RMarkdown/Jupyter/Quarto documentation, Microsoft Power User |
 | **Programming Languages:** Python, R, SQL, HTML, CSS, Java, bash | 
 | **Pending patents:** [CU18316 Prediction of post-heart transplant primary graft dysfunction using exosome proteins](http://innovation.columbia.edu/technologies/CU18316)|
 
