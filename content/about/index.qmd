@@ -43,7 +43,6 @@ I like learning about how the body re-learns movement patterns through
 %%{init: {'theme': 'base', 'sequence':{'useMaxWidth': false}, 'themeVariables': { 'fontSize': '13px', 'fontFamily': 'Inter', 'wrap': true}}}%%
 
 flowchart BT
-
   HS( High School ) --> College( URochester <br>2010-2014<br>BS Biochemistry, Philosophy minor)
   College --> Postbac( NIH <br>2014-2016<br>Post-baccalaureate trainee)
   Postbac --> Phd( Columbia <br>2016-2021<br>Ph.D. Cellular, Molecular, and Biomedical Studies)
