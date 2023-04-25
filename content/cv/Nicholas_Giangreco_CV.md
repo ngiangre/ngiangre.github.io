@@ -16,7 +16,7 @@ title: Nick Giangreco
 
 ### *Independent and collaborative precision medicine scientist* 
 
-[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** March 12th 2023
+[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** April 25th 2023
 
 | |
 | :------ |
@@ -39,9 +39,9 @@ WORK EXPERIENCE
 
 	Thesis: [Mind the developmental gap: Identifying adverse drug effects across childhood to evaluate biological mechanisms from growth and development](https://doi.org/10.7916/d8-5d9b-6738)
    
-    [Cell Press cover art](https://www.cell.com/med/current#fullCover)
+    [Cell Press cover art](https://www.cell.com/med/issue?pii=S2666-6340(21)X0020-7#fullCover)
     
-    [PDSportal](http://pdsportal.shinyapps.io/)
+    [PDSportal](https://pdsportal.shinyapps.io/pdsportal/)
    
     [kidsides](https://github.com/ngiangre/kidsides)
     
@@ -50,7 +50,7 @@ WORK EXPERIENCE
 February 2021 - August 2021
 :   **Bioinformatics intern** [(DNAnexus)](https://www.dnanexus.com/); San Francisco, CA
 
-    Customer success development team
+    Solutions team
     
     Initiated internal and external projects such as interpretable machine learning and genomic/phenomic data integration/analysis
 
@@ -258,10 +258,14 @@ CONFERENCES AND HACKATHONS
 -  American Heart Association Scientific Sessions 2017, poster presentation [*Giangreco et al. 2017*](https://f1000research.com/posters/6-2080).
  
 -  [NCBI Hackathon @ New York Genome Center June 2017.](https://github.com/NCBI-Hackathons/Proteomic_Correlation_Shiny)
--	[NCBI Hackathon @ NCBI March 2017.](https://github.com/NCBI-Hackathons/Scan2CNV)
--	CSHL Biological Data Science meeting October 2016.
--	[JHU DaSH Hackathon September 2015.](https://github.com/NCBI-Hackathons/DASH_cell_type)
--	ISMB/ECCB conference @ Berlin, Germany July 2013, poster presentation *Giangreco et al. 2013*.
+
+-	[NCBI Hackathon @ NCBI March 2017.](https://github.com/NCBI-Hackathons/Scan2CNV)
+
+-	CSHL Biological Data Science meeting October 2016.
+
+-	[JHU DaSH Hackathon September 2015.](https://github.com/NCBI-Hackathons/DASH_cell_type)
+
+-	ISMB/ECCB conference @ Berlin, Germany July 2013, poster presentation *Giangreco et al. 2013*.
 
 TALKS AND PANELS
 --------
