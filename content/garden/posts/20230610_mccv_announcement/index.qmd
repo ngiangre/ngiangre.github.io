@@ -1,7 +1,7 @@
 ---
 title: Announcing the mccv python package with Quarto website
 subtitle: Monte Carlo Cross Validation (MCCV) is a peer-reviewed clinical machine learning algorithm that is now implemented in a package and showcased in a website built by Quarto
-image: "mccv_scheme.jpg"
+image: "images/mccv_scheme.jpg"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 date-format: "MMMM D, YYYY"
 page-layout: article
