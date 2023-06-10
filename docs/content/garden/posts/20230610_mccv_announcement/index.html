@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2023-06-10">
 
-<title>Nicholas Giangreco - Pediatric Drug Safety</title>
+<title>Nicholas Giangreco - Announcing the mccv python package with Quarto website</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +21,25 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 
@@ -30,11 +50,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../../../">
-<script src="../../../../site_libs/quarto-listing/list.min.js"></script>
-<script src="../../../../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../../../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
@@ -59,43 +78,13 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-image','listing-subtitle',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-subtitle","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <style>html{ scroll-behavior: smooth; }</style>
 
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../../../../styles.css">
-<meta property="og:title" content="Nicholas Giangreco - Pediatric Drug Safety">
-<meta property="og:description" content="Research, data, and analyses on reported adverse medication outcomes across childood">
-<meta property="og:image" content="https://nickg.bio/content/garden/projects/pds/images/med_cover.jpeg">
+<meta property="og:title" content="Nicholas Giangreco - Announcing the mccv python package with Quarto website">
+<meta property="og:description" content="Monte Carlo Cross Validation (MCCV) is a peer-reviewed clinical machine learning algorithm that is now implemented in a package and showcased in a website built by Quarto">
+<meta property="og:image" content="https://nickg.bio/content/garden/posts/20230610_mccv_announcement/mccv_scheme.jpg">
 <meta property="og:site-name" content="Nicholas Giangreco">
 <meta property="og:locale" content="en_US">
 </head>
@@ -165,111 +154,70 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#references" id="toc-references" class="nav-link active" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<div class="quarto-about-marquee column-page">
-  <div class="about-image-container">
-    <img src="images/med_cover.jpeg" class="about-image " style="width: 100%;">
-  </div>
-  <div class="about-contents">
-    <header id="title-block-header" class="quarto-title-block default">
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Pediatric Drug Safety</h1>
-<p class="subtitle lead">Research, data, and analyses on reported adverse medication outcomes across childood</p>
+<h1 class="title">Announcing the mccv python package with Quarto website</h1>
+<p class="subtitle lead">Monte Carlo Cross Validation (MCCV) is a peer-reviewed clinical machine learning algorithm that is now implemented in a package and showcased in a website built by Quarto</p>
 </div>
+
+
+
 <div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 10, 2023</p>
+    </div>
   </div>
-</header> <main class="content column-page" id="quarto-document-content">
-<p>Drug safety in children can be affected by a number of dynamic variables such as enzymatic activity and hormonal levels that change during child growth and development. However, tools to predict adverse events in pediatric patients currently do not take into account these dynamics. My PhD advisor, Nicholas Tatonetti, and I developed a pharmacovigilance signal-detection algorithm to identify dynamic adverse events (such as metabolic and psychiatric disorders). We developed a database and a web application that provides the first resource to identify and evaluate drug safety signals across child-development stages. The cover symbolizes the data-driven method of the authors to provide more clarity on drug safety in pediatric patients, as parts of the image become better refined. Cover credit: adapted by Kip Lyall from FG Trade/E+ via Getty Images.</p>
+  
+    
+  </div>
+  
+
+</header>
+
+<div class="page-columns page-full"><p>One of the research questions during my PhD was can we generate evidence for proteins in blood before a heart transplant to predict heart failure within 24 hours after the transplant surgery? Ideally, the clinical team wanted an equation that provided a probability of heart failure for a patient. A requirement for this equation was that it was generalizable to patients across heart clinics, such as in the US or Europe, and it outperformed existing clinical scores. This question was what motivated developing the algorithm Monte Carlo Cross Validation (MCCV)*.</p><div class="no-row-height column-margin column-container"><span class="">*The algorithm is not new, but in late 2016 I wasn’t familiar with an open source implementation for the question and I wanted to use this as an opportunity to learn python.</span></div></div>
+<p>Fast forward 5 years, 2 papers were published where we used MCCV and found pre-transplant predictive evidence for plasma kallikrein (KLKB1) towards post-transplant heart failure<span class="citation" data-cites="Giangreco2021-vv Giangreco2022-is"><sup><a href="#ref-Giangreco2021-vv" role="doc-biblioref">1</a>,<a href="#ref-Giangreco2022-is" role="doc-biblioref">2</a></sup></span>. The algorithm MCCV was written as a few python functions in scripts for both papers<span class="citation" data-cites="nick_giangreco_2021_4463714 nick_giangreco_2022_6969703"><sup><a href="#ref-nick_giangreco_2021_4463714" role="doc-biblioref">3</a>,<a href="#ref-nick_giangreco_2022_6969703" role="doc-biblioref">4</a></sup></span>. At the time of publishing the papers, I knew eventually I would properly incorporate the functions into a package to make the algorithm more widely available*[*Also I wrote the python package for the opportunity to code in python since I mostly code in R for work.]. That time came after publishing the papers and after I defended my PhD thesis. Serendipitously, the software <a href="https://quarto.org">Quarto</a>, which was announced by <a href="https://posit.co">Posit</a>, allowed making a website AND writing code both in python and R interchangeably in the same document. Quarto allowed showcasing the algorithm in both programming languages (with prettier visualizations from R) along with tutorials and detailed explanations.</p>
+<div class="page-columns page-full"><p>The mccv python package is available on GitHub and is also shown on a website* written in Quarto. The website includes several tutorials in the navigation bar at the top of the page.</p><div class="no-row-height column-margin column-container"><span class="">*<a href="https://ngiangre.github.io/mccv/">https://ngiangre.github.io/mccv/</a> or <a href="https://www.mccv.nickg.bio">https://www.mccv.nickg.bio</a></span></div></div>
+<p>Thank you for reading this post! Reply in the comments if you find the algorithm useful in your own work. I also want to give a shoutout to the Quarto team for developing a great communication tool. I highly recommend having an accompanying website for analytical software packages (luckily, this is easier for developing R packages with the <a href="https://pkgdown.r-lib.org">{pkgdown} package</a>])!</p>
+<section id="references" class="level3">
+<h3 class="anchored" data-anchor-id="references">References</h3>
+<div id="refs" class="references csl-bib-body" role="doc-bibliography">
+<div id="ref-Giangreco2021-vv" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">Giangreco NP, Lebreton G, Restaino S, Jane Farr M, Zorn E, Colombo PC, Patel J, Levine R, Truby L, Soni RK, Leprince P, Kobashigawa J, Tatonetti NP, Fine BM. Plasma kallikrein predicts primary graft dysfunction after heart transplant. <em>J. Heart Lung Transplant.</em> 2021;40(10):1199–1211.</div>
+</div>
+<div id="ref-Giangreco2022-is" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">2. </div><div class="csl-right-inline">Giangreco NP, Lebreton G, Restaino S, Farr M, Zorn E, Colombo PC, Patel J, Soni RK, Leprince P, Kobashigawa J, Tatonetti NP, Fine BM. Alterations in the kallikrein-kinin system predict death after heart transplant. <em>Sci. Rep.</em> 2022;12(1):14167.</div>
+</div>
+<div id="ref-nick_giangreco_2021_4463714" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">3. </div><div class="csl-right-inline">Giangreco N. <em><a href="https://doi.org/10.5281/zenodo.4463714">Ngiangre/clinical_klkb1_analysis: First release</a></em>. Zenodo; 2021.</div>
+</div>
+<div id="ref-nick_giangreco_2022_6969703" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">4. </div><div class="csl-right-inline">Giangreco N. <em><a href="https://doi.org/10.5281/zenodo.6969703"><span class="nocase">ngiangre/kng1_analysis: Revision code for manuscript</span></a></em>. Zenodo; 2022.</div>
+</div>
+</div>
 
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-left" data-index="0" data-categories="R,database,package" data-listing-file-modified-sort="1673126483622" data-listing-reading-time-sort="0.095">
-<div class="thumbnail">
-<p><a href="../../../../content/garden/projects/pds/pds-database.html"> <img src="../../../../content/garden/projects/pds/images/noun-database-1035249.svg" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../../../../content/garden/projects/pds/pds-database.html">
-<h3 class="no-anchor listing-title">
-KidSIDES
-</h3>
-<div class="listing-subtitle">
-An R data package to access publically available pediatric drug safety information
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../../../../content/garden/projects/pds/pds-database.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-left" data-index="1" data-categories="Portal,R Shiny,Web app" data-listing-file-modified-sort="1668876790648" data-listing-reading-time-sort="0.535">
-<div class="thumbnail">
-<p><a href="../../../../content/garden/projects/pds/pds-portal.html"> <img src="../../../../content/garden/projects/pds/images/noun-portal-3859593.svg" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../../../../content/garden/projects/pds/pds-portal.html">
-<h3 class="no-anchor listing-title">
-PDSportal
-</h3>
-<div class="listing-subtitle">
-R shinydashboard application to access publicly available pediatric drug safety information
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../../../../content/garden/projects/pds/pds-portal.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-left" data-index="2" data-listing-file-modified-sort="1686422817023">
-<div class="thumbnail">
-<a href="../../../../content/garden/projects/pds/pds-database.html">
-<div class="thumbnail-image">
-</div>
-</a><p><a href="../../../../content/garden/projects/pds/pds-database.html"></a></p>
-</div>
-<div class="body">
-<a href="../../../../content/garden/projects/pds/pds-database.html">
-<h3 class="no-anchor listing-title">
-</h3>
-<div class="listing-subtitle">
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../../../../content/garden/projects/pds/pds-database.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-left" data-index="3" data-listing-file-modified-sort="1686422816754">
-<div class="thumbnail">
-<a href="../../../../content/garden/projects/pds/pds-portal.html">
-<div class="thumbnail-image">
-</div>
-</a><p><a href="../../../../content/garden/projects/pds/pds-portal.html"></a></p>
-</div>
-<div class="body">
-<a href="../../../../content/garden/projects/pds/pds-portal.html">
-<h3 class="no-anchor listing-title">
-</h3>
-<div class="listing-subtitle">
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../../../../content/garden/projects/pds/pds-portal.html"> </a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> 
-  </div>
-</div>
- <!-- /main -->
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -290,6 +238,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const clipboard = new window.ClipboardJS('.code-copy-button', {
     target: function(trigger) {
       return trigger.previousElementSibling;
@@ -395,6 +350,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
+</script>
+<script src="https://utteranc.es/client.js" repo="ngiangre/quarto-site" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
 
