@@ -6,7 +6,7 @@ date: "`r format(Sys.time(), '%d %B, %Y')`"
 date-format: "MMMM D, YYYY"
 page-layout: article
 toc: true
-draft: true
+draft: false
 comments:
   utterances:
     repo: ngiangre/quarto-site
