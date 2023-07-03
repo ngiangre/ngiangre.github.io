@@ -1,0 +1,24 @@
+---
+title: "MCCV (Shiny for Python) App"
+subtitle: "A web application to simulate prior data distributions and inspective predictive evidence using MCCV"
+categories:
+    - python
+    - shiny
+    - app
+    - shiny-for-python
+    - prediction
+image: "images/noun-webapp.png"
+about: 
+  template: marquee
+  links: 
+    - icon: github
+      text: Github
+      href: https://github.com/ngiangre/mccvshiny
+    - icon: badge-cc-fill
+      text: Icon attribute
+      href: https://thenounproject.com/icon/web-app-289690/
+---
+
+Interactive App for exploring Monte Carlo Cross Validation predictions from the {mccv} package using Shiny for Python.
+
+Read more at the GitHub site.

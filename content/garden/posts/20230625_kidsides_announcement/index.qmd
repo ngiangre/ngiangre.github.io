@@ -2,8 +2,7 @@
 title: Announcing the kidsides R package
 subtitle: We hypothesized that adverse drug reactions manifest from the interaction between drug exposure and dynamic biological processes during child growth and development. The {kidsides} R data package contains half a million drug safety hypotheses. 
 image: "images/med_cover.jpeg"
-date: "`r format(Sys.time(), '%d %B, %Y')`"
-date-format: "MMMM D, YYYY"
+date: "06/24/2023"
 page-layout: article
 format:
   html:

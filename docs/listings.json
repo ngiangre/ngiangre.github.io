@@ -13,6 +13,7 @@
   {
     "listing": "/content/garden/projects/mccv/index.html",
     "items": [
+      "/content/garden/projects/mccv/mccv-shiny.html",
       "/content/garden/projects/mccv/mccv-simulation.html",
       "/content/garden/projects/mccv/mccv-package.html"
     ]
