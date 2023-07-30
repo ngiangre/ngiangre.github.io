@@ -16,12 +16,12 @@ title: Nick Giangreco
 
 ### *Independent and collaborative precision medicine scientist and engineer* 
 
-[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** June 25th 2023
+[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** July 30th 2023
 
 | |
 | :------ |
 | **Topic areas:** Precision medicine, biomarker evaluation and discovery, Pediatric drug safety, interpretable machine learning, fairness and equity in biomedical informatics, prediction and risk estimation |
-| **Technical expertise:** biomedical data science and (R/Python) software development, predictive analysis, statistical simulation, data cleaning and modeling, Shiny (R and Python) app development, data-driven hypothesis generation and testing, RMarkdown/Jupyter/Quarto, Microsoft Power User |
+| **Technical expertise:** biomedical data science and (R/Python) software development, predictive analysis, statistical simulation, data cleaning and modeling, Shiny (for R and Python) app development, data-driven hypothesis generation and testing, RMarkdown/Jupyter/Quarto, Microsoft Power User |
 | **Programming Languages:** Python, R, SQL, HTML, CSS, Java, bash | 
 | **Pending patents:** [CU18316 Prediction of post-heart transplant primary graft dysfunction using exosome proteins](https://patents.google.com/patent/WO2022060842A1/en?oq=2022060842)|
 
@@ -149,7 +149,7 @@ POSTERS AND SOFTWARE
 Leadership and Management Experience
 ----------
 
-- [New York Health Artificial Intelligence Society](https://www.meetup.com/NYHAIS/)
+- [New York Health Artificial Intelligence Society](https://www.nyhais.org)
    + 501(c)(3) not-for-profit Cofounder and Secretary, 2019-Present
    + Promote public discourse on a wide range of topics such as AI & Society, AI & Healthcare, and economic impact by AI. 
    + Organize and facilitate group engagement, workshops, AI study groups, and not-for-profit organization.
