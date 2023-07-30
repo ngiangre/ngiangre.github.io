@@ -1,0 +1,107 @@
+---
+title: Identifying Open Data about the City of Buffalo and Western New York
+subtitle: Starting the journey to make some interesting and fun insights about my hometown by identifying open datasets
+image: "images/opendata_logo.jpeg"
+date: "07/30/2023"
+page-layout: article
+toc: true
+draft: false
+comments:
+  utterances:
+    repo: ngiangre/quarto-site
+---
+
+[Open Data Buffalo](https://data.buffalony.gov) is a great resource and initiative to make datasets open and available to the public. My goal here is to identify available datasets in order to do a interesting, fun, and possible useful analysis or web application in the future. Let's get started!
+
+I first made an account with [Tyler Data and Insights](https://data.buffalony.gov/signup). Not sure why, but I may learn why later on.
+
+Second, I [searched](https://data.buffalony.gov/browse?limitTo=datasets&sortBy=most_accessed&utf8=✓) for datasets and sorted by most accessed datasets.
+
+[![Screenshot of search filter and sorted site](images/Screenshot 2023-07-30 at 1.08.24 PM.png){fig-alt="Screenshot of search filter and sorted site"}](https://data.buffalony.gov/browse?limitTo=datasets&sortBy=most_accessed&utf8=✓)
+
+And after scrolling through a few pages, I'm curious to look at the Active Corporations dataset.
+
+[![Screenshot of Active Corporations dataset webpage](images/Screenshot 2023-07-30 at 1.11.15 PM.png){fig-alt="Screenshot of Active Corporations dataset webpage" fig-align="center"}](https://data.ny.gov/Economic-Development/Active-Corporations-Beginning-1800/n9v6-gdp6)
+
+Luckily, this dataset has a few options to access the data:
+
+![Screenshot of API options](images/Screenshot 2023-07-30 at 1.12.21 PM.png){fig-alt="Screenshot of API options" fig-align="center"}
+
+And below is some information about the dataset on the webpage. It has 3.6 million rows and 30 columns.
+
+[![Screenshot of Active Corporations dataset description](images/Screenshot 2023-07-30 at 1.13.58 PM.png){fig-alt="Screenshot of Active Corporations dataset description" fig-align="center"}](https://data.ny.gov/Economic-Development/Active-Corporations-Beginning-1800/n9v6-gdp6)
+
+Let's see what happens when I try to view this dataset.
+
+```{r}
+library(jsonlite)
+library(dplyr)
+
+jobj <- jsonlite::read_json("https://data.ny.gov/resource/n9v6-gdp6.json",simplifyVector = TRUE)
+
+jobj %>% dplyr::glimpse()
+```
+
+Interesting! I may come back to this but let's see what another dataset looks like. The dataset description is on the site below.
+
+[![Screenshot of Inpatient Discharge dataset. ](images/Screenshot 2023-07-30 at 1.23.48 PM.png){fig-alt="Screenshot of Inpatient Discharge dataset"}](https://health.data.ny.gov/Health/Hospital-Inpatient-Discharges-SPARCS-De-Identified/u4ud-w55t)
+
+```{r}
+jobj <- jsonlite::read_json("https://health.data.ny.gov/resource/u4ud-w55t.json",simplifyVector = TRUE)
+
+jobj %>% dplyr::glimpse()
+```
+
+It looks like I'm only downloading 1000 rows from each dataset. Hmmm. It looks like I can export the button by pressing the 'Export' button, but I don't want to have datasets on my laptop. I rather load them into my environment as needed by whatever I would end up developing. Maybe I need to read these [SODA docs](https://dev.socrata.com/consumers/getting-started.html) that are linked on the site.
+
+[![Screenshot of SODA Getting Started docs](images/Screenshot 2023-07-30 at 1.33.09 PM.png){fig-alt="Screenshot of SODA Getting Started docs" fig-align="center"}](https://dev.socrata.com/consumers/getting-started.html)
+
+So it seems like I need to use some extra parameter filtering? Let's try it.
+
+```{r}
+jobj <- jsonlite::read_json("https://health.data.ny.gov/resource/u4ud-w55t.json?apr_drg_description=Asthma",simplifyVector = TRUE)
+
+jobj %>% dplyr::glimpse()
+```
+
+I think that worked - I only downloaded Asthma items! But still, a limited dataset of 1000 rows was downloaded. What do I need to download all items? Ah, looks like I need to read about the application token usage.
+
+[![Screenshot of throttling and application tokens](images/Screenshot 2023-07-30 at 1.38.17 PM.png){fig-alt="Screenshot of throttling and application tokens"}](https://dev.socrata.com/consumers/getting-started.html)
+
+I must use an App token. I will create one in my profile settings - this must be why my previous self made the account earlier on in this post. Huzzah! So now that I created an app token, let's try using it. I'll use the glue package to read it in from a hidden file so I don't have it sown here 😁
+
+```{r}
+library(glue)
+
+jobj <- jsonlite::read_json(glue::glue("https://health.data.ny.gov/resource/u4ud-w55t.json?$$app_token={read_json('.apptoken')[['token']]}"),simplifyVector = T)
+
+jobj %>% dplyr::glimpse()
+```
+
+Hmmm still a limited dataset downloaded even with the app token. Let's see if there is an http message.
+
+```{r}
+library(httr)
+res <- httr::GET(glue::glue("https://health.data.ny.gov/resource/u4ud-w55t.json?$$app_token={read_json('.apptoken')[['token']]}"))
+
+names(res)
+
+res$status_code
+
+rlist <- httr::content(res)
+
+do.call(dplyr::bind_rows, rlist) %>% dplyr::glimpse()
+```
+
+Not that I can tell, and still a limited dataset is downloaded. After some google searches, I found the {RSocrata} that may be helpful.
+
+```{r}
+library(RSocrata)
+dat <- RSocrata::read.socrata("https://health.data.ny.gov/resource/u4ud-w55t.json",app_token = read_json('.apptoken')[['token']])
+
+dat %>% dplyr::glimpse()
+```
+
+Eureka! So seems like I can use this package to start reading in and playing with full datasets. I can also use the API to make smaller requests based on filters, too.
+
+Hope this train of thought is useful to you readers! I'll definitely come back to this.
