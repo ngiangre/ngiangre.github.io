@@ -1,0 +1,20 @@
+---
+title: Announcing mccvshiny
+subtitle: Monte Carlo Cross Validation (MCCV) is a peer-reviewed clinical machine learning algorithm that is now showcased in a Shiny for R app with simulated data distributions
+image: "images/mccv_scheme.jpg"
+date: "07/30/2023"
+page-layout: article
+toc: true
+draft: false
+comments:
+  utterances:
+    repo: ngiangre/quarto-site
+---
+
+During my PhD I wrote the algorithm Monte Carlo Cross Validation (MCCV) to address a question about generating evidence for a prognostic biomarker of an adverse outcome. I wanted to have an opportunity to show the algorithm 'in action' while also embracing a new learning opportunity: [Shiny for Python](https://shiny.posit.co/py/).
+
+Introducing [mccvshiny](http://nick-giangreco.shinyapps.io/mccvshiny/)! Disclaimer: This proof-of-concept (POC) is pretty slow and doesn't do nearly as much parameterization of MCCV or parallelization as I would like. But again, it's a POC and a learning experience 😊
+
+Click the link [here](https://nick-giangreco.shinyapps.io/mccvshiny/) or on the [GitHub](https://github.com/ngiangre/mccvshiny) site to check out the app or code. Feel free to make a PR to do something cool with this app - I'm not planning to extend it more but happy to collaborate with others who would like to 😁
+
+Shoutout to the Shiny team for developing a great tool for pythonistas
