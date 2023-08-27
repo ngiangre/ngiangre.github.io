@@ -23,7 +23,7 @@ title: Nick Giangreco
 | **Topic areas:** Precision medicine, biomarker evaluation and discovery, Pediatric drug safety, interpretable machine learning, fairness and equity in biomedical informatics, prediction and risk estimation |
 | **Technical expertise:** biomedical data science and (R/Python) software development, predictive analysis, statistical simulation, data cleaning and modeling, Shiny (for R and Python) app development, data-driven hypothesis generation and testing, RMarkdown/Jupyter/Quarto, Microsoft Power User |
 | **Programming Languages:** Python, R, SQL, HTML, CSS, Java, bash | 
-| **Pending patents:** [CU18316 Prediction of post-heart transplant primary graft dysfunction using exosome proteins](https://patents.google.com/patent/WO2022060842A1/en?oq=2022060842)|
+| **Patents:** [Systems and methods for predicting graft dysfunction with exosome proteins](https://patents.google.com/patent/WO2022060842A1/en?oq=2022060842)|
 
 
 WORK EXPERIENCE
