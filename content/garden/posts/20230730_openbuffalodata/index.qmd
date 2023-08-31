@@ -2,7 +2,7 @@
 title: Identifying Open Data about the City of Buffalo and Western New York
 subtitle: Starting the journey to make some interesting and fun insights about my hometown by identifying open datasets
 image: "images/opendata_logo.jpeg"
-date: "07/30/2023"
+date: "07/31/2023"
 page-layout: article
 toc: true
 draft: false
