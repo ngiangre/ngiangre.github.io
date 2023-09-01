@@ -18,6 +18,7 @@ listing:
     image-align: left
     fields: [title, subtitle, date, image]
     sort-ui: true
+    sort: "date desc"
 ---
 
 ::: grid
