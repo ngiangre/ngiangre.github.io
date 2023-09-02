@@ -1,7 +1,7 @@
 ---
 title: What Baby Names are In and Out of Fashion?
 subtitle: Using open data to summarize baby names over time
-image: "images/opendata_logo.jpeg"
+image: "images/baby.png"
 date: "09/02/2023"
 page-layout: article
 toc: true
