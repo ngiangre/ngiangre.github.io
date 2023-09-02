@@ -166,7 +166,7 @@ After transforming the dataset and checking data quality, we see that:
 
 ## What are the trending baby names in NYS?
 
-I want to ask the question what are the trending baby names in NYS? My question is not specific to the gender or county. Also, my question wants to consider all the baby names in the dataset as possible *influencing* factors in which baby names are trending. Because of the missing count data, we should use a model to estimate the trend based on the available data. The model we will use is a generalized additive model (GAM) to predict the Poisson distribution count of the baby name.
+I want to ask the question what are the trending baby names in NYS? My question is not specific to the gender or county. Also, my question wants to consider all the baby names in the dataset as possible *influencing* factors in which baby names are trending. Because of the missing count data, we should use a model to estimate the trend based on the available data. The model we will use is a generalized additive model (GAM) to predict the Poisson distribution count of the baby name. \*[\*I heavily referenced https://fromthebottomoftheheap.net/2021/02/02/random-effects-in-gams/]{.aside}
 
 ## We can estimate baby name trends using generalized additive models
 
