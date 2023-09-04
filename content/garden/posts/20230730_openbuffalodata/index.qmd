@@ -8,7 +8,7 @@ toc: true
 draft: false
 comments:
   utterances:
-    repo: ngiangre/quarto-site
+    repo: ngiangre/ngiangre.github.io
 ---
 
 [Open Data Buffalo](https://data.buffalony.gov) is a great resource and initiative to make datasets open and available to the public. My goal looking here is to identify and download available datasets about my hometown. This is the first leg of the journey in order to perform analyses or create web applications that do something interesting, fun, and possibly useful with data from my hometown. Along thhe way, I hope to learn more about APIs, Shiny development, and knowledge about the place I call home. 

@@ -9,7 +9,7 @@ toc: true
 draft: false
 comments:
   utterances:
-    repo: ngiangre/quarto-site
+    repo: ngiangre/ngiangre.github.io
 ---
 
 Hello! This is exciting for a couple of reasons:

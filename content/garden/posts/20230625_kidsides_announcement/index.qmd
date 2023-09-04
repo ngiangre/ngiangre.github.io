@@ -10,7 +10,7 @@ format:
 draft: false
 comments:
   utterances:
-    repo: ngiangre/quarto-site
+    repo: ngiangre/ngiangre.github.io
 bibliography: references.bib
 csl: american-heart-association.csl
 ---

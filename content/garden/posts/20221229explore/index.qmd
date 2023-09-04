@@ -9,7 +9,7 @@ page-layout: article
 toc: true
 comments:
   utterances:
-    repo: ngiangre/quarto_site
+    repo: ngiangre/ngiangre.github.io
 ---
 
 In this post, I am looking into something that I have been wanting to look into for a while. This short notebook shows a mini investigation into work I did during my PhD. 

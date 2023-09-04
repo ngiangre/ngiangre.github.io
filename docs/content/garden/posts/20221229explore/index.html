@@ -238,19 +238,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──
-✔ ggplot2 3.4.0      ✔ purrr   0.3.5 
-✔ tibble  3.1.8      ✔ dplyr   1.0.10
-✔ tidyr   1.2.1      ✔ stringr 1.5.0 
-✔ readr   2.1.3      ✔ forcats 0.5.2 
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.2     ✔ readr     2.1.4
+✔ forcats   1.0.0     ✔ stringr   1.5.0
+✔ ggplot2   3.4.3     ✔ tibble    3.2.1
+✔ lubridate 1.9.2     ✔ tidyr     1.3.0
+✔ purrr     1.0.2     
 ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
 ✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()</code></pre>
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(data.table)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>
 Attaching package: 'data.table'
+
+The following objects are masked from 'package:lubridate':
+
+    hour, isoweek, mday, minute, month, quarter, second, wday, week,
+    yday, year
 
 The following objects are masked from 'package:dplyr':
 
@@ -265,7 +272,7 @@ The following object is masked from 'package:purrr':
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>kidsides<span class="sc">::</span><span class="fu">download_sqlite_db</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Attempt failed to check sqlite exists or to download from the URL: https://tlab-kidsides.s3.amazonaws.com/data/effect_peds_19q2_v0.3_20211119.sqlite.gz</code></pre>
+<pre><code>Already exists: /Users/nickgiangreco/Library/Caches/org.R-project.R/R/kidsides/effect_peds_19q2_v0.3_20211119.sqlite</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>con <span class="ot">&lt;-</span> kidsides<span class="sc">::</span><span class="fu">connect_sqlite_db</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -282,12 +289,12 @@ The following object is masked from 'package:purrr':
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">collect</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 15
-  category atc_con…¹ meddr…² nichd atc_c…³ meddr…⁴     a     b     c     d   lwr
-  &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;   &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;   &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;dbl&gt;
-1 soc_atc5 monteluk… Psychi… todd… ATC5    SOC        16  6777     3 11145  2.51
-# … with 4 more variables: odds_ratio &lt;dbl&gt;, upr &lt;dbl&gt;, pvalue &lt;dbl&gt;,
-#   fdr &lt;dbl&gt;, and abbreviated variable names ¹​atc_concept_name,
-#   ²​meddra_concept_name, ³​atc_concept_class_id, ⁴​meddra_concept_class_id</code></pre>
+  category atc_concept_name meddra_concept_name   nichd   atc_concept_class_id
+  &lt;chr&gt;    &lt;chr&gt;            &lt;chr&gt;                 &lt;chr&gt;   &lt;chr&gt;               
+1 soc_atc5 montelukast      Psychiatric disorders toddler ATC5                
+# ℹ 10 more variables: meddra_concept_class_id &lt;chr&gt;, a &lt;int&gt;, b &lt;int&gt;,
+#   c &lt;int&gt;, d &lt;int&gt;, lwr &lt;dbl&gt;, odds_ratio &lt;dbl&gt;, upr &lt;dbl&gt;, pvalue &lt;dbl&gt;,
+#   fdr &lt;dbl&gt;</code></pre>
 </div>
 </div>
 <p>The odds of 8.7708426 indicates a large association of statistically significant reporting of montelukast-induced Psychiatric disorders for toddlers.</p>
@@ -600,7 +607,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<script src="https://utteranc.es/client.js" repo="ngiangre/quarto_site" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
+<script src="https://utteranc.es/client.js" repo="ngiangre/ngiangre.github.io" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
 

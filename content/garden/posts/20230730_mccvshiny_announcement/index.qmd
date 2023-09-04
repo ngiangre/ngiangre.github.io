@@ -8,7 +8,7 @@ toc: true
 draft: false
 comments:
   utterances:
-    repo: ngiangre/quarto-site
+    repo: ngiangre/ngiangre.github.io
 ---
 
 During my PhD I wrote the algorithm Monte Carlo Cross Validation (MCCV) to address a question about generating evidence for a prognostic biomarker of an adverse outcome. I wanted to have an opportunity to show the algorithm 'in action' while also embracing a new learning opportunity: [Shiny for Python](https://shiny.posit.co/py/).
