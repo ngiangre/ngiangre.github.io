@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2022-09-04">
 
-<title>Nicholas Giangreco - Hello, world!</title>
+<title>Nicholas Giangreco - Using Tidymodels with Targets for adventures in statistical learning</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,10 +30,11 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../../../">
+<script src="../../../../site_libs/quarto-listing/list.min.js"></script>
+<script src="../../../../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../../../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
@@ -60,13 +60,44 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-image','listing-subtitle',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: [],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <style>html{ scroll-behavior: smooth; }</style>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../../../../styles.css">
-<meta property="og:title" content="Nicholas Giangreco - Hello, world!">
-<meta property="og:description" content="First post! Starting and describing my digital space.">
-<meta property="og:image" content="https://nickg.bio/content/garden/posts/20220904welcome/images/noun-hi-1994887.svg">
+<meta property="og:title" content="Nicholas Giangreco - Using Tidymodels with Targets for adventures in statistical learning">
+<meta property="og:description" content="Project utilizing the {targets} and {tidymodels} packages when re-reading the book ‘Introduction to Statistical Learning’">
+<meta property="og:image" content="https://nickg.bio/content/garden/projects/islr_tidymodels_targets/images/medicine-health-humanities-statistical-learning_sohs-ystatsstatlearning-sp.jpg">
 <meta property="og:site-name" content="Nicholas Giangreco">
 <meta property="og:locale" content="en_US">
 </head>
@@ -138,73 +169,36 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#my-digital-garden-is-like-a-virtual-showcase" id="toc-my-digital-garden-is-like-a-virtual-showcase" class="nav-link active" data-scroll-target="#my-digital-garden-is-like-a-virtual-showcase">My digital garden is like a virtual showcase</a></li>
-  <li><a href="#i-will-make-an-effort-to-work-on-my-digital-garden-like-a-gardener-tends-to-their-garden-in-the-backyard" id="toc-i-will-make-an-effort-to-work-on-my-digital-garden-like-a-gardener-tends-to-their-garden-in-the-backyard" class="nav-link" data-scroll-target="#i-will-make-an-effort-to-work-on-my-digital-garden-like-a-gardener-tends-to-their-garden-in-the-backyard">I will make an effort to work on my digital garden like a gardener tends to their garden in the backyard</a></li>
-  <li><a href="#how-quarto-is-fantastic-software-for-making-your-digital-garden" id="toc-how-quarto-is-fantastic-software-for-making-your-digital-garden" class="nav-link" data-scroll-target="#how-quarto-is-fantastic-software-for-making-your-digital-garden">How Quarto is fantastic software for making your digital garden</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-about-marquee column-page">
+  <div class="about-image-container">
+    <img src="images/medicine-health-humanities-statistical-learning_sohs-ystatsstatlearning-sp.jpg" class="about-image " style="width: 100%;">
+  </div>
+  <div class="about-contents">
+    <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Hello, world!</h1>
-<p class="subtitle lead">First post! Starting and describing my digital space.</p>
+<h1 class="title">Using Tidymodels with Targets for adventures in statistical learning</h1>
+<p class="subtitle lead">Project utilizing the {targets} and {tidymodels} packages when re-reading the book ‘Introduction to Statistical Learning’</p>
 </div>
-
-
-
 <div class="quarto-title-meta">
-
-    
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">September 4, 2022</p>
-    </div>
   </div>
-  
-    
+</header> <main class="content column-page" id="quarto-document-content">
+
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div></main> 
   </div>
-  
-
-</header>
-
-<p>Hello! This is exciting for a couple of reasons:</p>
-<ul>
-<li><p>This is the redesign of my <a href="https://thunderous-conkies-5ca337.netlify.app/">original website</a></p></li>
-<li><p>This redesigned website is made using <a href="quarto.org">Quarto</a></p></li>
-<li><p>This redesigned website is now hosting my digital garden</p></li>
-</ul>
-<section id="my-digital-garden-is-like-a-virtual-showcase" class="level1">
-<h1>My digital garden is like a virtual showcase</h1>
-<p>In Buffalo, I learned that there’s an annual garden walk, where people all over the city can venture through and see wonderful gardens carefully crafted and skillfully maintained by their gardeners. These gardens are open to the public and showcase plants and outdoor designs serving as inspiration and just very nice places to experience.</p>
-<p>Similar to a real garden, I want to craft a digital garden. My digital garden will be carefully crafted to showcase new and old projects, both matured content and content in development. What makes this digital garden deviate from my profile on Github is that 1) it is organized as a mixture of long-term, project work and short-term, stand-alone posts, and 2) it is meant as sort of an “official” landing page from my personal website.</p>
-<p>I acknowledge how my digital garden will deviate from a digital knowledge tree or mind map, as described in this article about the <a href="https://maggieappleton.com/garden-history">ethos</a>. However, I really like the idea of thinking-out-loud and sharing knowledge and resources openly. So here we are.</p>
-</section>
-<section id="i-will-make-an-effort-to-work-on-my-digital-garden-like-a-gardener-tends-to-their-garden-in-the-backyard" class="level1">
-<h1>I will make an effort to work on my digital garden like a gardener tends to their garden in the backyard</h1>
-<p>Currently, alot of the work in my garden is projects from my time as a graduate student. I’m very proud of the work I contributed to and the open access work. After my time as a graduate student, there’s still so muc to explore and to work on! Obviously I won’t have a ton of time to devote to personal projects; besides work and family, I also need to catch up to my partner on the Marvel universe on Disney+…But when I can I will be definitely working more on growing existing work and knowledge in an effort to think-out-loud and develop as a scientist.</p>
-</section>
-<section id="how-quarto-is-fantastic-software-for-making-your-digital-garden" class="level1">
-<h1>How Quarto is fantastic software for making your digital garden</h1>
-<p>I wanted to give my <a href="https://thunderous-conkies-5ca337.netlify.app/">original website</a> a face-lift. It was my first foray into web development, even if extremely basic. I knew I would have to do it eventually, but I wasn’t keen on any particular tool out there. I wanted 1) customization but also ease-of-use, 2) community support for tool development so I wouldn’t be stuck with broken code later, 3) a way to do coding in different languages and frameworks so my projects are only limited by content and not technology, and 4) I wanted ti use a tool that would persist a long time.</p>
-<p>Quarto seemed to fit these criteria as a new tool, support by a community, offering amazing customization and a friendly user-interface, and it fit my projects with code from different languages. I also searched for some other cool features (see the typing text on my homepage) that I could implement using Quarto. The site is also pretty mobile friendly which is a must these days! The tool seems to be great for putting together my digital garden.</p>
-<p>Here’s hoping we all get to see some cool content result from ‘tending’ to my digital garden!</p>
-
-
-</section>
-
-</main> <!-- /main -->
+</div>
+ <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -225,13 +219,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     
@@ -437,8 +424,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
-<script src="https://utteranc.es/client.js" repo="ngiangre/ngiangre.github.io" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
 

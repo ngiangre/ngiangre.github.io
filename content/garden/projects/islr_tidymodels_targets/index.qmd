@@ -1,0 +1,12 @@
+---
+title: "Using Tidymodels with Targets for adventures in statistical learning"
+subtitle: Project utilizing the {targets} and {tidymodels} packages when re-reading the book  'Introduction to Statistical Learning'
+about: marquee
+image: "images/medicine-health-humanities-statistical-learning_sohs-ystatsstatlearning-sp.jpg"
+listing:
+    type: default
+    image-align: left
+    fields: [title, image, subtitle]
+    contents: "/islr-*"
+---
+

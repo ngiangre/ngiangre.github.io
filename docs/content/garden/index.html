@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.269">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -17,7 +17,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -57,7 +57,8 @@ ul.task-list li input[type="checkbox"] {
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 <script>
@@ -119,6 +120,7 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <style>html{ scroll-behavior: smooth; }</style>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../../styles.css">
@@ -140,55 +142,57 @@ ul.task-list li input[type="checkbox"] {
     <span class="navbar-title">Nicholas Giangreco</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/ngiangre"><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/ngiangre" rel="" target=""><i class="bi bi-github" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.linkedin.com/in/nickgiangreco/"><i class="bi bi-linkedin" role="img">
+    <a class="nav-link" href="https://www.linkedin.com/in/nickgiangreco/" rel="" target=""><i class="bi bi-linkedin" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/nickgiangreco"><i class="bi bi-twitter" role="img">
+    <a class="nav-link" href="https://twitter.com/nickgiangreco" rel="" target=""><i class="bi bi-twitter" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.facebook.com/ngiangreco/"><i class="bi bi-facebook" role="img">
+    <a class="nav-link" href="https://www.facebook.com/ngiangreco/" rel="" target=""><i class="bi bi-facebook" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.instagram.com/ngiangreco/"><i class="bi bi-instagram" role="img">
+    <a class="nav-link" href="https://www.instagram.com/ngiangreco/" rel="" target=""><i class="bi bi-instagram" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="mailto:nick.giangreco@gmail.com"><i class="bi bi-envelope" role="img">
+    <a class="nav-link" href="mailto:nick.giangreco@gmail.com" rel="" target=""><i class="bi bi-envelope" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../content/about/index.html">
+    <a class="nav-link" href="../../content/about/index.html" rel="" target="">
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../../content/garden/index.html" aria-current="page">
+    <a class="nav-link active" href="../../content/garden/index.html" rel="" target="" aria-current="page">
  <span class="menu-text">Digital Garden</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../content/cv/Nicholas_Giangreco_CV.pdf">
+    <a class="nav-link" href="../../content/cv/Nicholas_Giangreco_CV.pdf" rel="" target="">
  <span class="menu-text">CV</span></a>
   </li>  
 </ul>
-              <div id="quarto-search" class="" title="Search"></div>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
@@ -199,7 +203,23 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
 <!-- main -->
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"></h1>
+<p class="subtitle lead">This is where I till my projects and collect my musings</p>
+</div>
 
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
 
 <div class="grid">
 <section id="welcome-to-my-digital-garden" class="level2 g-col-10 g-start-2" style="text-align: center">
@@ -218,7 +238,7 @@ ul.task-list li input[type="checkbox"] {
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <div id="listing-projects" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-5">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1668876790662" data-listing-reading-time-sort="0.71">
+<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1668876790662" data-listing-reading-time-sort="1">
 <a href="../../content/garden/projects/buffalo/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-center">
 <p class="card-img-top">
@@ -235,7 +255,7 @@ Exploring my hometown through data
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1668876790675" data-listing-reading-time-sort="1.405">
+<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1668876790675" data-listing-reading-time-sort="2">
 <a href="../../content/garden/projects/mccv/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-center">
 <p class="card-img-top">
@@ -252,7 +272,7 @@ Clinical machine learning framework
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1668876790657" data-listing-reading-time-sort="0.645">
+<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1668876790657" data-listing-reading-time-sort="1">
 <a href="../../content/garden/projects/pds/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-center">
 <p class="card-img-top">
@@ -264,6 +284,23 @@ Pediatric Drug Safety
 </h5>
 <div class="card-subtitle listing-subtitle">
 Research, data, and analyses on reported adverse medication outcomes across childood
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1693846792624" data-listing-reading-time-sort="1">
+<a href="../../content/garden/projects/islr_tidymodels_targets/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-center">
+<p class="card-img-top">
+<img src="../../content/garden/projects/islr_tidymodels_targets/images/medicine-health-humanities-statistical-learning_sohs-ystatsstatlearning-sp.jpg" class="thumbnail-image card-img" style="height: 10em;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Using Tidymodels with Targets for adventures in statistical learning
+</h5>
+<div class="card-subtitle listing-subtitle">
+Project utilizing the {targets} and {tidymodels} packages when re-reading the book ‘Introduction to Statistical Learning’
 </div>
 </div>
 </div>
@@ -296,9 +333,9 @@ No matching items
   </div>
 </div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-left" data-index="0" data-listing-date-sort="1693627200000" data-listing-file-modified-sort="1693787684818" data-listing-reading-time-sort="10.88">
+<div class="quarto-post image-left" data-index="0" data-listing-date-sort="1693627200000" data-listing-file-modified-sort="1693787684818" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11">
 <div class="thumbnail">
-<p><a href="../../content/garden/posts/20230902_openbuffalodataforml/index.html"> <img src="../../content/garden/posts/20230902_openbuffalodataforml/images/baby.png" class="thumnail-image"> </a></p>
+<p><a href="../../content/garden/posts/20230902_openbuffalodataforml/index.html"> <img src="../../content/garden/posts/20230902_openbuffalodataforml/images/baby.png" class="thumbnail-image"> </a></p>
 </div>
 <div class="body">
 <a href="../../content/garden/posts/20230902_openbuffalodataforml/index.html">
@@ -318,9 +355,9 @@ Sep 2, 2023
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="1" data-listing-date-sort="1690776000000" data-listing-file-modified-sort="1693787669616" data-listing-reading-time-sort="3.22">
+<div class="quarto-post image-left" data-index="1" data-listing-date-sort="1690776000000" data-listing-file-modified-sort="1693787669616" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
 <div class="thumbnail">
-<p><a href="../../content/garden/posts/20230730_openbuffalodata/index.html"> <img src="../../content/garden/posts/20230730_openbuffalodata/images/opendata_logo.jpeg" class="thumnail-image"> </a></p>
+<p><a href="../../content/garden/posts/20230730_openbuffalodata/index.html"> <img src="../../content/garden/posts/20230730_openbuffalodata/images/opendata_logo.jpeg" class="thumbnail-image"> </a></p>
 </div>
 <div class="body">
 <a href="../../content/garden/posts/20230730_openbuffalodata/index.html">
@@ -340,9 +377,9 @@ Jul 31, 2023
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="2" data-listing-date-sort="1690689600000" data-listing-file-modified-sort="1693787659678" data-listing-reading-time-sort="0.7">
+<div class="quarto-post image-left" data-index="2" data-listing-date-sort="1690689600000" data-listing-file-modified-sort="1694282737917" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
 <div class="thumbnail">
-<p><a href="../../content/garden/posts/20230730_mccvshiny_announcement/index.html"> <img src="../../content/garden/posts/20230730_mccvshiny_announcement/images/mccv_scheme.jpg" class="thumnail-image"> </a></p>
+<p><a href="../../content/garden/posts/20230730_mccvshiny_announcement/index.html"> <img src="../../content/garden/posts/20230730_mccvshiny_announcement/images/mccv_scheme.jpg" class="thumbnail-image"> </a></p>
 </div>
 <div class="body">
 <a href="../../content/garden/posts/20230730_mccvshiny_announcement/index.html">
@@ -350,7 +387,7 @@ Jul 31, 2023
 Announcing mccvshiny
 </h3>
 <div class="listing-subtitle">
-Monte Carlo Cross Validation (MCCV) is a peer-reviewed clinical machine learning algorithm that is now showcased in a Shiny for R app with simulated data distributions
+mccvshiny is a Shiny for Python app that showcases the flexibility of the peer-reviewed Monte Carlo Cross Validation (MCCV) algorithm using simulated data distributions
 </div>
 </a>
 </div>
@@ -362,9 +399,9 @@ Jul 30, 2023
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="3" data-listing-date-sort="1687579200000" data-listing-file-modified-sort="1693787645065" data-listing-reading-time-sort="7.245">
+<div class="quarto-post image-left" data-index="3" data-listing-date-sort="1687579200000" data-listing-file-modified-sort="1693787645065" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8">
 <div class="thumbnail">
-<p><a href="../../content/garden/posts/20230625_kidsides_announcement/index.html"> <img src="../../content/garden/posts/20230625_kidsides_announcement/images/med_cover.jpeg" class="thumnail-image"> </a></p>
+<p><a href="../../content/garden/posts/20230625_kidsides_announcement/index.html"> <img src="../../content/garden/posts/20230625_kidsides_announcement/images/med_cover.jpeg" class="thumbnail-image"> </a></p>
 </div>
 <div class="body">
 <a href="../../content/garden/posts/20230625_kidsides_announcement/index.html">
@@ -384,9 +421,9 @@ Jun 24, 2023
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="4" data-listing-date-sort="1687060800000" data-listing-file-modified-sort="1693787632178" data-listing-reading-time-sort="1.81">
+<div class="quarto-post image-left" data-index="4" data-listing-date-sort="1687060800000" data-listing-file-modified-sort="1693787632178" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
 <div class="thumbnail">
-<p><a href="../../content/garden/posts/20230610_mccv_announcement/index.html"> <img src="../../content/garden/posts/20230610_mccv_announcement/images/mccv_scheme.jpg" class="thumnail-image"> </a></p>
+<p><a href="../../content/garden/posts/20230610_mccv_announcement/index.html"> <img src="../../content/garden/posts/20230610_mccv_announcement/images/mccv_scheme.jpg" class="thumbnail-image"> </a></p>
 </div>
 <div class="body">
 <a href="../../content/garden/posts/20230610_mccv_announcement/index.html">
@@ -406,9 +443,9 @@ Jun 18, 2023
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="5" data-listing-date-sort="1672290000000" data-listing-file-modified-sort="1693787619826" data-listing-reading-time-sort="7.065">
+<div class="quarto-post image-left" data-index="5" data-listing-date-sort="1672290000000" data-listing-file-modified-sort="1693787619826" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8">
 <div class="thumbnail">
-<p><a href="../../content/garden/posts/20221229explore/index.html"> <img src="../../content/garden/posts/20221229explore/images/explore.png" class="thumnail-image" alt="dGAM signal distribution for montelukast associated Psychiatric disorders across child development stages"> </a></p>
+<p><a href="../../content/garden/posts/20221229explore/index.html"> <img src="../../content/garden/posts/20221229explore/images/explore.png" class="thumbnail-image" alt="dGAM signal distribution for montelukast associated Psychiatric disorders across child development stages"> </a></p>
 </div>
 <div class="body">
 <a href="../../content/garden/posts/20221229explore/index.html">
@@ -428,9 +465,9 @@ Dec 29, 2022
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="6" data-listing-date-sort="1662264000000" data-listing-file-modified-sort="1693787609985" data-listing-reading-time-sort="2.675">
+<div class="quarto-post image-left" data-index="6" data-listing-date-sort="1662264000000" data-listing-file-modified-sort="1693787609985" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
 <div class="thumbnail">
-<p><a href="../../content/garden/posts/20220904welcome/index.html"> <img src="../../content/garden/posts/20220904welcome/images/noun-hi-1994887.svg" class="thumnail-image"> </a></p>
+<p><a href="../../content/garden/posts/20220904welcome/index.html"> <img src="../../content/garden/posts/20220904welcome/images/noun-hi-1994887.svg" class="thumbnail-image"> </a></p>
 </div>
 <div class="body">
 <a href="../../content/garden/posts/20220904welcome/index.html">
@@ -491,9 +528,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -558,6 +609,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
