@@ -16,7 +16,7 @@ title: Nick Giangreco
 
 ### *Independent and collaborative precision medicine scientist and engineer* 
 
-[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** August 27th 2023
+[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** September 10th 2023
 
 | |
 | :------ |
@@ -106,7 +106,7 @@ American Journal of Physiology-Heart and Circulatory Physiology 2018 315:5, [H14
 - Kim-Hellmuth, S., Bechheim, M., Pütz, B., Mohammadi, P., Néd´lec, Y, **Giangreco, N.**, et al. Genetic regulatory effects modified by immune activation contribute to autoimmune disease associations. Nat Commun 8, 266 (2017). [https://doi.org/10.1038/s41467-017-00366-1](https://doi.org/10.1038/s41467-017-00366-1).
 
 
-[**Peer-reviewed publications on pubmed**](https://www.ncbi.nlm.nih.gov/pubmed/?term=Giangreco+N%5BAuthor%5D)
+[**Peer-reviewed publications on pubmed**](https://pubmed.ncbi.nlm.nih.gov/?term=Giangreco+N&cauthor_id=28814792)
 
 [**Google scholar profile**](https://scholar.google.com/citations?user=Q3m0Jl8AAAAJ&hl=en&oi=ao)
 
