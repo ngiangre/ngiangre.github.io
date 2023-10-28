@@ -121,7 +121,7 @@
   {
     "objectID": "content/garden/posts/20231028_objectsandshiny/index.html",
     "href": "content/garden/posts/20231028_objectsandshiny/index.html",
-    "title": "Storing state in Shiny Apps",
+    "title": "Shinylive - shiny apps with no server",
     "section": "",
     "text": "#| standalone: true\n\nfrom shiny import *\n\napp_ui = ui.page_fluid(\n    ui.input_slider(\"n\", \"N\", 0, 100, 40),\n    ui.output_text_verbatim(\"txt\"),\n)\n\ndef server(input, output, session):\n    @output\n    @render.text\n    def txt():\n        return f\"The value of n*2 is {input.n() * 2}\"\n\napp = App(app_ui, server)"
   },

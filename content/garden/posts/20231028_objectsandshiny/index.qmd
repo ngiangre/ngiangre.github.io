@@ -1,6 +1,6 @@
 ---
-title: Storing state in Shiny Apps
-subtitle: Using Object oriented programming to represent the current state of your Shiny App
+title: Shinylive - shiny apps with no server
+subtitle: Minimal example showing an interactive webpage in shiny without a server!
 image: "images/servertoshiny.png"
 date: "10/28/2023"
 draft: false
