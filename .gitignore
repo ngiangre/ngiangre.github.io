@@ -8,3 +8,5 @@ _cache
 
 _publish.yml
 /.quarto/
+
+*.rds
