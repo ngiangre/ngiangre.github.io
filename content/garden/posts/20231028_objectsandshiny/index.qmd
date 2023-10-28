@@ -1,0 +1,35 @@
+---
+title: Storing state in Shiny Apps
+subtitle: Using Object oriented programming to represent the current state of your Shiny App
+image: "images/servertoshiny.png"
+date: "10/28/2023"
+draft: true
+page-layout: article
+toc: true
+format: html
+filters:
+  - shinylive
+comments:
+  utterances:
+    repo: ngiangre/ngiangre.github.io
+---
+
+```{shinylive-python}
+#| standalone: true
+
+from shiny import *
+
+app_ui = ui.page_fluid(
+    ui.input_slider("n", "N", 0, 100, 40),
+    ui.output_text_verbatim("txt"),
+)
+
+def server(input, output, session):
+    @output
+    @render.text
+    def txt():
+        return f"The value of n*2 is {input.n() * 2}"
+
+app = App(app_ui, server)
+
+```
