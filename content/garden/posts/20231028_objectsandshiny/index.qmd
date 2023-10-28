@@ -3,7 +3,7 @@ title: Storing state in Shiny Apps
 subtitle: Using Object oriented programming to represent the current state of your Shiny App
 image: "images/servertoshiny.png"
 date: "10/28/2023"
-draft: true
+draft: false
 page-layout: article
 toc: true
 format: html
