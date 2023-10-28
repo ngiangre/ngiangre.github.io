@@ -215,14 +215,14 @@ We can use this formula in our model to get the trends of the baby names over ti
 tmp <- 
     baby_names_transformed
 
-if(file.exists(paste0(here::here(),"baby_name_gam_full.rds"))){
-    fit <- readr::read_rds(paste0(here::here(),"baby_name_gam_full.rds"))
+if(file.exists(paste0(here::here(),"/baby_name_gam_full.rds"))){
+    fit <- readr::read_rds(paste0(here::here(),"/baby_name_gam_full.rds"))
 }else{
     system.time(fit <- mgcv::bam(form,
                  family = "poisson",
                  data = tmp,
                  discrete = TRUE))
-    readr::write_rds(fit,paste0(here::here(),"baby_name_gam_full.rds"))
+    readr::write_rds(fit,paste0(here::here(),"/baby_name_gam_full.rds"))
 }
 ```
 
