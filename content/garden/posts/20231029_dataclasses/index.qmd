@@ -1,9 +1,9 @@
 ---
 title: Object Oriented Programming (OOP) with Datasets
-subtitle: Showing the idea of using OOP to define and manipulate datasets in as standard way
+subtitle: Showing the idea of using OOP (i.e. S3) to define and manipulate datasets in a standard way
 image: "images/INUAA.png"
 date: "10/29/2023"
-draft: true
+draft: false
 page-layout: article
 toc: true
 comments:
@@ -40,15 +40,66 @@ sloop::otype(d2)
 sloop::s3_class(d2)
 ```
 
-So what's the issue if they are already classes? I actually want to know the number of rows and columns including the name of the data. 
+So what's the issue if they are already classes? I actually want to know the number of rows and columns including the name of the data. That's easy to derive, but think 'what if they weren't?' - having information available would be handy. The class would then be a simple interface to that information. To that end, I would make an object with class 'my_data' and the below attributes. This generates a fancy list using `structure`:
 
 ```{r}
 structure(
     list(
-        "data.frame" = NULL,
-        "ncols" = NULL,
-        "nrows" = NULL
+        data.frame = NULL,
+        name = NULL,
+        ncols = function(x)ncol(x),
+        nrows = function(x)nrow(x)
     ),
-    class = "my_dataset"
+    class = "my_data"
 )
 ```
+
+To create objects of this class, I would create a constructor. The constructor would just be a function taking in the input and wrapping it in my new class (a fancy list):
+
+```{r}
+
+my_data <- function(dat,name = NULL){
+    stopifnot(is.data.frame(dat))
+    structure(
+    list(
+        data.frame = dat,
+        name = name,
+        ncols = ncol(dat),
+        nrows = nrow(dat)
+    ),
+    class = "my_data"
+    )
+}
+
+d1_data <- my_data(d1,"d1")
+d2_data <- my_data(d2,"d2")
+
+d1_data$name
+d2_data$ncols
+
+```
+
+This seems sort of useful, but what would be more useful is showing me the information I want in the way I want. To do this, I make a method for this class:
+
+```{r}
+
+show.my_data <- function(x){
+    cat(x$name,"\n")
+    cat("Rows: ",x$nrow,"\n")
+    cat("Columns: ",x$ncol)
+}
+
+show <- function(x){
+    UseMethod("show")
+}
+
+```
+
+```{r}
+
+show(d1_data)
+show(d2_data)
+
+```
+
+I defined a `show` method that is _specific_ to objects of my class. Pretty nifty. This ability gets niftier as the complexity of the attributes and the operations on objects of this class increases. 
