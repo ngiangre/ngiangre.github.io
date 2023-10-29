@@ -10,7 +10,7 @@
   </url>
   <url>
     <loc>https://nickg.bio/content/garden/index.html</loc>
-    <lastmod>2023-10-29T17:02:12.981Z</lastmod>
+    <lastmod>2023-10-29T17:30:47.064Z</lastmod>
   </url>
   <url>
     <loc>https://nickg.bio/content/garden/projects/mccv/mccv-package.html</loc>
@@ -87,5 +87,9 @@
   <url>
     <loc>https://nickg.bio/content/cv/Nicholas_Giangreco_academic_CV.html</loc>
     <lastmod>2023-10-29T17:02:14.967Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nickg.bio/content/garden/posts/20231029_dataclasses/index.html</loc>
+    <lastmod>2023-10-29T17:30:46.158Z</lastmod>
   </url>
 </urlset>

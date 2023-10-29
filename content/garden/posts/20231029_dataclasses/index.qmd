@@ -1,0 +1,54 @@
+---
+title: Object Oriented Programming (OOP) with Datasets
+subtitle: Showing the idea of using OOP to define and manipulate datasets in as standard way
+image: "images/INUAA.png"
+date: "10/29/2023"
+draft: true
+page-layout: article
+toc: true
+comments:
+  utterances:
+    repo: ngiangre/ngiangre.github.io
+---
+
+Datasets can come in many different shapes and sizes, such as a number of rows and columns. But what if I need to interface with datasets in a specific but standard way? I can create a class for this.
+
+Let's say I have two datasets that I want to represent in a standard way. 
+
+```{r}
+d1 <- datasets::airquality
+d2 <- datasets::anscombe
+```
+
+```{r}
+d1 |> head(5)
+```
+
+```{r}
+d2 |> head(5)
+```
+
+These two example datasets are actually classes already (i.e. S3 classes), and are data.frames (which are also classes).
+
+```{r}
+sloop::otype(d1)
+sloop::s3_class(d1)
+```
+
+```{r}
+sloop::otype(d2)
+sloop::s3_class(d2)
+```
+
+So what's the issue if they are already classes? I actually want to know the number of rows and columns including the name of the data. 
+
+```{r}
+structure(
+    list(
+        "data.frame" = NULL,
+        "ncols" = NULL,
+        "nrows" = NULL
+    ),
+    class = "my_dataset"
+)
+```
