@@ -1,7 +1,7 @@
 ---
 title: Object Oriented Programming (OOP) with Datasets
 subtitle: Showing the idea of using OOP (i.e. S3) to define and manipulate datasets in a standard way
-image: "images/INUAA.png"
+image: "images/classobjects.png"
 date: "10/29/2023"
 draft: false
 page-layout: article
