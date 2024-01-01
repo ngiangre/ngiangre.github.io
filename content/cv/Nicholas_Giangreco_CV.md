@@ -16,7 +16,7 @@ title: Nick Giangreco
 
 ### *Independent and collaborative precision medicine scientist and engineer* 
 
-[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** December 17th 2023
+[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** January 1st 2024
 
 | |
 | :------ |
@@ -29,11 +29,16 @@ title: Nick Giangreco
 WORK EXPERIENCE
 ----------
 
+2023 - Present
+:    **Technical Advisor (Remote)** [(MindArch Health)](http://www.mindarchhealth.com/); Sayville, NY
+
+     Machine learning, Software, Web Applications & Design
+     
 2021 - Present
-:    **Senior Scientist, Quantitative Translational Scientist** [(Regeneron Pharmaceuticals Inc.)](https://www.regeneron.com); Tarrytown, NY
+:    **Senior Scientist, Quantitative Translational Scientist (Remote)** [(Regeneron Pharmaceuticals Inc.)](https://www.regeneron.com); Tarrytown, NY
      
      Precision Medicine - scientist, data architect, software developer, and applications engineer
-    
+
 2016 - 2021
 :    **Systems biologist** [(Columbia University)](https://systemsbiology.columbia.edu/people/nicholas-giangreco); New York, NY
 
@@ -150,7 +155,7 @@ Leadership and Management Experience
 ----------
 
 - [New York Health Artificial Intelligence Society](https://www.nyhais.org)
-   + 501(c)(3) not-for-profit Cofounder and Secretary, 2019-Present
+   + 501(c)(3) not-for-profit Cofounder and Secretary, 2019-2023
    + Promote public discourse on a wide range of topics such as AI & Society, AI & Healthcare, and economic impact by AI. 
    + Organize and facilitate group engagement, workshops, AI study groups, and not-for-profit organization.
    + Consultant on data science and education projects and initiatives. 
