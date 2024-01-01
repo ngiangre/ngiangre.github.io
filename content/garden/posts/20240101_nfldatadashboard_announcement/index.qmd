@@ -26,3 +26,6 @@ I hope to be building on {nfldatadashboard} as I learn from my brother (resident
 [Click here for link to Github repository](https://github.com/ngiangre/nfldatadashboard)
 
 [Click here for link to live dashboard](https://nick-giangreco.shinyapps.io/nfldatadashboard/)
+
+P.S. I want to explicitly say, I leverage many useful resources put out by the R community and the teaching/workshop material I learned over the past years (e.g. posit conf, hackathons, etc.). I am forever indebted to the R community in which I work and live in. 
+
