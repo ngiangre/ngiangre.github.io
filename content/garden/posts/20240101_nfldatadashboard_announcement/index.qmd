@@ -1,0 +1,28 @@
+---
+title: A dashboard for interacting with NFL data
+subtitle: The start of a dashboard, hobby project to understand more about sports data
+image: "images/nfldatadashboard_snapshot.png"
+date: "01/01/2024"
+draft: false
+page-layout: article
+toc: true
+comments:
+  utterances:
+    repo: ngiangre/ngiangre.github.io
+---
+
+Happy New Year everyone! Today's post is brought to you by the data science hobbyist in me and a new quest.
+
+This year I started a Fantasy Football team with my brother. As he explained what FF is and how it is played, I am fascinated by how one understands how a player or team performs on the field and over the season. I'm now wondering how to leverage my background in data and statistics to understand performance in the National Football League.
+
+My new quest and hobby is to leverage my background to formalize how I can interact with and use data to understand NFL player performance. As a started thinking about this topic, though, I realize how complex the data is and how player or team performance is. I am not a domain expert in sports (NFL)! However, maybe my background is strong enough to pull me from my dearth of knowledge and into the light.
+
+This holiday season I made {nfldatadashboard}, an R package that installs a shiny dashboard for viewing and interacting with NFL data (limited to 2023 season currently). The source is NFL Next Gen Stats, which I pulled using the R package {nflreadr}. I then used the R package {targets} for extracting and saving the datasets. Finally I used the R package {R6} to standardize both the data retrieval and data plotting in the dashboard. The dashboard was developed using the framework from the R package {golem}. There's no testing included yet as this is a prototype and is likely to change. 
+
+While building {nfldatadasdhboard}, I learned some new skills and built on others. I used the R packages {ggplot2} and {ggiraph} for plotting that includes interactivity. I used custom and standard dashboard themes using the R package {bslib}. Using objects with {R6} let me separate dashboard reactivity from functionality that lacks reactivity, as this can be a source of technical complexity.
+
+I hope to be building on {nfldatadashboard} as I learn from my brother (resident NFL expert) and pointers given by everyone out there reading this post. If you made it this far, thank you! And let me know your thoughts in the comments on how to make the dashboard more accessible and intuitive. 
+
+[Click here for link to Github repository](https://github.com/ngiangre/nfldatadashboard)
+
+[Click here for link to live dashboard](https://nick-giangreco.shinyapps.io/nfldatadashboard/)
