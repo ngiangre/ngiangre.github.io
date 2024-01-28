@@ -16,12 +16,12 @@ title: Nick Giangreco
 
 ### *Independent and collaborative precision medicine scientist and engineer* 
 
-[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** January 1st 2024
+[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** January 28th 2024
 
 | |
 | :------ |
 | **Topic areas:** Precision medicine, biomarker evaluation and discovery, Applications engineering, Data architecture, Pediatric drug safety, interpretable machine learning, fairness and equity in biomedical informatics, prediction and risk estimation |
-| **Technical expertise:** biomedical data science and (R/Python) software development, predictive analysis, statistical simulation, data cleaning and modeling, Shiny (for R and Python) app development, data-driven hypothesis generation and testing, RMarkdown/Jupyter/Quarto, Microsoft Power User |
+| **Technical expertise:** biomedical data science and (R/Python) software development, predictive analysis, statistical simulation, data cleaning and modeling, Shiny (for R and Python) application development, data-driven hypothesis generation and testing, RMarkdown/Jupyter/Quarto, Microsoft Power App and API user |
 | **Programming Languages:** Python, R, SQL, HTML, CSS, Java, bash | 
 | **Patents:** [Systems and methods for predicting graft dysfunction with exosome proteins](https://patents.google.com/patent/WO2022060842A1/en?oq=2022060842)|
 
@@ -35,7 +35,7 @@ WORK EXPERIENCE
      Machine learning, Software, Web Applications & Design
      
 2021 - Present
-:    **Senior Scientist, Quantitative Translational Scientist (Remote)** [(Regeneron Pharmaceuticals Inc.)](https://www.regeneron.com); Tarrytown, NY
+:    **Senior Scientist, Quantitative Translational Science (Remote)** [(Regeneron Pharmaceuticals Inc.)](https://www.regeneron.com); Tarrytown, NY
      
      Precision Medicine - scientist, data architect, software developer, and applications engineer
 
@@ -122,7 +122,7 @@ FELLOWSHIPS AND AWARDS
 
 -   Travel award to 2021 Elixir biohackathon in Barcelona Spain.
 
--   Special recognition from Columbia University for service during the COVID-19 crisis
+-   Special recognition from Columbia University for service during the COVID-19 crisis, 2021
 
 -   2021 Diversity & Inclusion Commercialization and Entrepreneurship Fellow @ Columbia Technology Ventures
 
@@ -130,11 +130,11 @@ FELLOWSHIPS AND AWARDS
 
 -   Best contribution in methodological research at the [OHDSI 2018 Symposium](https://www.ohdsi.org/2018-ohdsi-symposium/) for [Pediatric Drug Safety](http://10.7490/f1000research.1116203.1) poster.
 
--   Columbia Diversity Fellowship.
+-   Columbia Diversity Fellowship 2016.
 
--   Department of Systems Biology Merit Fellowship.
+-   Department of Systems Biology Merit Fellowship 2016.
 
--   Donald Charles Award, University of Rochester Department of Biology.
+-   Donald Charles Award, University of Rochester Department of Biology, 2014.
 
 -   Fulbright Fellowship Alternate 2013-2014: Sweden, Molecular Modeling, “Novel Antibody-SpA Complex Modeling”.
 
@@ -154,13 +154,17 @@ POSTERS AND SOFTWARE
 Leadership and Management Experience
 ----------
 
+
+- University of Rochester Alumni Buffalo Leadership Council 2023-Present
+    + Ideate and organize local events
+
 - [New York Health Artificial Intelligence Society](https://www.nyhais.org)
    + 501(c)(3) not-for-profit Cofounder and Secretary, 2019-2023
    + Promote public discourse on a wide range of topics such as AI & Society, AI & Healthcare, and economic impact by AI. 
    + Organize and facilitate group engagement, workshops, AI study groups, and not-for-profit organization.
    + Consultant on data science and education projects and initiatives. 
 
-- University of Rochester Alumni Undergraduate Interviewer
+- University of Rochester Alumni Undergraduate Interviewer 2016-2022
     + Assess potential and suitability for undergraduate college 
     + Interviewer at large and small event settings
 
@@ -219,6 +223,10 @@ MENTORING, TUTORING, and WRITING
 
 CONFERENCES AND HACKATHONS
 ----------
+
+- [posit::conf(2023)](https://www.rstudio.com/conference/)
+
+- [Bio-IT World 2023](https://www.bio-itworldexpo.com/)
 
 - [rstudio::conf(2022)](https://www.rstudio.com/conference/)
 
