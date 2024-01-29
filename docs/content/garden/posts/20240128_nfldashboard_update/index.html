@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2024-01-28">
 
-<title>Nicholas Giangreco - Pediatric Drug Safety</title>
+<title>Nicholas Giangreco - The end of the beginning to a NFL player performance dashboard</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,11 +31,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../../../">
-<script src="../../../../site_libs/quarto-listing/list.min.js"></script>
-<script src="../../../../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../../../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
@@ -60,46 +60,17 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-image','listing-subtitle',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-subtitle","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <style>html{ scroll-behavior: smooth; }</style>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../../../../styles.css">
-<meta property="og:title" content="Nicholas Giangreco - Pediatric Drug Safety">
-<meta property="og:description" content="Research, data, and analyses on reported adverse medication outcomes across childood">
-<meta property="og:image" content="https://nickg.bio/content/garden/projects/pds/images/med_cover.jpeg">
+<meta property="og:title" content="Nicholas Giangreco - The end of the beginning to a NFL player performance dashboard">
+<meta property="og:description" content="A prototype for my new dashboard hobby project, and why all prototypes have an ending">
+<meta property="og:image" content="https://nickg.bio/content/garden/posts/20240128_nfldashboard_update/images/nfldatadashboard_snapshot.png">
 <meta property="og:site-name" content="Nicholas Giangreco">
 <meta property="og:locale" content="en_US">
+<meta property="og:image:height" content="1198">
+<meta property="og:image:width" content="1838">
 </head>
 
 <body class="nav-fixed">
@@ -169,105 +140,92 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#the-nfl-data-dashboard-project" id="toc-the-nfl-data-dashboard-project" class="nav-link active" data-scroll-target="#the-nfl-data-dashboard-project">The NFL Data Dashboard Project</a></li>
+  <li><a href="#every-dashboard-needs-a-prototype" id="toc-every-dashboard-needs-a-prototype" class="nav-link" data-scroll-target="#every-dashboard-needs-a-prototype">Every Dashboard Needs a Prototype</a></li>
+  <li><a href="#the-journey-to-a-prototype" id="toc-the-journey-to-a-prototype" class="nav-link" data-scroll-target="#the-journey-to-a-prototype">The Journey to a Prototype</a></li>
+  <li><a href="#all-prototypes-serve-a-purpose" id="toc-all-prototypes-serve-a-purpose" class="nav-link" data-scroll-target="#all-prototypes-serve-a-purpose">All Prototypes Serve a Purpose</a></li>
+  <li><a href="#all-prototypes-have-an-ending" id="toc-all-prototypes-have-an-ending" class="nav-link" data-scroll-target="#all-prototypes-have-an-ending">All Prototypes Have an Ending</a></li>
+  <li><a href="#all-prototypes-beget-another-prototype" id="toc-all-prototypes-beget-another-prototype" class="nav-link" data-scroll-target="#all-prototypes-beget-another-prototype">All Prototypes Beget Another Prototype</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<div class="quarto-about-marquee column-page">
-  <div class="about-image-container">
-    <img src="images/med_cover.jpeg" class="about-image " style="width: 100%;">
-  </div>
-  <div class="about-contents">
-    <header id="title-block-header" class="quarto-title-block default">
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Pediatric Drug Safety</h1>
-<p class="subtitle lead">Research, data, and analyses on reported adverse medication outcomes across childood</p>
+<h1 class="title">The end of the beginning to a NFL player performance dashboard</h1>
+<p class="subtitle lead">A prototype for my new dashboard hobby project, and why all prototypes have an ending</p>
 </div>
+
+
+
 <div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 28, 2024</p>
+    </div>
   </div>
-</header> <main class="content column-page" id="quarto-document-content">
-<p>Drug safety in children can be affected by a number of dynamic variables such as enzymatic activity and hormonal levels that change during child growth and development. However, tools to predict adverse events in pediatric patients currently do not take into account these dynamics. My PhD advisor, Nicholas Tatonetti, and I developed a pharmacovigilance signal-detection algorithm to identify dynamic adverse events (such as metabolic and psychiatric disorders). We developed a database and a web application that provides the first resource to identify and evaluate drug safety signals across child-development stages. The cover symbolizes the data-driven method of the authors to provide more clarity on drug safety in pediatric patients, as parts of the image become better refined. Cover credit: adapted by Kip Lyall from FG Trade/E+ via Getty Images.</p>
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="the-nfl-data-dashboard-project" class="level1">
+<h1>The NFL Data Dashboard Project</h1>
+<p><a href="https://nickg.bio/content/garden/posts/20240101_nfldatadashboard_announcement/">My last post</a> outlined the start of my new hobby project: creation of a sports analytics dashboard. There was a fun intersection between me wanting to work on a fun project in a new domain and my brother having keen expertise in Fantasy Football (FF) and the NFL. I set out to learn new techniques in application/software development, which also led to fun discussion on factors contributing to NFL player performance.</p>
+</section>
+<section id="every-dashboard-needs-a-prototype" class="level1 page-columns page-full">
+<h1>Every Dashboard Needs a Prototype</h1>
+<div class="page-columns page-full"><p>The goal of the dashboard is to display NFL statistics for deciding on winning FF rosters*. A dashboard that exactly reached that goal is highly sought after! Obviously, it would take significant time, resources, and critical evaluation to create such a dashboard, which would challenge even a well-funded company. Additionally, the approach to reaching this goal will change. The potential insights from and interactions with the data in the dashboard change with more understanding of the data and presentation of that data. Therefore, we need a prototype!</p><div class="no-row-height column-margin column-container"><span class="">*A winning FF roster has a set of players with the most FF points during the season</span></div></div>
+</section>
+<section id="the-journey-to-a-prototype" class="level1 page-columns page-full">
+<h1>The Journey to a Prototype</h1>
+<div class="page-columns page-full"><p>The prototype we created helped us think about our overall goal*. We wanted to not only directly compare players, but also compare players week by week during the season. We wanted to not only compare players to all others, but think about overall player performance with their variability during the season. After a few football discussions and leveraging key programming techniques, we created the current version of the dashboard that does a pretty good job towards our goal. Below are two graphs displaying performance of QBs (see the dashboard for statistic descriptions):</p><div class="no-row-height column-margin column-container"><span class=""><a href="https://github.com/ngiangre/nfldatadashboard" class="uri">https://github.com/ngiangre/nfldatadashboard</a></span></div></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/diagram-3.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Boxplot with scatter points of all QBs as gray dots, and the AFC/NFC team QBs as colored point amongst them for each performance statistic</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/diagram-4.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Scatterplot of all QBs as gray points and the AFC/NFC team QBs as colored points faceted by different performance statistics</figcaption>
+</figure>
+</div>
+</section>
+<section id="all-prototypes-serve-a-purpose" class="level1 page-columns page-full">
+<h1>All Prototypes Serve a Purpose</h1>
+<div class="page-columns page-full"><p>Similar to Plato’s allegory of the cave*, prototypes are just shadows of the “ideal” dashboard. In my opinion, prototypes have more purpose than shadows because they can lead us to the “ideal” dashboard that reaches our goal. How many prototypes do we need to make to reach our goal? That is the million, possibly billion, dollar question! Luckily, in this fun hobby project, I’ll probably chase a few shadows that get us to ‘good enough’ while balancing fun and the limited time I can work on this.</p><div class="no-row-height column-margin column-container"><span class=""><a href="https://en.wikipedia.org/wiki/Allegory_of_the_cave" class="uri">https://en.wikipedia.org/wiki/Allegory_of_the_cave</a></span></div></div>
+</section>
+<section id="all-prototypes-have-an-ending" class="level1">
+<h1>All Prototypes Have an Ending</h1>
+<p>The development of this prototype is coming to an end. The prototype helped us move towards the dashboard’s ‘ideal’ goal, but has ultimately led to a new approach we want to explore. What are the trends of players across seasons? Are they lifting off in their career? Are there other data sources, such as of player injuries or contracts, that can yield some interesting insights into pivotal points in player’s careers? The current prototype was not designed for development in this direction, and so developing this prototype has come to an end.</p>
+</section>
+<section id="all-prototypes-beget-another-prototype" class="level1">
+<h1>All Prototypes Beget Another Prototype</h1>
+<p>The ‘death’ of one prototype leading to the ‘birth’ of another prototype is actually quite poetic. And as is often the case, the next prototype is arguably more insightful and impactful than the first. Fortunately, all that was learned when developing the first prototype can be used when developing the next! This strengthens our skills in software/application development just like practicing for a piano recital, or for a Superbowl. For the application/software developers out there, enoy the journey and keep prototyping!</p>
+<p><a href="https://github.com/ngiangre/nfldatadashboard">Click here for link to Github repository</a></p>
+<p><a href="https://nick-giangreco.shinyapps.io/nfldatadashboard/">Click here for link to live dashboard</a></p>
 
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-left" data-index="0" data-categories="R,database,package" data-listing-file-modified-sort="1673126483622" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="../../../../content/garden/projects/pds/pds-database.html"> <img src="../../../../content/garden/projects/pds/images/noun-database-1035249.svg" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../../../../content/garden/projects/pds/pds-database.html">
-<h3 class="no-anchor listing-title">
-KidSIDES
-</h3>
-<div class="listing-subtitle">
-An R data package to access publically available pediatric drug safety information
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../../../../content/garden/projects/pds/pds-database.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-left" data-index="1" data-categories="Portal,R Shiny,Web app" data-listing-file-modified-sort="1668876790648" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="../../../../content/garden/projects/pds/pds-portal.html"> <img src="../../../../content/garden/projects/pds/images/noun-portal-3859593.svg" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../../../../content/garden/projects/pds/pds-portal.html">
-<h3 class="no-anchor listing-title">
-PDSportal
-</h3>
-<div class="listing-subtitle">
-R shinydashboard application to access publicly available pediatric drug safety information
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../../../../content/garden/projects/pds/pds-portal.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-left" data-index="2" data-listing-file-modified-sort="1706495336320">
-<div class="thumbnail">
-<p><a href="../../../../content/garden/projects/pds/pds-database.html"> </a></p>
-</div>
-<div class="body">
-<a href="../../../../content/garden/projects/pds/pds-database.html">
-<h3 class="no-anchor listing-title">
-</h3>
-<div class="listing-subtitle">
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../../../../content/garden/projects/pds/pds-database.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-left" data-index="3" data-listing-file-modified-sort="1706495335969">
-<div class="thumbnail">
-<p><a href="../../../../content/garden/projects/pds/pds-portal.html"> </a></p>
-</div>
-<div class="body">
-<a href="../../../../content/garden/projects/pds/pds-portal.html">
-<h3 class="no-anchor listing-title">
-</h3>
-<div class="listing-subtitle">
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../../../../content/garden/projects/pds/pds-portal.html"> </a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> 
-  </div>
-</div>
- <!-- /main -->
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -288,6 +246,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     
@@ -493,6 +458,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
+</script>
+<script src="https://utteranc.es/client.js" repo="ngiangre/ngiangre.github.io" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
 
