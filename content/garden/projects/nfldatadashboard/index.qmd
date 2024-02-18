@@ -1,0 +1,13 @@
+---
+title: "Showcasing NFL NextGenStats"
+subtitle: Project for learning a new data domain and new programming techniques, including shiny modules.
+about: marquee
+image: "images/nfldatadashboard_project.png"
+listing:
+    type: default
+    image-align: left
+    fields: [title, image, subtitle]
+    contents: "/nfldd-*"
+---
+
+Firs prototype: [https://nick-giangreco.shinyapps.io/nfldatadashboard/](https://nick-giangreco.shinyapps.io/nfldatadashboard/)
