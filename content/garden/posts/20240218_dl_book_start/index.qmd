@@ -1,0 +1,23 @@
+---
+title: "New learning journey: Deep Learning with R"
+subtitle: Starting to read about apply DL algorithms in R, converting between R and Python
+image: "images/dl_with_r_book.png"
+date: "02/18/2024"
+draft: false
+page-layout: article
+toc: true
+toc_float: true
+comments:
+  utterances:
+    repo: ngiangre/ngiangre.github.io
+---
+
+⚠️ Short, Technical Post Alert ⚠️
+
+I'm starting to read the book Deep Learning with R.[I've been meaning to read this since I had this book signed at rstudio::conf(2022)]{.aside} I will be putting some code snippets from my reading at the below github repository. What I've learned so far:
+
+1.  You can use {renv} to set, record, and manage a python virtualenv.
+2.  It is very simple to get started with NN models using {keras}.
+3.  You can use {reticulate} to bring predictions from python objects into R dataframes for visualization using {ggplot2}!
+
+[Click here for GitHub](https://github.com/ngiangre/deeplearnining_with_r_playground)
