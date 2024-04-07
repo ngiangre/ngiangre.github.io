@@ -10,3 +10,4 @@ _publish.yml
 /.quarto/
 
 *.rds
+.env
