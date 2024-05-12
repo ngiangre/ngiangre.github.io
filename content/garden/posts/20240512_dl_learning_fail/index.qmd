@@ -1,0 +1,48 @@
+---
+title: "Deep learning fail - it happens"
+subtitle: I failed at training a deep learning model - this post sums it up. In the end, its ok because though my model didn't, I learned!
+image: "images/dl_with_r_book.png"
+date: "02/18/2024"
+draft: false
+page-layout: article
+toc: true
+toc_float: true
+comments:
+  utterances:
+    repo: ngiangre/ngiangre.github.io
+---
+
+As I am reading through the book Deep Learning with R, I tried to apply some of the learnings but with no success. This is part of how we learn new material, so its ok! Here are some notes on my application, what happened, why it didn't work out, and what to do next.
+
+# My applied problem
+
+I made a dataset from the data in the `{kidsides}` R package which has information on millions of self reported adverse drug events in the US population from the 1990s to 2019. The dataset had predictors on what the drug and event classes were for the drugs and adverse events in each of the reports. 
+
+I constructed a training set to learn what characteristics could determine whether a report contained more than one drug included in a report. Basically, I wanted to learn what characteristics associated with reported. adverse drug events that involved polypharmacy.
+
+# What happened
+
+I made a few deep neural network models that varied in the number of nodes in one dense layer, included 20% dropout of nodes (basically adding noise to the learning process), and varied in the size of samples used in the learning process. I used 40% of the data to validate the training process. In the end, I trained 6 different models. 
+
+I monitored the training and validation loss and accuracy. The models ended up not having enough ability to learn any patterns in the data, and the models weren't able to learn enough (no overfitting occurred).
+
+# Why it didn't work out?
+
+Alot of reasons but here are 4:
+
+1. The question was not posited correctly.
+2. The dataset did not contained the relevant features.
+3. There wasn't enough data to learn meaningful patterns.
+4. The model wasn't constructed well enough to learn patterns if there were any.
+
+# What next?
+
+I need to think more about the question and construct a better dataset. I think `{kidsides}` contains a lot of information to learn about how and when adverse drug events may occur in the US population.
+
+I need to construct deep learning models that have a better ability to detect patterns in the data. Trying different types of model architectures may help.
+
+I also could just give up and say deep learning is not well suited for this kind of data. Deep learning is fantastic at representing data and finding patterns in images, text, and other information. It may be overkill for tabular data. Most likely it is.
+
+In the end, this was a good exercise for me to try my hand at and get some experience with these models. You can find the script at the Github linked below. Thanks for reading about my learning journey!
+
+[Click here for GitHub](https://github.com/ngiangre/deeplearnining_with_r_playground)

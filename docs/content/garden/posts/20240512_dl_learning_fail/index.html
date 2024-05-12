@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2024-02-18">
 
-<title>Nicholas Giangreco - Pediatric Drug Safety</title>
+<title>Nicholas Giangreco - Deep learning fail - it happens</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,11 +31,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../../../">
-<script src="../../../../site_libs/quarto-listing/list.min.js"></script>
-<script src="../../../../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../../../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
@@ -60,46 +60,17 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-image','listing-subtitle',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-subtitle","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <style>html{ scroll-behavior: smooth; }</style>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../../../../styles.css">
-<meta property="og:title" content="Nicholas Giangreco - Pediatric Drug Safety">
-<meta property="og:description" content="Research, data, and analyses on reported adverse medication outcomes across childood">
-<meta property="og:image" content="https://nickg.bio/content/garden/projects/pds/images/med_cover.jpeg">
+<meta property="og:title" content="Nicholas Giangreco - Deep learning fail - it happens">
+<meta property="og:description" content="I failed at training a deep learning model - this post sums it up. In the end, its ok because though my model didn’t, I learned!">
+<meta property="og:image" content="https://nickg.bio/content/garden/posts/20240512_dl_learning_fail/images/dl_with_r_book.png">
 <meta property="og:site-name" content="Nicholas Giangreco">
 <meta property="og:locale" content="en_US">
+<meta property="og:image:height" content="900">
+<meta property="og:image:width" content="714">
 </head>
 
 <body class="nav-fixed">
@@ -169,105 +140,81 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#my-applied-problem" id="toc-my-applied-problem" class="nav-link active" data-scroll-target="#my-applied-problem">My applied problem</a></li>
+  <li><a href="#what-happened" id="toc-what-happened" class="nav-link" data-scroll-target="#what-happened">What happened</a></li>
+  <li><a href="#why-it-didnt-work-out" id="toc-why-it-didnt-work-out" class="nav-link" data-scroll-target="#why-it-didnt-work-out">Why it didn’t work out?</a></li>
+  <li><a href="#what-next" id="toc-what-next" class="nav-link" data-scroll-target="#what-next">What next?</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<div class="quarto-about-marquee column-page">
-  <div class="about-image-container">
-    <img src="images/med_cover.jpeg" class="about-image " style="width: 100%;">
-  </div>
-  <div class="about-contents">
-    <header id="title-block-header" class="quarto-title-block default">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Pediatric Drug Safety</h1>
-<p class="subtitle lead">Research, data, and analyses on reported adverse medication outcomes across childood</p>
+<h1 class="title">Deep learning fail - it happens</h1>
+<p class="subtitle lead">I failed at training a deep learning model - this post sums it up. In the end, its ok because though my model didn’t, I learned!</p>
 </div>
+
+
+
 <div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 18, 2024</p>
+    </div>
   </div>
-</header> <main class="content column-page" id="quarto-document-content">
-<p>Drug safety in children can be affected by a number of dynamic variables such as enzymatic activity and hormonal levels that change during child growth and development. However, tools to predict adverse events in pediatric patients currently do not take into account these dynamics. My PhD advisor, Nicholas Tatonetti, and I developed a pharmacovigilance signal-detection algorithm to identify dynamic adverse events (such as metabolic and psychiatric disorders). We developed a database and a web application that provides the first resource to identify and evaluate drug safety signals across child-development stages. The cover symbolizes the data-driven method of the authors to provide more clarity on drug safety in pediatric patients, as parts of the image become better refined. Cover credit: adapted by Kip Lyall from FG Trade/E+ via Getty Images.</p>
+  
+    
+  </div>
+  
+
+</header>
+
+<p>As I am reading through the book Deep Learning with R, I tried to apply some of the learnings but with no success. This is part of how we learn new material, so its ok! Here are some notes on my application, what happened, why it didn’t work out, and what to do next.</p>
+<section id="my-applied-problem" class="level1">
+<h1>My applied problem</h1>
+<p>I made a dataset from the data in the <code>{kidsides}</code> R package which has information on millions of self reported adverse drug events in the US population from the 1990s to 2019. The dataset had predictors on what the drug and event classes were for the drugs and adverse events in each of the reports.</p>
+<p>I constructed a training set to learn what characteristics could determine whether a report contained more than one drug included in a report. Basically, I wanted to learn what characteristics associated with reported. adverse drug events that involved polypharmacy.</p>
+</section>
+<section id="what-happened" class="level1">
+<h1>What happened</h1>
+<p>I made a few deep neural network models that varied in the number of nodes in one dense layer, included 20% dropout of nodes (basically adding noise to the learning process), and varied in the size of samples used in the learning process. I used 40% of the data to validate the training process. In the end, I trained 6 different models.</p>
+<p>I monitored the training and validation loss and accuracy. The models ended up not having enough ability to learn any patterns in the data, and the models weren’t able to learn enough (no overfitting occurred).</p>
+</section>
+<section id="why-it-didnt-work-out" class="level1">
+<h1>Why it didn’t work out?</h1>
+<p>Alot of reasons but here are 4:</p>
+<ol type="1">
+<li>The question was not posited correctly.</li>
+<li>The dataset did not contained the relevant features.</li>
+<li>There wasn’t enough data to learn meaningful patterns.</li>
+<li>The model wasn’t constructed well enough to learn patterns if there were any.</li>
+</ol>
+</section>
+<section id="what-next" class="level1">
+<h1>What next?</h1>
+<p>I need to think more about the question and construct a better dataset. I think <code>{kidsides}</code> contains a lot of information to learn about how and when adverse drug events may occur in the US population.</p>
+<p>I need to construct deep learning models that have a better ability to detect patterns in the data. Trying different types of model architectures may help.</p>
+<p>I also could just give up and say deep learning is not well suited for this kind of data. Deep learning is fantastic at representing data and finding patterns in images, text, and other information. It may be overkill for tabular data. Most likely it is.</p>
+<p>In the end, this was a good exercise for me to try my hand at and get some experience with these models. You can find the script at the Github linked below. Thanks for reading about my learning journey!</p>
+<p><a href="https://github.com/ngiangre/deeplearnining_with_r_playground">Click here for GitHub</a></p>
 
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-left" data-index="0" data-categories="R,database,package" data-listing-file-modified-sort="1673126483622" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="../../../../content/garden/projects/pds/pds-database.html"> <img src="../../../../content/garden/projects/pds/images/noun-database-1035249.svg" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../../../../content/garden/projects/pds/pds-database.html">
-<h3 class="no-anchor listing-title">
-KidSIDES
-</h3>
-<div class="listing-subtitle">
-An R data package to access publically available pediatric drug safety information
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../../../../content/garden/projects/pds/pds-database.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-left" data-index="1" data-categories="Portal,R Shiny,Web app" data-listing-file-modified-sort="1668876790648" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="../../../../content/garden/projects/pds/pds-portal.html"> <img src="../../../../content/garden/projects/pds/images/noun-portal-3859593.svg" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../../../../content/garden/projects/pds/pds-portal.html">
-<h3 class="no-anchor listing-title">
-PDSportal
-</h3>
-<div class="listing-subtitle">
-R shinydashboard application to access publicly available pediatric drug safety information
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../../../../content/garden/projects/pds/pds-portal.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-left" data-index="2" data-listing-file-modified-sort="1715516596311">
-<div class="thumbnail">
-<p><a href="../../../../content/garden/projects/pds/pds-database.html"> </a></p>
-</div>
-<div class="body">
-<a href="../../../../content/garden/projects/pds/pds-database.html">
-<h3 class="no-anchor listing-title">
-</h3>
-<div class="listing-subtitle">
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../../../../content/garden/projects/pds/pds-database.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-left" data-index="3" data-listing-file-modified-sort="1715516596019">
-<div class="thumbnail">
-<p><a href="../../../../content/garden/projects/pds/pds-portal.html"> </a></p>
-</div>
-<div class="body">
-<a href="../../../../content/garden/projects/pds/pds-portal.html">
-<h3 class="no-anchor listing-title">
-</h3>
-<div class="listing-subtitle">
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../../../../content/garden/projects/pds/pds-portal.html"> </a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> 
-  </div>
-</div>
- <!-- /main -->
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -288,6 +235,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     
@@ -493,6 +447,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
+</script>
+<script src="https://utteranc.es/client.js" repo="ngiangre/ngiangre.github.io" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
 
