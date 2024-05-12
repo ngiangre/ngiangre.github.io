@@ -1,8 +1,8 @@
 ---
 title: "Deep learning fail - it happens"
 subtitle: I failed at training a deep learning model - this post sums it up. In the end, its ok because though my model didn't, I learned!
-image: "images/dl_with_r_book.png"
-date: "02/18/2024"
+image: "images/learniing_fail.png"
+date: "05/12/2024"
 draft: false
 page-layout: article
 toc: true
