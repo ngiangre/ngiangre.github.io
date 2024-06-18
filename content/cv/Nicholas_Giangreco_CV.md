@@ -38,6 +38,9 @@ WORK EXPERIENCE
 :    **Senior Scientist, Quantitative Translational Science (Remote)** [(Regeneron Pharmaceuticals Inc.)](https://www.regeneron.com); Tarrytown, NY
      
      Precision Medicine - scientist, data architect, software developer, and applications engineer
+     
+     - Development of software packages and pipelines for clinical biomarker data analysis
+     - Development and maintancence of about a dozen Apps and automated reports for data reporting, monitoring, and analysis for early clinical development
 
 2016 - 2021
 :    **Systems biologist** [(Columbia University)](https://systemsbiology.columbia.edu/people/nicholas-giangreco); New York, NY
