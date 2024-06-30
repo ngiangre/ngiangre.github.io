@@ -21,7 +21,7 @@ title: Nick Giangreco
 | |
 | :------ |
 | **Topic areas:** Precision medicine, biomarker evaluation and discovery, Applications engineering, Scientific data architecture, Pediatric drug safety, interpretable machine learning, fairness and equity in biomedical informatics |
-| **Technical expertise:** biomedical data science, (R/Python) software development, machine learning, statistical simulation, data cleaning, data modeling, Shiny (for R and Python) application development, objec oriented programming, RMarkdown/Jupyter/Quarto, Microsoft Power App and API user |
+| **Technical expertise:** biomedical data science, (R/Python) software development, machine learning, statistical simulation, data cleaning, data modeling, Shiny (for R and Python) application development, object oriented programming, RMarkdown/Jupyter/Quarto, Microsoft Power App and API user |
 | **Programming Languages:** Python, R, SQL, HTML, CSS, Java, bash | 
 | **Patents:** [Systems and methods for predicting graft dysfunction with exosome proteins](https://patents.google.com/patent/WO2022060842A1/en?oq=2022060842)|
 
