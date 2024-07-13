@@ -16,12 +16,12 @@ title: Nick Giangreco
 
 ### *Independent and collaborative precision medicine scientist and engineer* 
 
-[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** June 30th 2024
+[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** July 13th 2024
 
 | |
 | :------ |
-| **Topic areas:** Precision medicine, biomarker evaluation and discovery, Applications engineering, Scientific data architecture, Pediatric drug safety, interpretable machine learning, fairness and equity in biomedical informatics |
-| **Technical expertise:** biomedical data science, (R/Python) software development, machine learning, statistical simulation, data cleaning, data modeling, Shiny (for R and Python) application development, object oriented programming, RMarkdown/Jupyter/Quarto, Microsoft Power App and API user |
+| **Topic areas:** Biomarker evaluation and discovery, Applications engineering, Scientific data modeling and architecture, Pediatric drug safety, interpretable machine learning, fairness and equity in biomedical informatics |
+| **Technical expertise:** biomedical data science, (R/Python) software development, machine learning, statistical simulation, data cleaning, data pipelines, Shiny (for R and Python) application development, object oriented programming, RMarkdown/Jupyter/Quarto, Microsoft Power App and API user |
 | **Programming Languages:** Python, R, SQL, HTML, CSS, Java, bash | 
 | **Patents:** [Systems and methods for predicting graft dysfunction with exosome proteins](https://patents.google.com/patent/WO2022060842A1/en?oq=2022060842)|
 
@@ -39,8 +39,10 @@ WORK EXPERIENCE
      
      Precision Medicine - scientist, data architect, software developer, and applications engineer
      
-     - Development of software packages and pipelines for clinical biomarker data analysis
-     - Development and maintancence of about a dozen packages, Apps, and automated reports for data reporting, monitoring, and analysis in early clinical development
+     - Manage execution of data architecture and software development projects in precision medicine innovation development portfolio.
+     - Develop and maintain 6+ software packages and pipelines for team of clinical biomarker data analysts.
+     - Deliver automated project management and portfolio reports to senior leadership.
+     - Mentor interns and data scientists to develop reproducible data analyses and web apps.
 
 2016 - 2021
 :    **Systems biologist** [(Columbia University)](https://systemsbiology.columbia.edu/people/nicholas-giangreco); New York, NY
