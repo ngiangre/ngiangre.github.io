@@ -16,7 +16,7 @@ title: Nick Giangreco
 
 ### *Independent and collaborative precision medicine scientist and engineer* 
 
-[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** August 25th 2024
+[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** October 6th 2024
 
 | |
 | :------ |
@@ -30,7 +30,7 @@ WORK EXPERIENCE
 ----------
 
 2023 - Present
-:    **Technical Advisor (Remote)** [(MindArch Health)](http://www.mindarchhealth.com/); Sayville, NY
+:    **Computer Sciences Advisor (Remote)** [(MindArch Health)](http://www.mindarchhealth.com/); Sayville, NY
 
      Machine learning, Software, Web Applications & Design
      

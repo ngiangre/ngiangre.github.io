@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Nicholas Giangreco -</title>
+<title>index – Nicholas Giangreco</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -47,7 +47,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -56,6 +62,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -120,14 +127,41 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <style>html{ scroll-behavior: smooth; }</style>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Nicholas Giangreco -">
+<meta property="og:title" content="– Nicholas Giangreco">
 <meta property="og:description" content="This is where I till my projects and collect my musings">
 <meta property="og:image" content="https://nickg.bio/content/garden/projects/pds/images/med_cover.jpeg">
-<meta property="og:site-name" content="Nicholas Giangreco">
+<meta property="og:site_name" content="Nicholas Giangreco">
 <meta property="og:locale" content="en_US">
 </head>
 
@@ -135,65 +169,65 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Nicholas Giangreco</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/ngiangre" rel="" target=""><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/ngiangre"> <i class="bi bi-github" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.linkedin.com/in/nickgiangreco/" rel="" target=""><i class="bi bi-linkedin" role="img">
+    <a class="nav-link" href="https://www.linkedin.com/in/nickgiangreco/"> <i class="bi bi-linkedin" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/nickgiangreco" rel="" target=""><i class="bi bi-twitter" role="img">
+    <a class="nav-link" href="https://twitter.com/nickgiangreco"> <i class="bi bi-twitter" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.facebook.com/ngiangreco/" rel="" target=""><i class="bi bi-facebook" role="img">
+    <a class="nav-link" href="https://www.facebook.com/ngiangreco/"> <i class="bi bi-facebook" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.instagram.com/ngiangreco/" rel="" target=""><i class="bi bi-instagram" role="img">
+    <a class="nav-link" href="https://www.instagram.com/ngiangreco/"> <i class="bi bi-instagram" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="mailto:nick.giangreco@gmail.com" rel="" target=""><i class="bi bi-envelope" role="img">
+    <a class="nav-link" href="mailto:nick.giangreco@gmail.com"> <i class="bi bi-envelope" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../content/about/index.html" rel="" target="">
- <span class="menu-text">About</span></a>
+    <a class="nav-link" href="../../content/about/index.html"> 
+<span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../../content/garden/index.html" rel="" target="" aria-current="page">
- <span class="menu-text">Digital Garden</span></a>
+    <a class="nav-link active" href="../../content/garden/index.html" aria-current="page"> 
+<span class="menu-text">Digital Garden</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../content/cv/Nicholas_Giangreco_CV.pdf" rel="" target="">
- <span class="menu-text">CV</span></a>
+    <a class="nav-link" href="../../content/cv/Nicholas_Giangreco_CV.pdf"> 
+<span class="menu-text">CV</span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools ms-auto">
-</div>
           </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -205,7 +239,6 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"></h1>
 <p class="subtitle lead">This is where I till my projects and collect my musings</p>
 </div>
 
@@ -219,7 +252,9 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
+
 </header>
+
 
 <div class="grid">
 <section id="welcome-to-my-digital-garden" class="level2 g-col-10 g-start-2" style="text-align: center">
@@ -238,11 +273,11 @@ ul.task-list li input[type="checkbox"] {
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <div id="listing-projects" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-5">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1668876790662" data-listing-reading-time-sort="1">
+<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1668876790662" data-listing-reading-time-sort="1" data-listing-word-count-sort="142">
 <a href="../../content/garden/projects/buffalo/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-center">
 <p class="card-img-top">
-<img src="../../content/garden/projects/buffalo/images/open_data_buffalo.png" class="thumbnail-image card-img" style="height: 10em;">
+<img loading="lazy" src="../../content/garden/projects/buffalo/images/open_data_buffalo.png" class="thumbnail-image card-img" style="height: 10em;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -255,11 +290,11 @@ Exploring my hometown through data
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1668876790675" data-listing-reading-time-sort="2">
+<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1668876790675" data-listing-reading-time-sort="2" data-listing-word-count-sort="281">
 <a href="../../content/garden/projects/mccv/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-center">
 <p class="card-img-top">
-<img src="../../content/garden/projects/mccv/images/mccv_scheme.jpg" class="thumbnail-image card-img" style="height: 10em;">
+<img loading="lazy" src="../../content/garden/projects/mccv/images/mccv_scheme.jpg" class="thumbnail-image card-img" style="height: 10em;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -272,11 +307,11 @@ Clinical machine learning framework
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1668876790657" data-listing-reading-time-sort="1">
+<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1668876790657" data-listing-reading-time-sort="1" data-listing-word-count-sort="129">
 <a href="../../content/garden/projects/pds/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-center">
 <p class="card-img-top">
-<img src="../../content/garden/projects/pds/images/med_cover.jpeg" class="thumbnail-image card-img" style="height: 10em;">
+<img loading="lazy" src="../../content/garden/projects/pds/images/med_cover.jpeg" class="thumbnail-image card-img" style="height: 10em;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -289,11 +324,11 @@ Research, data, and analyses on reported adverse medication outcomes across chil
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1708279862731" data-listing-reading-time-sort="1">
+<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1708279862731" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <a href="../../content/garden/projects/nfldatadashboard/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-center">
 <p class="card-img-top">
-<img src="../../content/garden/projects/nfldatadashboard/images/nfldatadashboard_project.png" class="thumbnail-image card-img" style="height: 10em;">
+<img loading="lazy" src="../../content/garden/projects/nfldatadashboard/images/nfldatadashboard_project.png" class="thumbnail-image card-img" style="height: 10em;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -333,308 +368,308 @@ No matching items
   </div>
 </div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-left" data-index="0" data-listing-date-sort="1720152000000" data-listing-file-modified-sort="1720195811537" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7">
+<div class="quarto-post image-left" data-index="0" data-listing-date-sort="1720152000000" data-listing-file-modified-sort="1720195811537" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1377">
 <div class="thumbnail">
-<p><a href="../../content/garden/posts/20240605_ggdx_start/index.html"> <img src="../../content/garden/posts/20240605_ggdx_start/images/garden.jpeg" class="thumbnail-image"> </a></p>
+<p><a href="../../content/garden/posts/20240605_ggdx_start/index.html" class="no-external"></a></p><a href="../../content/garden/posts/20240605_ggdx_start/index.html" class="no-external">
+<p><img loading="lazy" src="../../content/garden/posts/20240605_ggdx_start/images/garden.jpeg" class="thumbnail-image"></p>
+</a><p><a href="../../content/garden/posts/20240605_ggdx_start/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="../../content/garden/posts/20240605_ggdx_start/index.html">
 <h3 class="no-anchor listing-title">
-Diagnostics in ggplot2 plots
+<a href="../../content/garden/posts/20240605_ggdx_start/index.html" class="no-external">Diagnostics in ggplot2 plots</a>
 </h3>
 <div class="listing-subtitle">
-Adding diagnostics to plots for validating the data plotted
+<a href="../../content/garden/posts/20240605_ggdx_start/index.html" class="no-external">Adding diagnostics to plots for validating the data plotted</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="../../content/garden/posts/20240605_ggdx_start/index.html">
+<a href="../../content/garden/posts/20240605_ggdx_start/index.html" class="no-external">
 <div class="listing-date">
 Jul 5, 2024
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="1" data-listing-date-sort="1715486400000" data-listing-file-modified-sort="1715523462294" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-left" data-index="1" data-listing-date-sort="1715486400000" data-listing-file-modified-sort="1715523462294" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="439">
 <div class="thumbnail">
-<p><a href="../../content/garden/posts/20240512_dl_learning_fail/index.html"> <img src="../../content/garden/posts/20240512_dl_learning_fail/images/learning_fail.png" class="thumbnail-image"> </a></p>
+<p><a href="../../content/garden/posts/20240512_dl_learning_fail/index.html" class="no-external"></a></p><a href="../../content/garden/posts/20240512_dl_learning_fail/index.html" class="no-external">
+<p><img loading="lazy" src="../../content/garden/posts/20240512_dl_learning_fail/images/learning_fail.png" class="thumbnail-image"></p>
+</a><p><a href="../../content/garden/posts/20240512_dl_learning_fail/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="../../content/garden/posts/20240512_dl_learning_fail/index.html">
 <h3 class="no-anchor listing-title">
-Deep learning fail - it happens
+<a href="../../content/garden/posts/20240512_dl_learning_fail/index.html" class="no-external">Deep learning fail - it happens</a>
 </h3>
 <div class="listing-subtitle">
-I failed at training a deep learning model - this post sums it up. In the end, its ok because though my model didn’t, I learned!
+<a href="../../content/garden/posts/20240512_dl_learning_fail/index.html" class="no-external">I failed at training a deep learning model - this post sums it up. In the end, its ok because though my model didn’t, I learned!</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="../../content/garden/posts/20240512_dl_learning_fail/index.html">
+<a href="../../content/garden/posts/20240512_dl_learning_fail/index.html" class="no-external">
 <div class="listing-date">
 May 12, 2024
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="2" data-listing-date-sort="1708232400000" data-listing-file-modified-sort="1708281359787" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-left" data-index="2" data-listing-date-sort="1708232400000" data-listing-file-modified-sort="1708281359787" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="95">
 <div class="thumbnail">
-<p><a href="../../content/garden/posts/20240218_dl_book_start/index.html"> <img src="../../content/garden/posts/20240218_dl_book_start/images/dl_with_r_book.png" class="thumbnail-image"> </a></p>
+<p><a href="../../content/garden/posts/20240218_dl_book_start/index.html" class="no-external"></a></p><a href="../../content/garden/posts/20240218_dl_book_start/index.html" class="no-external">
+<p><img loading="lazy" src="../../content/garden/posts/20240218_dl_book_start/images/dl_with_r_book.png" class="thumbnail-image"></p>
+</a><p><a href="../../content/garden/posts/20240218_dl_book_start/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="../../content/garden/posts/20240218_dl_book_start/index.html">
 <h3 class="no-anchor listing-title">
-New learning journey: Deep Learning with R
+<a href="../../content/garden/posts/20240218_dl_book_start/index.html" class="no-external">New learning journey: Deep Learning with R</a>
 </h3>
 <div class="listing-subtitle">
-Starting to read about apply DL algorithms in R, converting between R and Python
+<a href="../../content/garden/posts/20240218_dl_book_start/index.html" class="no-external">Starting to read about apply DL algorithms in R, converting between R and Python</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="../../content/garden/posts/20240218_dl_book_start/index.html">
+<a href="../../content/garden/posts/20240218_dl_book_start/index.html" class="no-external">
 <div class="listing-date">
 Feb 18, 2024
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="3" data-listing-date-sort="1706418000000" data-listing-file-modified-sort="1706495302885" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-left" data-index="3" data-listing-date-sort="1706418000000" data-listing-file-modified-sort="1706495302885" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="600">
 <div class="thumbnail">
-<p><a href="../../content/garden/posts/20240128_nfldashboard_update/index.html"> <img src="../../content/garden/posts/20240128_nfldashboard_update/images/nfldatadashboard_snapshot.png" class="thumbnail-image"> </a></p>
+<p><a href="../../content/garden/posts/20240128_nfldashboard_update/index.html" class="no-external"></a></p><a href="../../content/garden/posts/20240128_nfldashboard_update/index.html" class="no-external">
+<p><img loading="lazy" src="../../content/garden/posts/20240128_nfldashboard_update/images/nfldatadashboard_snapshot.png" class="thumbnail-image"></p>
+</a><p><a href="../../content/garden/posts/20240128_nfldashboard_update/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="../../content/garden/posts/20240128_nfldashboard_update/index.html">
 <h3 class="no-anchor listing-title">
-The end of the beginning to a NFL player performance dashboard
+<a href="../../content/garden/posts/20240128_nfldashboard_update/index.html" class="no-external">The end of the beginning to a NFL player performance dashboard</a>
 </h3>
 <div class="listing-subtitle">
-A prototype for my new dashboard hobby project, and why all prototypes have an ending
+<a href="../../content/garden/posts/20240128_nfldashboard_update/index.html" class="no-external">A prototype for my new dashboard hobby project, and why all prototypes have an ending</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="../../content/garden/posts/20240128_nfldashboard_update/index.html">
+<a href="../../content/garden/posts/20240128_nfldashboard_update/index.html" class="no-external">
 <div class="listing-date">
 Jan 28, 2024
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="4" data-listing-date-sort="1704085200000" data-listing-file-modified-sort="1704138648750" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-left" data-index="4" data-listing-date-sort="1704085200000" data-listing-file-modified-sort="1704138648750" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="427">
 <div class="thumbnail">
-<p><a href="../../content/garden/posts/20240101_nfldatadashboard_announcement/index.html"> <img src="../../content/garden/posts/20240101_nfldatadashboard_announcement/images/nfldatadashboard_snapshot.png" class="thumbnail-image"> </a></p>
+<p><a href="../../content/garden/posts/20240101_nfldatadashboard_announcement/index.html" class="no-external"></a></p><a href="../../content/garden/posts/20240101_nfldatadashboard_announcement/index.html" class="no-external">
+<p><img loading="lazy" src="../../content/garden/posts/20240101_nfldatadashboard_announcement/images/nfldatadashboard_snapshot.png" class="thumbnail-image"></p>
+</a><p><a href="../../content/garden/posts/20240101_nfldatadashboard_announcement/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="../../content/garden/posts/20240101_nfldatadashboard_announcement/index.html">
 <h3 class="no-anchor listing-title">
-A dashboard for interacting with NFL data
+<a href="../../content/garden/posts/20240101_nfldatadashboard_announcement/index.html" class="no-external">A dashboard for interacting with NFL data</a>
 </h3>
 <div class="listing-subtitle">
-The start of a dashboard, hobby project to understand more about sports data
+<a href="../../content/garden/posts/20240101_nfldatadashboard_announcement/index.html" class="no-external">The start of a dashboard, hobby project to understand more about sports data</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="../../content/garden/posts/20240101_nfldatadashboard_announcement/index.html">
+<a href="../../content/garden/posts/20240101_nfldatadashboard_announcement/index.html" class="no-external">
 <div class="listing-date">
 Jan 1, 2024
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="5" data-listing-date-sort="1698552000000" data-listing-file-modified-sort="1698622958050" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-left" data-index="5" data-listing-date-sort="1698552000000" data-listing-file-modified-sort="1698622958050" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="401">
 <div class="thumbnail">
-<p><a href="../../content/garden/posts/20231029_dataclasses/index.html"> <img src="../../content/garden/posts/20231029_dataclasses/images/classobjects.png" class="thumbnail-image"> </a></p>
+<p><a href="../../content/garden/posts/20231029_dataclasses/index.html" class="no-external"></a></p><a href="../../content/garden/posts/20231029_dataclasses/index.html" class="no-external">
+<p><img loading="lazy" src="../../content/garden/posts/20231029_dataclasses/images/classobjects.png" class="thumbnail-image"></p>
+</a><p><a href="../../content/garden/posts/20231029_dataclasses/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="../../content/garden/posts/20231029_dataclasses/index.html">
 <h3 class="no-anchor listing-title">
-Object Oriented Programming (OOP) with Datasets
+<a href="../../content/garden/posts/20231029_dataclasses/index.html" class="no-external">Object Oriented Programming (OOP) with Datasets</a>
 </h3>
 <div class="listing-subtitle">
-Showing the idea of using OOP (i.e.&nbsp;S3) to define and manipulate datasets in a standard way
+<a href="../../content/garden/posts/20231029_dataclasses/index.html" class="no-external">Showing the idea of using OOP (i.e.&nbsp;S3) to define and manipulate datasets in a standard way</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="../../content/garden/posts/20231029_dataclasses/index.html">
+<a href="../../content/garden/posts/20231029_dataclasses/index.html" class="no-external">
 <div class="listing-date">
 Oct 29, 2023
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="6" data-listing-date-sort="1698465600000" data-listing-file-modified-sort="1698598915985" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-left" data-index="6" data-listing-date-sort="1698465600000" data-listing-file-modified-sort="1698598915985" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="182">
 <div class="thumbnail">
-<p><a href="../../content/garden/posts/20231028_shinylive/index.html"> <img src="../../content/garden/posts/20231028_shinylive/images/servertoshiny.png" class="thumbnail-image"> </a></p>
+<p><a href="../../content/garden/posts/20231028_shinylive/index.html" class="no-external"></a></p><a href="../../content/garden/posts/20231028_shinylive/index.html" class="no-external">
+<p><img loading="lazy" src="../../content/garden/posts/20231028_shinylive/images/servertoshiny.png" class="thumbnail-image"></p>
+</a><p><a href="../../content/garden/posts/20231028_shinylive/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="../../content/garden/posts/20231028_shinylive/index.html">
 <h3 class="no-anchor listing-title">
-Shinylive - shiny apps with no server
+<a href="../../content/garden/posts/20231028_shinylive/index.html" class="no-external">Shinylive - shiny apps with no server</a>
 </h3>
 <div class="listing-subtitle">
-Minimal example showing an interactive webpage in shiny without a server!
+<a href="../../content/garden/posts/20231028_shinylive/index.html" class="no-external">Minimal example showing an interactive webpage in shiny without a server!</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="../../content/garden/posts/20231028_shinylive/index.html">
+<a href="../../content/garden/posts/20231028_shinylive/index.html" class="no-external">
 <div class="listing-date">
 Oct 28, 2023
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="7" data-listing-date-sort="1693627200000" data-listing-file-modified-sort="1698508438836" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11">
+<div class="quarto-post image-left" data-index="7" data-listing-date-sort="1693627200000" data-listing-file-modified-sort="1698508438836" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2176">
 <div class="thumbnail">
-<p><a href="../../content/garden/posts/20230902_openbuffalodataforml/index.html"> <img src="../../content/garden/posts/20230902_openbuffalodataforml/images/baby.png" class="thumbnail-image"> </a></p>
+<p><a href="../../content/garden/posts/20230902_openbuffalodataforml/index.html" class="no-external"></a></p><a href="../../content/garden/posts/20230902_openbuffalodataforml/index.html" class="no-external">
+<p><img loading="lazy" src="../../content/garden/posts/20230902_openbuffalodataforml/images/baby.png" class="thumbnail-image"></p>
+</a><p><a href="../../content/garden/posts/20230902_openbuffalodataforml/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="../../content/garden/posts/20230902_openbuffalodataforml/index.html">
 <h3 class="no-anchor listing-title">
-What Baby Names are In and Out of Fashion?
+<a href="../../content/garden/posts/20230902_openbuffalodataforml/index.html" class="no-external">What Baby Names are In and Out of Fashion?</a>
 </h3>
 <div class="listing-subtitle">
-Using open data to summarize baby names over time
+<a href="../../content/garden/posts/20230902_openbuffalodataforml/index.html" class="no-external">Using open data to summarize baby names over time</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="../../content/garden/posts/20230902_openbuffalodataforml/index.html">
+<a href="../../content/garden/posts/20230902_openbuffalodataforml/index.html" class="no-external">
 <div class="listing-date">
 Sep 2, 2023
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="8" data-listing-date-sort="1690776000000" data-listing-file-modified-sort="1693787669616" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+<div class="quarto-post image-left" data-index="8" data-listing-date-sort="1690776000000" data-listing-file-modified-sort="1693787669616" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="644">
 <div class="thumbnail">
-<p><a href="../../content/garden/posts/20230730_openbuffalodata/index.html"> <img src="../../content/garden/posts/20230730_openbuffalodata/images/opendata_logo.jpeg" class="thumbnail-image"> </a></p>
+<p><a href="../../content/garden/posts/20230730_openbuffalodata/index.html" class="no-external"></a></p><a href="../../content/garden/posts/20230730_openbuffalodata/index.html" class="no-external">
+<p><img loading="lazy" src="../../content/garden/posts/20230730_openbuffalodata/images/opendata_logo.jpeg" class="thumbnail-image"></p>
+</a><p><a href="../../content/garden/posts/20230730_openbuffalodata/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="../../content/garden/posts/20230730_openbuffalodata/index.html">
 <h3 class="no-anchor listing-title">
-Identifying Open Data about the City of Buffalo and Western New York
+<a href="../../content/garden/posts/20230730_openbuffalodata/index.html" class="no-external">Identifying Open Data about the City of Buffalo and Western New York</a>
 </h3>
 <div class="listing-subtitle">
-Starting the journey to make some interesting and fun insights about my hometown by identifying open datasets
+<a href="../../content/garden/posts/20230730_openbuffalodata/index.html" class="no-external">Starting the journey to make some interesting and fun insights about my hometown by identifying open datasets</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="../../content/garden/posts/20230730_openbuffalodata/index.html">
+<a href="../../content/garden/posts/20230730_openbuffalodata/index.html" class="no-external">
 <div class="listing-date">
 Jul 31, 2023
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="9" data-listing-date-sort="1690689600000" data-listing-file-modified-sort="1694282737917" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-left" data-index="9" data-listing-date-sort="1690689600000" data-listing-file-modified-sort="1694282737917" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="285">
 <div class="thumbnail">
-<p><a href="../../content/garden/posts/20230730_mccvshiny_announcement/index.html"> <img src="../../content/garden/posts/20230730_mccvshiny_announcement/images/mccv_scheme.jpg" class="thumbnail-image"> </a></p>
+<p><a href="../../content/garden/posts/20230730_mccvshiny_announcement/index.html" class="no-external"></a></p><a href="../../content/garden/posts/20230730_mccvshiny_announcement/index.html" class="no-external">
+<p><img loading="lazy" src="../../content/garden/posts/20230730_mccvshiny_announcement/images/mccv_scheme.jpg" class="thumbnail-image"></p>
+</a><p><a href="../../content/garden/posts/20230730_mccvshiny_announcement/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="../../content/garden/posts/20230730_mccvshiny_announcement/index.html">
 <h3 class="no-anchor listing-title">
-Announcing mccvshiny
+<a href="../../content/garden/posts/20230730_mccvshiny_announcement/index.html" class="no-external">Announcing mccvshiny</a>
 </h3>
 <div class="listing-subtitle">
-mccvshiny is a Shiny for Python app that showcases the flexibility of the peer-reviewed Monte Carlo Cross Validation (MCCV) algorithm using simulated data distributions
+<a href="../../content/garden/posts/20230730_mccvshiny_announcement/index.html" class="no-external">mccvshiny is a Shiny for Python app that showcases the flexibility of the peer-reviewed Monte Carlo Cross Validation (MCCV) algorithm using simulated data distributions</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="../../content/garden/posts/20230730_mccvshiny_announcement/index.html">
+<a href="../../content/garden/posts/20230730_mccvshiny_announcement/index.html" class="no-external">
 <div class="listing-date">
 Jul 30, 2023
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="10" data-listing-date-sort="1687579200000" data-listing-file-modified-sort="1693787645065" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8">
+<div class="quarto-post image-left" data-index="10" data-listing-date-sort="1687579200000" data-listing-file-modified-sort="1693787645065" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1449">
 <div class="thumbnail">
-<p><a href="../../content/garden/posts/20230625_kidsides_announcement/index.html"> <img src="../../content/garden/posts/20230625_kidsides_announcement/images/med_cover.jpeg" class="thumbnail-image"> </a></p>
+<p><a href="../../content/garden/posts/20230625_kidsides_announcement/index.html" class="no-external"></a></p><a href="../../content/garden/posts/20230625_kidsides_announcement/index.html" class="no-external">
+<p><img loading="lazy" src="../../content/garden/posts/20230625_kidsides_announcement/images/med_cover.jpeg" class="thumbnail-image"></p>
+</a><p><a href="../../content/garden/posts/20230625_kidsides_announcement/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="../../content/garden/posts/20230625_kidsides_announcement/index.html">
 <h3 class="no-anchor listing-title">
-Announcing the kidsides R package
+<a href="../../content/garden/posts/20230625_kidsides_announcement/index.html" class="no-external">Announcing the kidsides R package</a>
 </h3>
 <div class="listing-subtitle">
-We hypothesized that adverse drug reactions manifest from the interaction between drug exposure and dynamic biological processes during child growth and development. The {kidsides} R data package contains half a million drug safety hypotheses.
+<a href="../../content/garden/posts/20230625_kidsides_announcement/index.html" class="no-external">We hypothesized that adverse drug reactions manifest from the interaction between drug exposure and dynamic biological processes during child growth and development. The {kidsides} R data package contains half a million drug safety hypotheses.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="../../content/garden/posts/20230625_kidsides_announcement/index.html">
+<a href="../../content/garden/posts/20230625_kidsides_announcement/index.html" class="no-external">
 <div class="listing-date">
 Jun 24, 2023
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="11" data-listing-date-sort="1687060800000" data-listing-file-modified-sort="1693787632178" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-left" data-index="11" data-listing-date-sort="1687060800000" data-listing-file-modified-sort="1693787632178" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="362">
 <div class="thumbnail">
-<p><a href="../../content/garden/posts/20230610_mccv_announcement/index.html"> <img src="../../content/garden/posts/20230610_mccv_announcement/images/mccv_scheme.jpg" class="thumbnail-image"> </a></p>
+<p><a href="../../content/garden/posts/20230610_mccv_announcement/index.html" class="no-external"></a></p><a href="../../content/garden/posts/20230610_mccv_announcement/index.html" class="no-external">
+<p><img loading="lazy" src="../../content/garden/posts/20230610_mccv_announcement/images/mccv_scheme.jpg" class="thumbnail-image"></p>
+</a><p><a href="../../content/garden/posts/20230610_mccv_announcement/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="../../content/garden/posts/20230610_mccv_announcement/index.html">
 <h3 class="no-anchor listing-title">
-Announcing the mccv python package with Quarto website
+<a href="../../content/garden/posts/20230610_mccv_announcement/index.html" class="no-external">Announcing the mccv python package with Quarto website</a>
 </h3>
 <div class="listing-subtitle">
-Monte Carlo Cross Validation (MCCV) is a peer-reviewed clinical machine learning algorithm that is now implemented in a package and showcased in a website built by Quarto
+<a href="../../content/garden/posts/20230610_mccv_announcement/index.html" class="no-external">Monte Carlo Cross Validation (MCCV) is a peer-reviewed clinical machine learning algorithm that is now implemented in a package and showcased in a website built by Quarto</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="../../content/garden/posts/20230610_mccv_announcement/index.html">
+<a href="../../content/garden/posts/20230610_mccv_announcement/index.html" class="no-external">
 <div class="listing-date">
 Jun 18, 2023
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="12" data-listing-date-sort="1672290000000" data-listing-file-modified-sort="1693787619826" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8">
+<div class="quarto-post image-left" data-index="12" data-listing-date-sort="1672290000000" data-listing-file-modified-sort="1693787619826" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1415">
 <div class="thumbnail">
-<p><a href="../../content/garden/posts/20221229explore/index.html"> <img src="../../content/garden/posts/20221229explore/images/explore.png" class="thumbnail-image" alt="dGAM signal distribution for montelukast associated Psychiatric disorders across child development stages"> </a></p>
+<p><a href="../../content/garden/posts/20221229explore/index.html" class="no-external"></a></p><a href="../../content/garden/posts/20221229explore/index.html" class="no-external">
+<p><img loading="lazy" src="../../content/garden/posts/20221229explore/images/explore.png" class="thumbnail-image" alt="dGAM signal distribution for montelukast associated Psychiatric disorders across child development stages"></p>
+</a><p><a href="../../content/garden/posts/20221229explore/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="../../content/garden/posts/20221229explore/index.html">
 <h3 class="no-anchor listing-title">
-Explorations in Pediatric Drug Safety
+<a href="../../content/garden/posts/20221229explore/index.html" class="no-external">Explorations in Pediatric Drug Safety</a>
 </h3>
 <div class="listing-subtitle">
-montelukast-associated systematic disorders
+<a href="../../content/garden/posts/20221229explore/index.html" class="no-external">montelukast-associated systematic disorders</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="../../content/garden/posts/20221229explore/index.html">
+<a href="../../content/garden/posts/20221229explore/index.html" class="no-external">
 <div class="listing-date">
 Dec 29, 2022
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="13" data-listing-date-sort="1662264000000" data-listing-file-modified-sort="1693787609985" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-left" data-index="13" data-listing-date-sort="1662264000000" data-listing-file-modified-sort="1693787609985" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="535">
 <div class="thumbnail">
-<p><a href="../../content/garden/posts/20220904welcome/index.html"> <img src="../../content/garden/posts/20220904welcome/images/noun-hi-1994887.svg" class="thumbnail-image"> </a></p>
+<p><a href="../../content/garden/posts/20220904welcome/index.html" class="no-external"></a></p><a href="../../content/garden/posts/20220904welcome/index.html" class="no-external">
+<p><img loading="lazy" src="../../content/garden/posts/20220904welcome/images/noun-hi-1994887.svg" class="thumbnail-image"></p>
+</a><p><a href="../../content/garden/posts/20220904welcome/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="../../content/garden/posts/20220904welcome/index.html">
 <h3 class="no-anchor listing-title">
-Hello, world!
+<a href="../../content/garden/posts/20220904welcome/index.html" class="no-external">Hello, world!</a>
 </h3>
 <div class="listing-subtitle">
-First post! Starting and describing my digital space.
+<a href="../../content/garden/posts/20220904welcome/index.html" class="no-external">First post! Starting and describing my digital space. </a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="../../content/garden/posts/20220904welcome/index.html">
+<a href="../../content/garden/posts/20220904welcome/index.html" class="no-external">
 <div class="listing-date">
 Sep 4, 2022
 </div>
@@ -690,18 +725,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -733,11 +757,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
-  function tippyHover(el, contentFn) {
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/nickg\.bio");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -747,8 +810,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -760,7 +832,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -804,6 +999,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -829,6 +1025,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -889,6 +1111,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 
