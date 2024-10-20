@@ -16,12 +16,12 @@ title: Nick Giangreco
 
 ### *Independent and collaborative precision medicine scientist and engineer* 
 
-[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** October 6th 2024
+[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** October 20th 2024
 
 | |
 | :------ |
 | **Topic areas:** Biomarker evaluation and discovery, Applications engineering, Scientific data modeling and architecture, Pediatric drug safety, interpretable machine learning, fairness and equity in biomedical informatics |
-| **Technical expertise:** biomedical data science, (R/Python) software development, machine learning, statistical simulation, data cleaning, data pipelines, Shiny (for R and Python) application development, object oriented programming, RMarkdown/Jupyter/Quarto, Microsoft Power App and API user |
+| **Technical expertise:** biomedical data science, (R/Python) software development, machine learning, statistical simulation, data cleaning, data pipelines, Shiny (for R and Python) application development, object oriented programming, RMarkdown/JuPyteR/Quarto, Microsoft Power App and API user |
 | **Programming Languages:** Python, R, SQL, HTML, CSS, Java, bash | 
 | **Patents:** [Systems and methods for predicting graft dysfunction with exosome proteins](https://patents.google.com/patent/WO2022060842A1/en?oq=2022060842)|
 
@@ -43,6 +43,7 @@ WORK EXPERIENCE
      - Develop and maintain 6+ software packages and pipelines for team of clinical biomarker data analysts.
      - Deliver automated project management and portfolio reports to senior leadership.
      - Mentor interns and data scientists to develop reproducible data analyses and web apps.
+     - Analyze clinical and biomarker data in rare disease and drug trials
 
 2016 - 2021
 :    **Systems biologist** [(Columbia University)](https://systemsbiology.columbia.edu/people/nicholas-giangreco); New York, NY
