@@ -1,0 +1,172 @@
+---
+title: "Looking up open datasets in AWS Marketplace using {arrow}"
+subtitle: Using the {arrow} package to look into and. use datasets in S3 storage
+image: "images/aws.jpeg"
+date: "12/17/2024"
+draft: false
+page-layout: article
+toc: true
+toc_float: true
+comments:
+  utterances:
+    repo: ngiangre/ngiangre.github.io
+---
+
+# Introduction
+
+Have you ever wanted to dive into *huge* biological datasets, do a little citizen science, or just sharpen your coding skills? [**AWS Open Data Registry**](https://aws.amazon.com/marketplace/search/results?trk=8384929b-0eb1-4af3-8996-07aa409646bc&sc_channel=el&CONTRACT_TYPE=OPEN_DATA_LICENSES&DATA_AVAILABLE_THROUGH=S3_OBJECTS&PRICING_MODEL=FREE&FULFILLMENT_OPTION_TYPE=DATA_EXCHANGE&filters=CONTRACT_TYPE%2CDATA_AVAILABLE_THROUGH%2CPRICING_MODEL%2CFULFILLMENT_OPTION_TYPE) is a treasure trove of public datasets you can access for free! Today, we'll explore the **Clinical Proteomic Tumor Analysis Consortium (CPTAC-2)** dataset. 
+
+CPTAC-2 is part of a national effort to accelerate our understanding of cancer biology through proteogenomics. The datasets include RNA-Seq, miRNA quantification, and other valuable tools for cancer research. Exciting stuff, right? Let’s access and explore it using R and packages like **`{arrow}`** and **`{purrr}`**.
+
+---
+
+# Key Packages and Techniques
+
+This post relies on a few key packages and techniques to unlock the data:
+
+- **`{arrow}`**: Enables seamless access to data stored in AWS S3 buckets and efficient handling of large datasets.
+- **`{purrr}`**: Makes iterating over data structures easy and expressive.
+- **`{stringr}`**: Provides handy tools for string manipulation.
+- **`{tibble}`**: Simplifies working with tabular data in R.
+- **`{dplyr}`**: A powerful tool for data manipulation and transformation.
+
+Here’s how we’ll use these tools to:
+1. Connect to an AWS S3 bucket and explore its structure.
+2. List and classify the available files.
+3. Load specific datasets into dataframes based on their type for analysis.
+
+By the end, you’ll know how to apply these packages to answer key questions like:
+- What datasets are available in the CPTAC-2 bucket?
+- How can we identify and load the files we need?
+- What insights can we draw from these datasets?
+
+---
+
+# Exploring the Data
+
+## Connecting to AWS S3 Storage
+
+The CPTAC data lives on an S3 bucket in AWS. To access it, we’ll use `arrow::s3_bucket`. The `{arrow}` package makes working with cloud storage and large datasets seamless. Let’s set up the connection:
+
+```{r}
+# Connect to the CPTAC-2 open data bucket on AWS
+cptac_s3 <- arrow::s3_bucket("s3://gdc-cptac-2-phs000892-2-open/")
+```
+
+Boom! We now have a pipeline into the bucket, and we can start peeking at its contents.
+
+## Listing Folders and Files
+
+The first step is to see what’s inside this giant bucket.
+
+### Listing Folders
+
+```{r}
+# List all folders in the bucket
+cptac_folders <- cptac_s3$ls()
+length(cptac_folders)
+cptac_folders[1:5]
+```
+
+Here, `cptac_s3$ls()` gives us the top-level folder names in the bucket.
+
+### Listing Files in Each Folder
+
+Now that we have folders, let’s dive into them and list the files inside. We’ll use the `purrr::map_chr()` function to map over the folders and fetch the file names.
+
+```{r}
+# List all files within the folders
+cptac_files <- purrr::map_chr(
+    cptac_folders,
+    ~{ cptac_s3$ls(.x) }
+)
+length(cptac_files)
+cptac_files[1:5]
+```
+This step takes each folder and retrieves the files within.
+
+## Classifying File Types
+
+Let’s get curious: what types of data are in these files? We'll extract file extensions to see what formats are available.
+
+```{r}
+# Extract file types by splitting filenames
+cptac_filetypes <- purrr::map_chr(
+    cptac_files,
+    ~{
+        (basename(.x) |> 
+         stringr::str_split_fixed(pattern = "\\.", n = 2))[2]
+    }
+)
+
+# Count the occurrences of each file type
+table(cptac_filetypes)
+```
+
+Here, we:
+1. Use `basename()` to get the file name without the folder path.
+2. Split the file name at the first dot (`\\.`) to extract extensions.
+3. Count the file types using `table()`.
+
+This gives us a nice summary of the types of files: **.txt.gz**, **.tsv**, and so on.
+
+---
+
+# Loading Specific Datasets
+
+Now for the fun part: let’s load and explore some actual data. We’ll define rules to read specific file types, like gene expression files and miRNA quantification data. Since this is a lot of files to structure, we'll just go through a few examples. Here’s the magic:
+
+```{r}
+# Read in data based on file type
+cptac_s3_df_20 <- tibble::tibble(
+    cptac_folders,
+    cptac_files,
+    cptac_filetypes
+) |> 
+    head(20) |> 
+    dplyr::mutate(
+        df = list(NULL),
+        df = purrr::map2(cptac_files, cptac_filetypes, ~{
+            if(.y %in% c("htseq_counts.txt.gz", "FPKM-UQ.txt.gz", "FPKM.txt.gz")){
+                cptac_s3$path(.x) |> 
+                    arrow::read_delim_arrow(delim = "\t", col_names = FALSE) |> 
+                    tibble::tibble() |> 
+                    dplyr::rename(ensembl_id = f0, value = f1)
+            } else if(.y %in% c("rna_seq.augmented_star_gene_counts.tsv")){
+                cptac_s3$path(.x) |> 
+                    arrow::read_delim_arrow(delim = "\t", skip = 1) |> 
+                    tibble::tibble()
+            } else if(.y %in% c("mirnaseq.mirnas.quantification.txt", "mirnaseq.isoforms.quantification.txt")){
+                cptac_s3$path(.x) |> 
+                    arrow::read_delim_arrow(delim = "\t") |> 
+                    tibble::tibble()
+            } else if(.y %in% c("wxs.aliquot_ensemble_masked.maf.gz")){
+                cptac_s3$path(.x) |> 
+                    arrow::read_delim_arrow(delim = "\t", skip = 7) |> 
+                    tibble::tibble()
+            }
+        })
+    )
+cptac_s3_df_20
+```
+
+Here’s what happens:
+- **File Types**: Depending on the file type (RNA-seq, miRNA, etc.), we apply different parsing rules.
+- **`arrow::read_delim_arrow()`**: Reads data efficiently from the bucket.
+- **Skipping Headers**: Some files need skipping rows before the actual data.
+
+We now have actual dataframes loaded into the `df` column for exploration.
+
+---
+
+# Wrapping Up
+
+In this post, we:
+1. Connected to an AWS S3 bucket to access the CPTAC-2 dataset.
+2. Explored the folder and file structure.
+3. Classified file types to understand the available data.
+4. Loaded specific datasets into R for analysis.
+
+The CPTAC-2 dataset is a treasure trove for exploring cancer biology, and tools like `arrow` and `purrr` make accessing and analyzing such massive datasets both accessible and fun. The possibilities are endless—whether for academic research, personal projects, or learning new coding techniques.
+
+So, go on and explore some datasets!
