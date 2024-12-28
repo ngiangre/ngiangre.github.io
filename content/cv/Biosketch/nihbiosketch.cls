@@ -1,4 +1,4 @@
-%% nihbiosketch.cls 
+%% nihbiosketch.cls
 %% Copyright 2015 Paul M. Magwene
 %
 % This work may be distributed and/or modified under the
@@ -10,7 +10,7 @@
 % version 008/05/04 or later.
 %
 % This work has the LPPL maintenance status `maintained'.
-% 
+%
 % The Current Maintainer of this work is Paul M. Magwene
 %
 % This work consists of the files nihbiosketch.cls
@@ -72,10 +72,7 @@
 \newcommand{\piinfo}
 {\pgline
 {\centering
-\textbf{BIOGRAPHICAL SKETCH}\\
-{\footnotesize
-Provide the following information for the Senior/key personnel and other significant contributors.\\
-Follow this format for each person.  \textbf{DO NOT EXCEED FIVE PAGES}.\\}}
+\textbf{BIOGRAPHICAL SKETCH}\\}
 \pgline
 NAME: \@name\\
 \pgline
@@ -83,7 +80,7 @@ eRA COMMONS USER NAME (credential, e.g., agency login): \@eracommons\\
 \pgline
 POSITION TITLE: \@position\\
 \pgline
-EDUCATION/TRAINING (\textit{Begin with baccalaureate or other initial professional education, such as nursing, include postdoctoral training and residency training if applicable. Add/delete rows as necessary.})\\}
+EDUCATION/TRAINING:\\}
 
 \newcommand{\grantinfo}[6]
 {\begin{tabular}{@{}lll@{}}
@@ -98,9 +95,9 @@ EDUCATION/TRAINING (\textit{Begin with baccalaureate or other initial profession
 \begin{tabu} to \textwidth {X[3.73,l,m]|X[1,c,m]|X[1,c,m]|X[1.8,l,m]}
 \hline
 \rowfont[c]{}               % for the header only we want all the text centered
-INSTITUTION AND LOCATION & 
-DEGREE \newline (\textit{if applicable}) & 
-Completion Date MM/YYYY & 
+INSTITUTION AND LOCATION &
+DEGREE \newline (\textit{if applicable}) &
+Completion Date MM/YYYY &
 FIELD OF STUDY\\
 \hline}
 {\end{tabu}\egroup}
@@ -116,7 +113,7 @@ FIELD OF STUDY\\
 
 
 %------------------------------------------------------------------------------
-% setup document geometry    
+% setup document geometry
 
 % turn off page numbering
 \pagenumbering{gobble}
