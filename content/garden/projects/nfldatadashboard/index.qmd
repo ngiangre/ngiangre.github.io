@@ -10,4 +10,6 @@ listing:
     contents: "/nfldd-*"
 ---
 
-Firs prototype: [https://nick-giangreco.shinyapps.io/nfldatadashboard/](https://nick-giangreco.shinyapps.io/nfldatadashboard/)
+Firs prototype - dashboard: [https://nick-giangreco.shinyapps.io/nfldatadashboard/](https://nick-giangreco.shinyapps.io/nfldatadashboard/)
+
+Second prototype - refreshhing website: [https://ngiangre.github.io/nflstats/website/index.html](https://ngiangre.github.io/nflstats/website/index.html)
