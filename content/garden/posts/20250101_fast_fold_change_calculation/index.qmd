@@ -1,0 +1,122 @@
+---
+title: "Computing group differences fast"
+subtitle: Initial generalization how to comput summaries withinand betwee variables
+image: "images/algebra.jpeg"
+date: "01/01/2025"
+draft: false
+page-layout: article
+toc: true
+toc_float: true
+comments:
+  utterances:
+    repo: ngiangre/ngiangre.github.io
+---
+
+I had a thought for computing the fold change of the average of two distributions. Below is my attempt to try out something. It doesn't scale well (I think it's big-O n squared?) so will need to try another approach.
+
+```{r data}
+create_dataset <- function(n=1e6,n_tests = 2,n_groups = 3){
+    stopifnot(is.numeric(n_groups) & n_groups>0)
+    stopifnot(is.numeric(n_tests) & n_tests>0)
+    eg <- expand.grid(1:n_groups,1:n_tests)
+    var1 <- eg[['Var1']]
+    var2 <- eg[['Var2']]
+    purrr::map2_dfr(
+        var1,
+        var2,
+    function(grp,name){
+        data.table::data.table(
+            "group" = grp,
+            "name" = name,
+            "value" = rgamma(n,sample(1:10,1),sample(1:10,1))
+            )
+        })
+}
+dat <- create_dataset(n=10,n_tests = 1,n_groups = 2)
+dim(dat)
+head(dat)
+```
+
+```{r}
+library(data.table)
+compute_fold_changes <- function(df, measurement_col, group_cols, value_col = "value") {
+  if (!requireNamespace("data.table", quietly = TRUE)) {
+    stop("The 'data.table' package is required but not installed.")
+  }
+  
+  # Convert to data.table and validate input
+  dt <- as.data.table(df)
+  stopifnot(value_col %in% colnames(dt),
+            all(group_cols %in% colnames(dt)),
+            measurement_col %in% colnames(dt))
+  
+  # Ensure the value column is numeric and remove NA values
+  dt <- dt[!is.na(get(value_col))]
+  dt[[value_col]] <- as.numeric(dt[[value_col]])
+
+  # Compute fold changes for all group column combinations
+  final_result <- purrr::map_dfr(unique(dt[[measurement_col]]),function(measure){
+    dt_measure <- dt[get(measurement_col) == measure]
+
+    # Compute fold changes for each group column
+    purrr::map_dfr(group_cols,function(group_col){
+      levels <- unique(dt_measure[[group_col]])
+      combos <- combn(levels, 2, simplify = FALSE)
+
+      # Calculate fold changes for each pair of levels
+      purrr::map_dfr(combos,function(combo){
+        group1 <- combo[1]
+        group2 <- combo[2]
+
+        # Compute means for each group
+        mean1 <- dt_measure[get(group_col) == group1, mean(get(value_col), na.rm = TRUE)]
+        mean2 <- dt_measure[get(group_col) == group2, mean(get(value_col), na.rm = TRUE)]
+
+        # Calculate fold change and avoid division by zero
+        fold_change <- mean1 / mean2
+        if (fold_change < 1) fold_change <- 1 / fold_change
+
+        # Append the result to the list
+        data.table(
+          measurement = measure,
+          group_col = group_col,
+          group1 = group1,
+          group2 = group2,
+          AVAL = fold_change
+        )
+      })
+    })
+  })
+
+  # Combine results and add analysis column
+  final_result[['PARAM']] = "fold_change"
+  return(final_result)
+}
+```
+
+```{r}
+system.time(compute_fold_changes(dat,"name",c("group")))
+compute_fold_changes(dat,"name",c("group"))
+```
+
+```{r}
+tm <- 
+    microbenchmark::microbenchmark(
+        compute_fold_changes(
+            create_dataset(n=1e3,n_tests = 1,n_groups = 2),"name",c("group")
+        ),
+        compute_fold_changes(
+            create_dataset(n=1e3,n_tests = 1,n_groups = 10),"name",c("group")
+        ),
+        compute_fold_changes(
+            create_dataset(n=1e3,n_tests = 10,n_groups = 10),"name",c("group")
+        ),
+        compute_fold_changes(
+            create_dataset(n=1e3,n_tests = 100,n_groups = 10),"name",c("group")
+        ),
+        unit = "second",
+        times = 30
+    )
+tm |> ggplot2::autoplot()
+```
+

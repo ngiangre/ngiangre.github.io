@@ -33,64 +33,68 @@
     <lastmod>2025-01-01T18:54:34.591Z</lastmod>
   </url>
   <url>
-    <loc>https://nickg.bio/content/garden/posts/20240128_nfldashboard_update/index.html</loc>
-    <lastmod>2024-01-29T02:28:22.885Z</lastmod>
-  </url>
-  <url>
-    <loc>https://nickg.bio/content/garden/posts/20241215_aws_open_data_arrow/index.html</loc>
-    <lastmod>2024-12-18T00:38:12.538Z</lastmod>
-  </url>
-  <url>
-    <loc>https://nickg.bio/content/garden/posts/20230730_openbuffalodata/index.html</loc>
-    <lastmod>2023-09-04T00:34:29.616Z</lastmod>
-  </url>
-  <url>
-    <loc>https://nickg.bio/content/garden/posts/20240512_dl_learning_fail/index.html</loc>
-    <lastmod>2024-05-12T14:17:42.294Z</lastmod>
-  </url>
-  <url>
-    <loc>https://nickg.bio/content/garden/posts/20231028_shinylive/index.html</loc>
-    <lastmod>2023-10-29T17:01:55.985Z</lastmod>
-  </url>
-  <url>
-    <loc>https://nickg.bio/content/garden/posts/20230610_mccv_announcement/index.html</loc>
-    <lastmod>2023-09-04T00:33:52.178Z</lastmod>
-  </url>
-  <url>
-    <loc>https://nickg.bio/content/garden/posts/20240605_ggdx_start/index.html</loc>
-    <lastmod>2024-07-05T16:10:11.537Z</lastmod>
-  </url>
-  <url>
-    <loc>https://nickg.bio/content/garden/posts/20220904welcome/index.html</loc>
-    <lastmod>2023-09-04T00:33:29.985Z</lastmod>
-  </url>
-  <url>
-    <loc>https://nickg.bio/content/garden/posts/20231029_dataclasses/index.html</loc>
-    <lastmod>2023-10-29T23:42:38.050Z</lastmod>
-  </url>
-  <url>
-    <loc>https://nickg.bio/content/garden/posts/20221229explore/index.html</loc>
-    <lastmod>2023-09-04T00:33:39.826Z</lastmod>
-  </url>
-  <url>
-    <loc>https://nickg.bio/content/garden/posts/20230730_mccvshiny_announcement/index.html</loc>
-    <lastmod>2023-09-09T18:05:37.917Z</lastmod>
-  </url>
-  <url>
-    <loc>https://nickg.bio/content/garden/posts/20230902_openbuffalodataforml/index.html</loc>
-    <lastmod>2023-10-28T15:53:58.836Z</lastmod>
-  </url>
-  <url>
-    <loc>https://nickg.bio/content/garden/posts/20240101_nfldatadashboard_announcement/index.html</loc>
-    <lastmod>2024-01-01T19:50:48.750Z</lastmod>
+    <loc>https://nickg.bio/content/garden/posts/20230625_kidsides_announcement/index.html</loc>
+    <lastmod>2023-09-04T00:34:05.065Z</lastmod>
   </url>
   <url>
     <loc>https://nickg.bio/content/garden/posts/20240218_dl_book_start/index.html</loc>
     <lastmod>2024-02-18T18:35:59.787Z</lastmod>
   </url>
   <url>
-    <loc>https://nickg.bio/content/garden/posts/20230625_kidsides_announcement/index.html</loc>
-    <lastmod>2023-09-04T00:34:05.065Z</lastmod>
+    <loc>https://nickg.bio/content/garden/posts/20240101_nfldatadashboard_announcement/index.html</loc>
+    <lastmod>2024-01-01T19:50:48.750Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nickg.bio/content/garden/posts/20230902_openbuffalodataforml/index.html</loc>
+    <lastmod>2023-10-28T15:53:58.836Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nickg.bio/content/garden/posts/20230730_mccvshiny_announcement/index.html</loc>
+    <lastmod>2023-09-09T18:05:37.917Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nickg.bio/content/garden/posts/20221229explore/index.html</loc>
+    <lastmod>2023-09-04T00:33:39.826Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nickg.bio/content/garden/posts/20231029_dataclasses/index.html</loc>
+    <lastmod>2023-10-29T23:42:38.050Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nickg.bio/content/garden/posts/20220904welcome/index.html</loc>
+    <lastmod>2023-09-04T00:33:29.985Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nickg.bio/content/garden/posts/20240605_ggdx_start/index.html</loc>
+    <lastmod>2024-07-05T16:10:11.537Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nickg.bio/content/garden/posts/20230610_mccv_announcement/index.html</loc>
+    <lastmod>2023-09-04T00:33:52.178Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nickg.bio/content/garden/posts/20231028_shinylive/index.html</loc>
+    <lastmod>2023-10-29T17:01:55.985Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nickg.bio/content/garden/posts/20240512_dl_learning_fail/index.html</loc>
+    <lastmod>2024-05-12T14:17:42.294Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nickg.bio/content/garden/posts/20230730_openbuffalodata/index.html</loc>
+    <lastmod>2023-09-04T00:34:29.616Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nickg.bio/content/garden/posts/20241215_aws_open_data_arrow/index.html</loc>
+    <lastmod>2024-12-18T00:38:12.538Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nickg.bio/content/garden/posts/20240128_nfldashboard_update/index.html</loc>
+    <lastmod>2024-01-29T02:28:22.885Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nickg.bio/content/garden/posts/20250101_fast_fold_change_calculation/index.html</loc>
+    <lastmod>2025-01-01T23:16:29.326Z</lastmod>
   </url>
   <url>
     <loc>https://nickg.bio/content/garden/projects/pds/pds-portal.html</loc>
