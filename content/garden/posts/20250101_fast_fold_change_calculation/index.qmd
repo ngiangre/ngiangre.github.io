@@ -12,7 +12,10 @@ comments:
     repo: ngiangre/ngiangre.github.io
 ---
 
-I had a thought for computing the fold change of the average of two distributions. Below is my attempt to try out something. It doesn't scale well (I think it's big-O n squared?) so will need to try another approach.
+::: column-page
+
+I had a thought for computing the fold change of the average of two distributions. Below is my attempt to try out something - a {data.table} and a {dplyr} implementation. The {data.table} approach doesn't scale well compared to the {dplyr} approach so I must have did something wrong with the syntax. Using the {dtplyr} package actually helps in this case with translating to the right syntax for the speed ups afforded by {data.table}. However the {dplyr} function actually outperforms the function using {dtplyr}. However, the {dplyr} implentation is still pretty slow at the scale I ideally want to target...need to think this implentation through...
+
 
 ```{r data}
 create_dataset <- function(n=1e6,n_tests = 2,n_groups = 3){
@@ -39,79 +42,196 @@ head(dat)
 
 ```{r}
 library(data.table)
-compute_fold_changes <- function(df, measurement_col, group_cols, value_col = "value") {
-  if (!requireNamespace("data.table", quietly = TRUE)) {
-    stop("The 'data.table' package is required but not installed.")
-  }
-  
-  # Convert to data.table and validate input
-  dt <- as.data.table(df)
-  stopifnot(value_col %in% colnames(dt),
-            all(group_cols %in% colnames(dt)),
-            measurement_col %in% colnames(dt))
-  
-  # Ensure the value column is numeric and remove NA values
-  dt <- dt[!is.na(get(value_col))]
-  dt[[value_col]] <- as.numeric(dt[[value_col]])
-
-  # Compute fold changes for all group column combinations
-  final_result <- purrr::map_dfr(unique(dt[[measurement_col]]),function(measure){
-    dt_measure <- dt[get(measurement_col) == measure]
-
-    # Compute fold changes for each group column
-    purrr::map_dfr(group_cols,function(group_col){
-      levels <- unique(dt_measure[[group_col]])
-      combos <- combn(levels, 2, simplify = FALSE)
-
-      # Calculate fold changes for each pair of levels
-      purrr::map_dfr(combos,function(combo){
-        group1 <- combo[1]
-        group2 <- combo[2]
-
-        # Compute means for each group
-        mean1 <- dt_measure[get(group_col) == group1, mean(get(value_col), na.rm = TRUE)]
-        mean2 <- dt_measure[get(group_col) == group2, mean(get(value_col), na.rm = TRUE)]
-
-        # Calculate fold change and avoid division by zero
-        fold_change <- mean1 / mean2
-        if (fold_change < 1) fold_change <- 1 / fold_change
-
-        # Append the result to the list
-        data.table(
-          measurement = measure,
-          group_col = group_col,
-          group1 = group1,
-          group2 = group2,
-          AVAL = fold_change
-        )
-      })
+compute_fc_dt <- function(df, measurement_col, group_cols, value_col = "value") {
+    if (!requireNamespace("data.table", quietly = TRUE)) {
+        stop("The 'data.table' package is required but not installed.")
+    }
+    
+    # Convert to data.table and validate input
+    dt <- as.data.table(df)
+    stopifnot(value_col %in% colnames(dt),
+              all(group_cols %in% colnames(dt)),
+              measurement_col %in% colnames(dt))
+    
+    # Ensure the value column is numeric and remove NA values
+    dt <- dt[!is.na(get(value_col))]
+    dt[[value_col]] <- as.numeric(dt[[value_col]])
+    
+    # Compute fold changes for all group column combinations
+    final_result <- purrr::map_dfr(unique(dt[[measurement_col]]),function(measure){
+        dt_measure <- dt[get(measurement_col) == measure]
+        
+        # Compute fold changes for each group column
+        purrr::map_dfr(group_cols,function(group_col){
+            levels <- unique(dt_measure[[group_col]])
+            combos <- combn(levels, 2, simplify = FALSE)
+            
+            # Calculate fold changes for each pair of levels
+            purrr::map_dfr(combos,function(combo){
+                group1 <- combo[1]
+                group2 <- combo[2]
+                
+                # Compute means for each group
+                mean1 <- dt_measure[get(group_col) == group1, mean(get(value_col), na.rm = TRUE)]
+                mean2 <- dt_measure[get(group_col) == group2, mean(get(value_col), na.rm = TRUE)]
+                
+                # Calculate fold change and avoid division by zero
+                fold_change <- mean1 / mean2
+                if (fold_change < 1) fold_change <- 1 / fold_change
+                
+                # Append the result to the list
+                data.table(
+                    measurement = measure,
+                    group_col = group_col,
+                    group1 = group1,
+                    group2 = group2,
+                    AVAL = fold_change
+                )
+            })
+        })
     })
-  })
-
-  # Combine results and add analysis column
-  final_result[['PARAM']] = "fold_change"
-  return(final_result)
+    
+    # Combine results and add analysis column
+    final_result[['PARAM']] = "fold_change"
+    return(final_result)
+}
+compute_fc_dplyr <- function(df, measurement_col, group_cols, value_col = "value") {
+    if (!requireNamespace("data.table", quietly = TRUE)) {
+        stop("The 'data.table' package is required but not installed.")
+    }
+    
+    # Convert to data.table and validate input
+    dt <- tibble::as_tibble(df)
+    stopifnot(value_col %in% colnames(dt),
+              all(group_cols %in% colnames(dt)),
+              measurement_col %in% colnames(dt))
+    
+    # Ensure the value column is numeric and remove NA values
+    dt <- 
+        dt |> 
+        dplyr::filter(!is.na(.data[[value_col]])) |> 
+        dplyr::mutate(
+            dplyr::across(dplyr::all_of(value_col), as.numeric)
+        )
+    
+    # Compute fold changes
+    result <- 
+        unique(dt[[measurement_col]]) |> 
+        purrr::map_dfr(function(measure) {
+            dt_measure <- 
+                dt |> 
+                dplyr::filter(.data[[measurement_col]] == measure)
+            
+            group_cols |>
+                purrr::map_dfr(function(group_col) {
+                    dt_measure |> 
+                        dplyr::summarise(
+                            mean_value = mean(.data[[value_col]], na.rm = TRUE), 
+                            .by = dplyr::all_of(group_col)
+                        ) |> 
+                        dplyr::summarise(
+                            AVAL = mean_value[1] / mean_value[2],
+                            group_value1 = .data[[group_col]][1], 
+                            group_value2 = .data[[group_col]][2],
+                            group_column = group_col,
+                            !!measurement_col := measure
+                        )
+                })
+        }) |> 
+        dplyr::mutate(
+            PARAM = "fold_change"
+        ) |> 
+        dplyr::relocate(
+            dplyr::any_of(c(
+                "group_column",measurement_col,
+                "group_value1","group_value2",
+                "PARAM","AVAL"
+            ))
+        )
+    
+    return(result)
+}
+compute_fc_dtplyr <- function(df, measurement_col, group_cols, value_col = "value") {
+    if (!requireNamespace("data.table", quietly = TRUE)) {
+        stop("The 'data.table' package is required but not installed.")
+    }
+    
+    # Convert to data.table and validate input
+    stopifnot(value_col %in% colnames(df),
+              all(group_cols %in% colnames(df)),
+              measurement_col %in% colnames(df))
+    
+    # Ensure the value column is numeric and remove NA values
+    dt <- 
+        df |> 
+        dtplyr::lazy_dt() |> 
+        dplyr::filter(!is.na(.data[[value_col]])) |> 
+        dplyr::mutate(
+            dplyr::across(dplyr::all_of(value_col), as.numeric)
+        )
+    
+    # Compute fold changes
+    result <- 
+        unique(df[[measurement_col]]) |> 
+        purrr::map_dfr(function(measure) {
+            dt_measure <- 
+                dt |> 
+                dplyr::filter(.data[[measurement_col]] == measure)
+            
+            group_cols |>
+                purrr::map_dfr(function(group_col) {
+                    dt_measure |> 
+                        dplyr::summarise(
+                            mean_value = mean(.data[[value_col]], na.rm = TRUE), 
+                            .by = dplyr::all_of(group_col)
+                        ) |> 
+                        dplyr::summarise(
+                            AVAL = mean_value[1] / mean_value[2],
+                            group_value1 = .data[[group_col]][1], 
+                            group_value2 = .data[[group_col]][2],
+                            group_column = group_col,
+                            !!measurement_col := measure
+                        ) |> 
+                        dplyr::collect()
+                })
+        }) |> 
+        dplyr::mutate(
+            PARAM = "fold_change"
+        ) |> 
+        dplyr::relocate(
+            dplyr::any_of(c(
+                "group_column",measurement_col,
+                "group_value1","group_value2",
+                "PARAM","AVAL"
+            ))
+        )
+    
+    return(result)
 }
 ```
 
-```{r}
-system.time(compute_fold_changes(dat,"name",c("group")))
-compute_fold_changes(dat,"name",c("group"))
-```
-
-```{r}
+```{r,fig.width=15}
 tm <- 
     microbenchmark::microbenchmark(
-        compute_fold_changes(
-            create_dataset(n=1e3,n_tests = 1,n_groups = 2),"name",c("group")
-        ),
-        compute_fold_changes(
+        compute_fc_dt(
             create_dataset(n=1e3,n_tests = 1,n_groups = 10),"name",c("group")
         ),
-        compute_fold_changes(
+        compute_fc_dplyr(
+            create_dataset(n=1e3,n_tests = 1,n_groups = 10),"name",c("group")
+        ),
+        compute_fc_dtplyr(
+            create_dataset(n=1e3,n_tests = 1,n_groups = 10),"name",c("group")
+        ),
+        compute_fc_dplyr(
             create_dataset(n=1e3,n_tests = 10,n_groups = 10),"name",c("group")
         ),
-        compute_fold_changes(
+        compute_fc_dtplyr(
+            create_dataset(n=1e3,n_tests = 10,n_groups = 10),"name",c("group")
+        ),
+        compute_fc_dplyr(
+            create_dataset(n=1e3,n_tests = 100,n_groups = 10),"name",c("group")
+        ),
+        compute_fc_dtplyr(
             create_dataset(n=1e3,n_tests = 100,n_groups = 10),"name",c("group")
         ),
         unit = "second",
@@ -120,3 +240,4 @@ tm <-
 tm |> ggplot2::autoplot()
 ```
 
+:::
