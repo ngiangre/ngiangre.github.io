@@ -16,73 +16,73 @@ title: Nick Giangreco
 
 ### *Independent and collaborative precision medicine scientist and engineer* 
 
-[Github](http://github.com/ngiangre) | [Linkedin](http://www.linkedin.com/in/nickgiangreco/) | [ORCID](https://orcid.org/0000-0001-8138-4947) | [nickg.bio](http://nickg.bio) | [nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** October 20th 2024
+[Github: ngiangre](http://github.com/ngiangre) | [Linkedin: http://www.linkedin.com/in/nickgiangreco/](http://www.linkedin.com/in/nickgiangreco/) | [ORCID: 0000-0001-8138-4947](https://orcid.org/0000-0001-8138-4947) | [Personal Website: nickg.bio](http://nickg.bio) | [Email: nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** January 11th 2025
 
 | |
 | :------ |
-| **Topic areas:** Biomarker evaluation and discovery, Applications engineering, Scientific data modeling and architecture, Pediatric drug safety, interpretable machine learning, fairness and equity in biomedical informatics |
-| **Technical expertise:** biomedical data science, (R/Python) software development, machine learning, statistical simulation, data cleaning, data pipelines, Shiny (for R and Python) application development, object oriented programming, RMarkdown/JuPyteR/Quarto, Microsoft Power App and API user |
-| **Programming Languages:** Python, R, SQL, HTML, CSS, Java, bash | 
+| **Topic expertise:** Bioinformatics, Biomarker evaluation and discovery, Applications engineering, Scientific data modeling and architecture, Pediatric drug safety, Interpretable machine learning and AI, fairness and equity in biomedical informatics |
+| **Technical expertise:** biomedical data science, (R/Python) software package development, R programming, {plumber} APIs, machine learning, statistical simulation, data cleaning, data pipelines, Shiny (for R and Python) application development, object oriented programming, RMarkdown/JuPyteR/Quarto, Microsoft Power App and API user |
+| **Programming Languages:** R, Python, SQL, HTML, CSS, Java, bash | 
 | **Patents:** [Systems and methods for predicting graft dysfunction with exosome proteins](https://patents.google.com/patent/WO2022060842A1/en?oq=2022060842)|
 
 
 WORK EXPERIENCE
 ----------
 
-2023 - Present
+February 2023 - Present
 :    **Computer Sciences Advisor (Remote)** [(MindArch Health)](http://www.mindarchhealth.com/); Sayville, NY
 
      Machine learning, Software, Web Applications & Design
      
-2021 - Present
+December 2021 - Present
 :    **Senior Scientist, Quantitative Translational Science (Remote)** [(Regeneron Pharmaceuticals Inc.)](https://www.regeneron.com); Tarrytown, NY
      
      Precision Medicine - scientist, data architect, software developer, and applications engineer
      
+     - Analyze clinical and biomarker data in rare disease and drug trials
      - Manage execution of data architecture and software development projects in precision medicine innovation development portfolio.
-     - Develop and maintain 6+ software packages and pipelines for team of clinical biomarker data analysts.
+     - Develop and maintain 6+ software packages and data pipelines for team of clinical biomarker data analysts.
      - Deliver automated project management and portfolio reports to senior leadership.
      - Mentor interns and data scientists to develop reproducible data analyses and web apps.
-     - Analyze clinical and biomarker data in rare disease and drug trials
 
-2016 - 2021
+August 2016 - October 2021
 :    **Systems biologist** [(Columbia University)](https://systemsbiology.columbia.edu/people/nicholas-giangreco); New York, NY
 
-	Thesis: [Mind the developmental gap: Identifying adverse drug effects across childhood to evaluate biological mechanisms from growth and development](https://doi.org/10.7916/d8-5d9b-6738)
+	Ph.D. Thesis: [Mind the developmental gap: Identifying adverse drug effects across childhood to evaluate biological mechanisms from growth and development](https://doi.org/10.7916/d8-5d9b-6738)
    
     [Cell Press cover art](https://www.cell.com/med/issue?pii=S2666-6340(21)X0020-7#fullCover)
     
-    [PDSportal](https://pdsportal.shinyapps.io/pdsportal/)
+    [PDSportal Shiny for R application](https://pdsportal.shinyapps.io/pdsportal/)
    
-    [kidsides](https://github.com/ngiangre/kidsides)
+    [kidsides R package and database](https://github.com/ngiangre/kidsides)
     
-    [Media release](https://www.dbmi.columbia.edu/pediatric-drug-side-effects-study-tatonetti/)
+    [Columbia University media release](https://www.dbmi.columbia.edu/pediatric-drug-side-effects-study-tatonetti/)
    
 February 2021 - August 2021
 :   **Bioinformatics intern** [(DNAnexus)](https://www.dnanexus.com/); San Francisco, CA
 
-    Solutions team
+    Solutions Science team
     
-    Initiated internal and external projects such as interpretable machine learning and genomic/phenomic data integration/analysis
+    Initiated internal and external projects such as interpretable, tree-based andd boosting machine learning for phenotype prediction and 2) integration of genomic/phenomic data using common data models
 
 June 2019 - August 2019
 :    **Clinical informatics intern** [(Regeneron Genetics Center)](https://www.regeneron.com/genetics-center)); Tarrytown, NY
 	  
-	Developed database of multivariate clinical associations using incremental learning on amazon web services. 
+	Developed database of multivariate clinical associations using incremental learning technique on EC2 Amazon Web Services. 
 	  
 July 2018 - September 2018
 :    **Computational biology intern** [(Genetic Leap)](https://www.genetic-leap.com); New York, NY
 	  
 	Formerly Genetic Intelligence Inc.
 	
-	Conducted independent and collaborative genomics research using NCBI APIs and amazon web services.
+	Conducted independent and collaborative genomics research using NCBI APIs and Amazon Web Services.
 	  
-2014-2019
+August 2014 - July 2019
 :    **Cancer bioinformatician** [(National Human Genome Research Institute)](https://www.genome.gov/staff/Laura-Elnitski-PhD); Bethesda, MD
      
 	Post-baccalaureate trainee 2014-2016; Special volunteer 2016-2019
 
-	Investigated ovarian endometrioid tumorigenesis by integrating and analyzing RNASeq and DNA methylation sequencing (MBD-Seq).
+	Investigated ovarian endometrioid tumorigenesis by integrating and analyzing RNA-Seq and DNA methylation sequencing (MBD-Seq).
      
 EDUCATION
 ----------
@@ -163,7 +163,7 @@ Leadership and Management Experience
 
 - University of Rochester Alumni Buffalo Leadership Council 2023-Present
     + Ideate and organize local events
-- [New York Health Artificial Intelligence Society](https://www.nyhais.org)
+- [New York Health Artificial Intelligence Society](https://www.nyhais.org) 2019-2024
    + 501(c)(3) not-for-profit Cofounder and Secretary, 2019-2024
    + Promote public discourse on a wide range of topics such as AI & Society, AI & Healthcare, and economic impact by AI. 
    + Organize and facilitate group engagement, workshops, AI study groups, and not-for-profit organization.
@@ -229,9 +229,7 @@ MENTORING, TUTORING, and WRITING
 CONFERENCES AND HACKATHONS
 ----------
 
-- [posit::conf(2024)](https://www.rstudio.com/conference/)
-
-- [posit::conf(2023)](https://www.rstudio.com/conference/)
+- [posit::conf( c(2023,2024) ) with workshops](https://www.rstudio.com/conference/)
 
 - [Bio-IT World 2023](https://www.bio-itworldexpo.com/)
 

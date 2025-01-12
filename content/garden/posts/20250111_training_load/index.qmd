@@ -1,0 +1,182 @@
+---
+title: "Creating choices while maintaining high training volume"
+subtitle: Due to needing to modify exercises and regimends to my needs, I want to see if my modifications still allow me to have the high training volume I need.
+image: "images/exercise.jpeg"
+date: "01/11/2025"
+draft: false
+page-layout: article
+toc: true
+toc_float: true
+comments:
+  utterances:
+    repo: ngiangre/ngiangre.github.io
+---
+
+::: column-page
+
+I bought resistance bands this week! I joined a gym last month! I have a regular routine of doing medical pilates each week, but recently I'm wanting to complement that with strength training.
+
+One thing I'm told you want to do is aim for progressive overload. The idea is applying stress to the body over time drives adaptations such as muscle growth, increased endurance, and new neural pathways (i.e. teach the brain that the body can do new stuff). I'm constantly working on new movements, but I'd like to try to start activating and grow muscles in ways I haven't done before. To do this, increasing training volume promotes progressive overload to help me reach my goals.
+
+The resistance bands I bought come in 10 pound increments. I may have to start really light and repeat movements alot in order to teach my brain a new movement and promote muscle growth. I was curious about how I can maintain or increase training volume either but repeating the movement alot or increase the weight. This had me thinking of controlling variables but changing one to see how that affects training volume. And then considering a few approaches and seeing where the training volume is similar. This calls for a little simulation!
+
+but first, I am defining training volume by the product of `Sets`, `Reps`, `Tempo`, and `Weight`. There's a lot of other variables that affect training volume, but let's say that only these variables matter *within* a specific exercise. Just a note on tempo: this is comprised of the seconds it takes to perform the eccentric movement, pause at the top, and perform the concentric movement (E-P-C for short) which all is time under muscle tension. 
+
+Let's say we consider 1-6 sets, 5-50 reps in increments of 5, 1+1+1/2+2+2/3+3+3/3+5+3 for Tempo, and 10 to 90 in 10 pound increments
+
+
+```{r}
+library(tidyverse)
+library(scales)
+library(ggiraph)
+```
+
+```{r}
+
+training_volume_df <- 
+    expand.grid(
+        sets = 1:6,
+        reps = seq(5,50,5),
+        tempo = c(3,6,9,11),
+        weight = seq(10,90,10)
+    ) |> 
+    dplyr::mutate(
+        training_volume = sets*reps*tempo*weight,
+        tempo = case_when(
+            tempo==3 ~ '1/1/1',
+            tempo==6 ~ '2/2/2',
+            tempo==9 ~ '3/3/3',
+            tempo==11 ~ '3/5/3'
+        ),
+        tooltip = paste0(
+            'Sets: ',sets,'\n',
+            'Reps: ',reps,'\n',
+            'Tempo: ',tempo,'\n',
+            'Weight: ',weight,'\n',
+            'Training Volume: ',scales::comma(training_volume)
+        )
+    ) |> 
+    dplyr::mutate(
+        across(all_of(c('sets','reps','tempo','weight')),as.character),
+        reps = factor(reps,levels = seq(5,50,5))
+    )
+training_volume_df |> 
+    head()
+```
+
+Let's look at how training volume changes as only the weight changes:
+
+```{r}
+
+tmp <- 
+    training_volume_df |> 
+    dplyr::filter(
+        sets==3,reps==15,tempo=='2/2/2'
+    )
+
+g <- 
+    tmp |> 
+    ggplot(aes(weight,training_volume,group=sets)) +
+    geom_line() +
+    geom_point_interactive(aes(tooltip = tooltip)) +
+    scale_y_continuous(
+        name = 'Training Volume',
+        labels = scales::comma
+    ) +
+    theme_bw(
+        base_size = 16
+    )
+
+girafe(ggobj = g,width_svg = 10,height_svg = 5)
+    
+```
+
+Linear relationship - not surprising. So before going further, I'm going to put some code into a function so we can make more of these types of graphs but with less code. We're going to change the data filters and the basic aesthetics of the plot, but everythin else will be the same. 
+
+```{r}
+
+make_line_plot <- function(g_start,thresholds = NULL,facet = NULL,base_size = 20,nrow = 1, width = 10,height = 5){
+    g <- 
+        g_start +
+        lapply(thresholds,function(x){
+            geom_hline(aes(yintercept=x),
+                           linetype='dashed',
+                           color='red',
+                           linewidth=2)
+        }) +
+        geom_line(linewidth=1) +
+        geom_point_interactive(aes(tooltip = tooltip),
+                               size=2) +
+        scale_color_viridis_d(option = 'D',direction = -1) +
+        scale_fill_viridis_d(option = 'D',direction = -1) +
+        scale_y_continuous(
+            name = 'Training Volume',
+            labels = scales::comma
+        ) +
+        theme_bw(
+            base_size = base_size
+        )
+    
+    if(!is.null(facet)){
+        g <- 
+            g +
+            facet_wrap(vars(.data[[facet]]),nrow = nrow)
+    }
+    
+    girafe(ggobj = g,width_svg = width,height_svg = height)
+}
+
+```
+
+Let's make the same graph but vary the sets and color them. Also, I'm adding a way to see what are our options to get a certain training volume.
+
+```{r}
+training_volume_df |> 
+    dplyr::filter(
+        reps==15,tempo=='2/2/2'
+    ) |> 
+    ggplot(aes(weight,training_volume,
+               group = sets,
+               color=sets,fill=sets)) |> 
+    make_line_plot(thresholds = 18000)
+```
+
+This graph shows we can hit that training volume with different sets EXCEPT 1 or 2 sets. I could hit the same volume with 3-6 sets. So at more sets I can use a lower weight. Cool.
+
+What about if keep the set the same but vary the tempo?
+
+```{r}
+training_volume_df |> 
+    dplyr::filter(
+        reps==15
+    ) |> 
+    ggplot(aes(weight,training_volume,
+               group = tempo,
+               color=tempo,fill=tempo)) |> 
+    make_line_plot(thresholds = 18000,facet = 'sets',
+                   width = 12,nrow=2)
+```
+
+At 4 sets I can use 30 pounds with very low tempo like 3/5/3 to get the volume I want whereas I'd have to do 6 sets if I only could use 20 pound weights. 
+
+For a realistic scenario, I think the 3/5/3 is good for me so I can activate muscles and I think I'll stick to 3 sets. Now. I want to vary weight and reps. 
+
+```{r}
+
+training_volume_df |> 
+    dplyr::filter(
+        tempo=='3/5/3',sets==3
+    ) |> 
+    ggplot(aes(reps,training_volume,
+               group=weight,
+               color=weight,fill=weight)) |> 
+    make_line_plot(thresholds = seq(1e4,1e5,length.out = 4),
+                   width = 10,height=6,base_size = 16,nrow=2)
+
+```
+
+If I wanted to hit those high training volumes, I'd have to increase to very high reps and not necessarily increase the weight so high. So if I can't go to higher weights because stabilizing the weight is not possible, atleast I can increase the reps enough to hit the volume needed for progressive overload.
+
+
+
+:::
