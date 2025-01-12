@@ -177,6 +177,8 @@ training_volume_df |>
 
 If I wanted to hit those high training volumes, I'd have to increase to very high reps and not necessarily increase the weight so high. So if I can't go to higher weights because stabilizing the weight is not possible, atleast I can increase the reps enough to hit the volume needed for progressive overload.
 
+Here's a useful finding! If I can't increase the weight, I can acheive the same training volume by doubling the reps. 
+
 
 
 :::
