@@ -179,6 +179,22 @@ If I wanted to hit those high training volumes, I'd have to increase to very hig
 
 Here's a useful finding! If I can't increase the weight, I can acheive the same training volume by doubling the reps. 
 
+```{r}
+
+training_volume_df |> 
+    dplyr::filter(
+        tempo=='3/5/3',sets %in% 3:6,
+        weight %in% 10:50
+    ) |> 
+    ggplot(aes(reps,training_volume,
+               group=weight,
+               color=weight,fill=weight)) |> 
+    make_line_plot(thresholds = seq(1e4,1e5,length.out = 4),
+                   facet = 'sets',
+                   width = 12,height=10,base_size = 16,nrow=2)
+
+```
+
 
 
 :::
