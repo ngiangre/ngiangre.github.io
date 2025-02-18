@@ -7,6 +7,7 @@ draft: false
 page-layout: article
 toc: true
 toc_float: true
+code-fold: true
 comments:
   utterances:
     repo: ngiangre/ngiangre.github.io
@@ -37,6 +38,7 @@ library(DBI)
 con <- kidsides::connect_sqlite_db()
 data <- 
     tbl(con,"ade_nichd_enrichment") |> 
+    filter(odds_ratio>0) |> 
     collect()
 
 ojs_define(data = data,small_data = head(data,5))
@@ -53,7 +55,18 @@ small_data
 
 ## Observable Table
 
-Viewing the table is really snappy! Real fast scrolling. This [vignette](https://observablehq.com/@observablehq/input-table) from Observable goes through some cool tricks with the penguins dataset.
+This [vignette](https://observablehq.com/@observablehq/input-table) from Observable goes through some cool tricks with the penguins dataset. Below I highlight a few tricks.
+
+By using the `Inputs.search' API, this creates a filtered table, based on values in two columns only, to then view. But it seems slow with this many rows. Duly noted!
+
+```{ojs}
+viewof search = Inputs.search(transpose(data), {
+  placeholder: "Search table…",
+  columns: ["atc_concept_name", "meddra_concept_name"]
+});
+```
+
+See the numbered list below for an explanation of the syntax to generate this table.
 
 ```{ojs}
 function sparkbar(max) {
@@ -68,7 +81,7 @@ function sparkbar(max) {
     justify-content: end;">${x.toLocaleString("en")}`
 }
 
-viewof selection = Inputs.table(transpose(data),{
+viewof selection = Inputs.table(search,{
   sort: "odds_ratio",
   reverse: true,
   columns: [
@@ -83,11 +96,17 @@ viewof selection = Inputs.table(transpose(data),{
   },
   format: {
     odds_ratio: d3.format(".2f"),
-    odds_ratio: sparkbar(d3.max(transpose(data), d => d.odds_ratio))
-  }
+    odds_ratio: sparkbar(d3.max(search, d => d.odds_ratio))
+  },
+  required: false
 })
 ```
 
+What is really cool is selecting rows in the above table gives a totally reactive table like below:
+
+```{ojs}
+Inputs.table(selection)
+```
 
 1. Inputs.table()
 
@@ -116,12 +135,6 @@ viewof selection = Inputs.table(transpose(data),{
    * `format` allows for controlling how the data is displayed in the table.
    * `d3` refers to D3.js wherein Observable Plot is built on top of. Observable uses D3 for added functionality like formatting. 
    * `sparkbar` is a function that creates an inline spark bar chart. It creates this within HTML to be rendered in the table. The `=>` in JavaScript is used for arrow functions, which provide a more concise syntax for defining functions. The function takes the max value from the odds ratio column using the arrow function. `htl.html` used in the function is a template literal function from the [htl (Hypertext Literal) library](https://github.com/observablehq/htl). It safely generates HTML in Observable notebooks.
-
-Annnnnd, what is really cool is selecting rows in the above table gives a totally reactive table like below:
-
-```{ojs}
-Inputs.table(selection)
-```
 
 :::
 
