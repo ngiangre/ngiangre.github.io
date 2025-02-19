@@ -16,13 +16,13 @@ title: Nick Giangreco
 
 ### *Independent and collaborative precision medicine scientist and engineer* 
 
-[Github: ngiangre](http://github.com/ngiangre) | [Linkedin: http://www.linkedin.com/in/nickgiangreco/](http://www.linkedin.com/in/nickgiangreco/) | [ORCID: 0000-0001-8138-4947](https://orcid.org/0000-0001-8138-4947) | [Personal Website: nickg.bio](http://nickg.bio) | [Email: nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** January 11th 2025
+[Github: ngiangre](http://github.com/ngiangre) | [Linkedin: http://www.linkedin.com/in/nickgiangreco/](http://www.linkedin.com/in/nickgiangreco/) | [ORCID: 0000-0001-8138-4947](https://orcid.org/0000-0001-8138-4947) | [Personal Website: nickg.bio](http://nickg.bio) | [Email: nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** February 18th 2025
 
 | |
 | :------ |
-| **Topic expertise:** Bioinformatics, Biomarker evaluation and discovery, Applications engineering, Scientific data modeling and architecture, Pediatric drug safety, Interpretable machine learning and AI, fairness and equity in biomedical informatics |
-| **Technical expertise:** biomedical data science, (R/Python) software package development, R programming, {plumber} APIs, machine learning, statistical simulation, data cleaning, data pipelines, Shiny (for R and Python) application development, object oriented programming, RMarkdown/JuPyteR/Quarto, Microsoft Power App and API user |
-| **Programming Languages:** R, Python, SQL, HTML, CSS, Java, bash | 
+| **Topic expertise:** Pediatric drug safety, Bioinformatics, Biomarker discovery, Cancer biology, Genetics, Interpretable machine learning and artificial intelligence |
+| **Technical expertise:** Biomedical data science, (R/Python) software package development, R programming, {plumber} APIs, machine learning, statistical simulation, data cleaning, data pipelines, Shiny (for R and Python) application development, object oriented programming, RMarkdown/JuPyteR/Quarto, Microsoft Power App and API user |
+| **Programming Languages:** R, Python, SQL, HTML, CSS, Observable Javascript, Java, bash | 
 | **Patents:** [Systems and methods for predicting graft dysfunction with exosome proteins](https://patents.google.com/patent/WO2022060842A1/en?oq=2022060842)|
 
 
