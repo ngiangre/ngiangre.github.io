@@ -22,19 +22,19 @@ title: Nick Giangreco
 | :------ |
 | **Topic expertise:** Pediatric drug safety, Bioinformatics, Biomarker discovery, Cancer biology, Genetics, Interpretable machine learning and artificial intelligence |
 | **Technical expertise:** Biomedical data science, (R/Python) software package development, R programming, {plumber} APIs, machine learning, statistical simulation, data cleaning, data pipelines, Shiny (for R and Python) application development, object oriented programming, RMarkdown/JuPyteR/Quarto, Microsoft Power App and API user |
-| **Programming Languages:** R, Python, SQL, HTML, CSS, Observable Javascript, Java, bash | 
+| **Programming Languages:** R, Python, SQL, HTML, CSS, Observable Javascript, Java, Bash | 
 | **Patents:** [Systems and methods for predicting graft dysfunction with exosome proteins](https://patents.google.com/patent/WO2022060842A1/en?oq=2022060842)|
 
 
 WORK EXPERIENCE
 ----------
 
-February 2023 - Present
+Feb 2023 - Present
 :    **Computer Sciences Advisor (Remote)** [(MindArch Health)](http://www.mindarchhealth.com/); Sayville, NY
 
      Machine learning, Software, Web Applications & Design
      
-December 2021 - Present
+Dec 2021 - Present
 :    **Senior Scientist, Quantitative Translational Science (Remote)** [(Regeneron Pharmaceuticals Inc.)](https://www.regeneron.com); Tarrytown, NY
      
      Precision Medicine - scientist, data architect, software developer, and applications engineer
@@ -45,39 +45,35 @@ December 2021 - Present
      - Deliver automated project management and portfolio reports to senior leadership.
      - Mentor interns and data scientists to develop reproducible data analyses and web apps.
 
-August 2016 - October 2021
+Aug 2016 - Oct 2021
 :    **Systems biologist** [(Columbia University)](https://systemsbiology.columbia.edu/people/nicholas-giangreco); New York, NY
-
-	Ph.D. Thesis: [Mind the developmental gap: Identifying adverse drug effects across childhood to evaluate biological mechanisms from growth and development](https://doi.org/10.7916/d8-5d9b-6738)
-   
-    [Cell Press cover art](https://www.cell.com/med/issue?pii=S2666-6340(21)X0020-7#fullCover)
     
-    [PDSportal Shiny for R application](https://pdsportal.shinyapps.io/pdsportal/)
+	 - Ph.D. Thesis: [Mind the developmental gap: Identifying adverse drug effects across childhood to evaluate biological mechanisms from growth and development](https://doi.org/10.7916/d8-5d9b-6738)
+	 - [Cell Press cover art](https://www.cell.com/med/issue?pii=S2666-6340(21)X0020-7#fullCover)
+    - [PDSportal Shiny for R application](https://pdsportal.shinyapps.io/pdsportal/)
+    - [kidsides R package and database](https://github.com/ngiangre/kidsides)
+    - [Columbia University media release](https://www.dbmi.columbia.edu/pediatric-drug-side-effects-study-tatonetti/)
    
-    [kidsides R package and database](https://github.com/ngiangre/kidsides)
-    
-    [Columbia University media release](https://www.dbmi.columbia.edu/pediatric-drug-side-effects-study-tatonetti/)
-   
-February 2021 - August 2021
+Feb 2021 - Aug 2021
 :   **Bioinformatics intern** [(DNAnexus)](https://www.dnanexus.com/); San Francisco, CA
 
     Solutions Science team
     
     Initiated internal and external projects such as interpretable, tree-based andd boosting machine learning for phenotype prediction and 2) integration of genomic/phenomic data using common data models
 
-June 2019 - August 2019
+Jun 2019 - Aug 2019
 :    **Clinical informatics intern** [(Regeneron Genetics Center)](https://www.regeneron.com/genetics-center)); Tarrytown, NY
 	  
 	Developed database of multivariate clinical associations using incremental learning technique on EC2 Amazon Web Services. 
 	  
-July 2018 - September 2018
+Jul 2018 - Sept 2018
 :    **Computational biology intern** [(Genetic Leap)](https://www.genetic-leap.com); New York, NY
 	  
 	Formerly Genetic Intelligence Inc.
 	
 	Conducted independent and collaborative genomics research using NCBI APIs and Amazon Web Services.
 	  
-August 2014 - July 2019
+Aug 2014 - July 2019
 :    **Cancer bioinformatician** [(National Human Genome Research Institute)](https://www.genome.gov/staff/Laura-Elnitski-PhD); Bethesda, MD
      
 	Post-baccalaureate trainee 2014-2016; Special volunteer 2016-2019
@@ -87,10 +83,13 @@ August 2014 - July 2019
 EDUCATION
 ----------
 
-
 2016 - 2021
 :     [**PhD, Systems Biology**](http://systemsbiology.columbia.edu/people/nicholas-giangreco); Columbia University, New York City, NY
 
+     Thesis Date: October 26th, 2021
+     
+     Department of Systems Biology and Biomedical Informatics
+     
      PhD advisor: [Dr. Nicholas Tatonetti](http://tatonettilab.org)
      
      Masters of Arts (2018) and Masters of Philosophy (2019)
@@ -101,25 +100,22 @@ EDUCATION
 SELECT PUBLICATIONS
 ----------
 
-- Biswas S, Shahriar S, **Giangreco NP**, Arvanitis P, Winkler M, Tatonetti NP, Brunken WJ, Cutforth T, Agalliu D. Mural Wnt/β-catenin signaling regulates Lama2 expression to promote neurovascular unit maturation. Development. 2022 Sep 1;149(17):dev200610. doi: [10.1242/dev.200610](https://doi.org/10.1242/dev.200610). Epub 2022 Sep 13. PMID: 36098369; PMCID: PMC9578690.
-- **Giangreco, N.P.**, Lebreton, G., Restaino, S. et al. Alterations in the kallikrein-kinin system predict death after heart transplant. Sci Rep 12, 14167 (2022). [https://doi.org/10.1038/s41598-022-18573-2](https://doi.org/10.1038/s41598-022-18573-2)
-- **Giangreco NP**, Tatonetti NP. A database of pediatric drug effects to evaluate ontogenic mechanisms from child growth and development. Med (N Y). 2022 Aug 12;3(8):579-595.e7. doi: [10.1016/j.medj.2022.06.001](https://doi.org/10.1016/j.medj.2022.06.001). Epub 2022 Jun 24. PMID: 35752163; PMCID: PMC9378670.
-- **Giangreco, Nicholas** (2022), Longitudinal trends of EHR concepts in pediatric patients, Dryad, Dataset, [https://doi.org/10.5061/dryad.j0zpc86g3](https://doi.org/10.5061/dryad.j0zpc86g3)
-- **Nicholas P Giangreco**, Sulieman Lina, Jun Qian, Aymone Kuoame, Vignesh Subbian, Eric Boerwinkle, Mine Cicek, Cheryl R Clark, Elizabeth Cohen, Kelly A Gebo, Roxana Loperena-Cortes, Kelsey Mayo, Stephen Mockrin, Lucila Ohno-Machado, Sheri D Schully, Nicholas P Tatonetti, Andrea H Ramirez, Pediatric data from the All of Us research program: demonstration of pediatric obesity over time, JAMIA Open, Volume 4, Issue 4, October 2021, ooab112, [https://doi.org/10.1093/jamiaopen/ooab112](https://doi.org/10.1093/jamiaopen/ooab112)
-- **Giangreco NP**, Lebreton G, Restaino S, Jane Farr M, Zorn E, Colombo PC, Patel J, Levine R, Truby L, Soni RK, Leprince P, Kobashigawa J, Tatonetti NP, Fine BM. Plasma kallikrein predicts primary graft dysfunction after heart transplant. J Heart Lung Transplant. 2021 Jul 10:S1053-2498(21)02391-3. doi: [10.1016/j.healun.2021.07.001](https://doi.org/10.1016/j.healun.2021.07.001). 
-- **Giangreco, N.P.**, Tatonetti, N.P. Evaluating risk detection methods to uncover ontogenic-mediated adverse drug effect mechanisms in children. BioData Mining 14, 34 (2021). [https://doi.org/10.1186/s13040-021-00264-9](https://doi.org/10.1186/s13040-021-00264-9).
-- **Giangreco, NP**, Elias, JE, Tatonetti, NP. No population left behind: Improving paediatric drug safety using informatics and systems biology. Br J Clin Pharmacol. 2021; 1– 7. [https://doi.org/10.1111/bcp.14705](https://doi.org/10.1111/bcp.14705).
-- **Nicholas P. Giangreco**, Barry Fine, Nicholas P. Tatonetti. cohorts: A Python package for clinical ‘omics data management. bioaRxiv doi: [https://www.biorxiv.org/content/10.1101/626051](https://www.biorxiv.org/content/10.1101/626051)
-- Benjamin S Glicksberg, Boris Oskotsky, Phyllis M Thangaraj, **Nicholas Giangreco**, Marcus A Badgeley, Kipp W Johnson, Debajyoti Datta, Vivek A Rudrapatna, Nadav Rappoport, Mark M Shervey, Riccardo Miotto, Theodore C Goldstein, Eugenia Rutenberg, Remi Frazier, Nelson Lee, Sharat Israni, Rick Larsen, Bethany Percha, Li Li, Joel T Dudley, Nicholas P Tatonetti, Atul J Butte, PatientExploreR: an extensible application for dynamic visualization of patient clinical history from electronic health records in the OMOP common data model, Bioinformatics, Volume 35, Issue 21, 1 November 2019, Pages 4515–4518, [https://doi.org/10.1093/bioinformatics/btz409](https://doi.org/10.1093/bioinformatics/btz409).
-- Benjamin S Glicksberg, Boris Oskotsky, **Nicholas Giangreco**, Phyllis M Thangaraj, Vivek Rudrapatna, Debajyoti Datta, Remi Frazier, Nelson Lee, Rick Larsen, Nicholas P Tatonetti, Atul J Butte, ROMOP: a light-weight R package for interfacing with OMOP-formatted electronic health record data, JAMIA Open, Volume 2, Issue 1, April 2019, Pages 10–14, [https://doi.org/10.1093/jamiaopen/ooy059](https://doi.org/10.1093/jamiaopen/ooy059)
-- Estibaliz Castillero, Ziad A. Ali, Hirokazu Akashi, **Nicholas Giangreco**, Catherine Wang, Eric J. Stöhr, Ruping Ji, Xiaokan Zhang, Nathaniel Kheysin, Joo-Eun S. Park, Sheetal Hegde, Sanatkumar Patel, Samantha Stein, Carlos Cuenca, Diana Leung, Shunichi Homma, Nicholas P. Tatonetti, Veli K. Topkara, Koji Takeda, Paolo C. Colombo, Yoshifumi Naka, H. Lee Sweeney, P. Christian Schulze, and Isaac George
+A complete listing may be found in [**pubmed**](https://pubmed.ncbi.nlm.nih.gov/?term=Giangreco+N&cauthor_id=28814792) or [**google scholar**](https://scholar.google.com/citations?user=Q3m0Jl8AAAAJ&hl=en&oi=ao)
+
+1. Biswas S, Shahriar S, **Giangreco NP**, Arvanitis P, Winkler M, Tatonetti NP, Brunken WJ, Cutforth T, Agalliu D. Mural Wnt/β-catenin signaling regulates Lama2 expression to promote neurovascular unit maturation. Development. 2022 Sep 1;149(17):dev200610. doi: [10.1242/dev.200610](https://doi.org/10.1242/dev.200610). Epub 2022 Sep 13. PMID: 36098369; PMCID: PMC9578690.
+2. **Giangreco, N.P.**, Lebreton, G., Restaino, S. et al. Alterations in the kallikrein-kinin system predict death after heart transplant. Sci Rep 12, 14167 (2022). [https://doi.org/10.1038/s41598-022-18573-2](https://doi.org/10.1038/s41598-022-18573-2)
+3. **Giangreco NP**, Tatonetti NP. A database of pediatric drug effects to evaluate ontogenic mechanisms from child growth and development. Med (N Y). 2022 Aug 12;3(8):579-595.e7. doi: [10.1016/j.medj.2022.06.001](https://doi.org/10.1016/j.medj.2022.06.001). Epub 2022 Jun 24. PMID: 35752163; PMCID: PMC9378670.
+4. **Giangreco, Nicholas** (2022), Longitudinal trends of EHR concepts in pediatric patients, Dryad, Dataset, [https://doi.org/10.5061/dryad.j0zpc86g3](https://doi.org/10.5061/dryad.j0zpc86g3)
+5. **Nicholas P Giangreco**, Sulieman Lina, Jun Qian, Aymone Kuoame, Vignesh Subbian, Eric Boerwinkle, Mine Cicek, Cheryl R Clark, Elizabeth Cohen, Kelly A Gebo, Roxana Loperena-Cortes, Kelsey Mayo, Stephen Mockrin, Lucila Ohno-Machado, Sheri D Schully, Nicholas P Tatonetti, Andrea H Ramirez, Pediatric data from the All of Us research program: demonstration of pediatric obesity over time, JAMIA Open, Volume 4, Issue 4, October 2021, ooab112, [https://doi.org/10.1093/jamiaopen/ooab112](https://doi.org/10.1093/jamiaopen/ooab112)
+6. **Giangreco NP**, Lebreton G, Restaino S, Jane Farr M, Zorn E, Colombo PC, Patel J, Levine R, Truby L, Soni RK, Leprince P, Kobashigawa J, Tatonetti NP, Fine BM. Plasma kallikrein predicts primary graft dysfunction after heart transplant. J Heart Lung Transplant. 2021 Jul 10:S1053-2498(21)02391-3. doi: [10.1016/j.healun.2021.07.001](https://doi.org/10.1016/j.healun.2021.07.001). 
+7.  **Giangreco, N.P.**, Tatonetti, N.P. Evaluating risk detection methods to uncover ontogenic-mediated adverse drug effect mechanisms in children. BioData Mining 14, 34 (2021). [https://doi.org/10.1186/s13040-021-00264-9](https://doi.org/10.1186/s13040-021-00264-9).
+8. **Giangreco, NP**, Elias, JE, Tatonetti, NP. No population left behind: Improving paediatric drug safety using informatics and systems biology. Br J Clin Pharmacol. 2021; 1– 7. [https://doi.org/10.1111/bcp.14705](https://doi.org/10.1111/bcp.14705).
+9. **Nicholas P. Giangreco**, Barry Fine, Nicholas P. Tatonetti. cohorts: A Python package for clinical ‘omics data management. bioaRxiv doi: [https://www.biorxiv.org/content/10.1101/626051](https://www.biorxiv.org/content/10.1101/626051)
+10. Benjamin S Glicksberg, Boris Oskotsky, Phyllis M Thangaraj, **Nicholas Giangreco**, Marcus A Badgeley, Kipp W Johnson, Debajyoti Datta, Vivek A Rudrapatna, Nadav Rappoport, Mark M Shervey, Riccardo Miotto, Theodore C Goldstein, Eugenia Rutenberg, Remi Frazier, Nelson Lee, Sharat Israni, Rick Larsen, Bethany Percha, Li Li, Joel T Dudley, Nicholas P Tatonetti, Atul J Butte, PatientExploreR: an extensible application for dynamic visualization of patient clinical history from electronic health records in the OMOP common data model, Bioinformatics, Volume 35, Issue 21, 1 November 2019, Pages 4515–4518, [https://doi.org/10.1093/bioinformatics/btz409](https://doi.org/10.1093/bioinformatics/btz409).
+11. Benjamin S Glicksberg, Boris Oskotsky, **Nicholas Giangreco**, Phyllis M Thangaraj, Vivek Rudrapatna, Debajyoti Datta, Remi Frazier, Nelson Lee, Rick Larsen, Nicholas P Tatonetti, Atul J Butte, ROMOP: a light-weight R package for interfacing with OMOP-formatted electronic health record data, JAMIA Open, Volume 2, Issue 1, April 2019, Pages 10–14, [https://doi.org/10.1093/jamiaopen/ooy059](https://doi.org/10.1093/jamiaopen/ooy059)
+12. Estibaliz Castillero, Ziad A. Ali, Hirokazu Akashi, **Nicholas Giangreco**, Catherine Wang, Eric J. Stöhr, Ruping Ji, Xiaokan Zhang, Nathaniel Kheysin, Joo-Eun S. Park, Sheetal Hegde, Sanatkumar Patel, Samantha Stein, Carlos Cuenca, Diana Leung, Shunichi Homma, Nicholas P. Tatonetti, Veli K. Topkara, Koji Takeda, Paolo C. Colombo, Yoshifumi Naka, H. Lee Sweeney, P. Christian Schulze, and Isaac George
 American Journal of Physiology-Heart and Circulatory Physiology 2018 315:5, [H1463-H1476](https://www.physiology.org/doi/10.1152/ajpheart.00187.2018).
-- Kim-Hellmuth, S., Bechheim, M., Pütz, B., Mohammadi, P., Néd´lec, Y, **Giangreco, N.**, et al. Genetic regulatory effects modified by immune activation contribute to autoimmune disease associations. Nat Commun 8, 266 (2017). [https://doi.org/10.1038/s41467-017-00366-1](https://doi.org/10.1038/s41467-017-00366-1).
-
-
-[**Peer-reviewed publications on pubmed**](https://pubmed.ncbi.nlm.nih.gov/?term=Giangreco+N&cauthor_id=28814792)
-
-[**Google scholar profile**](https://scholar.google.com/citations?user=Q3m0Jl8AAAAJ&hl=en&oi=ao)
+13. Kim-Hellmuth, S., Bechheim, M., Pütz, B., Mohammadi, P., Néd´lec, Y, **Giangreco, N.**, et al. Genetic regulatory effects modified by immune activation contribute to autoimmune disease associations. Nat Commun 8, 266 (2017). [https://doi.org/10.1038/s41467-017-00366-1](https://doi.org/10.1038/s41467-017-00366-1).
 
 FELLOWSHIPS AND AWARDS
 ----------
@@ -159,7 +155,6 @@ POSTERS AND SOFTWARE
 
 Leadership and Management Experience
 ----------
-
 
 - University of Rochester Alumni Buffalo Leadership Council 2023-Present
     + Ideate and organize local events
@@ -287,6 +282,7 @@ CONFERENCES AND HACKATHONS
 
 TALKS AND PANELS
 --------
+
 - Panelist for S14: "Utility of the All of Us Researcher Workbench in Educational and Research Settings" [American Medical Informatics Association Informatics Summit](https://amia.org/education-events/amia-2022-informatics-summit) March 2022 Chicago.
 - DBMI Justice Informatics Joint Forum. Internal, collaborative meeting discussing the impact of Big Data and mathematical models on inequity and how that applies to research. 
 - "Pediatrics data in *All of Us*". All of Us Research Workbench Onramp Virtual Event June 2021.
