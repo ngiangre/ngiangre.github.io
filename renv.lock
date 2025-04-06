@@ -272,23 +272,6 @@
       ],
       "Hash": "543776ae6848fde2f48ff3816d0628bc"
     },
-    "biosketchr": {
-      "Package": "biosketchr",
-      "Version": "0.1.5",
-      "Source": "GitHub",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteRepo": "biosketchr",
-      "RemoteUsername": "tysonstanley",
-      "RemoteRef": "HEAD",
-      "RemoteSha": "dd5896fe0d8d715c15b05c2c663fd1f1758d2d55",
-      "Requirements": [
-        "knitr",
-        "rmarkdown",
-        "yaml"
-      ],
-      "Hash": "a1dbbca42d70021043899a9fa409dc79"
-    },
     "bit": {
       "Package": "bit",
       "Version": "4.0.5",

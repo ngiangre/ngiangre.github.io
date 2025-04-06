@@ -1,0 +1,112 @@
+---
+title: "Part 2: Learning a new way to make visuals with Observable"
+subtitle: After making tables of data using observable, now we can try making plots of that data!
+image: "images/observable.jpeg"
+date: "04/06/2025"
+draft: false
+page-layout: article
+toc: true
+toc_float: true
+code-fold: true
+comments:
+  utterances:
+    repo: ngiangre/ngiangre.github.io
+fig-width: 8
+fig-height: 8
+---
+
+::: column-page
+
+# Introduction 
+
+In this part 2 post, I will take the table. data from part 1 and create a scatter plot of the drug-adverse event enrichment. 
+
+**1. Data:** I will use pediatric drug safety data from the {kidsides} R package.
+
+**2. Plots:** I will finally create a scatter plot. I will try to make the points interactive (hover over effect) and modify some aesthetics such as color, tooltips, and labels.
+
+## Data
+
+In addition to getting data from the R package, to make the data available to Observable I have to use [`ojs_define`](https://quarto.org/docs/interactive/ojs/data-sources.html#python-and-r) in order to "lift over" the data from the R environment to the Observable environment in 'ojs' code chunks. `data` then becomes an array of objects.
+
+```{r, warning=FALSE,message=FALSE}
+library(kidsides)
+library(dplyr)
+library(DBI)
+con <- kidsides::connect_sqlite_db()
+data <- 
+    tbl(con,"ade_nichd_enrichment") |> 
+    filter(pvalue!=0 & odds_ratio>0 & odds_ratio<100) |> 
+    dplyr::mutate(
+        atc_concept_name = ifelse(is.na(atc_concept_name),"",atc_concept_name)
+    ) |> 
+    collect()
+
+ojs_define(data = data)
+
+```
+
+## Observable Plot
+
+This [vignette](https://observablehq.com/plot/marks/dot) from Observable goes through some cool tricks with the cars dataset. 
+
+Below I have a scatterplot of enrichments withinteractive hover tips. 
+
+```{ojs}
+Plot.plot({
+  grid: true,
+  x: {
+    type: 'pow',
+    exponent: 1/4,
+    ticks: [0,0.1,0.5,1,2,5,10,20,30,40,50,60],
+    tickFormat: d => d.toString(),
+    grid: true,
+    label: "Odds Ratio"
+  },
+  y: {
+    type: 'pow',
+    exponent: 1/2,
+    ticks: [1,5,10,20,30,40,50,60,70,80],
+    tickFormat: d => d.toString(),
+    label: "-log10(P-value)"
+  },
+  marks: [
+    Plot.dot(
+      transpose(data).map(d => ({ 
+        x: d.odds_ratio, 
+        y: -Math.log10(d.pvalue),
+        category: d.category,
+        meddra: d.meddra_concept_name,
+        atc: d.atc_concept_name
+      })),
+      { 
+        x: "x", 
+        y: "y", 
+        fill: "category", 
+        tip: true,
+        channels: {
+          "MedDRA:": "meddra",
+          "ATC:": "atc"
+        }
+      }
+    ),
+    Plot.ruleX([1], {stroke: "red"})
+  ]
+})
+```
+
+# Challenges
+
+This is a lot of code compared to what can be done with {ggplot2} in R. It's also more difficult to do things like wrap text or change axis scales with ojs.
+
+This plot is also pretty slow to render, but this is a lot of overlappoing data so this makes sense.
+
+# Conclusion
+
+This post showed how to customize a plot in ojs.I think I'll stick with using {ggplot2} and {ggiraph} for interactivity. 
+
+```{r}
+DBI::dbDisconnect(con)
+```
+
+:::
