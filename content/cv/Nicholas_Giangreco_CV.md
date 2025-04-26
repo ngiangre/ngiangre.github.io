@@ -16,11 +16,11 @@ title: Nick Giangreco
 
 ### *Independent and collaborative precision medicine scientist and engineer* 
 
-[Github: ngiangre](http://github.com/ngiangre) | [Linkedin: http://www.linkedin.com/in/nickgiangreco/](http://www.linkedin.com/in/nickgiangreco/) | [ORCID: 0000-0001-8138-4947](https://orcid.org/0000-0001-8138-4947) | [Personal Website: nickg.bio](http://nickg.bio) | [Email: nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** February 18th 2025
+[Github: ngiangre](http://github.com/ngiangre) | [Linkedin: http://www.linkedin.com/in/nickgiangreco/](http://www.linkedin.com/in/nickgiangreco/) | [ORCID: 0000-0001-8138-4947](https://orcid.org/0000-0001-8138-4947) | [Personal Website: nickg.bio](http://nickg.bio) | [Email: nick.giangreco@gmail.com](nick.giangreco@gmail.com) | **Date of preparation:** April 26th 2025
 
 | |
 | :------ |
-| **Topic expertise:** Pediatric drug safety, Bioinformatics, Biomarker discovery, Cancer biology, Genetics, Interpretable machine learning and artificial intelligence |
+| **Topic expertise:** Pediatric drug safety, Bioinformatics, Biomarker discovery, Systems Biology, Statistics, Interpretable machine learning and artificial intelligence |
 | **Technical expertise:** Biomedical data science, (R/Python) software package development, R programming, {plumber} APIs, machine learning, statistical simulation, data cleaning, data pipelines, Shiny (for R and Python) application development, object oriented programming, RMarkdown/JuPyteR/Quarto, Microsoft Power App and API user |
 | **Programming Languages:** R, Python, SQL, HTML, CSS, Observable Javascript, Java, Bash | 
 | **Patents:** [Systems and methods for predicting graft dysfunction with exosome proteins](https://patents.google.com/patent/WO2022060842A1/en?oq=2022060842)|
@@ -40,7 +40,7 @@ Dec 2021 - Present
      Precision Medicine - scientist, data architect, software developer, and applications engineer
      
      - Analyze clinical and biomarker data in rare disease and drug trials
-     - Manage execution of data architecture and software development projects in precision medicine innovation development portfolio.
+     - Perform and manage data architecture and software development projects in precision medicine innovation development portfolio.
      - Develop and maintain 6+ software packages and data pipelines for team of clinical biomarker data analysts.
      - Deliver automated project management and portfolio reports to senior leadership.
      - Mentor interns and data scientists to develop reproducible data analyses and web apps.
