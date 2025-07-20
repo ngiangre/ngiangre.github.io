@@ -1,0 +1,333 @@
+---
+title: "Customizing interactive visualizations"
+subtitle: Using thhe {ggiraph} package to customize tooltips to explain modeling results!
+image: "images/ggiraph.png"
+date: "07/20/2025"
+draft: false
+page-layout: article
+toc: true
+toc_float: true
+code-fold: true
+comments:
+  utterances:
+    repo: ngiangre/ngiangre.github.io
+fig-width: 8
+fig-height: 8
+---
+
+::: column-page
+
+# Introduction 
+
+For work, I often explain scientific modeling results to collaborators by leveraging interactive tooltips from the {ggiraph} package. One thing I haven't done yet is incorporate an actual table in a tooltip. Especially if showing an odds ratio derived from a 2x2 table, showing the actual observed counts can be extremely helpful for explaining whether the result is scientifically meaningful!
+
+## Data
+
+As in my last post, I will be using pediatric drug safety data (adverse drug events or ADEs). Specially, odds ratios on observed drug safety signal between drugs, adverse events, and classes of each. These enrichments are within each child development stage in which the counts were observed.
+
+```{r, warning=FALSE,message=FALSE}
+library(kidsides)
+library(dplyr)
+library(DBI)
+con <- kidsides::connect_sqlite_db()
+nichd_lvls <- 
+    tbl(con,"ade_nichd") |> 
+    head(7) |> 
+    dplyr::collect() |> 
+    dplyr::pull(nichd) |> 
+    stringr::str_replace("_"," ") |> 
+    stringr::str_to_title()
+data <- 
+    tbl(con,"ade_nichd_enrichment") |> 
+    filter(pvalue!=0 & odds_ratio>0 & odds_ratio<100) |> 
+    dplyr::mutate(
+        dplyr::across(
+            dplyr::all_of(c("odds_ratio")),~round(.x,2)
+        ),
+        dplyr::across(
+            dplyr::all_of(c("a","b","c","d")),as.integer
+        ),
+        atc_concept_name = ifelse(is.na(atc_concept_name),"",atc_concept_name)
+    ) |> 
+    collect() |> 
+    dplyr::mutate(
+        nichd = nichd |> 
+            stringr::str_replace("_"," ") |> 
+            stringr::str_to_title() |> 
+            factor(levels = nichd_lvls)
+    )
+
+dim(data)
+
+data |> 
+    dplyr::relocate(a,b,c,d,nichd,odds_ratio,
+                    atc_concept_name,
+                    meddra_concept_name) |> 
+    head() |> 
+    DT::datatable()
+
+```
+
+# Goal
+
+The ultimate goal of this post is to create an interactive volcano plot of odds ratio vs. -log10(p-value) with a tooltip showing a 2x2 table of the observed counts. To get there, I need to:
+
+1. Create a (vectorized) function to create a 2x2 table
+
+2. Write code to create a tooltip showing the 2x2 table with the odds ratio and -log10(p-value)
+
+3. Create a function that outputs the interactive volcano plot of odds ratio vs. -log10(p-value) with a tooltip showing a 2x2 table of the observed counts. I may also color points by the development stage category of enrichment i.e. if the enrichment was between a. certain class of drugs and a certai class of adverse events.
+
+# A (vectorized) function to create a 2x2 table
+
+This function was created with help from claude.ai
+
+```{r}
+#' Create a 2x2 contingency table with odds calculation (vectorized for mutate)
+#' 
+#' @param a numeric vector - top-left cell values
+#' @param b numeric vector - top-right cell values  
+#' @param c numeric vector - bottom-left cell values
+#' @param d numeric vector - bottom-right cell values
+#' @param row_names character vector of length 2 - row header names (default: c("Row 1", "Row 2"))
+#' @param col_names character vector of length 2 - column header names (default: c("Col 1", "Col 2"))
+#' @param table_title character - title for the table (default: "2x2 Contingency Table with Odds")
+#' 
+#' @return gt table object with vectorized input data and calculated odds
+#' 
+#' @examples
+#' df = data.frame(
+#'   study = c("Study 1", "Study 2", "Study 3"),
+#'   a = c(10, 8, 12),
+#'   b = c(20, 12, 18),
+#'   c = c(5, 6, 4),
+#'   d = c(15, 10, 16)
+#' )
+#' 
+#' df |> 
+#'   dplyr::mutate(
+#'     odds_table = purrr::pmap(
+#'         list(a,b,c,d),function(a,b,c,d){
+#'         create_odds_table(
+#'             a,b,c,d,
+#'             row_names = c("Exposed", "Not Exposed"),
+#'             col_names = c("Case", "Control"))
+#'         }
+#'     )
+#'   )
+create_odds_table <- function(a, b, c, d, 
+                              row_names = c("Row 1", "Row 2"),
+                              col_names = c("Col 1", "Col 2"),
+                              table_title = "2x2 Contingency Table with Odds") {
+    stopifnot(length(a)==length(b) &
+                  length(b)==length(c) &
+                  length(c)==length(d) &
+                  length(d)==1)
+    
+    # Calculate odds for all values
+    odds <- (a * d) / (b * c)
+    odds_rounded <- as.character(round(odds, 2))
+    
+    # Create a single table with all the vectorized data
+    table_data <- data.frame(
+        Variable = c(row_names[1], row_names[2], "Odds Ratio"),
+        Col1 = c(a, c, paste0("(", a, " × ", d, ") / (", b, " × ", c, ")")),
+        Col2 = c(b, d, odds_rounded),
+        stringsAsFactors = FALSE
+    )
+
+    # Set column names
+    names(table_data)[2:3] <- col_names
+    
+    # Create gt table
+    gt_table <- table_data |>
+        gt::gt() |>
+        gt::tab_header(title = table_title) |>
+        gt::tab_style(
+            style = gt::cell_text(weight = "bold"),
+            locations = gt::cells_column_labels()
+        ) |>
+        gt::tab_style(
+            style = gt::cell_text(weight = "bold"),
+            locations = gt::cells_body(columns = 1)
+        ) |>
+        gt::cols_align(
+            align = "center",
+            columns = 2:3
+        )
+    
+    # Add styling for odds ratio rows
+    gt_table <- gt_table |>
+        gt::tab_style(
+            style = list(
+                gt::cell_fill(color = "lightgray"),
+                gt::cell_text(weight = "bold")
+            ),
+            locations = gt::cells_body(rows = 3)
+        ) |>
+        gt::tab_footnote(
+            footnote = paste0("Odds Ratio = ", odds_rounded, 
+                                    " (calculated as (a×d)/(b×c))"),
+            locations = gt::cells_body(columns = 2, rows = 3)
+        )
+    
+    return(gt_table)
+}
+```
+
+From the example:
+
+```{r}
+df <-
+    data.frame(
+      study = c("Study 1", "Study 2", "Study 3"),
+      a = c(10, 8, 12),
+      b = c(20, 12, 18),
+      c = c(5, 6, 4),
+      d = c(15, 10, 16)
+)
+df
+```
+
+```{r}
+
+df_tbl <- df |> 
+  dplyr::mutate(
+    odds_table = purrr::pmap(
+        list(a,b,c,d),function(a,b,c,d){
+        create_odds_table(
+            a,b,c,d,
+            row_names = c("Exposed", "Not Exposed"),
+            col_names = c("Case", "Control"),
+            table_title = NULL
+        )
+    })
+  )
+```
+
+From the first row:
+
+```{r}
+df_tbl$odds_table[[1]]
+```
+
+# Create a tooltip showing the 2x2 table with the odds ratio and -log10(p-value)
+
+First, lets first make a basic interactive volcano plot. I'll just sample 50 rows and show making a toopltip is extremely easy.
+
+```{r}
+library(ggplot2)
+library(ggiraph)
+p <- 
+    data |> 
+    dplyr::mutate(
+        tooltip = "I'm a tooltip"
+    ) |> 
+    dplyr::slice_sample(n = 50) |> 
+    ggplot(aes(odds_ratio,-log10(pvalue),tooltip = tooltip)) +
+    ggiraph::geom_point_interactive(size = 5)
+girafe(ggobj = p,width = 5, height = 5)
+```
+
+What I really want is to include te 2x2 table. We need to add it into the tooltip as an HTML table.
+
+```{r}
+p <- 
+    data |> 
+    dplyr::slice_sample(n = 50) |> 
+    dplyr::mutate(
+        odds_table = purrr::pmap(
+            list(a,b,c,d),function(a,b,c,d){
+            create_odds_table(
+                a,b,c,d,
+                row_names = c("Exposed", "Not Exposed"),
+                col_names = c("Case", "Control"),
+                table_title = NULL
+            )
+        })
+    ) |> 
+    dplyr::rowwise() |> 
+    dplyr::mutate(
+        tooltip = stringr::str_glue("
+                                    {gt::as_raw_html(odds_table)}
+                                    ")
+    ) |> 
+    dplyr::ungroup() |> 
+    ggplot(aes(odds_ratio,-log10(pvalue),tooltip = tooltip)) +
+    ggiraph::geom_point_interactive(size = 5)
+girafe(ggobj = p,width = 5, height = 5)
+```
+
+Very cool. I need to ensure the raw html is added to the tooltip column rowwise because gt::as_raw_html doesn't take a list as created in the dplyr operations.
+
+# A function for an interactive volcano plot with a 2x2 table in the tooltip
+
+This function will output an interactive volcano plot with the 2x2 table in the tooltip. I'll also include the drug and adverse event (class) from the enrichment with the pvalue. Addingthe. tooltip is slow since it needs to be added rowwise - so for this post I'll just sample n rows. I'll add some nice CSS too.
+
+```{r}
+generate_ivolcanoplot <- function(n = 50){
+    p <- data |> 
+        dplyr::slice_sample(n = n) |> 
+        dplyr::rowwise() |> 
+        dplyr::mutate(
+            odds_table = purrr::pmap(
+                list(a,b,c,d),function(a,b,c,d){
+                create_odds_table(
+                    a,b,c,d,
+                    row_names = c("Significant ADE Reports", "Non-Significant Reports"),
+                    col_names = c("ADE", "Not ADE"),
+                    table_title = stringr::str_glue(
+                        "
+                        {ifelse(atc_concept_name=='','',paste0(atc_concept_name,' and '))}
+                        {meddra_concept_name} in {nichd}
+                        "
+                    )
+                )
+            }),
+            tooltip = stringr::str_glue(
+            "
+            {gt::as_raw_html(odds_table)}
+            ")
+        ) |> 
+        dplyr::ungroup() |> 
+        ggplot(aes(odds_ratio,-log10(pvalue),
+                   fill = nichd, 
+                   tooltip = tooltip)) +
+        ggiraph::geom_point_interactive(size = 5,pch = 21) +
+        scale_fill_brewer() +
+        guides(fill = guide_legend(title="Development Stage")) +
+        theme_minimal() +
+        labs(x = "Odds Ratio", y = "-log10(P-value)",
+             title = "Enrichment of Drug Safety Signals")
+    p
+}
+```
+
+The function sampling 50 rows:
+
+```{r}
+p <- generate_ivolcanoplot(1000)
+girafe(ggobj = p,width = 5, height = 5,
+       options = list(
+        opts_hover(css = "fill:#6f1d1b;"),
+        opts_hover_inv(css = "opacity:0.3;"),
+        opts_selection(type = "multiple", css = "fill:#FF851B;stroke:black;"),
+        opts_toolbar(saveaspng = FALSE, position = "topright", delay_mouseout = 10000),
+        opts_tooltip(
+          css = "background-color:black;color:white;padding:30px;border-radius:10px;box-shadow:10px 10px 10px rgba(0,0,0,0.3);font-family:Arial;font-size:20px;",
+          opacity = 0.9
+        ),
+        opts_sizing(rescale = TRUE),
+        opts_zoom(max = 2)
+      ))
+```
+
+# Conclusion
+
+I hope you learned from this post you can put tables in tooltips. Tis is something I'll need for work but wanted to first show an example and make the code available for others. Cheers!
+
+```{r}
+DBI::dbDisconnect(con)
+```
+
+:::
