@@ -13,3 +13,5 @@ _publish.yml
 .env
 
 **/*.quarto_ipynb
+
+.socrata_app_token
