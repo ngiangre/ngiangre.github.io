@@ -18,7 +18,7 @@ title: Nick Giangreco
 
 ### *Independent and collaborative precision medicine scientist and engineer*
 
-[Github: ngiangre](http://github.com/ngiangre) \| [Linkedin: http://www.linkedin.com/in/nickgiangreco/](http://www.linkedin.com/in/nickgiangreco/) \| [ORCID: 0000-0001-8138-4947](https://orcid.org/0000-0001-8138-4947) \| [Personal Website: nickg.bio](http://nickg.bio) \| [Email: nick.giangreco\@gmail.com](nick.giangreco@gmail.com) \| **Date of preparation:** Octoberr 19th 2025
+[Github: ngiangre](http://github.com/ngiangre) \| [Linkedin: http://www.linkedin.com/in/nickgiangreco/](http://www.linkedin.com/in/nickgiangreco/) \| [ORCID: 0000-0001-8138-4947](https://orcid.org/0000-0001-8138-4947) \| [Personal Website: nickg.bio](http://nickg.bio) \| [Email: nick.giangreco\@gmail.com](nick.giangreco@gmail.com) \| **Date of preparation:** December 14th 2025
 
 |  |
 |:-----------------------------------------------------------------------|
@@ -45,6 +45,7 @@ Dec 2021 - Present
     -   Perform and manage data architecture and software development projects in precision medicine innovation development portfolio.
     -   Develop and maintain software packages and data pipelines for team of clinical biomarker data analysts.
     -   Deliver automated project management and portfolio reports to senior leadership.
+    -   Rapidly prototype apps and tools using Claude Code for stakeholder buy in
     -   Mentor interns and data scientists to develop reproducible data analyses and web apps.
 
 Aug 2016 - Oct 2021
@@ -199,7 +200,7 @@ A complete listing may be found in [**pubmed**](https://pubmed.ncbi.nlm.nih.gov/
 
 ## MENTORING, TUTORING, and WRITING
 
--   Mentor in the [Say Yes not-for-profit](https://sayyesbuffalo.org) in Buffalo NY
+-   Mentor in the [Say Yes not-for-profit](https://sayyesbuffalo.org) in Buffalo NY (2021-2023)
     -   Mission is to remove barriers to educational and economic attainment for our young people.
 -   Mentor in technical and entrepreneurship development for the [Innovate Children's Health Challenge](https://www.innovatechildrenshealth.com/)
 -   Advisor, mentor and tutor for project management, R and python programming, and statistics and machine learning to high school/college/graduate students and professionals.
@@ -221,11 +222,9 @@ A complete listing may be found in [**pubmed**](https://pubmed.ncbi.nlm.nih.gov/
 
 ## CONFERENCES AND HACKATHONS
 
--   [posit::conf( c(2023,2024) ) with workshops](https://www.rstudio.com/conference/)
+-   [posit::conf( 2022:2025 ) with workshops](https://www.rstudio.com/conference/)
 
 -   [Bio-IT World 2023](https://www.bio-itworldexpo.com/)
-
--   [rstudio::conf(2022)](https://www.rstudio.com/conference/)
 
 -   [American Medical Informatics Association Translational Summit 2022 Chicago USA](https://amia.org/education-events/amia-2022-informatics-summit)
 
