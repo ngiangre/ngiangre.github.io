@@ -18,14 +18,13 @@ title: Nick Giangreco
 
 ### *Independent and collaborative precision medicine scientist and engineer*
 
-[Github: ngiangre](http://github.com/ngiangre) \| [Linkedin: http://www.linkedin.com/in/nickgiangreco/](http://www.linkedin.com/in/nickgiangreco/) \| [ORCID: 0000-0001-8138-4947](https://orcid.org/0000-0001-8138-4947) \| [Personal Website: nickg.bio](http://nickg.bio) \| [Email: nick.giangreco\@gmail.com](nick.giangreco@gmail.com) \| **Date of preparation:** December 14th 2025
+[Github: ngiangre](http://github.com/ngiangre) \| [Linkedin: http://www.linkedin.com/in/nickgiangreco/](http://www.linkedin.com/in/nickgiangreco/) \| [ORCID: 0000-0001-8138-4947](https://orcid.org/0000-0001-8138-4947) \| [Personal Website: nickg.bio](http://nickg.bio) \| [Email: nick.giangreco\@gmail.com](nick.giangreco@gmail.com) \| **Date of preparation:** December 29th 2025
 
 |  |
 |:-----------------------------------------------------------------------|
-| **Topic expertise:** Pediatric drug safety, Bioinformatics, Biomarker discovery, Systems Biology, Statistics, Cancer Biology, Reproducible Research |
-| **Technical expertise:** Biomedical data science, (R/Python) software development, {plumber} APIs, machine learning, statistical simulation, data cleaning, data pipelines, Shiny (for R and Python) application development, object oriented programming, RMarkdown/JuPyteR/Quarto, Claude Code and LLM API user, Microsoft Power App and API user |
+| **Topic expertise:** Pediatric drug safety, Genetics, Biomarker discovery, Systems Biology, Statistics, Cancer Biology, Reproducible Research |
+| **Technical expertise:** Biomedical data science, (R/Python) software development, {plumber} APIs, machine learning, statistical simulation, data cleaning, data pipelines, Shiny (for R and Python) application development, object oriented programming, RMarkdown/JuPyteR/Quarto, Claude Code and LLM API usage, Microsoft Power App and API user |
 | **Programming Languages:** R, Python, SQL, HTML, CSS, Observable Javascript, Java, Bash |
-| **Patents:** [Systems and methods for predicting graft dysfunction with exosome proteins](https://patents.google.com/patent/WO2022060842A1/en?oq=2022060842) |
 
 ## WORK EXPERIENCE
 
@@ -37,16 +36,16 @@ Feb 2023 - Present
 
 Dec 2021 - Present
 
-:   **Senior Scientist, Quantitative Translational Science (Remote)** [(Regeneron Pharmaceuticals Inc.)](https://www.regeneron.com); Tarrytown, NY
+:   **Senior Scientist, Quantitative Biomarker Science (Remote)** [(Regeneron Pharmaceuticals Inc.)](https://www.regeneron.com); Tarrytown, NY
 
     Precision Medicine - scientist, data architect, software developer, and applications engineer
 
-    -   Analyze clinical and biomarker data in rare disease and drug trials
-    -   Perform and manage data architecture and software development projects in precision medicine innovation development portfolio.
-    -   Develop and maintain software packages and data pipelines for team of clinical biomarker data analysts.
-    -   Deliver automated project management and portfolio reports to senior leadership.
-    -   Rapidly prototype apps and tools using Claude Code for stakeholder buy in
-    -   Mentor interns and data scientists to develop reproducible data analyses and web apps.
+    -   Deliver decision-ready analyses supporting rare disease programs and clinical drug development.
+    -   Lead precision medicine data architecture and software initiatives across an innovation portfolio, translating scientific needs into scalable systems.
+    -   Build and maintain production-grade software packages and data pipelines enabling clinical biomarker analysis at team scale.
+    -   Automate portfolio and project reporting to provide senior leadership with real-time visibility into progress, risk, and impact.
+    -   Rapidly prototype analytical applications and decision-support tools to accelerate stakeholder alignment and prioritization decisions.
+    -   Mentor interns and data scientists in reproducible analytics and web-based tools, raising technical rigor and accelerating delivery across the team.
 
 Aug 2016 - Oct 2021
 
@@ -57,6 +56,7 @@ Aug 2016 - Oct 2021
     -   [PDSportal Shiny for R application](https://pdsportal.shinyapps.io/pdsportal/)
     -   [kidsides R package and database](https://github.com/ngiangre/kidsides)
     -   [Columbia University media release](https://www.dbmi.columbia.edu/pediatric-drug-side-effects-study-tatonetti/)
+    -   Ceased Patent: [Systems and methods for predicting graft dysfunction with exosome proteins](https://patents.google.com/patent/WO2022060842A1/en?oq=2022060842)
 
 Feb 2021 - Aug 2021
 
