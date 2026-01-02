@@ -2,7 +2,7 @@
 title: What Baby Names are In and Out of Fashion?
 subtitle: Using open data to summarize baby names over time
 image: "images/baby.png"
-date: today
+date: "09/02/2023"
 page-layout: article
 toc: true
 draft: false
@@ -11,7 +11,7 @@ comments:
     repo: ngiangre/ngiangre.github.io
 ---
 
-[October 18t 2025 update - replacing arcived {RSocrata} with {socratadata}]
+[October 18th 2025 update - replacing arcived {RSocrata} with {socratadata}]
 
 # Open Data of Baby Names
 
