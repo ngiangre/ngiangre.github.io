@@ -1,0 +1,133 @@
+---
+title: "Introduction to visualizing ontologies"
+subtitle: Visualizing relationships between biomedical concepts - an introductory post
+image: "images/obi.png"
+date: "01/01/2026"
+draft: false
+page-layout: article
+toc: true
+toc_float: true
+code-fold: true
+comments:
+  utterances:
+    repo: ngiangre/ngiangre.github.io
+fig-width: 8
+fig-height: 8
+---
+
+::: column-page
+# Introduction
+
+Ontologies are extremely useful in illuminating the interconnectedness in our world. More fundamentally, they help define what things are. This is important especially in science. Since I have been utilizing ontologies more for work, I wanted to see if work with them programmatically since it may be useful in he future. Online resources like [Ontobee](https://ontobee.org) fulfill most of my needs already.
+
+This post goes further and attempts to programmatically represent and visualize ontologies.
+
+# Data
+
+I use the ontology data found at [Ontobee](https://ontobee.org), specifically the OWL files. The [W3C Ontology Web Language (OWL)](https://www.w3.org/OWL/) documents represent knowledge from ontologies to be exploited by computer programs.
+
+I investigate the [Ontology of Biomedical Investigations](https://ontobee.org/ontology/OBI) in this post. I use the [{rdflib}](https://docs.ropensci.org/rdflib/) package to read the file. The Resource Description Framework (RDF) is the syntax or the data model for which OWL documents are made machine readable.
+
+```{r}
+obi_url <- "http://purl.obolibrary.org/obo/obi.owl"
+
+obi <- rdflib::rdf_parse(obi_url)
+
+class(obi)
+names(obi)
+obi
+```
+
+# Goal
+
+My goal in this post is to extract and visualize a small portion on the ontology. I will look at all the knowledge related to the term 'protein'.
+
+# Analysis
+
+## Define Triples
+
+In RDF, a triple or the combination of three things together (three-part statement) are fundamental units of the data, representing [facts](https://docs.ropensci.org/rdflib/articles/rdf_intro.html#its-all-about-the-triples). The [query language SPARQL](https://www.w3.org/TR/sparql12-query/) is used to interact with this data.
+
+```{r, echo=FALSE}
+count_query <- "
+  SELECT (COUNT(?s) AS ?n) WHERE {
+    ?s ?p ?o .
+  }"
+total_triples <- rdflib::rdf_query(obi, count_query)
+print(total_triples)
+```
+
+There are `r scales::comma(total_triples[['n']])` triples or facts in this RDF file. Though that number is printed from `obi`, we can see how counting the subjects (s), predicates (p), and objects (o) gives the same statistic.
+
+## Make Graph Data
+
+To be honest, I've never used SPARQL queries or RDF data before so I relied in ChatGPT here to make a directed graph. Basically in order to visualize the graphical structure of the data, you need to extract nodes and edges. The term 'protein' was used to filter the queried data as well.
+
+```{r}
+# ---- Create Node and Edge Tables ----
+# ---- Query: Find all classes whose labels contain 'protein' ----
+terms_query <- "
+  PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+  PREFIX owl: <http://www.w3.org/2002/07/owl#>
+  SELECT ?term ?label WHERE {
+    ?term rdfs:label ?label .
+    FILTER(CONTAINS(LCASE(STR(?label)), 'protein'))
+  }"
+terms <- rdflib::rdf_query(obi, terms_query)
+
+# ---- Query: Get subclass relationships among those protein terms ----
+relations_query <- "
+  PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+  PREFIX owl: <http://www.w3.org/2002/07/owl#>
+  SELECT ?child ?parent WHERE {
+    ?child rdfs:subClassOf ?parent .
+    ?child rdfs:label ?label .
+    FILTER(CONTAINS(LCASE(STR(?label)), 'protein'))
+  }"
+relations <- rdflib::rdf_query(obi, relations_query)
+
+# ---- Prepare nodes ----
+nodes <-
+  terms |>
+  dplyr::distinct(term, label) |>
+  dplyr::mutate(id = term,
+                label = stringr::str_replace(label, "@en", ""),  # remove language tag if present
+                title = id) |> 
+  dplyr::reframe(
+    term = dplyr::first(term),
+    label = dplyr::first(label),
+    title = dplyr::first(title),
+    .by = id
+  )
+
+# ---- Prepare edges ----
+edges <-
+  relations |>
+  dplyr::rename(from = child, to = parent) |>
+  dplyr::filter(from %in% nodes$id & to %in% nodes$id)
+
+```
+
+## Make Graph
+
+he {visNetwork} package represents a graph beautifully! Select a term. in the dropdown to highlight a specific term from the filtered data in the graph.
+
+```{r}
+#| fig-width: 30
+#| fig-height: 30
+
+# ---- Visualize the Network ----
+visNetwork::visNetwork(nodes, edges, height = "1600px", width = "100%") |>
+  visNetwork::visEdges(arrows = "to", smooth = FALSE) |>
+  visNetwork::visOptions(highlightNearest = TRUE, nodesIdSelection = TRUE) |>
+  visNetwork::visPhysics(
+    solver = "forceAtlas2Based",
+    stabilization = TRUE
+  ) |>
+  visNetwork::visLayout(randomSeed = 42)
+```
+
+# Conclusion
+
+While I'm not proud of how much I relied on ChatGPT, the results show me how powerful this can be for extracting and. visualizing knowledge. I can identify terminology and view relationships pretty easily. There's alot that can be enhanced like the query or labels on the graph, but this was a great first stab at the goal.
+:::

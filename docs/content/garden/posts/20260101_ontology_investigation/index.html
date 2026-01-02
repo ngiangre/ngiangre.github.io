@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.24">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2026-01-01">
+
+<title>Introduction to visualizing ontologies – Nicholas Giangreco</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../">
+<script src="../../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../site_libs/bootstrap/bootstrap-1ac49dc45d461ba7e3f4755605d38e4c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<script src="../../../../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<link href="../../../../site_libs/vis-9.1.0/vis-network.min.css" rel="stylesheet">
+<script src="../../../../site_libs/vis-9.1.0/vis-network.min.js"></script>
+<script src="../../../../site_libs/visNetwork-binding-2.1.4/visNetwork.js"></script>
+
+
+<link rel="stylesheet" href="../../../../styles.css">
+<meta property="og:title" content="Introduction to visualizing ontologies – Nicholas Giangreco">
+<meta property="og:description" content="Visualizing relationships between biomedical concepts - an introductory post">
+<meta property="og:image" content="https://nickg.bio/content/garden/posts/20260101_ontology_investigation/images/obi.png">
+<meta property="og:site_name" content="Nicholas Giangreco">
+<meta property="og:locale" content="en_US">
+<meta property="og:image:height" content="478">
+<meta property="og:image:width" content="1172">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../../../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
+    <a class="navbar-brand" href="../../../../index.html">
+    <span class="navbar-title">Nicholas Giangreco</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/ngiangre"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/nickgiangreco/"> <i class="bi bi-linkedin" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/nickgiangreco"> <i class="bi bi-twitter" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.facebook.com/ngiangreco/"> <i class="bi bi-facebook" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.instagram.com/ngiangreco/"> <i class="bi bi-instagram" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="mailto:nick.giangreco@gmail.com"> <i class="bi bi-envelope" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../content/about/index.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../content/garden/index.html"> 
+<span class="menu-text">Digital Garden</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../content/cv/Nicholas_Giangreco_CV.pdf"> 
+<span class="menu-text">CV</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Introduction to visualizing ontologies</h1>
+<p class="subtitle lead">Visualizing relationships between biomedical concepts - an introductory post</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 1, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="column-page">
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>Ontologies are extremely useful in illuminating the interconnectedness in our world. More fundamentally, they help define what things are. This is important especially in science. Since I have been utilizing ontologies more for work, I wanted to see if work with them programmatically since it may be useful in he future. Online resources like <a href="https://ontobee.org">Ontobee</a> fulfill most of my needs already.</p>
+<p>This post goes further and attempts to programmatically represent and visualize ontologies.</p>
+</section>
+<section id="data" class="level1">
+<h1>Data</h1>
+<p>I use the ontology data found at <a href="https://ontobee.org">Ontobee</a>, specifically the OWL files. The <a href="https://www.w3.org/OWL/">W3C Ontology Web Language (OWL)</a> documents represent knowledge from ontologies to be exploited by computer programs.</p>
+<p>I investigate the <a href="https://ontobee.org/ontology/OBI">Ontology of Biomedical Investigations</a> in this post. I use the <a href="https://docs.ropensci.org/rdflib/">{rdflib}</a> package to read the file. The Resource Description Framework (RDF) is the syntax or the data model for which OWL documents are made machine readable.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>obi_url <span class="ot">&lt;-</span> <span class="st">"http://purl.obolibrary.org/obo/obi.owl"</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>obi <span class="ot">&lt;-</span> rdflib<span class="sc">::</span><span class="fu">rdf_parse</span>(obi_url)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(obi)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "rdf"</code></pre>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(obi)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "world"   "model"   "storage"</code></pre>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>obi</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Total of 112206 triples, stored in hashes
+-------------------------------
+ 
+ (preview supressed for performance)</code></pre>
+</div>
+</div>
+</section>
+<section id="goal" class="level1">
+<h1>Goal</h1>
+<p>My goal in this post is to extract and visualize a small portion on the ontology. I will look at all the knowledge related to the term ‘protein’.</p>
+</section>
+<section id="analysis" class="level1">
+<h1>Analysis</h1>
+<section id="define-triples" class="level2">
+<h2 class="anchored" data-anchor-id="define-triples">Define Triples</h2>
+<p>In RDF, a triple or the combination of three things together (three-part statement) are fundamental units of the data, representing <a href="https://docs.ropensci.org/rdflib/articles/rdf_intro.html#its-all-about-the-triples">facts</a>. The <a href="https://www.w3.org/TR/sparql12-query/">query language SPARQL</a> is used to interact with this data.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+       n
+   &lt;dbl&gt;
+1 112206</code></pre>
+</div>
+</div>
+<p>There are 112,206 triples or facts in this RDF file. Though that number is printed from <code>obi</code>, we can see how counting the subjects (s), predicates (p), and objects (o) gives the same statistic.</p>
+</section>
+<section id="make-graph-data" class="level2">
+<h2 class="anchored" data-anchor-id="make-graph-data">Make Graph Data</h2>
+<p>To be honest, I’ve never used SPARQL queries or RDF data before so I relied in ChatGPT here to make a directed graph. Basically in order to visualize the graphical structure of the data, you need to extract nodes and edges. The term ‘protein’ was used to filter the queried data as well.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ---- Create Node and Edge Tables ----</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co"># ---- Query: Find all classes whose labels contain 'protein' ----</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>terms_query <span class="ot">&lt;-</span> <span class="st">"</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="st">  PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="st">  PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="st">  SELECT ?term ?label WHERE {</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="st">    ?term rdfs:label ?label .</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="st">    FILTER(CONTAINS(LCASE(STR(?label)), 'protein'))</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="st">  }"</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>terms <span class="ot">&lt;-</span> rdflib<span class="sc">::</span><span class="fu">rdf_query</span>(obi, terms_query)</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="co"># ---- Query: Get subclass relationships among those protein terms ----</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>relations_query <span class="ot">&lt;-</span> <span class="st">"</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="st">  PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="st">  PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;</span></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a><span class="st">  SELECT ?child ?parent WHERE {</span></span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a><span class="st">    ?child rdfs:subClassOf ?parent .</span></span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a><span class="st">    ?child rdfs:label ?label .</span></span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a><span class="st">    FILTER(CONTAINS(LCASE(STR(?label)), 'protein'))</span></span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a><span class="st">  }"</span></span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>relations <span class="ot">&lt;-</span> rdflib<span class="sc">::</span><span class="fu">rdf_query</span>(obi, relations_query)</span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a><span class="co"># ---- Prepare nodes ----</span></span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>nodes <span class="ot">&lt;-</span></span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>  terms <span class="sc">|&gt;</span></span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">distinct</span>(term, label) <span class="sc">|&gt;</span></span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">id =</span> term,</span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>                <span class="at">label =</span> stringr<span class="sc">::</span><span class="fu">str_replace</span>(label, <span class="st">"@en"</span>, <span class="st">""</span>),  <span class="co"># remove language tag if present</span></span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>                <span class="at">title =</span> id) <span class="sc">|&gt;</span> </span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">reframe</span>(</span>
+<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">term =</span> dplyr<span class="sc">::</span><span class="fu">first</span>(term),</span>
+<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a>    <span class="at">label =</span> dplyr<span class="sc">::</span><span class="fu">first</span>(label),</span>
+<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> dplyr<span class="sc">::</span><span class="fu">first</span>(title),</span>
+<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a>    <span class="at">.by =</span> id</span>
+<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a><span class="co"># ---- Prepare edges ----</span></span>
+<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a>edges <span class="ot">&lt;-</span></span>
+<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a>  relations <span class="sc">|&gt;</span></span>
+<span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">rename</span>(<span class="at">from =</span> child, <span class="at">to =</span> parent) <span class="sc">|&gt;</span></span>
+<span id="cb8-41"><a href="#cb8-41" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(from <span class="sc">%in%</span> nodes<span class="sc">$</span>id <span class="sc">&amp;</span> to <span class="sc">%in%</span> nodes<span class="sc">$</span>id)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+</section>
+<section id="make-graph" class="level2">
+<h2 class="anchored" data-anchor-id="make-graph">Make Graph</h2>
+<p>he {visNetwork} package represents a graph beautifully! Select a term. in the dropdown to highlight a specific term from the filtered data in the graph.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ---- Visualize the Network ----</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>visNetwork<span class="sc">::</span><span class="fu">visNetwork</span>(nodes, edges, <span class="at">height =</span> <span class="st">"1600px"</span>, <span class="at">width =</span> <span class="st">"100%"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  visNetwork<span class="sc">::</span><span class="fu">visEdges</span>(<span class="at">arrows =</span> <span class="st">"to"</span>, <span class="at">smooth =</span> <span class="cn">FALSE</span>) <span class="sc">|&gt;</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  visNetwork<span class="sc">::</span><span class="fu">visOptions</span>(<span class="at">highlightNearest =</span> <span class="cn">TRUE</span>, <span class="at">nodesIdSelection =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  visNetwork<span class="sc">::</span><span class="fu">visPhysics</span>(</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">solver =</span> <span class="st">"forceAtlas2Based"</span>,</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">stabilization =</span> <span class="cn">TRUE</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  visNetwork<span class="sc">::</span><span class="fu">visLayout</span>(<span class="at">randomSeed =</span> <span class="dv">42</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div id="htmlwidget-70b02fa6fbc4eca8ff3d" style="width:100%;height:1600px;" class="visNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-70b02fa6fbc4eca8ff3d">{"x":{"nodes":{"id":["http://purl.obolibrary.org/obo/OBI_2100047","http://purl.obolibrary.org/obo/OBI_0003621","http://purl.obolibrary.org/obo/MRO_0000992","http://purl.obolibrary.org/obo/GO_0071605","http://purl.obolibrary.org/obo/OBI_0001780","http://purl.obolibrary.org/obo/OBI_0001344","http://purl.obolibrary.org/obo/OBI_2100212","http://purl.obolibrary.org/obo/OBI_0001786","http://purl.obolibrary.org/obo/MRO_0001454","http://purl.obolibrary.org/obo/OBI_0002166","http://purl.obolibrary.org/obo/OBI_0001781","http://purl.obolibrary.org/obo/OBI_0001386","http://purl.obolibrary.org/obo/OBI_0002168","http://purl.obolibrary.org/obo/OBI_2100301","http://purl.obolibrary.org/obo/OBI_0003206","http://purl.obolibrary.org/obo/OBI_0001486","http://purl.obolibrary.org/obo/MRO_0001356","http://purl.obolibrary.org/obo/OBI_0002955","http://purl.obolibrary.org/obo/MRO_0001355","http://purl.obolibrary.org/obo/OBI_0003641","http://purl.obolibrary.org/obo/GO_0071607","http://purl.obolibrary.org/obo/MRO_0001793","http://purl.obolibrary.org/obo/OBI_2100342","http://purl.obolibrary.org/obo/OBI_0003627","http://purl.obolibrary.org/obo/OBI_2100158","http://purl.obolibrary.org/obo/MRO_0001455","http://purl.obolibrary.org/obo/GO_0032991","http://purl.obolibrary.org/obo/OBI_0003626","http://purl.obolibrary.org/obo/OBI_0003159","http://purl.obolibrary.org/obo/OBI_2100328","http://purl.obolibrary.org/obo/OBI_0003637","http://purl.obolibrary.org/obo/OBI_0001923","http://purl.obolibrary.org/obo/OBI_2100209","http://purl.obolibrary.org/obo/OBI_0003635","http://purl.obolibrary.org/obo/MRO_0001434","http://purl.obolibrary.org/obo/OBI_0003617","http://purl.obolibrary.org/obo/OBI_0003623","http://purl.obolibrary.org/obo/OBI_0000288","http://purl.obolibrary.org/obo/MRO_0000991","http://purl.obolibrary.org/obo/OBI_2100208","http://purl.obolibrary.org/obo/MRO_0001557","http://purl.obolibrary.org/obo/OBI_0001333","http://purl.obolibrary.org/obo/OBI_0002765","http://purl.obolibrary.org/obo/OBI_0003625","http://purl.obolibrary.org/obo/MRO_0000994","http://purl.obolibrary.org/obo/MRO_0001461","http://purl.obolibrary.org/obo/OBI_0003624","http://purl.obolibrary.org/obo/MRO_0000971","http://purl.obolibrary.org/obo/CHEBI_39027","http://purl.obolibrary.org/obo/MRO_0001498","http://purl.obolibrary.org/obo/OBI_0002953","http://purl.obolibrary.org/obo/OBI_0003620","http://purl.obolibrary.org/obo/OBI_0001921","http://purl.obolibrary.org/obo/OBI_0003622","http://purl.obolibrary.org/obo/OBI_0000468","http://purl.obolibrary.org/obo/MRO_0000013","http://purl.obolibrary.org/obo/OBI_0002980","http://purl.obolibrary.org/obo/OBI_0001405","http://purl.obolibrary.org/obo/OBI_2100115","http://purl.obolibrary.org/obo/OBI_0002954","http://purl.obolibrary.org/obo/OBI_2100401","http://purl.obolibrary.org/obo/OBI_0003616","http://purl.obolibrary.org/obo/OBI_0002970","http://purl.obolibrary.org/obo/MRO_0001537","http://purl.obolibrary.org/obo/MRO_0002026","http://purl.obolibrary.org/obo/OBI_0002957","http://purl.obolibrary.org/obo/OBI_2100310","http://purl.obolibrary.org/obo/OBI_0003619","http://purl.obolibrary.org/obo/OBI_0003642","http://purl.obolibrary.org/obo/PR_000005897","http://purl.obolibrary.org/obo/MRO_0001790","http://purl.obolibrary.org/obo/OBI_2100210","http://purl.obolibrary.org/obo/MRO_0001538","http://purl.obolibrary.org/obo/OBI_0100039","http://purl.obolibrary.org/obo/OBI_0003640","http://purl.obolibrary.org/obo/OBI_0001302","http://purl.obolibrary.org/obo/GO_0071608","http://purl.obolibrary.org/obo/OBI_0000615","http://purl.obolibrary.org/obo/OBI_2100032","http://purl.obolibrary.org/obo/MRO_0002027","http://purl.obolibrary.org/obo/OBI_2100266","http://purl.obolibrary.org/obo/OBI_0003157","http://purl.obolibrary.org/obo/OBI_0002958","http://purl.obolibrary.org/obo/OBI_0001456","http://purl.obolibrary.org/obo/CHEBI_39025","http://purl.obolibrary.org/obo/OBI_0002976","http://purl.obolibrary.org/obo/MRO_0001149","http://purl.obolibrary.org/obo/OBI_0003638","http://purl.obolibrary.org/obo/PR_000000001","http://purl.obolibrary.org/obo/CHEBI_39026","http://purl.obolibrary.org/obo/OBI_0001783","http://purl.obolibrary.org/obo/MRO_0001460","http://purl.obolibrary.org/obo/OBI_0003630","http://purl.obolibrary.org/obo/OBI_0003628","http://purl.obolibrary.org/obo/OBI_0001398","http://purl.obolibrary.org/obo/OBI_0000797","http://purl.obolibrary.org/obo/OBI_2100023","http://purl.obolibrary.org/obo/OBI_0001425","http://purl.obolibrary.org/obo/OBI_0003639","http://purl.obolibrary.org/obo/OBI_2100398","http://purl.obolibrary.org/obo/OBI_0001082","http://purl.obolibrary.org/obo/OBI_0001243","http://purl.obolibrary.org/obo/OBI_0003644","http://purl.obolibrary.org/obo/MRO_0000997","http://purl.obolibrary.org/obo/GO_0042611","http://purl.obolibrary.org/obo/OBI_0001503","http://purl.obolibrary.org/obo/OBI_0003631","http://purl.obolibrary.org/obo/OBI_0001784","http://purl.obolibrary.org/obo/MRO_0001435","http://purl.obolibrary.org/obo/OBI_0003632","http://purl.obolibrary.org/obo/OBI_0003645","http://purl.obolibrary.org/obo/OBI_0001792","http://purl.obolibrary.org/obo/PR_000029983","http://purl.obolibrary.org/obo/CHEBI_47775","http://purl.obolibrary.org/obo/OBI_0003205","http://purl.obolibrary.org/obo/OBI_0002165","http://purl.obolibrary.org/obo/OBI_0001465","http://purl.obolibrary.org/obo/OBI_0003615","http://purl.obolibrary.org/obo/MRO_0001167","http://purl.obolibrary.org/obo/OBI_0002956","http://purl.obolibrary.org/obo/OBI_0003629","http://purl.obolibrary.org/obo/OBI_0001545","http://purl.obolibrary.org/obo/OBI_0003207","http://purl.obolibrary.org/obo/OBI_2100205","http://purl.obolibrary.org/obo/MRO_0001465","http://purl.obolibrary.org/obo/OBI_2100325","http://purl.obolibrary.org/obo/MRO_0001533","http://purl.obolibrary.org/obo/OBI_2100086","http://purl.obolibrary.org/obo/OBI_0001137","http://purl.obolibrary.org/obo/OBI_0002979","http://purl.obolibrary.org/obo/MRO_0001759","http://purl.obolibrary.org/obo/OBI_0003646","http://purl.obolibrary.org/obo/OBI_2100118","http://purl.obolibrary.org/obo/OBI_0003634","http://purl.obolibrary.org/obo/OBI_0003633","http://purl.obolibrary.org/obo/OBI_2100262","http://purl.obolibrary.org/obo/OBI_0003204","http://purl.obolibrary.org/obo/MRO_0000973","http://purl.obolibrary.org/obo/OBI_0001343","http://purl.obolibrary.org/obo/CHEBI_6495","http://purl.obolibrary.org/obo/OBI_0001782","http://purl.obolibrary.org/obo/MRO_0000975","http://purl.obolibrary.org/obo/OBI_0003636","http://purl.obolibrary.org/obo/OBI_2100030","http://purl.obolibrary.org/obo/OBI_0001447","http://purl.obolibrary.org/obo/OBI_0400149","http://purl.obolibrary.org/obo/OBI_0003618","http://purl.obolibrary.org/obo/OBI_2100113","http://purl.obolibrary.org/obo/OBI_0001918","http://purl.obolibrary.org/obo/CHEBI_47774","http://purl.obolibrary.org/obo/OBI_0001207","http://purl.obolibrary.org/obo/MRO_0000966","http://purl.obolibrary.org/obo/OBI_0002167","http://purl.obolibrary.org/obo/OBI_0000894","http://purl.obolibrary.org/obo/OBI_0003643","http://purl.obolibrary.org/obo/GO_0019904","http://purl.obolibrary.org/obo/MRO_0001530","http://purl.obolibrary.org/obo/MRO_0000967","http://purl.obolibrary.org/obo/OBI_0002975","http://purl.obolibrary.org/obo/OBI_0001438","http://purl.obolibrary.org/obo/OBI_0001785","http://purl.obolibrary.org/obo/OBI_0001854","http://purl.obolibrary.org/obo/MRO_0001622"],"term":["http://purl.obolibrary.org/obo/OBI_2100047","http://purl.obolibrary.org/obo/OBI_0003621","http://purl.obolibrary.org/obo/MRO_0000992","http://purl.obolibrary.org/obo/GO_0071605","http://purl.obolibrary.org/obo/OBI_0001780","http://purl.obolibrary.org/obo/OBI_0001344","http://purl.obolibrary.org/obo/OBI_2100212","http://purl.obolibrary.org/obo/OBI_0001786","http://purl.obolibrary.org/obo/MRO_0001454","http://purl.obolibrary.org/obo/OBI_0002166","http://purl.obolibrary.org/obo/OBI_0001781","http://purl.obolibrary.org/obo/OBI_0001386","http://purl.obolibrary.org/obo/OBI_0002168","http://purl.obolibrary.org/obo/OBI_2100301","http://purl.obolibrary.org/obo/OBI_0003206","http://purl.obolibrary.org/obo/OBI_0001486","http://purl.obolibrary.org/obo/MRO_0001356","http://purl.obolibrary.org/obo/OBI_0002955","http://purl.obolibrary.org/obo/MRO_0001355","http://purl.obolibrary.org/obo/OBI_0003641","http://purl.obolibrary.org/obo/GO_0071607","http://purl.obolibrary.org/obo/MRO_0001793","http://purl.obolibrary.org/obo/OBI_2100342","http://purl.obolibrary.org/obo/OBI_0003627","http://purl.obolibrary.org/obo/OBI_2100158","http://purl.obolibrary.org/obo/MRO_0001455","http://purl.obolibrary.org/obo/GO_0032991","http://purl.obolibrary.org/obo/OBI_0003626","http://purl.obolibrary.org/obo/OBI_0003159","http://purl.obolibrary.org/obo/OBI_2100328","http://purl.obolibrary.org/obo/OBI_0003637","http://purl.obolibrary.org/obo/OBI_0001923","http://purl.obolibrary.org/obo/OBI_2100209","http://purl.obolibrary.org/obo/OBI_0003635","http://purl.obolibrary.org/obo/MRO_0001434","http://purl.obolibrary.org/obo/OBI_0003617","http://purl.obolibrary.org/obo/OBI_0003623","http://purl.obolibrary.org/obo/OBI_0000288","http://purl.obolibrary.org/obo/MRO_0000991","http://purl.obolibrary.org/obo/OBI_2100208","http://purl.obolibrary.org/obo/MRO_0001557","http://purl.obolibrary.org/obo/OBI_0001333","http://purl.obolibrary.org/obo/OBI_0002765","http://purl.obolibrary.org/obo/OBI_0003625","http://purl.obolibrary.org/obo/MRO_0000994","http://purl.obolibrary.org/obo/MRO_0001461","http://purl.obolibrary.org/obo/OBI_0003624","http://purl.obolibrary.org/obo/MRO_0000971","http://purl.obolibrary.org/obo/CHEBI_39027","http://purl.obolibrary.org/obo/MRO_0001498","http://purl.obolibrary.org/obo/OBI_0002953","http://purl.obolibrary.org/obo/OBI_0003620","http://purl.obolibrary.org/obo/OBI_0001921","http://purl.obolibrary.org/obo/OBI_0003622","http://purl.obolibrary.org/obo/OBI_0000468","http://purl.obolibrary.org/obo/MRO_0000013","http://purl.obolibrary.org/obo/OBI_0002980","http://purl.obolibrary.org/obo/OBI_0001405","http://purl.obolibrary.org/obo/OBI_2100115","http://purl.obolibrary.org/obo/OBI_0002954","http://purl.obolibrary.org/obo/OBI_2100401","http://purl.obolibrary.org/obo/OBI_0003616","http://purl.obolibrary.org/obo/OBI_0002970","http://purl.obolibrary.org/obo/MRO_0001537","http://purl.obolibrary.org/obo/MRO_0002026","http://purl.obolibrary.org/obo/OBI_0002957","http://purl.obolibrary.org/obo/OBI_2100310","http://purl.obolibrary.org/obo/OBI_0003619","http://purl.obolibrary.org/obo/OBI_0003642","http://purl.obolibrary.org/obo/PR_000005897","http://purl.obolibrary.org/obo/MRO_0001790","http://purl.obolibrary.org/obo/OBI_2100210","http://purl.obolibrary.org/obo/MRO_0001538","http://purl.obolibrary.org/obo/OBI_0100039","http://purl.obolibrary.org/obo/OBI_0003640","http://purl.obolibrary.org/obo/OBI_0001302","http://purl.obolibrary.org/obo/GO_0071608","http://purl.obolibrary.org/obo/OBI_0000615","http://purl.obolibrary.org/obo/OBI_2100032","http://purl.obolibrary.org/obo/MRO_0002027","http://purl.obolibrary.org/obo/OBI_2100266","http://purl.obolibrary.org/obo/OBI_0003157","http://purl.obolibrary.org/obo/OBI_0002958","http://purl.obolibrary.org/obo/OBI_0001456","http://purl.obolibrary.org/obo/CHEBI_39025","http://purl.obolibrary.org/obo/OBI_0002976","http://purl.obolibrary.org/obo/MRO_0001149","http://purl.obolibrary.org/obo/OBI_0003638","http://purl.obolibrary.org/obo/PR_000000001","http://purl.obolibrary.org/obo/CHEBI_39026","http://purl.obolibrary.org/obo/OBI_0001783","http://purl.obolibrary.org/obo/MRO_0001460","http://purl.obolibrary.org/obo/OBI_0003630","http://purl.obolibrary.org/obo/OBI_0003628","http://purl.obolibrary.org/obo/OBI_0001398","http://purl.obolibrary.org/obo/OBI_0000797","http://purl.obolibrary.org/obo/OBI_2100023","http://purl.obolibrary.org/obo/OBI_0001425","http://purl.obolibrary.org/obo/OBI_0003639","http://purl.obolibrary.org/obo/OBI_2100398","http://purl.obolibrary.org/obo/OBI_0001082","http://purl.obolibrary.org/obo/OBI_0001243","http://purl.obolibrary.org/obo/OBI_0003644","http://purl.obolibrary.org/obo/MRO_0000997","http://purl.obolibrary.org/obo/GO_0042611","http://purl.obolibrary.org/obo/OBI_0001503","http://purl.obolibrary.org/obo/OBI_0003631","http://purl.obolibrary.org/obo/OBI_0001784","http://purl.obolibrary.org/obo/MRO_0001435","http://purl.obolibrary.org/obo/OBI_0003632","http://purl.obolibrary.org/obo/OBI_0003645","http://purl.obolibrary.org/obo/OBI_0001792","http://purl.obolibrary.org/obo/PR_000029983","http://purl.obolibrary.org/obo/CHEBI_47775","http://purl.obolibrary.org/obo/OBI_0003205","http://purl.obolibrary.org/obo/OBI_0002165","http://purl.obolibrary.org/obo/OBI_0001465","http://purl.obolibrary.org/obo/OBI_0003615","http://purl.obolibrary.org/obo/MRO_0001167","http://purl.obolibrary.org/obo/OBI_0002956","http://purl.obolibrary.org/obo/OBI_0003629","http://purl.obolibrary.org/obo/OBI_0001545","http://purl.obolibrary.org/obo/OBI_0003207","http://purl.obolibrary.org/obo/OBI_2100205","http://purl.obolibrary.org/obo/MRO_0001465","http://purl.obolibrary.org/obo/OBI_2100325","http://purl.obolibrary.org/obo/MRO_0001533","http://purl.obolibrary.org/obo/OBI_2100086","http://purl.obolibrary.org/obo/OBI_0001137","http://purl.obolibrary.org/obo/OBI_0002979","http://purl.obolibrary.org/obo/MRO_0001759","http://purl.obolibrary.org/obo/OBI_0003646","http://purl.obolibrary.org/obo/OBI_2100118","http://purl.obolibrary.org/obo/OBI_0003634","http://purl.obolibrary.org/obo/OBI_0003633","http://purl.obolibrary.org/obo/OBI_2100262","http://purl.obolibrary.org/obo/OBI_0003204","http://purl.obolibrary.org/obo/MRO_0000973","http://purl.obolibrary.org/obo/OBI_0001343","http://purl.obolibrary.org/obo/CHEBI_6495","http://purl.obolibrary.org/obo/OBI_0001782","http://purl.obolibrary.org/obo/MRO_0000975","http://purl.obolibrary.org/obo/OBI_0003636","http://purl.obolibrary.org/obo/OBI_2100030","http://purl.obolibrary.org/obo/OBI_0001447","http://purl.obolibrary.org/obo/OBI_0400149","http://purl.obolibrary.org/obo/OBI_0003618","http://purl.obolibrary.org/obo/OBI_2100113","http://purl.obolibrary.org/obo/OBI_0001918","http://purl.obolibrary.org/obo/CHEBI_47774","http://purl.obolibrary.org/obo/OBI_0001207","http://purl.obolibrary.org/obo/MRO_0000966","http://purl.obolibrary.org/obo/OBI_0002167","http://purl.obolibrary.org/obo/OBI_0000894","http://purl.obolibrary.org/obo/OBI_0003643","http://purl.obolibrary.org/obo/GO_0019904","http://purl.obolibrary.org/obo/MRO_0001530","http://purl.obolibrary.org/obo/MRO_0000967","http://purl.obolibrary.org/obo/OBI_0002975","http://purl.obolibrary.org/obo/OBI_0001438","http://purl.obolibrary.org/obo/OBI_0001785","http://purl.obolibrary.org/obo/OBI_0001854","http://purl.obolibrary.org/obo/MRO_0001622"],"label":["C-reactive protein assay","antibody purification of HLA protein complex with A29 serotype","H2-Kd protein complex","monocyte chemotactic protein-1 production","ELISPOT assay measuring epitope specific macrophage inflammatory protein-1 alpha production by T cells","ELISA measuring epitope specific monocyte chemotactic protein-1 production by T cells","hepatic panel venous blood protein assay","ELISPOT assay measuring epitope specific macrophage inflammatory protein-1 gamma production by T cells","human MHC class I protein complex","tissue-based protein localization assay","cytometric bead array assay measuring epitope specific macrophage inflammatory protein-1 gamma production by T cells","epitope specific monocyte chemotactic protein-1 production by T cells","subcellular protein immunohistochemistry assay","bone profile venous blood protein assay","low-density lipoprotein concentration assay","disposition to be bound by an MHC protein complex","MHC class II protein complex","mass spectrometry-based protein state assay","MHC class I protein complex","antibody purification of HLA protein complex with DQ3 serotype","macrophage inflammatory protein-1 gamma production","rat MHC class II protein complex with RT1-A haplotype","liver function venous blood protein assay","antibody purification of mouse MHC class I protein complex","comprehensive metabolic panel venous blood protein assay","human MHC class II protein complex","protein-containing complex","antibody purification of rat MHC class I protein complex","low-density lipoprotein cholesterol concentration assay","total bodily fluid protein assay","antibody purification of cattle MHC class II protein complex","protein sequencing by tandem mass spectrometry assay","SPEP protein electrophoresis venous blood albumin assay","antibody purification of pig MHC class I protein complex, cattle MHC class I protein complex, and/or human MHC class I protein complex","cattle MHC class I protein complex","antibody purification of human MHC class I protein complex","antibody purification of HLA-C protein complex","protein-protein interaction detection assay","H2-Kb protein complex","SPEP protein electrophoresis venous blood beta-globin assay","HLA protein complex with B27 serotype","assay measuring epitope specific macrophage inflammatory protein-1 alpha production by T cells","microbiome protein expression profiling assay","antibody purification of cattle MHC class I protein complex","H2-Ks protein complex","mouse MHC class II protein complex","antibody purification of pig MHC class I protein complex","H2-IA protein complex","very-low-density lipoprotein","mouse MHC protein complex with H2-p haplotype","protein state assay","antibody purification of HLA protein complex with A2 serotype and/or HLA protein complex with A28 serotype","RNA-binding protein immunoprecipitation tiling array profiling assay","antibody purification of HLA protein complex with B27 serotype","protein column","HLA-DR protein complex","reference protein sequence stop site","cytometric bead array assay measuring epitope specific macrophage inflammatory protein-1 alpha production by T cells","lipid panel venous blood low density lipoprotein assay","fluorescence imaging-based protein phosphorylation state assay","lipid panel reflex direct venous blood high density lipoprotein assay","antibody purification of MHC class I protein complex","multiplex bead-based protein state immunoassay","HLA protein complex with A28 serotype","H2-Dq protein complex","reverse phase protein array profiling assay","high sensitivity cardiac/neonatal venous blood c-reactive protein assay","antibody purification of HLA protein complex with A24 serotype","antibody purification of mouse MHC class II protein complex","C-reactive protein","rat MHC class I protein complex","SPEP protein electrophoresis venous blood protein assay","HLA protein complex with A29 serotype","obsolete_fragment derived from protein","antibody purification of HLA-DR protein complex","ELISA measuring epitope specific macrophage inflammatory protein-1 alpha production by T cells","macrophage inflammatory protein-1 alpha production","protein expression profiling assay","low-density lipoprotein cholesterol assay","H2-Kq protein complex","cerebrospinal fluid protein assay","high-density lipoprotein cholesterol concentration assay","SWATH-MS protein profiling assay","assay measuring epitope specific macrophage inflammatory protein-1 gamma production by T cells","high-density lipoprotein","input protein sequence stop site","HLA-C protein complex","antibody purification of human MHC class II protein complex","protein","low-density lipoprotein","intracellular cytokine staining assay measuring epitope specific monocyte chemotactic protein-1 production by T cells","mouse MHC class I protein complex","antibody purification of H2-Kd protein complex","antibody purification of H2-Dd protein complex","protein and DNA interaction identification objective","obsolete_primary structure of protein","protein assay","protein binding site identification design","antibody purification of HLA-DP protein complex","lipid panel reflex direct venous blood low density lipoprotein assay","protein separation apparatus","cytometric bead array assay measuring epitope specific monocyte chemotactic protein-1 production by T cells","antibody purification of H2-IAg7 protein complex","H2-Ld protein complex","MHC protein complex","MHC protein complex binding to ligand","antibody purification of H2-Ld protein complex, H2-Db protein complex, and/or H2-Dq protein complex","ELISPOT assay measuring epitope specific monocyte chemotactic protein-1 production by T cells","cattle MHC class II protein complex","antibody purification of H2-Dd protein complex and/or H2-Kd protein complex","antibody purification of H2-IAd protein complex","detection of specific nucleic acids with complementary probes assay measuring epitope specific macrophage inflammatory protein-1 alpha production by T cells","protein-glutamine gamma-glutamyltransferase","high-density lipoprotein cholesterol","high-density lipoprotein concentration assay","protein localization assay","assay measuring epitope specific monocyte chemotactic protein-1 production by T cells","antibody purification of MHC protein complex","HLA-DP protein complex","targeted, drug-modulated, mass spectrometry-based protein phoshporylation-state assay","antibody purification of H2-Db protein complex","intracellular cytokine staining assay measuring epitope specific macrophage inflammatory protein-1 alpha production by T cells","very-low-density lipoprotein concentration assay","urine protein assay","pig MHC class I protein complex","non-cardiac venous blood c-reactive protein assay","HLA protein complex with A24 serotype","liver evaluation venous blood protein assay","protein sequencer","reference protein sequence start site","mouse MHC class I protein complex with H2-b haplotype","antibody purification of mouse MHC class II protein complex and/or rat MHC class II protein complex with RT1-A haplotype","total venous blood protein assay","antibody purification of H2-Kb protein complex, H2-Ks protein complex, and/or H2-Kq protein complex","antibody purification of mouse MHC class I protein complex with H2-b haplotype and/or mouse MHC protein complex with H2-p haplotype","24 hour urine protein assay","lipoprotein concentration assay","H2-IAd protein complex","detection of specific nucleic acids with complementary probes assay measuring epitope specific monocyte chemotactic protein-1 production by T cells","lipoprotein","detection of specific nucleic acids with complementary probes assay measuring epitope specific macrophage inflammatory protein-1 gamma production by T cells","H2-IAg7 protein complex","antibody purification of MHC class II protein complex","high-density lipoprotein cholesterol assay","epitope specific macrophage inflammatory protein-1 gamma production by T cells","protein microarray","antibody purification of HLA protein complex with A2 serotype","lipid panel venous blood high density lipoprotein assay","RNA-binding protein immunoprecipitation array profiling assay","low-density lipoprotein cholesterol","epitope specific macrophage inflammatory protein-1 alpha production by T cells","H2-Db protein complex","subcellular protein localization assay","protein extract","antibody purification of H2-IA protein complex","protein domain specific binding","HLA protein complex with A2 serotype","H2-Dd protein complex","input protein sequence start site","ELISA measuring epitope specific macrophage inflammatory protein-1 gamma production by T cells","intracellular cytokine staining assay measuring epitope specific macrophage inflammatory protein-1 gamma production by T cells","protein and RNA interaction identification objective","HLA protein complex with DQ3 serotype"],"title":["http://purl.obolibrary.org/obo/OBI_2100047","http://purl.obolibrary.org/obo/OBI_0003621","http://purl.obolibrary.org/obo/MRO_0000992","http://purl.obolibrary.org/obo/GO_0071605","http://purl.obolibrary.org/obo/OBI_0001780","http://purl.obolibrary.org/obo/OBI_0001344","http://purl.obolibrary.org/obo/OBI_2100212","http://purl.obolibrary.org/obo/OBI_0001786","http://purl.obolibrary.org/obo/MRO_0001454","http://purl.obolibrary.org/obo/OBI_0002166","http://purl.obolibrary.org/obo/OBI_0001781","http://purl.obolibrary.org/obo/OBI_0001386","http://purl.obolibrary.org/obo/OBI_0002168","http://purl.obolibrary.org/obo/OBI_2100301","http://purl.obolibrary.org/obo/OBI_0003206","http://purl.obolibrary.org/obo/OBI_0001486","http://purl.obolibrary.org/obo/MRO_0001356","http://purl.obolibrary.org/obo/OBI_0002955","http://purl.obolibrary.org/obo/MRO_0001355","http://purl.obolibrary.org/obo/OBI_0003641","http://purl.obolibrary.org/obo/GO_0071607","http://purl.obolibrary.org/obo/MRO_0001793","http://purl.obolibrary.org/obo/OBI_2100342","http://purl.obolibrary.org/obo/OBI_0003627","http://purl.obolibrary.org/obo/OBI_2100158","http://purl.obolibrary.org/obo/MRO_0001455","http://purl.obolibrary.org/obo/GO_0032991","http://purl.obolibrary.org/obo/OBI_0003626","http://purl.obolibrary.org/obo/OBI_0003159","http://purl.obolibrary.org/obo/OBI_2100328","http://purl.obolibrary.org/obo/OBI_0003637","http://purl.obolibrary.org/obo/OBI_0001923","http://purl.obolibrary.org/obo/OBI_2100209","http://purl.obolibrary.org/obo/OBI_0003635","http://purl.obolibrary.org/obo/MRO_0001434","http://purl.obolibrary.org/obo/OBI_0003617","http://purl.obolibrary.org/obo/OBI_0003623","http://purl.obolibrary.org/obo/OBI_0000288","http://purl.obolibrary.org/obo/MRO_0000991","http://purl.obolibrary.org/obo/OBI_2100208","http://purl.obolibrary.org/obo/MRO_0001557","http://purl.obolibrary.org/obo/OBI_0001333","http://purl.obolibrary.org/obo/OBI_0002765","http://purl.obolibrary.org/obo/OBI_0003625","http://purl.obolibrary.org/obo/MRO_0000994","http://purl.obolibrary.org/obo/MRO_0001461","http://purl.obolibrary.org/obo/OBI_0003624","http://purl.obolibrary.org/obo/MRO_0000971","http://purl.obolibrary.org/obo/CHEBI_39027","http://purl.obolibrary.org/obo/MRO_0001498","http://purl.obolibrary.org/obo/OBI_0002953","http://purl.obolibrary.org/obo/OBI_0003620","http://purl.obolibrary.org/obo/OBI_0001921","http://purl.obolibrary.org/obo/OBI_0003622","http://purl.obolibrary.org/obo/OBI_0000468","http://purl.obolibrary.org/obo/MRO_0000013","http://purl.obolibrary.org/obo/OBI_0002980","http://purl.obolibrary.org/obo/OBI_0001405","http://purl.obolibrary.org/obo/OBI_2100115","http://purl.obolibrary.org/obo/OBI_0002954","http://purl.obolibrary.org/obo/OBI_2100401","http://purl.obolibrary.org/obo/OBI_0003616","http://purl.obolibrary.org/obo/OBI_0002970","http://purl.obolibrary.org/obo/MRO_0001537","http://purl.obolibrary.org/obo/MRO_0002026","http://purl.obolibrary.org/obo/OBI_0002957","http://purl.obolibrary.org/obo/OBI_2100310","http://purl.obolibrary.org/obo/OBI_0003619","http://purl.obolibrary.org/obo/OBI_0003642","http://purl.obolibrary.org/obo/PR_000005897","http://purl.obolibrary.org/obo/MRO_0001790","http://purl.obolibrary.org/obo/OBI_2100210","http://purl.obolibrary.org/obo/MRO_0001538","http://purl.obolibrary.org/obo/OBI_0100039","http://purl.obolibrary.org/obo/OBI_0003640","http://purl.obolibrary.org/obo/OBI_0001302","http://purl.obolibrary.org/obo/GO_0071608","http://purl.obolibrary.org/obo/OBI_0000615","http://purl.obolibrary.org/obo/OBI_2100032","http://purl.obolibrary.org/obo/MRO_0002027","http://purl.obolibrary.org/obo/OBI_2100266","http://purl.obolibrary.org/obo/OBI_0003157","http://purl.obolibrary.org/obo/OBI_0002958","http://purl.obolibrary.org/obo/OBI_0001456","http://purl.obolibrary.org/obo/CHEBI_39025","http://purl.obolibrary.org/obo/OBI_0002976","http://purl.obolibrary.org/obo/MRO_0001149","http://purl.obolibrary.org/obo/OBI_0003638","http://purl.obolibrary.org/obo/PR_000000001","http://purl.obolibrary.org/obo/CHEBI_39026","http://purl.obolibrary.org/obo/OBI_0001783","http://purl.obolibrary.org/obo/MRO_0001460","http://purl.obolibrary.org/obo/OBI_0003630","http://purl.obolibrary.org/obo/OBI_0003628","http://purl.obolibrary.org/obo/OBI_0001398","http://purl.obolibrary.org/obo/OBI_0000797","http://purl.obolibrary.org/obo/OBI_2100023","http://purl.obolibrary.org/obo/OBI_0001425","http://purl.obolibrary.org/obo/OBI_0003639","http://purl.obolibrary.org/obo/OBI_2100398","http://purl.obolibrary.org/obo/OBI_0001082","http://purl.obolibrary.org/obo/OBI_0001243","http://purl.obolibrary.org/obo/OBI_0003644","http://purl.obolibrary.org/obo/MRO_0000997","http://purl.obolibrary.org/obo/GO_0042611","http://purl.obolibrary.org/obo/OBI_0001503","http://purl.obolibrary.org/obo/OBI_0003631","http://purl.obolibrary.org/obo/OBI_0001784","http://purl.obolibrary.org/obo/MRO_0001435","http://purl.obolibrary.org/obo/OBI_0003632","http://purl.obolibrary.org/obo/OBI_0003645","http://purl.obolibrary.org/obo/OBI_0001792","http://purl.obolibrary.org/obo/PR_000029983","http://purl.obolibrary.org/obo/CHEBI_47775","http://purl.obolibrary.org/obo/OBI_0003205","http://purl.obolibrary.org/obo/OBI_0002165","http://purl.obolibrary.org/obo/OBI_0001465","http://purl.obolibrary.org/obo/OBI_0003615","http://purl.obolibrary.org/obo/MRO_0001167","http://purl.obolibrary.org/obo/OBI_0002956","http://purl.obolibrary.org/obo/OBI_0003629","http://purl.obolibrary.org/obo/OBI_0001545","http://purl.obolibrary.org/obo/OBI_0003207","http://purl.obolibrary.org/obo/OBI_2100205","http://purl.obolibrary.org/obo/MRO_0001465","http://purl.obolibrary.org/obo/OBI_2100325","http://purl.obolibrary.org/obo/MRO_0001533","http://purl.obolibrary.org/obo/OBI_2100086","http://purl.obolibrary.org/obo/OBI_0001137","http://purl.obolibrary.org/obo/OBI_0002979","http://purl.obolibrary.org/obo/MRO_0001759","http://purl.obolibrary.org/obo/OBI_0003646","http://purl.obolibrary.org/obo/OBI_2100118","http://purl.obolibrary.org/obo/OBI_0003634","http://purl.obolibrary.org/obo/OBI_0003633","http://purl.obolibrary.org/obo/OBI_2100262","http://purl.obolibrary.org/obo/OBI_0003204","http://purl.obolibrary.org/obo/MRO_0000973","http://purl.obolibrary.org/obo/OBI_0001343","http://purl.obolibrary.org/obo/CHEBI_6495","http://purl.obolibrary.org/obo/OBI_0001782","http://purl.obolibrary.org/obo/MRO_0000975","http://purl.obolibrary.org/obo/OBI_0003636","http://purl.obolibrary.org/obo/OBI_2100030","http://purl.obolibrary.org/obo/OBI_0001447","http://purl.obolibrary.org/obo/OBI_0400149","http://purl.obolibrary.org/obo/OBI_0003618","http://purl.obolibrary.org/obo/OBI_2100113","http://purl.obolibrary.org/obo/OBI_0001918","http://purl.obolibrary.org/obo/CHEBI_47774","http://purl.obolibrary.org/obo/OBI_0001207","http://purl.obolibrary.org/obo/MRO_0000966","http://purl.obolibrary.org/obo/OBI_0002167","http://purl.obolibrary.org/obo/OBI_0000894","http://purl.obolibrary.org/obo/OBI_0003643","http://purl.obolibrary.org/obo/GO_0019904","http://purl.obolibrary.org/obo/MRO_0001530","http://purl.obolibrary.org/obo/MRO_0000967","http://purl.obolibrary.org/obo/OBI_0002975","http://purl.obolibrary.org/obo/OBI_0001438","http://purl.obolibrary.org/obo/OBI_0001785","http://purl.obolibrary.org/obo/OBI_0001854","http://purl.obolibrary.org/obo/MRO_0001622"]},"edges":{"from":["http://purl.obolibrary.org/obo/OBI_0003628","http://purl.obolibrary.org/obo/MRO_0001465","http://purl.obolibrary.org/obo/MRO_0001790","http://purl.obolibrary.org/obo/OBI_0001438","http://purl.obolibrary.org/obo/OBI_0003625","http://purl.obolibrary.org/obo/MRO_0001149","http://purl.obolibrary.org/obo/CHEBI_39027","http://purl.obolibrary.org/obo/OBI_0001781","http://purl.obolibrary.org/obo/OBI_0001783","http://purl.obolibrary.org/obo/OBI_0003620","http://purl.obolibrary.org/obo/MRO_0001454","http://purl.obolibrary.org/obo/OBI_0003207","http://purl.obolibrary.org/obo/MRO_0000971","http://purl.obolibrary.org/obo/OBI_0002956","http://purl.obolibrary.org/obo/MRO_0000994","http://purl.obolibrary.org/obo/OBI_2100310","http://purl.obolibrary.org/obo/OBI_0002954","http://purl.obolibrary.org/obo/OBI_0001302","http://purl.obolibrary.org/obo/OBI_0001344","http://purl.obolibrary.org/obo/OBI_0003638","http://purl.obolibrary.org/obo/OBI_0003629","http://purl.obolibrary.org/obo/OBI_0003629","http://purl.obolibrary.org/obo/OBI_0003626","http://purl.obolibrary.org/obo/OBI_0001792","http://purl.obolibrary.org/obo/MRO_0001355","http://purl.obolibrary.org/obo/OBI_0002765","http://purl.obolibrary.org/obo/OBI_2100086","http://purl.obolibrary.org/obo/OBI_0003640","http://purl.obolibrary.org/obo/OBI_2100210","http://purl.obolibrary.org/obo/OBI_0002957","http://purl.obolibrary.org/obo/MRO_0001538","http://purl.obolibrary.org/obo/MRO_0001793","http://purl.obolibrary.org/obo/OBI_0001343","http://purl.obolibrary.org/obo/OBI_0002970","http://purl.obolibrary.org/obo/MRO_0002026","http://purl.obolibrary.org/obo/GO_0042611","http://purl.obolibrary.org/obo/OBI_0003622","http://purl.obolibrary.org/obo/OBI_2100212","http://purl.obolibrary.org/obo/MRO_0000975","http://purl.obolibrary.org/obo/OBI_2100266","http://purl.obolibrary.org/obo/PR_000005897","http://purl.obolibrary.org/obo/MRO_0000966","http://purl.obolibrary.org/obo/OBI_0003636","http://purl.obolibrary.org/obo/OBI_2100047","http://purl.obolibrary.org/obo/MRO_0001167","http://purl.obolibrary.org/obo/OBI_2100205","http://purl.obolibrary.org/obo/OBI_0003623","http://purl.obolibrary.org/obo/OBI_0001782","http://purl.obolibrary.org/obo/OBI_0003644","http://purl.obolibrary.org/obo/MRO_0000973","http://purl.obolibrary.org/obo/OBI_0001545","http://purl.obolibrary.org/obo/OBI_0002167","http://purl.obolibrary.org/obo/OBI_0003616","http://purl.obolibrary.org/obo/OBI_0002955","http://purl.obolibrary.org/obo/OBI_0003639","http://purl.obolibrary.org/obo/OBI_0001447","http://purl.obolibrary.org/obo/MRO_0000013","http://purl.obolibrary.org/obo/OBI_0003633","http://purl.obolibrary.org/obo/OBI_0003157","http://purl.obolibrary.org/obo/OBI_0003646","http://purl.obolibrary.org/obo/OBI_0003619","http://purl.obolibrary.org/obo/MRO_0001434","http://purl.obolibrary.org/obo/OBI_0001243","http://purl.obolibrary.org/obo/OBI_0001405","http://purl.obolibrary.org/obo/MRO_0001356","http://purl.obolibrary.org/obo/MRO_0001537","http://purl.obolibrary.org/obo/OBI_2100262","http://purl.obolibrary.org/obo/MRO_0000991","http://purl.obolibrary.org/obo/OBI_2100158","http://purl.obolibrary.org/obo/OBI_0003205","http://purl.obolibrary.org/obo/OBI_0003635","http://purl.obolibrary.org/obo/OBI_2100113","http://purl.obolibrary.org/obo/OBI_2100398","http://purl.obolibrary.org/obo/MRO_0000997","http://purl.obolibrary.org/obo/MRO_0001460","http://purl.obolibrary.org/obo/OBI_0003617","http://purl.obolibrary.org/obo/OBI_0003645","http://purl.obolibrary.org/obo/OBI_0001386","http://purl.obolibrary.org/obo/OBI_0001786","http://purl.obolibrary.org/obo/OBI_2100401","http://purl.obolibrary.org/obo/MRO_0002027","http://purl.obolibrary.org/obo/OBI_0003642","http://purl.obolibrary.org/obo/OBI_0003643","http://purl.obolibrary.org/obo/OBI_2100208","http://purl.obolibrary.org/obo/MRO_0001557","http://purl.obolibrary.org/obo/CHEBI_39025","http://purl.obolibrary.org/obo/MRO_0001455","http://purl.obolibrary.org/obo/OBI_0003627","http://purl.obolibrary.org/obo/OBI_0003624","http://purl.obolibrary.org/obo/OBI_2100328","http://purl.obolibrary.org/obo/OBI_2100115","http://purl.obolibrary.org/obo/OBI_0003631","http://purl.obolibrary.org/obo/OBI_0003630","http://purl.obolibrary.org/obo/PR_000029983","http://purl.obolibrary.org/obo/OBI_0003159","http://purl.obolibrary.org/obo/CHEBI_39026","http://purl.obolibrary.org/obo/OBI_0001785","http://purl.obolibrary.org/obo/OBI_0001784","http://purl.obolibrary.org/obo/MRO_0001530","http://purl.obolibrary.org/obo/MRO_0000967","http://purl.obolibrary.org/obo/MRO_0001759","http://purl.obolibrary.org/obo/OBI_0003641","http://purl.obolibrary.org/obo/MRO_0001461","http://purl.obolibrary.org/obo/MRO_0001498","http://purl.obolibrary.org/obo/MRO_0001533","http://purl.obolibrary.org/obo/OBI_2100325","http://purl.obolibrary.org/obo/OBI_0001780","http://purl.obolibrary.org/obo/OBI_0003634","http://purl.obolibrary.org/obo/OBI_0001921","http://purl.obolibrary.org/obo/OBI_0003632","http://purl.obolibrary.org/obo/OBI_0003618","http://purl.obolibrary.org/obo/MRO_0000992","http://purl.obolibrary.org/obo/OBI_0002166","http://purl.obolibrary.org/obo/MRO_0001435","http://purl.obolibrary.org/obo/OBI_0002958","http://purl.obolibrary.org/obo/OBI_0001207","http://purl.obolibrary.org/obo/OBI_2100301","http://purl.obolibrary.org/obo/OBI_0003637","http://purl.obolibrary.org/obo/OBI_2100118","http://purl.obolibrary.org/obo/MRO_0001622","http://purl.obolibrary.org/obo/OBI_0003621","http://purl.obolibrary.org/obo/OBI_0003206","http://purl.obolibrary.org/obo/OBI_2100342"],"to":["http://purl.obolibrary.org/obo/OBI_0003632","http://purl.obolibrary.org/obo/MRO_0001355","http://purl.obolibrary.org/obo/MRO_0001355","http://purl.obolibrary.org/obo/OBI_0001456","http://purl.obolibrary.org/obo/OBI_0003635","http://purl.obolibrary.org/obo/MRO_0001454","http://purl.obolibrary.org/obo/CHEBI_6495","http://purl.obolibrary.org/obo/OBI_0001456","http://purl.obolibrary.org/obo/OBI_0001465","http://purl.obolibrary.org/obo/OBI_0003617","http://purl.obolibrary.org/obo/MRO_0001355","http://purl.obolibrary.org/obo/OBI_0003204","http://purl.obolibrary.org/obo/MRO_0001461","http://purl.obolibrary.org/obo/OBI_0002955","http://purl.obolibrary.org/obo/MRO_0001460","http://purl.obolibrary.org/obo/OBI_2100047","http://purl.obolibrary.org/obo/OBI_0002953","http://purl.obolibrary.org/obo/OBI_0001333","http://purl.obolibrary.org/obo/OBI_0001465","http://purl.obolibrary.org/obo/OBI_0003636","http://purl.obolibrary.org/obo/OBI_0003633","http://purl.obolibrary.org/obo/OBI_0003631","http://purl.obolibrary.org/obo/OBI_0003616","http://purl.obolibrary.org/obo/OBI_0001333","http://purl.obolibrary.org/obo/GO_0042611","http://purl.obolibrary.org/obo/OBI_0000615","http://purl.obolibrary.org/obo/OBI_2100023","http://purl.obolibrary.org/obo/OBI_0003638","http://purl.obolibrary.org/obo/OBI_2100023","http://purl.obolibrary.org/obo/OBI_0002953","http://purl.obolibrary.org/obo/GO_0042611","http://purl.obolibrary.org/obo/MRO_0001356","http://purl.obolibrary.org/obo/OBI_0001465","http://purl.obolibrary.org/obo/OBI_0002953","http://purl.obolibrary.org/obo/MRO_0001460","http://purl.obolibrary.org/obo/GO_0032991","http://purl.obolibrary.org/obo/OBI_0003617","http://purl.obolibrary.org/obo/OBI_2100023","http://purl.obolibrary.org/obo/MRO_0000971","http://purl.obolibrary.org/obo/OBI_2100023","http://purl.obolibrary.org/obo/PR_000000001","http://purl.obolibrary.org/obo/MRO_0001759","http://purl.obolibrary.org/obo/OBI_0003615","http://purl.obolibrary.org/obo/OBI_2100023","http://purl.obolibrary.org/obo/MRO_0001455","http://purl.obolibrary.org/obo/OBI_2100023","http://purl.obolibrary.org/obo/OBI_0003617","http://purl.obolibrary.org/obo/OBI_0001456","http://purl.obolibrary.org/obo/OBI_0003643","http://purl.obolibrary.org/obo/MRO_0000971","http://purl.obolibrary.org/obo/OBI_0001333","http://purl.obolibrary.org/obo/OBI_0002165","http://purl.obolibrary.org/obo/OBI_0003615","http://purl.obolibrary.org/obo/OBI_0002953","http://purl.obolibrary.org/obo/OBI_0003638","http://purl.obolibrary.org/obo/GO_0071607","http://purl.obolibrary.org/obo/MRO_0001455","http://purl.obolibrary.org/obo/OBI_0003627","http://purl.obolibrary.org/obo/OBI_2100030","http://purl.obolibrary.org/obo/OBI_0003636","http://purl.obolibrary.org/obo/OBI_0003617","http://purl.obolibrary.org/obo/MRO_0001355","http://purl.obolibrary.org/obo/OBI_0001465","http://purl.obolibrary.org/obo/OBI_0001333","http://purl.obolibrary.org/obo/GO_0042611","http://purl.obolibrary.org/obo/GO_0042611","http://purl.obolibrary.org/obo/OBI_2100023","http://purl.obolibrary.org/obo/MRO_0001759","http://purl.obolibrary.org/obo/OBI_2100023","http://purl.obolibrary.org/obo/OBI_0003204","http://purl.obolibrary.org/obo/OBI_0003616","http://purl.obolibrary.org/obo/OBI_2100030","http://purl.obolibrary.org/obo/OBI_2100032","http://purl.obolibrary.org/obo/MRO_0001460","http://purl.obolibrary.org/obo/MRO_0001355","http://purl.obolibrary.org/obo/OBI_0003635","http://purl.obolibrary.org/obo/OBI_0003643","http://purl.obolibrary.org/obo/GO_0071605","http://purl.obolibrary.org/obo/OBI_0001456","http://purl.obolibrary.org/obo/OBI_2100030","http://purl.obolibrary.org/obo/MRO_0001460","http://purl.obolibrary.org/obo/OBI_0003646","http://purl.obolibrary.org/obo/OBI_0003642","http://purl.obolibrary.org/obo/OBI_2100023","http://purl.obolibrary.org/obo/GO_0042611","http://purl.obolibrary.org/obo/CHEBI_6495","http://purl.obolibrary.org/obo/MRO_0001356","http://purl.obolibrary.org/obo/OBI_0003616","http://purl.obolibrary.org/obo/OBI_0003635","http://purl.obolibrary.org/obo/OBI_2100023","http://purl.obolibrary.org/obo/OBI_2100032","http://purl.obolibrary.org/obo/OBI_0003627","http://purl.obolibrary.org/obo/OBI_0003632","http://purl.obolibrary.org/obo/PR_000000001","http://purl.obolibrary.org/obo/OBI_2100032","http://purl.obolibrary.org/obo/CHEBI_6495","http://purl.obolibrary.org/obo/OBI_0001456","http://purl.obolibrary.org/obo/OBI_0001465","http://purl.obolibrary.org/obo/GO_0042611","http://purl.obolibrary.org/obo/MRO_0001460","http://purl.obolibrary.org/obo/MRO_0001460","http://purl.obolibrary.org/obo/OBI_0003638","http://purl.obolibrary.org/obo/MRO_0001356","http://purl.obolibrary.org/obo/GO_0042611","http://purl.obolibrary.org/obo/GO_0042611","http://purl.obolibrary.org/obo/OBI_2100047","http://purl.obolibrary.org/obo/OBI_0001333","http://purl.obolibrary.org/obo/OBI_0003627","http://purl.obolibrary.org/obo/OBI_0001918","http://purl.obolibrary.org/obo/OBI_0003627","http://purl.obolibrary.org/obo/OBI_0003620","http://purl.obolibrary.org/obo/MRO_0001460","http://purl.obolibrary.org/obo/OBI_0002165","http://purl.obolibrary.org/obo/MRO_0001356","http://purl.obolibrary.org/obo/OBI_0000615","http://purl.obolibrary.org/obo/GO_0071608","http://purl.obolibrary.org/obo/OBI_2100023","http://purl.obolibrary.org/obo/OBI_0003636","http://purl.obolibrary.org/obo/OBI_2100023","http://purl.obolibrary.org/obo/GO_0042611","http://purl.obolibrary.org/obo/OBI_0003617","http://purl.obolibrary.org/obo/OBI_0003204","http://purl.obolibrary.org/obo/OBI_2100023"]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot"},"manipulation":{"enabled":false},"edges":{"arrows":"to","smooth":false},"physics":{"solver":"forceAtlas2Based","stabilization":true},"layout":{"randomSeed":42}},"groups":null,"width":"100%","height":"1600px","idselection":{"enabled":true,"style":"width: 150px; height: 26px","useLabels":true,"main":"Select by id"},"byselection":{"enabled":false,"style":"width: 150px; height: 26px","multiple":false,"hideColor":"rgba(200,200,200,0.5)","highlight":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","highlight":{"enabled":true,"hoverNearest":false,"degree":1,"algorithm":"all","hideColor":"rgba(200,200,200,0.5)","labelOnly":true},"collapse":{"enabled":false,"fit":false,"resetHighlight":true,"clusterOptions":null,"keepCoord":true,"labelSuffix":"(cluster)"}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</section>
+</section>
+<section id="conclusion" class="level1">
+<h1>Conclusion</h1>
+<p>While I’m not proud of how much I relied on ChatGPT, the results show me how powerful this can be for extracting and. visualizing knowledge. I can identify terminology and view relationships pretty easily. There’s alot that can be enhanced like the query or labels on the graph, but this was a great first stab at the goal.</p>
+</section>
+</div>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/nickg\.bio");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<script src="https://utteranc.es/client.js" repo="ngiangre/ngiangre.github.io" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
+</script>
+</div> <!-- /content -->
+
+
+
+
+<script src="../../../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
