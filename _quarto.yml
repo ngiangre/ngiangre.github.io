@@ -43,3 +43,6 @@ editor: source
 
 execute:
   freeze: auto
+
+python: .venv/bin/python3
+
