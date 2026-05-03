@@ -14,17 +14,18 @@ see github repo for licensing information
 
 ---
 title: Nick Giangreco
+margin: 0pt
 ---
 
 ### *Independent and collaborative precision medicine scientist and engineer*
 
-[Github: ngiangre](http://github.com/ngiangre) \| [Linkedin: http://www.linkedin.com/in/nickgiangreco/](http://www.linkedin.com/in/nickgiangreco/) \| [ORCID: 0000-0001-8138-4947](https://orcid.org/0000-0001-8138-4947) \| [Personal Website: nickg.bio](http://nickg.bio) \| [Email: nick.giangreco\@gmail.com](nick.giangreco@gmail.com) \| **Date of preparation:** December 29th 2025
+[Github: ngiangre](http://github.com/ngiangre) \| [Linkedin: http://www.linkedin.com/in/nickgiangreco/](http://www.linkedin.com/in/nickgiangreco/) \| [ORCID: 0000-0001-8138-4947](https://orcid.org/0000-0001-8138-4947) \| [Personal Website: nickg.bio](http://nickg.bio) \| [Email: nick.giangreco\@gmail.com](nick.giangreco@gmail.com) \| **Date of preparation:** May 3rd, 2026
 
 |  |
 |:-----------------------------------------------------------------------|
-| **Topic expertise:** Pediatric drug safety, Genetics, Biomarker discovery, Systems Biology, Statistics, Cancer Biology, Reproducible Research |
-| **Technical expertise:** Biomedical data science, (R/Python) software development, {plumber} APIs, machine learning, statistical simulation, data cleaning, data pipelines, Shiny (for R and Python) application development, object oriented programming, RMarkdown/JuPyteR/Quarto, Claude Code and LLM API usage, Microsoft Power App and API user |
-| **Programming Languages:** R, Python, SQL, HTML, CSS, Observable Javascript, Java, Bash |
+| **Topic expertise:** Pediatric drug safety, Genetics, Biomarker discovery, Systems biology, Statistics, Cancer biology, Reproducible research, Project management |
+| **Technical expertise:** Biomedical data science, (R/Python) software development, {plumber} APIs, Machine learning, Statistical simulation, Data cleaning, Data pipelines, Shiny (for R and Python) application development, Object oriented programming, RMarkdown/JuPyteR/Quarto, Claude Code and LLM API usage, Microsoft Graph API |
+| **Programming Languages:** R, Python, SQL, HTML, CSS, Observable Javascript, React, Java, Bash |
 
 ## WORK EXPERIENCE
 
@@ -36,12 +37,12 @@ Feb 2023 - Present
 
 Dec 2021 - Present
 
-:   **Senior Scientist, Quantitative Biomarker Science (Remote)** [(Regeneron Pharmaceuticals Inc.)](https://www.regeneron.com); Tarrytown, NY
+:   **Principal Computational Scientist, Quantitative Biomarker Science (Remote)** [(Regeneron Pharmaceuticals Inc.)](https://www.regeneron.com); Tarrytown, NY
 
-    Precision Medicine - scientist, data architect, software developer, and applications engineer
+    Associate -> Senior -> Principal Computational Scientist
 
-    -   Deliver decision-ready analyses supporting rare disease programs and clinical drug development.
-    -   Lead precision medicine data architecture and software initiatives across an innovation portfolio, translating scientific needs into scalable systems.
+    -   Deliver decision-ready analyses supporting rare disease programs and pre-clinical and clinical drug development.
+    -   Lead precision medicine data architecture and software initiatives across an innovation portfolio, translating scientific and business needs into scalable systems.
     -   Build and maintain production-grade software packages and data pipelines enabling clinical biomarker analysis at team scale.
     -   Automate portfolio and project reporting to provide senior leadership with real-time visibility into progress, risk, and impact.
     -   Rapidly prototype analytical applications and decision-support tools to accelerate stakeholder alignment and prioritization decisions.

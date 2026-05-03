@@ -1,0 +1,12 @@
+{
+  "hash": "b3f2d5614bb7170f4a4b4d040c8afca6",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: Shinylive - shiny apps with no server\nsubtitle: Minimal example showing an interactive webpage in shiny without a server!\nimage: \"images/servertoshiny.png\"\ndate: \"10/28/2023\"\ndraft: false\npage-layout: article\ntoc: true\nformat: html\nfilters:\n  - shinylive\ncomments:\n  utterances:\n    repo: ngiangre/ngiangre.github.io\n---\n\nA Shiny for R App involves constant communication between two things: 1) the website (shiny) or basically what you see and interact with, and 2) the server that crunches data from your interactions in R. With any communication, it's a labor of love - it takes time, effort, and things break if there isn't communication. A Shinylive App, as opposed to a Shiny for R App, does not involve this communication between the website and server. The data crunching from your interactions occur on the website. No server is needed - no communication - no extra time, effort, and chance of breaking from no communication.\n\nBelow is an example of a Shinylive App. The interaction (i.e. slider) data is crunched directly on this website. No extra communication needed. \n\n```{shinylive-python}\n#| standalone: true\n\nfrom shiny import *\n\napp_ui = ui.page_fluid(\n    ui.input_slider(\"n\", \"N\", 0, 100, 40),\n    ui.output_text_verbatim(\"txt\"),\n)\n\ndef server(input, output, session):\n    @output\n    @render.text\n    def txt():\n        return f\"The value of n*2 is {input.n() * 2}\"\n\napp = App(app_ui, server)\n\n```\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}
