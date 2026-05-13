@@ -29,12 +29,6 @@ margin: 0pt
 
 ## WORK EXPERIENCE
 
-Feb 2023 - Present
-
-:   **Computer Sciences Advisor (Remote)** [(MindArch Health)](http://www.mindarchhealth.com/); Sayville, NY
-
-    Machine learning, Software, Web Applications & Design
-
 Dec 2021 - Present
 
 :   **Principal Computational Scientist, Quantitative Biomarker Science (Remote)** [(Regeneron Pharmaceuticals Inc.)](https://www.regeneron.com); Tarrytown, NY
@@ -47,6 +41,12 @@ Dec 2021 - Present
     -   Automate portfolio and project reporting to provide senior leadership with real-time visibility into progress, risk, and impact.
     -   Rapidly prototype analytical applications and decision-support tools to accelerate stakeholder alignment and prioritization decisions.
     -   Mentor interns and data scientists in reproducible analytics and web-based tools, raising technical rigor and accelerating delivery across the team.
+
+Feb 2023 - Present
+
+:   **Computer Sciences Advisor (Remote)** [(MindArch Health)](http://www.mindarchhealth.com/); Sayville, NY
+
+    Machine learning, Software, Web Applications & Design
 
 Aug 2016 - Oct 2021
 

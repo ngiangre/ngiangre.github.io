@@ -11,7 +11,7 @@
   // ── Page geometry (mirrors body { width:800px; margin:auto; padding:10px })
   set page(
     paper: "a4",
-    margin: (top: 1cm, bottom: 1cm, left: 1.5cm, right: 1.5cm),
+    margin: (top: 0.5cm, bottom: 0.5cm, left: 0.5cm, right: 0.5cm),
     fill: white,
   )
 
@@ -19,8 +19,8 @@
   // Typst ships "Libertinus Serif" by default; swap for any sans you have.
   // Verdana isn't bundled, so we fall back to the closest available sans-serif.
   set text(
-    font: ("Verdana", "Arial", "Helvetica"),
-    size: 11pt,           // ≈ 14px at 96 dpi
+    font: ("Helvetica"),
+    size: 10pt,           // ≈ 14px at 96 dpi
     fill: black,
     hyphenate: true,
   )
@@ -109,27 +109,3 @@
 
   doc
 }
-
-// ============================================================
-// PANDOC USAGE
-// ------------
-// pandoc exports a $body$ variable. Create a thin wrapper, e.g.
-// pandoc-wrapper.typ:
-//
-//   #import "resume-theme.typ": resume
-//   #show: resume
-//   $body$
-//
-// Then run:
-//   pandoc resume.md -o resume.pdf \
-//     --pdf-engine=typst \
-//     --template=pandoc-wrapper.typ
-//
-// STANDALONE USAGE
-// ----------------
-// #import "resume-theme.typ": resume
-// #show: resume
-// = Jane Doe
-// == Experience
-// ...
-// ============================================================
